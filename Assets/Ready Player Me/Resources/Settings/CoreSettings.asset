@@ -15,4 +15,4 @@ MonoBehaviour:
   Subdomain: vrviking
   AppId: 652535a6931c60d7b71c4f85
   EnableLogging: 0
-  EnableAnalytics: 1
+  EnableAnalytics: 0
