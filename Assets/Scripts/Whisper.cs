@@ -330,6 +330,11 @@ namespace OpenAI
             //Calculate estimated time till action by adding individual times.
             float estimatedTimeTillAction = punctuationTime + wordTime;
 
+            if (estimatedTimeTillAction < 0)
+            {
+                estimatedTimeTillAction = 0;
+            }
+            
             return estimatedTimeTillAction;
         }
 
