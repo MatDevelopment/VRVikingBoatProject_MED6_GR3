@@ -37,7 +37,7 @@ public class TextToSpeech : MonoBehaviour
     {
         //List<TextToSpeech> voiceIDActorsList1 = new List<TextToSpeech>(VoiceId.FindValue(voiceID_name));
         //voiceIDActorsList = VoiceId;
-        ReadString();
+        //ReadString();
         //Predicate<Person> oscarFinder = (Person p) => { return p.Name == "Oscar"; };
         
     }

@@ -16,11 +16,11 @@ public class TTSManager : MonoBehaviour
 
     public async void SynthesizeAndPlay(string text)
     {
-        //Debug.Log("Trying to synthesize " + text);
+        Debug.Log("Trying to synthesize " + text);
         byte[] audioData = await openAIWrapper.RequestTextToSpeech(text, model, voice, speed);
         if (audioData != null)
         {
-            //Debug.Log("Playing audio.");
+            Debug.Log("Playing audio.");
             audioPlayer.ProcessAudioBytes(audioData);
         }
         else

@@ -23361,7 +23361,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 361196141}
     - target: {fileID: 5765676546645601845, guid: 62b0066411a704e0ea891b828f10b710,
         type: 3}
       propertyPath: m_Name
@@ -43848,7 +43848,7 @@ PrefabInstance:
     - target: {fileID: 8996109759252394209, guid: b54076d3a1b3342448a41fd8732dd04a,
         type: 3}
       propertyPath: openAIKey
-      value: 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
+      value: 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
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45224,6 +45224,9 @@ MonoBehaviour:
   - UNSURE
   - CONFUSED
   - AGREEMENT
+  npcActionStrings:
+  - WAVING
+  - POINTING
   erikSpeakable: 1
   liftArmsAnimation: {fileID: 0}
   shrugAnimation: {fileID: 0}

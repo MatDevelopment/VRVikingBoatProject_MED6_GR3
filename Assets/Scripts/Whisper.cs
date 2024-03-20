@@ -175,10 +175,33 @@ namespace OpenAI
                         {
                             npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion);
                         }
-                        foreach (var secondaryEmotion in npcInteractorScript.npcSecondaryEmotions)
+                        /*foreach (var secondaryEmotion in npcInteractorScript.npcSecondaryEmotions)
                         {
                             npcInteractorScript.AnimateOnSecondaryEmotion_Erik(secondaryEmotion);
+                        }*/
+
+                        foreach (string action in npcInteractorScript.npcActionStrings)
+                        {
+                            if (chatGptResponse.Contains(action))
+                            {
+                                string responseTillActionString = CreateStringUntilKeyword(inputString: chatGptResponse, actionToCheck: action);
+                                Debug.Log("ActionString: " + responseTillActionString);
+                                
+                                int punctuationsCount = CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in chatGptResponse
+                                Debug.Log("Punctuations: " + punctuationsCount);
+                                
+                                int wordInStringCount = CountWordsInString(responseTillActionString);    //Counts the amount of words in chatGptResponse
+                                Debug.Log("Word count: " + wordInStringCount);
+                                
+                                float estimatedTimeTillAction = EstimatedTimeTillAction(wordCount: wordInStringCount,
+                                                            wordWeight: 0.2f, punctuationCount: punctuationsCount, punctuationWeight: 1f);
+                                
+                                Debug.Log("ETA of action: " + estimatedTimeTillAction);
+                                
+                                npcInteractorScript.AnimateBodyResponse_Erik(action, estimatedTimeTillAction);
+                            }
                         }
+
 
                         /*int primaryEmotionInt = npcInteractorScript.npcEmotion.Length;
                         int secondEmotionInt = npcInteractorScript.npcSecondaryEmotion.Length;
@@ -192,7 +215,7 @@ namespace OpenAI
                         //textToSpeechScript.MakeAudioRequest(npcResponse);
                         
                         //OpenAI TTS (Danish):
-                        ttsManagerScript.SynthesizeAndPlay(npcResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
+                        ttsManagerScript.SynthesizeAndPlay(chatGptResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
                         isDoneTalking = true;
                         // Debug.Log($"isDoneTalking: {isDoneTalking}");
                         res.Text = res.Text.Replace(res.Text, "");
@@ -262,5 +285,53 @@ namespace OpenAI
             
             audioSourceToPlayOn.Play();
         }
+
+        
+        public string CreateStringUntilKeyword(string inputString, string actionToCheck)
+        {
+            string responseTillAction = inputString;
+            
+            int endCharIndex = inputString.IndexOf(actionToCheck);
+            responseTillAction = inputString.Substring(0, endCharIndex - 1);
+            
+            /*foreach (string action in npcInteractorScript.npcActionStrings)
+            {
+                if (inputString.Contains(action))
+                {
+                    int endCharIndex = inputString.IndexOf(action);
+                    responseTillAction = inputString.Substring(0, endCharIndex - 1);
+                }
+            }*/
+            return responseTillAction;
+        }
+        
+        
+        public int CountCharsUsingLinqCount(string sourceString, char charToFind)
+        {
+            return sourceString.Count(t => t == charToFind);
+        }
+
+        
+        public int CountWordsInString(string sourceString)
+        {
+            int NumberOfWords = sourceString.Split().Length;        //Counts the numbers of words in sourceString... apparently: https://stackoverflow.com/a/26794798
+            
+            return NumberOfWords;
+        }
+
+        private float EstimatedTimeTillAction(int punctuationCount, int wordCount, float punctuationWeight, float wordWeight)
+        {
+            //Punctuation time estimation
+            float punctuationTime = punctuationCount * punctuationWeight;
+            
+            //Word time estimation
+            float wordTime = (wordCount - 2) * wordWeight;      //Subtract 2 from wordcount cause ChatGPT adds two new lines which are counted as words.
+            
+            //Calculate estimated time till action by adding individual times.
+            float estimatedTimeTillAction = punctuationTime + wordTime;
+
+            return estimatedTimeTillAction;
+        }
+
     }
 }

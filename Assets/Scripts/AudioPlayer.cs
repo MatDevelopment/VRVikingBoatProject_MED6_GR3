@@ -12,7 +12,7 @@ public class AudioPlayer : MonoBehaviour
     
     private void OnEnable()
     {
-        this.audioSource = GetComponent<AudioSource>();
+        //this.audioSource = GetComponent<AudioSource>();
     }
 
     public void ProcessAudioBytes(byte[] audioData)

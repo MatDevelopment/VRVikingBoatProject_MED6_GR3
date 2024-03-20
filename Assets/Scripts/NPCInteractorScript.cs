@@ -49,6 +49,8 @@ public class NPCInteractorScript : MonoBehaviour
     public string npcSecondaryEmotion;
     public string[] npcPrimaryEmotions = {"HAPPY", "SAD", "ANGRY", "SURPRISED", "SCARED", "DISGUST", "CONTEMPT"};
     public string[] npcSecondaryEmotions = {"UNSURE", "CONFUSED", "AGREEMENT"};
+    
+    public string[] npcActionStrings = {"WAVING", "POINTING"};
 
     /*[TextArea(3,20)]
     [SerializeField] string itemDescription_Horn;
@@ -133,10 +135,12 @@ public class NPCInteractorScript : MonoBehaviour
                 "The NPC is NOT able to physically move around. This includes pointing, head-nodding, walking, running and everything related to physical movement. Do not say this to the Traveller.\n" +
                 "If the Traveller does not say anything then ask the Traveller what is on their mind.\n" +
                 "Your responses should be no longer than 35 words.\n" +
-                "Start your response with the NPC's current primary emotional state in capitalized letters, in the same message. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT\n" +
-                "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick the most suitable secondary emotion for the NPC out of the following: \n" +
-                "UNSURE, CONFUSED, AGREEMENT\n" +
-                "State the NPC's secondary emotion in capitalized letters after its primary emotion, separated by white space.\n" +
+                "Start your response with the NPC's current primary emotional state in capitalized letters, in the same message without new line. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT\n" +
+                //"Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick the most suitable secondary emotion for the NPC out of the following: \n" +
+                //"UNSURE, CONFUSED, AGREEMENT\n" +
+                "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick one or more actions to go with the NPC's response: WAVING, POINTING\n" +
+                "Position the word of the chosen action in the NPC response in capitalized letters at the time in the response that the NPC would do the action.\n" +
+                //"State the NPC's secondary emotion in capitalized letters after its primary emotion, separated by white space.\n" +
                 //"Keep your responses to a maximum word limit of 40 words.\n" +
                 //"If my reply indicates that I want to end the conversation, finish your sentence with the phrase END_CONVO\n" +
                 "The following info is the info about the game world: \n" +
@@ -310,7 +314,7 @@ public class NPCInteractorScript : MonoBehaviour
         {
             npcEmotion = triggerString;
             Debug.Log("NPC Emotion: " + npcEmotion);
-            whisperScript.npcResponse = whisperScript.npcResponse.Replace(npcEmotion, "");
+            //whisperScript.npcResponse = whisperScript.npcResponse.Replace(npcEmotion, "");
             //return triggerString;
         }
         //return null;
@@ -318,43 +322,52 @@ public class NPCInteractorScript : MonoBehaviour
     
     //Method that animates Erik when the NPC's response contains a set trigger string.
     //Currently being used in Whisper.cs when the user has finished their utterance.
-    public void AnimateOnSecondaryEmotion_Erik(string triggerString)
+    public void AnimateOnAction_Erik(string triggerString, int delay)
     {
         if(whisperScript.npcResponse.Contains(triggerString))
         {
             npcSecondaryEmotion = triggerString;
-            AnimateBodyResponse_Erik(npcSecondaryEmotion);
-            whisperScript.npcResponse = whisperScript.npcResponse.Replace(npcSecondaryEmotion, "");
+            AnimateBodyResponse_Erik(npcSecondaryEmotion, delay);
+            //whisperScript.npcResponse = whisperScript.npcResponse.Replace(npcSecondaryEmotion, "");
         }
     }
     
-    public void AnimateBodyResponse_Erik(string triggerString)      //This could also be repurposed for ChatGPT to choose a body gesture on their own, instead of asking
+    
+    //THIS is the method meant to be used for ACTIONS
+    public void AnimateBodyResponse_Erik(string triggerString, float delay)      //This could also be repurposed for ChatGPT to choose a body gesture on their own, instead of asking
                                                                     //it to pick a secondary emotion. Could be argued to potentially give ChatGPT more agency.
     {
 
-        switch (triggerString)
+        switch (triggerString)      //Seek for trigger strings and run this method in a foreach loop containing all possible actions.
+                                    //Then run a coroutine under each switch case including the calculated to play animations, which will allow things to run asynchrously
         {
-            case "UNSURE":
+            case "WAVING":
                 //thisNpcAnimator.Play(shrugAnimation.ToString());
-                Debug.Log("UNSURE");
+                Debug.Log("WAVING");
                 break;
-            case "CONFUSED":
+            case "POINTING":
                 //thisNpcAnimator.Play(liftArmsAnimation.ToString());
-                Debug.Log("CONFUSED");
-                break;
-            case "POINTING":    //Not a secondary emotion, but thought it could be used to know when ChatGPT is pointing at something.
-                //thisNpcAnimator.Play(pointingAnimation.ToString());
                 Debug.Log("POINTING");
+                break;
+            /*case "CONFUSED":    //Not a secondary emotion, but thought it could be used to know when ChatGPT is pointing at something.
+                //thisNpcAnimator.Play(pointingAnimation.ToString());
+                Debug.Log("CONFUSED");
                 break;
             case "AGREEMENT":
                 //thisNpcAnimator.Play(headnodAnimation.ToString());
                 Debug.Log("AGREEMENT");
-                break;
+                break;*/
             default:
                 //thisNpcAnimator.Play();
                 Debug.Log("DefaultAnimation");
                 break;
         }
+    }
+
+    private IEnumerator PlayAnimationAfterDelay(Animation animationToPlay, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        thisNpcAnimator.Play(animationToPlay.ToString());
     }
 
     public void AnimateFacialExpressionResponse_Erik(string triggerString, float blendValue)

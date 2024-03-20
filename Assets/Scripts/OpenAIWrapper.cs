@@ -24,7 +24,7 @@ public class OpenAIWrapper : MonoBehaviour
 
     public async Task<byte[]> RequestTextToSpeech(string text)
     {
-        //Debug.Log("Sending new request to OpenAI TTS.");
+        Debug.Log("Sending new request to OpenAI TTS.");
         using var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", openAIKey);
 
