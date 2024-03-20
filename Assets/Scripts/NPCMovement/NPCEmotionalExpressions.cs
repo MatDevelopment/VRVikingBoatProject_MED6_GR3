@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using static UnityEditor.VersionControl.Asset;
 
 public class NPCEmotionalExpressions : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class NPCEmotionalExpressions : MonoBehaviour
     float expressionSpeed = 0.01f;
 
     // Based on Ekman's 7 Emotional States
+    public string currentMood = "isStatic";
+
     public bool isHappy = false;
     public bool isSad = false;
     public bool isAngry = false;
@@ -42,6 +45,11 @@ public class NPCEmotionalExpressions : MonoBehaviour
     {
         // Debugging Keys
         if (DebugEnabled) {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                currentMood = "isDefault";
+            }
+
             // Happy = H
             if (Input.GetKeyDown(KeyCode.H))
             {
@@ -88,37 +96,84 @@ public class NPCEmotionalExpressions : MonoBehaviour
         // Emotional State Logic
         if (isHappy == true)
         {
-            Happy(blendValue);
+            currentMood = "isHappy";
+            isHappy = false;
+            // Happy(blendValue);
         }
 
         if (isSad == true)
         {
-            Sad(blendValue);
+            currentMood = "isSad";
+            isSad = false;
+            // Sad(blendValue);
         }
 
         if (isAngry == true)
         {
-            Angry(blendValue);
+            currentMood = "isAngry";
+            isAngry = false;
+            // Angry(blendValue);
         }
 
         if (isSurprised == true)
         {
-            Surprised(blendValue);
+            currentMood = "isSurprised";
+            isSurprised = false;
+            // Surprised(blendValue);
         }
 
         if (isScared == true)
         {
-            Scared(blendValue);
+            currentMood = "isScared";
+            isScared = false;
+            // Scared(blendValue);
         }
 
         if (isDisgusted == true)
         {
-            Disgust(blendValue);
+            currentMood = "isDisgusted";
+            isDisgusted = false;
+            // Disgust(blendValue);
         }
 
         if (isContempted == true)
         {
-            Contempt(blendValue);
+            currentMood = "isContempted";
+            isContempted = false;
+            // Contempt(blendValue);
+        }
+
+        // Switch case which reads the current mood and runs the appropriate function
+        switch (currentMood)
+        {
+            case "isStatic":
+                break;
+            case "isDefault":
+                DefaultExpression();
+                break;
+            case "isHappy":
+                Happy(blendValue);
+                break;
+            case "isSad":
+                Sad(blendValue);
+                break;
+            case "isAngry":
+                Angry(blendValue);
+                break;
+            case "isSurprised":
+                Surprised(blendValue);
+                break;
+            case "isScared":
+                Scared(blendValue);
+                break;
+            case "isDisgusted":
+                Disgust(blendValue);
+                break;
+            case "isContempted":
+                Contempt(blendValue);
+                break;
+            default:
+                break;
         }
     }
 
@@ -146,6 +201,26 @@ public class NPCEmotionalExpressions : MonoBehaviour
         }
     }
 
+    void DefaultExpression()
+    {
+        float CombinedValue = 0;
+
+        for (int i = 15; i < blendShapeCount; i++)
+        {
+            float currentBlendValue = Mathf.Lerp(skinnedMeshRenderer.GetBlendShapeWeight(i), 0, expressionSpeed);
+            skinnedMeshRenderer.SetBlendShapeWeight(i, currentBlendValue);
+            CombinedValue += skinnedMeshRenderer.GetBlendShapeWeight(i);
+        }
+
+        float AverageValue = CombinedValue / blendShapeCount - 15;
+
+        if (AverageValue <= 0)
+        {
+            currentMood = "isStatic";
+            Debug.Log("Default");
+        }
+    }
+
     void Happy(float blendValue)
     {
         // FACS: 6 + 12
@@ -170,7 +245,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
         // Calculating a average value for the blendshapes
         for (int i = 0; i < shapes.Length; i++)
         {
-            CombinedValue += skinnedMeshRenderer.GetBlendShapeWeight(shapes[i]);;
+            CombinedValue += skinnedMeshRenderer.GetBlendShapeWeight(shapes[i]);
         }
 
         float AverageValue = CombinedValue / shapes.Length;
@@ -178,7 +253,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
         // Stopping the transition if close to chosen value
         if (AverageValue >= 0.95f * blendValue)
         {
-            isHappy = false;
+            currentMood = "isStatic";
             Debug.Log("Happy");
         }
     }
@@ -214,7 +289,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
         // Stopping the transition if close to chosen value
         if (AverageValue >= 0.95f * blendValue)
         {
-            isSad = false;
+            currentMood = "isStatic";
             Debug.Log("Sad");
         }
     }
@@ -240,13 +315,20 @@ public class NPCEmotionalExpressions : MonoBehaviour
             skinnedMeshRenderer.SetBlendShapeWeight(shape, currentBlend);
         }
 
-        // Stopping the transition if close to chosen value
-        if (skinnedMeshRenderer.GetBlendShapeWeight(shapes[0]) >= 0.95f * blendValue
-            && skinnedMeshRenderer.GetBlendShapeWeight(shapes[1]) >= 0.95f * blendValue
-            && skinnedMeshRenderer.GetBlendShapeWeight(shapes[2]) >= 0.95f * blendValue
-            && skinnedMeshRenderer.GetBlendShapeWeight(shapes[3]) >= 0.95f * blendValue)
+        float CombinedValue = 0;
+
+        // Calculating a average value for the blendshapes
+        for (int i = 0; i < shapes.Length; i++)
         {
-            isAngry = false;
+            CombinedValue += skinnedMeshRenderer.GetBlendShapeWeight(shapes[i]); ;
+        }
+
+        float AverageValue = CombinedValue / shapes.Length;
+
+        // Stopping the transition if close to chosen value
+        if (AverageValue >= 0.95f * blendValue)
+        {
+            currentMood = "isStatic";
             Debug.Log("Angry");
         }
     }
@@ -284,7 +366,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
         // Stopping the transition if close to chosen value
         if (AverageValue >= 0.95f * blendValue)
         {
-            isSurprised = false;
+            currentMood = "isStatic";
             Debug.Log("Surprised");
         }
     }
@@ -330,7 +412,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
         // Stopping the transition if close to chosen value
         if (AverageValue >= 0.95f * blendValue)
         {
-            isScared = false;
+            currentMood = "isStatic";
             Debug.Log("Scared");
         }
     }
@@ -368,7 +450,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
         // Stopping the transition if close to chosen value
         if (AverageValue >= 0.95f * blendValue)
         {
-            isDisgusted = false;
+            currentMood = "isStatic";
             Debug.Log("Disgusted");
         }
     }
@@ -402,7 +484,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
         // Stopping the transition if close to chosen value
         if (AverageValue >= 0.95f * blendValue)
         {
-            isContempted = false;
+            currentMood = "isStatic";
             Debug.Log("Contempted");
         }
     }
