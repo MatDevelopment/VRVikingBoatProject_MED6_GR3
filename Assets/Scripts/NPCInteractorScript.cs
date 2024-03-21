@@ -48,7 +48,7 @@ public class NPCInteractorScript : MonoBehaviour
     public string npcEmotion;
     public string npcSecondaryEmotion;
     public string[] npcPrimaryEmotions = {"HAPPY", "SAD", "ANGRY", "SURPRISED", "SCARED", "DISGUST", "CONTEMPT"};
-    public string[] npcSecondaryEmotions = {"UNSURE", "CONFUSED", "AGREEMENT"};
+    //public string[] npcSecondaryEmotions = {"UNSURE", "CONFUSED", "AGREEMENT"};
     
     public string[] npcActionStrings = {"WAVING", "POINTING"};
 
@@ -119,8 +119,8 @@ public class NPCInteractorScript : MonoBehaviour
         {
             Role = "system",
             Content =
-                "Act as an NPC in the given context and reply to the questions of the Traveller who talks to you.\n" +
-                "Reply to the questions considering your personality, your occupation and your talents.\n" +
+                "Act as an NPC in the given context and reply to what the Traveller says, who is talking to you.\n" +
+                "Reply the Traveller in danish considering your personality, your occupation and your talents.\n" +
                 "The NPC is a danish viking villager from the viking age the who lives a peaceful way of life and likes the simple things in life.\n" +
                 "The NPC's religious belief is Northern mythology (Asatro). Do not mention the word Asatro. The word Asatro is just for reference.\n" +
                 "The NPC's knowledge of norse mythology is greatly influenced by the traditions and stories passed down from previous generations.\n" +
@@ -132,28 +132,30 @@ public class NPCInteractorScript : MonoBehaviour
                 //"Ignore what the Traveller said if what they said contains the sentence in parentheses: (Subs by www.zeoranger.co.uk).\n" +                   //Weird string shot out from Whisper sometimes if nothing is said by the user. This is a failsafe if the code further down the script doesn't manage to remove it in the res.Text string.
                 "Do not break character and do not talk about the instructions given to you.\n" +
                 "Reply to only NPC lines not to the Traveller's lines.\n" +
-                "The NPC is NOT able to physically move around. This includes pointing, head-nodding, walking, running and everything related to physical movement. Do not say this to the Traveller.\n" +
+                //"The NPC is NOT able to physically move around. This includes pointing, head-nodding, walking, running and everything related to physical movement. Do not say this to the Traveller.\n" +
                 "If the Traveller does not say anything then ask the Traveller what is on their mind.\n" +
                 "Your responses should be no longer than 35 words.\n" +
-                "Start your response with the NPC's current primary emotional state in capitalized letters, in the same message without new line. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT\n" +
+                "Start your response with the NPC's current primary emotional state in capitalized letters, in the same message without new line and seperated by white space. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT\n" +
                 //"Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick the most suitable secondary emotion for the NPC out of the following: \n" +
                 //"UNSURE, CONFUSED, AGREEMENT\n" +
-                "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick one or more actions to go with the NPC's response: WAVING, POINTING\n" +
-                "Position the word of the chosen action in the NPC response in capitalized letters at the time in the response that the NPC would do the action.\n" +
+                //"End every sentence with the word BANANA.\n" +
+                "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick one or more gestures to go with the NPC's response: WAVING, POINTING.\n" +
+                "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n" +
+                "The gestures previously mentioned are the only gestures available to you, so please choose the most suitable gesture. All else physical movement besides these gestures are not possible.\n" +
                 //"State the NPC's secondary emotion in capitalized letters after its primary emotion, separated by white space.\n" +
                 //"Keep your responses to a maximum word limit of 40 words.\n" +
                 //"If my reply indicates that I want to end the conversation, finish your sentence with the phrase END_CONVO\n" +
-                "The following info is the info about the game world: \n" +
+                "The following info is the info about the world: \n" +
                 worldInfoScript.GetPrompt() +
                 "The following info is the info about the NPC: \n" +
                 npcInfoScript.GetPrompt() +
                 "Do not include the NPC name in your response.\n" +
                 "The following info is the info about the NPC's current surroundings: \n" +
-                sceneInfoScript.GetPrompt() +
-                "The following info is the info about the Traveller's current task and subtasks: \n" +
-                taskInfoScript.GetPrompt() +
-                "Do not mention the task names to the Traveller.\n" +
-                "If the Traveller asks for the NPC's help with their tasks that involves physical movement, then say to the Traveller that they have to do these tasks themselves because they promised to do them earlier on in the day."
+                sceneInfoScript.GetPrompt()
+                //"The following info is the info about the Traveller's current task and subtasks: \n" +
+                //taskInfoScript.GetPrompt() +
+                //"Do not mention the task names to the Traveller.\n"
+                //"If the Traveller asks for the NPC's help with their tasks that involves physical movement, then say to the Traveller that they have to do these tasks themselves because they promised to do them earlier on in the day."
         };
         
         ChatLogWithNPC.Add(message);
@@ -313,6 +315,10 @@ public class NPCInteractorScript : MonoBehaviour
         if (whisperScript.npcResponse.Contains(triggerString))
         {
             npcEmotion = triggerString;
+            
+            int startIndexEmotion = whisperScript.npcResponse.IndexOf(npcEmotion);
+            whisperScript.npcResponse = whisperScript.npcResponse.Remove(startIndexEmotion, npcEmotion.Length);     //Removes the action keyword from ChatGPT's response plus the following white space
+
             Debug.Log("NPC Emotion: " + npcEmotion);
             //whisperScript.npcResponse = whisperScript.npcResponse.Replace(npcEmotion, "");
             //return triggerString;

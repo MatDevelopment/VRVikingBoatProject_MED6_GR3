@@ -101,7 +101,7 @@ namespace OpenAI
                 if(isRecording == false && isDoneTalking == true)
                 {
                     //StartCoroutine(InterruptNpcTalkingAfterDuration(timeToInterruptTalk));
-                    Debug.Log("Start recording...");
+                    //Debug.Log("Start recording...");
                     isRecording = true;
                     
                     //var index = PlayerPrefs.GetInt("user-mic-device-index");
@@ -168,13 +168,22 @@ namespace OpenAI
                         
                         npcResponse = chatGptResponse;
                         
-                        chatTest.AddNpcResponseToChatLog(chatGptResponse);
+                        Debug.Log("NPC Response: " + npcResponse);
+                        
+                        chatTest.AddNpcResponseToChatLog(npcResponse);
                         
                         //Check for current NPC emotion in order to play animation
                         foreach (string primaryEmotion in npcInteractorScript.npcPrimaryEmotions)
                         {
                             npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion);
                         }
+                        
+                        //THREE LINES BELOW are BEING DONE IN NPCInteractorScript.cs in method initialized above (CheckErikPrimaryEmotion)
+                        //int startIndexEmotion = npcResponse.IndexOf(npcInteractorScript.npcEmotion);       //Finds the starting index of the NPC's emotion keyword in ChatGPT's response
+                        //int endEmotionString = chatGptResponse.LastIndexOf(npcInteractorScript.npcEmotion);
+                        //npcResponse = npcResponse.Remove(startIndexEmotion, npcInteractorScript.npcEmotion.Length);     //Removes the action keyword from ChatGPT's response plus the following white space
+                        
+                        
                         /*foreach (var secondaryEmotion in npcInteractorScript.npcSecondaryEmotions)
                         {
                             npcInteractorScript.AnimateOnSecondaryEmotion_Erik(secondaryEmotion);
@@ -182,21 +191,29 @@ namespace OpenAI
 
                         foreach (string action in npcInteractorScript.npcActionStrings)
                         {
-                            if (chatGptResponse.Contains(action))
+                            if (npcResponse.Contains(action))
                             {
-                                string responseTillActionString = CreateStringUntilKeyword(inputString: chatGptResponse, actionToCheck: action);
+                                string responseTillActionString = CreateStringUntilKeyword(inputString: npcResponse, actionToCheck: action);
                                 Debug.Log("ActionString: " + responseTillActionString);
                                 
-                                int punctuationsCount = CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in chatGptResponse
+                                int punctuationsCount = CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in responseTillActionString
                                 Debug.Log("Punctuations: " + punctuationsCount);
                                 
-                                int wordInStringCount = CountWordsInString(responseTillActionString);    //Counts the amount of words in chatGptResponse
+                                int wordInStringCount = CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
                                 Debug.Log("Word count: " + wordInStringCount);
                                 
-                                float estimatedTimeTillAction = EstimatedTimeTillAction(wordCount: wordInStringCount,
+                                float estimatedTimeTillAction = EstimatedTimeTillAction(wordCount: wordInStringCount,       //Simple method that takes in the variables created above as arguments to estimate a time to play the gesture/Action animation.
                                                             wordWeight: 0.2f, punctuationCount: punctuationsCount, punctuationWeight: 1f);
                                 
                                 Debug.Log("ETA of action: " + estimatedTimeTillAction);
+
+                                int startIndexAction = npcResponse.IndexOf(action);     //Finds the starting index of the action keyword in the ChatGPT response
+
+                                responseTillActionString = "";
+                                
+                                //Man kan godt løbe ind i problemer med Remove her, og ved ikke helt hvorfor.
+                                //Tror det har noget at gøre med at Length starter med at tælle til 1, men indeces starter fra 0.
+                                npcResponse = npcResponse.Remove(startIndexAction, action.Length);      //Removes the action keyword from ChatGPT's response plus the following white space
                                 
                                 npcInteractorScript.AnimateBodyResponse_Erik(action, estimatedTimeTillAction);
                             }
@@ -210,16 +227,19 @@ namespace OpenAI
                         npcInteractorScript.AnimateFacialExpressionResponse_Erik(npcInteractorScript.npcEmotion, 0.5f);
 
 
-                        Debug.Log(npcResponse);
+                        Debug.Log("Edited response: " + npcResponse);
+                        
+                        res.Text = res.Text.Replace(res.Text, "");
+                        userRecordingString = res.Text;
+                        
+                        
                         //AWS POLLY (English):
                         //textToSpeechScript.MakeAudioRequest(npcResponse);
                         
                         //OpenAI TTS (Danish):
-                        ttsManagerScript.SynthesizeAndPlay(chatGptResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
+                        ttsManagerScript.SynthesizeAndPlay(npcResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
                         isDoneTalking = true;
                         // Debug.Log($"isDoneTalking: {isDoneTalking}");
-                        res.Text = res.Text.Replace(res.Text, "");
-                        userRecordingString = res.Text;
                     }
                                 
                     //contextIsPerformed = false;
@@ -292,7 +312,7 @@ namespace OpenAI
             string responseTillAction = inputString;
             
             int endCharIndex = inputString.IndexOf(actionToCheck);
-            responseTillAction = inputString.Substring(0, endCharIndex - 1);
+            responseTillAction = inputString.Substring(0, endCharIndex);
             
             /*foreach (string action in npcInteractorScript.npcActionStrings)
             {
@@ -329,7 +349,7 @@ namespace OpenAI
             
             //Calculate estimated time till action by adding individual times.
             float estimatedTimeTillAction = punctuationTime + wordTime;
-
+            
             if (estimatedTimeTillAction < 0)
             {
                 estimatedTimeTillAction = 0;

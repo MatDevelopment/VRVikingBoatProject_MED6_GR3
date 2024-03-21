@@ -47,7 +47,7 @@ public class MicInputDetection : MonoBehaviour
             //The speechPauseCounter variable is so that the user can have natural breaks inbetween words they say, or so-called thinking pauses.
             loudness = 0;
 
-            if (speechPauseCounter >= 1.2 && isListening && whisperScript.isRecording == false && whisperScript.isDoneTalking && npcInteractorScript.erikSpeakable)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
+            if (speechPauseCounter >= 1 && isListening && whisperScript.isRecording == false && whisperScript.isDoneTalking && npcInteractorScript.erikSpeakable)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
             {
                 if (whisperScript.userRecordingString.Length > 0)
                 {
@@ -57,7 +57,7 @@ public class MicInputDetection : MonoBehaviour
                 
                 //Array.Clear(speechWaveData);      //Attempt to clear array, since overflow exception error
                 Debug.Log("Understood");
-                stoppedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);
+                //stoppedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);
                 //Debug.Log(stoppedSpeakingPosition); //Debugging
                 //int samplesUserSpeech = stoppedSpeakingPosition - startedSpeakingPosition;        //The sample length of the audioclip to be created that stores what the user says to the NPC.
                 
@@ -88,6 +88,7 @@ public class MicInputDetection : MonoBehaviour
             speechPauseCounter = 0;
             if (isListening == false && whisperScript.isRecording == false && whisperScript.isDoneTalking && npcInteractorScript.erikSpeakable)
             {
+                whisperScript.userRecordingString = "";     //NEWLY ADDED!!!!!!!!!!!!
                 userSpeechClip = null;
                 StartCoroutine(whisperScript.InterruptNpcTalkingAfterDuration(whisperScript.timeToInterruptTalk));  //Runs a method to interrupt the NPC and play a "Hmm" thinking sound sample
                 Debug.Log("LISTENING");
