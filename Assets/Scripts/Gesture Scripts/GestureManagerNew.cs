@@ -20,13 +20,13 @@ public class GestureManagerNew : MonoBehaviour
     private void Awake()
     {
         gestureManagerDebuggingMenu = FindAnyObjectByType<GestureManagerDebuggingMenu>();
-
     }
+
     void Start()
     {
         Debug.Log(PullMockString());
-        AddPointingAtTargetDescription_LeftHand("giant wolf");
-        AddPointingAtTargetDescription_RightHand("Tree (47)");
+        AddPointingAtTargetDescription_LeftHand("giant wolf"); // Mock description for debugging;
+        AddPointingAtTargetDescription_RightHand("Tree (47)"); // Mock description for debugging;
         Debug.Log(PullCombinedGesturesString());
 
         gestureManagerDebuggingMenu = GetComponent<GestureManagerDebuggingMenu>();
@@ -34,7 +34,7 @@ public class GestureManagerNew : MonoBehaviour
         gestureManagerDebuggingMenu.ShowMenu();
     }
 
-    private void checkForPointingWithHands()
+    private void checkForPointingWithHands() // Checks if the current gesture is pointing for both the left and right hands;
     {
         if (GestureList_Left.Count > 0 && GestureList_Left[0] == pointingPose)
         {
@@ -50,16 +50,16 @@ public class GestureManagerNew : MonoBehaviour
         else
             pointingWithRightHand = false;
     }
-    public void AddPointingAtTargetDescription_LeftHand(string interestPointDescription)
-    { 
-        PointingActionLeft = interestPointDescription + " with their left hand";
-    }
-    public void AddPointingAtTargetDescription_RightHand(string interestPointDescription)
+    public void AddPointingAtTargetDescription_LeftHand(string interestPointDescription) // sets the current pointing string for left hand. 
     {
-        PointingActionRight = interestPointDescription + " with their right hand";
+        PointingActionLeft = "pointing at " + interestPointDescription + " with their left hand";
+    }
+    public void AddPointingAtTargetDescription_RightHand(string interestPointDescription) // Duplicated for ease of readability.
+    {
+        PointingActionRight = "pointing at " + interestPointDescription + " with their right hand";
     }
 
-    public string PullCombinedGesturesString()
+    public string PullCombinedGesturesString() // The most important method in this class! return a string that describes what the user is currently doing with their hands.
     {
         string combinedString = "User is ";
 
@@ -67,7 +67,12 @@ public class GestureManagerNew : MonoBehaviour
         if (PointingActionLeft != null)
             combinedString += PointingActionLeft; // eg. "pointing at XX with their left hand"
         else if (GestureList_Left[0] != null)
-            combinedString += "doing a " + GestureList_Left[0] + " with their right hand";
+            combinedString += "doing a " + GestureList_Left[0] + " with their left hand";
+
+        //Check if right hand is doing something and add an "and" between the two gesture strings.
+        if (PointingActionLeft != null || GestureList_Right[0] != null)
+            combinedString += " and ";
+
         //Right hand check
         if (PointingActionRight != null)
             combinedString += PointingActionRight;
@@ -80,14 +85,12 @@ public class GestureManagerNew : MonoBehaviour
         else
             combinedGestureHistory.Add(combinedString);
 
-
-
         combinedGesturesString = combinedString;
 
-            return combinedString;
+        return combinedString;
     }
 
-    public string PullMockString()
+    public string PullMockString() //Debugging
     {
         return "User is pointing at the red cube with their left hand and is making a thumbs up gesture with their right hand";
     }
@@ -101,7 +104,24 @@ public class GestureManagerNew : MonoBehaviour
         if (startInDebugMode)
             gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);
     }
+    public void AddGestureToList_Left(XRHandPose handPose)
+    {
+        GestureList_Left.Add(handPose);
 
+        checkForPointingWithHands();
+
+        if (startInDebugMode)
+            gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);
+    }
+    public void RemoveGestureFromList_Left(XRHandPose handPose)
+    {
+        GestureList_Left.Remove(handPose);
+
+        checkForPointingWithHands();
+
+        if (startInDebugMode)
+            gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);
+    }
     public void RemoveGestureFromList_Right(XRHandPose handPose)
     {
         GestureList_Right.Remove(handPose);
@@ -112,31 +132,9 @@ public class GestureManagerNew : MonoBehaviour
             gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);
     }
 
-    public void AddGestureToList_Left(XRHandPose handPose)
+    public void OnValidate() // This is called everytime an update in the inspector UI happens. for example ticking a bool check box!
     {
-        GestureList_Left.Add(handPose);
-
-        checkForPointingWithHands();
-
-        if (startInDebugMode)
-            gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);
+        if (startInDebugMode && gestureManagerDebuggingMenu != null) gestureManagerDebuggingMenu.ShowMenu();
+        else if (!startInDebugMode && gestureManagerDebuggingMenu != null) gestureManagerDebuggingMenu.HideMenu();
     }
-
-    public void RemoveGestureFromList_Left(XRHandPose handPose)
-    {
-        GestureList_Left.Remove(handPose);
-
-        checkForPointingWithHands();
-
-        if (startInDebugMode)
-            gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);
-    }
-
-    //public void OnValidate()
-    //{
-    //    if (startInDebugMode && gestureManagerDebuggingMenu != null) gestureManagerDebuggingMenu.ShowMenu();
-    //    else if (!startInDebugMode && gestureManagerDebuggingMenu != null) gestureManagerDebuggingMenu.HideMenu();
-    //}
-
-
 }

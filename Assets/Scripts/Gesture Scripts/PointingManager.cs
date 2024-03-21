@@ -6,7 +6,7 @@ public class PointingManager : MonoBehaviour
 {
     private GestureManagerNew m_Manager;
     public Transform rightHand_indexStart, rightHand_indexEnd, leftHand_indexStart, leftHand_indexEnd;
-    public LineRenderer leftLine, rightLine;
+    public LineRenderer leftLineRenderer, rightLinerenderer;
     public int layermask;
     private int invertedLayermask;
     public GameObject leftHandLastSelected, rightHandLastSelected;
@@ -16,7 +16,7 @@ public class PointingManager : MonoBehaviour
 
     void Start()
     {
-        m_Manager = GameObject.FindAnyObjectByType<GestureManagerNew>();
+        m_Manager = FindAnyObjectByType<GestureManagerNew>();
 
         // Bit shift the index of the layer (8) to get a bit mask // From the unity docs..
         invertedLayermask = 1 << layermask;
@@ -27,7 +27,7 @@ public class PointingManager : MonoBehaviour
         if (m_Manager.pointingWithLeftHand)
         {
             RaycastHit hit;
-            Vector3 leftPointingDirection = (leftHand_indexEnd.position - leftHand_indexStart.position).normalized;
+            Vector3 leftPointingDirection = (leftHand_indexEnd.position - leftHand_indexStart.position).normalized; //Calculating the direction to shoot the ray.
             //Left hand pointing shoot ray!
             if (Physics.Raycast(leftHand_indexEnd.position, leftPointingDirection, out hit, Mathf.Infinity, invertedLayermask)) {
                 Debug.DrawRay(leftHand_indexEnd.position, leftPointingDirection * hit.distance, Color.yellow); Debug.Log(hit.transform.gameObject);
@@ -42,8 +42,8 @@ public class PointingManager : MonoBehaviour
 
             if (showLines)
             {
-                leftLine.SetPosition(0, leftHand_indexEnd.position);
-                leftLine.SetPosition(1, leftHand_indexEnd.position + leftPointingDirection * 300);
+                leftLineRenderer.SetPosition(0, leftHand_indexEnd.position);
+                leftLineRenderer.SetPosition(1, leftHand_indexEnd.position + leftPointingDirection * 300);
             }
         }
         if (m_Manager.pointingWithRightHand)
@@ -65,22 +65,22 @@ public class PointingManager : MonoBehaviour
 
             if (showLines)
             {
-                rightLine.SetPosition(0, rightHand_indexEnd.position);
-                rightLine.SetPosition(1, rightHand_indexEnd.position + rightPointingDirection * 300);
+                rightLinerenderer.SetPosition(0, rightHand_indexEnd.position);
+                rightLinerenderer.SetPosition(1, rightHand_indexEnd.position + rightPointingDirection * 300);
             }
         }
     }
     public void ShowLines()
     {
         showLines = true;
-        leftLine.enabled = true;
-        rightLine.enabled = true;
+        leftLineRenderer.enabled = true;
+        rightLinerenderer.enabled = true;
     }
 
     public void HideLines()
     {
         showLines = false;
-        leftLine.enabled = false;
-        rightLine.enabled = false;
+        leftLineRenderer.enabled = false;
+        rightLinerenderer.enabled = false;
     }
 }
