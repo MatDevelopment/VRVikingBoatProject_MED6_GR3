@@ -9291,7 +9291,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521175379}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -14698,8 +14698,8 @@ MonoBehaviour:
   npcResponse: 
   userRecordingString: 
   ErikHmmSound: {fileID: 8300000, guid: e4dd29ac11aa4e9478bf529e86079090, type: 3}
-  isRecording: 0
-  isDoneTalking: 1
+  isTranscribing: 0
+  ECAIsDoneTalking: 1
   contextIsPerformed: 0
   timeToInterruptTalk: 0.15
 --- !u!4 &861633865
@@ -14736,8 +14736,10 @@ MonoBehaviour:
   userSpeechClip: {fileID: 0}
   loudnessSensibility: 75
   threshold: 0.75
+  isListening: 0
   minScale: {x: 0, y: 0, z: 0}
   maxScale: {x: 0, y: 0, z: 0}
+  loudness: 0
 --- !u!1 &868871342
 GameObject:
   m_ObjectHideFlags: 0
@@ -20961,7 +20963,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097415367}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -22663,7 +22665,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1232529239}
-  - component: {fileID: 1232529238}
   m_Layer: 0
   m_Name: TerrainGroup_0
   m_TagString: Untagged
@@ -22671,18 +22672,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1232529238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232529237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ca34a6148db2d54493f84f379293f33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1232529239
 Transform:
   m_ObjectHideFlags: 0
@@ -23266,7 +23255,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097415360}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -25347,7 +25336,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407377832}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -30194,7 +30183,7 @@ MonoBehaviour:
   PointingActionRight: 
   combinedGesturesString: 
   combinedGestureHistory: []
-  startInDebugMode: 0
+  startInDebugMode: 1
 --- !u!114 &1739521428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30237,7 +30226,7 @@ MonoBehaviour:
   layermask: 6
   leftHandLastSelected: {fileID: 0}
   rightHandLastSelected: {fileID: 0}
-  showLines: 0
+  showLines: 1
 --- !u!4 &1739521430
 Transform:
   m_ObjectHideFlags: 0
@@ -32121,12 +32110,12 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -32134,23 +32123,95 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.002
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -500.20065
+      outSlope: -500.20065
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.008
+      value: 0.25
+      inSlope: -31.26254
+      outSlope: -31.26254
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.016
+      value: 0.125
+      inSlope: -7.815635
+      outSlope: -7.815635
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.032
+      value: 0.0625
+      inSlope: -1.9539088
+      outSlope: -1.9539088
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.064
+      value: 0.03125
+      inSlope: -0.4884772
+      outSlope: -0.4884772
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.128
+      value: 0.015625
+      inSlope: -0.1221193
+      outSlope: -0.1221193
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.256
+      value: 0.0078125
+      inSlope: -0.030529825
+      outSlope: -0.030529825
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.50681144
+      value: 0.31584167
+      inSlope: -125.05016
+      outSlope: -125.05016
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.512
+      value: 0.00390625
+      inSlope: -0.0076324563
+      outSlope: -0.0076324563
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.002
+      inSlope: -0.002000801
+      outSlope: -0.002000801
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -32329,7 +32390,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895965726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -42228,7 +42289,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938660104}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -45138,6 +45199,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7850403011473856651}
+    - targetCorrespondingSourceObject: {fileID: 2167672531572897428, guid: dea5600c046f8bc4ea0ea401f40f1f02,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7850403011473856658}
     - targetCorrespondingSourceObject: {fileID: 9017272046368141198, guid: dea5600c046f8bc4ea0ea401f40f1f02,
         type: 3}
       insertIndex: -1
@@ -45221,10 +45286,6 @@ MonoBehaviour:
   - CONTEMPT
   - DISGUST
   - SCARED
-  npcSecondaryEmotions:
-  - UNSURE
-  - CONFUSED
-  - AGREEMENT
   npcActionStrings:
   - WAVING
   - POINTING
@@ -45280,6 +45341,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 2795267193648958327}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7850403011473856658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362939397936681360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb93d6cef787e74caf0a1726f796ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

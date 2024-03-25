@@ -44,38 +44,10 @@ namespace OpenAI
 
         private void Start()
         {
-            //nameOfPreviousNPC = nameOfCurrentNPC;
-            //button.onClick.AddListener(SendReply);
-            if (nameOfCurrentNPC == "Erik")
-            {
                 currentNpcThinkingSoundsArray = erikInteractorScript.arrayThinkingNPCsounds;
                 textToSpeech.audioSource = erikInteractorScript.NPCaudioSource;
                 textToSpeech.voiceID_name = erikInteractorScript.voiceIDNameThisNpc;
                 messages = erikInteractorScript.ChatLogWithNPC;
-                
-            }
-            /*if (nameOfCurrentNPC == "Arne")
-            {
-                currentNpcThinkingSoundsArray = arneInteractorScript.arrayThinkingNPCsounds;
-                textToSpeech.audioSource = arneInteractorScript.NPCaudioSource;
-                textToSpeech.voiceID_name = arneInteractorScript.voiceIDNameThisNpc;
-                messages = arneInteractorScript.ChatLogWithNPC;
-            }
-            if (nameOfCurrentNPC == "Frida")
-            {
-                currentNpcThinkingSoundsArray = fridaInteractorScript.arrayThinkingNPCsounds;
-                textToSpeech.audioSource = fridaInteractorScript.NPCaudioSource;
-                textToSpeech.voiceID_name = fridaInteractorScript.voiceIDNameThisNpc;
-                messages = fridaInteractorScript.ChatLogWithNPC;
-            }
-            if (nameOfCurrentNPC == "Ingrid")
-            {
-                currentNpcThinkingSoundsArray = ingridInteractorScript.arrayThinkingNPCsounds;
-                textToSpeech.audioSource = ingridInteractorScript.NPCaudioSource;
-                textToSpeech.voiceID_name = ingridInteractorScript.voiceIDNameThisNpc;
-                messages = ingridInteractorScript.ChatLogWithNPC;
-            }*/
-            
         }
         
         public async Task<string> SendRequestToChatGpt(List<ChatMessage> combinedMessages)

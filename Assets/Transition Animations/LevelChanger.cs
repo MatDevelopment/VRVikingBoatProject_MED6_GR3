@@ -19,7 +19,7 @@ public class LevelChanger : MonoBehaviour
     // bool to check if you are playing the AI version of the experience (AI or scripted dialogue version)
     //public static bool LLM_VersionPlaying;
     //[SerializeField] public bool SetLLM_VersionPlaying;
-    [SerializeField] private LLMversionPlaying LLMversionPlayingScript;
+    //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
     [SerializeField] private ChatTest chatTestScript;
     
     // bool to unlock test conditions
@@ -78,7 +78,7 @@ public class LevelChanger : MonoBehaviour
 
     void Awake()
     {
-        LLMversionPlayingScript = GameObject.FindWithTag("LLMversionGameObject").GetComponent<LLMversionPlaying>();
+        //LLMversionPlayingScript = GameObject.FindWithTag("LLMversionGameObject").GetComponent<LLMversionPlaying>();
         
         if (IntroSceneActive == true)
         {
@@ -239,66 +239,66 @@ public class LevelChanger : MonoBehaviour
         //WoodChopped = true;
     }
 
-    public void CountWoodStacked()
-    {
-        Debug.Log("Wood stacked: " + countStackedWood);
-        if (countStackedWood >= 2 && WoodStacked == false)
-        {
-            if (LLMversionPlayingScript.LLMversionIsPlaying == true && woodStackedPromptSent == false)
-            {
-                chatTestScript.AddSystemInstructionToChatLog("The Traveller has now stacked all the wood needed for Thorsten's funeral pyre unto the wagon nearby. The NPC, Erik, will be with the Traveller inside the house of Thorsten and Ingrid AFTER the Traveller has entered the house. Keep this in mind.\n");
+    //public void CountWoodStacked()
+    //{
+    //    Debug.Log("Wood stacked: " + countStackedWood);
+    //    if (countStackedWood >= 2 && WoodStacked == false)
+    //    {
+    //        if (LLMversionPlayingScript.LLMversionIsPlaying == true && woodStackedPromptSent == false)
+    //        {
+    //            chatTestScript.AddSystemInstructionToChatLog("The Traveller has now stacked all the wood needed for Thorsten's funeral pyre unto the wagon nearby. The NPC, Erik, will be with the Traveller inside the house of Thorsten and Ingrid AFTER the Traveller has entered the house. Keep this in mind.\n");
 
-                if (erikInteractorScript.NPCaudioSource.isPlaying == false)
-                {
-                    erikInteractorScript.InformAndInitiateNpcTalk("The Traveller has now stacked all the wood needed for Thorsten's funeral pyre unto the wagon nearby. The NPC, Erik, will be with the Traveller inside the house of Thorsten and Ingrid AFTER the Traveller has entered the house. Convey this to the Traveller.\n");
-                }
+    //            if (erikInteractorScript.NPCaudioSource.isPlaying == false)
+    //            {
+    //                erikInteractorScript.InformAndInitiateNpcTalk("The Traveller has now stacked all the wood needed for Thorsten's funeral pyre unto the wagon nearby. The NPC, Erik, will be with the Traveller inside the house of Thorsten and Ingrid AFTER the Traveller has entered the house. Convey this to the Traveller.\n");
+    //            }
 
-                woodStackedPromptSent = true;
-            }
-            WoodStacked = true;
-        }
-    }
+    //            woodStackedPromptSent = true;
+    //        }
+    //        WoodStacked = true;
+    //    }
+    //}
     
     
-    public void CountStonePlacements()
-    {
-        countStonesPlaced++;
-        Debug.Log("Stones placed: " + countStonesPlaced);
+    //public void CountStonePlacements()
+    //{
+    //    countStonesPlaced++;
+    //    Debug.Log("Stones placed: " + countStonesPlaced);
 
-        if (countStonesPlaced == 12 && StonesPlaced == false)
-        {
-            if (LLMversionPlayingScript.LLMversionIsPlaying == true)
-            {
-                chatTestScript.AddSystemInstructionToChatLog("The Traveller have now placed the stones in the stone formation of a longship around Thorsten's funeral pyre. Keep this in mind.\n");
+    //    if (countStonesPlaced == 12 && StonesPlaced == false)
+    //    {
+    //        if (LLMversionPlayingScript.LLMversionIsPlaying == true)
+    //        {
+    //            chatTestScript.AddSystemInstructionToChatLog("The Traveller have now placed the stones in the stone formation of a longship around Thorsten's funeral pyre. Keep this in mind.\n");
 
-                if (erikInteractorScript.NPCaudioSource.isPlaying == false)
-                {
-                    erikInteractorScript.InformAndInitiateNpcTalk("The Traveller have now placed the stones in the stone formation of a longship around Thorsten's funeral pyre. Tell the Traveller that they did a good job.\n");
-                }
-            }
-            StonesPlaced = true;
-        }
-    }
+    //            if (erikInteractorScript.NPCaudioSource.isPlaying == false)
+    //            {
+    //                erikInteractorScript.InformAndInitiateNpcTalk("The Traveller have now placed the stones in the stone formation of a longship around Thorsten's funeral pyre. Tell the Traveller that they did a good job.\n");
+    //            }
+    //        }
+    //        StonesPlaced = true;
+    //    }
+    //}
     
-    public void CountWooodPlacements()
-    {
-        countWoodPlaced++;
-        Debug.Log("Wood placed: " + countWoodPlaced);
+    //public void CountWooodPlacements()
+    //{
+    //    countWoodPlaced++;
+    //    Debug.Log("Wood placed: " + countWoodPlaced);
         
-        if (countWoodPlaced == 7 && WoodPlacedOnPyre == false)
-        {
-            if (LLMversionPlayingScript.LLMversionIsPlaying == true)
-            {
-                chatTestScript.AddSystemInstructionToChatLog("The Traveller have now placed all the wood pieces unto Thorsten's funeral pyre. Keep this in mind.\n");
+    //    if (countWoodPlaced == 7 && WoodPlacedOnPyre == false)
+    //    {
+    //        if (LLMversionPlayingScript.LLMversionIsPlaying == true)
+    //        {
+    //            chatTestScript.AddSystemInstructionToChatLog("The Traveller have now placed all the wood pieces unto Thorsten's funeral pyre. Keep this in mind.\n");
                 
-                if (erikInteractorScript.NPCaudioSource.isPlaying == false)
-                {
-                    erikInteractorScript.InformAndInitiateNpcTalk("The Traveller have now placed all the wood pieces unto Thorsten's funeral pyre. Tell the Traveller that they did a good job.\n");
-                }
-            }
-            WoodPlacedOnPyre = true;
-        }
-    }
+    //            if (erikInteractorScript.NPCaudioSource.isPlaying == false)
+    //            {
+    //                erikInteractorScript.InformAndInitiateNpcTalk("The Traveller have now placed all the wood pieces unto Thorsten's funeral pyre. Tell the Traveller that they did a good job.\n");
+    //            }
+    //        }
+    //        WoodPlacedOnPyre = true;
+    //    }
+    //}
 
     public void DecrementStoneCount()
     {

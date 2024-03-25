@@ -94,7 +94,7 @@ public class TextToSpeech : MonoBehaviour
     // Checks if the audio source is playing to call the animator to transition between talking and idle
     private void Update() {
         
-        if (whisperScript.isDoneTalking) {
+        if (whisperScript.ECAIsDoneTalking) {
             animatorSelectedNpc.SetBool("isThinking", false);
         }
         else {

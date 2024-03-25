@@ -87,8 +87,7 @@ public class NPCInteractorScript : MonoBehaviour
     
     //public static bool lookingAtOtherThanSelectedNPC;
 
-    private float gazeTimeToActivate = 0.5f;
-    
+   
     public List<ChatMessage> ChatLogWithNPC = new List<ChatMessage>();
     //[SerializeField] private List<string> listOfOtherNpcs = new List<string>();
 
@@ -99,9 +98,7 @@ public class NPCInteractorScript : MonoBehaviour
     public Animation pointingAnimation;
     public Animation headnodAnimation;
     
-    private float startGazeTime = 0f;
-    private float stopGazeTime = 0f;
-
+   
     private float lengthOfSceneIntroTalkDialogue;
     public bool erikSceneStartDialogueDone;
     private void Awake()
@@ -193,7 +190,7 @@ public class NPCInteractorScript : MonoBehaviour
         {
             erikSceneStartDialogueDone = true;
         }
-        if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.isDoneTalking == true && whisperScript.isRecording == false && arrayNPCsounds.Length > 0 && erikSceneStartDialogueDone == true)
+        if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && arrayNPCsounds.Length > 0 && erikSceneStartDialogueDone == true)
         {
             Debug.Log("Started NPC dialogue coroutine on: " + nameOfThisNPC);
             StartCoroutine(PlayNpcDialogueAfterSetTime());
@@ -201,42 +198,42 @@ public class NPCInteractorScript : MonoBehaviour
         
     }
     
-    //The code BELOW is responsible for picking which NPC the user is currently talking to. The methods are called through unity's event system, in the inspector on each NPC.
-    public void Start_PickThisNpc_Coroutine()
-    {
-        if (chatTestScript.nameOfCurrentNPC != nameOfThisNPC && whisperScript.isDoneTalking == true && whisperScript.isRecording == false)
-        {
-            StartCoroutine(PickThisNpc());
-        }
-    }
-    private IEnumerator PickThisNpc()
-    {
-        Debug.Log("running PickThisNpc coroutine: " + nameOfThisNPC);
-        yield return new WaitForSeconds(gazeTimeToActivate);
-        if (chatTestScript.nameOfCurrentNPC != nameOfThisNPC && textToSpeechScript.isGeneratingSpeech == false & whisperScript.isDoneTalking == true && whisperScript.isRecording == false)
-        {
-            Debug.Log("PickThisNPC: " + nameOfThisNPC);
-            //chatTestScript.messages.Clear();
-            chatTestScript.messages = ChatLogWithNPC;               //Sets the ChatGPT chat log to be the chatlog/prompts stored on this NPC.
-            textToSpeechScript.audioSource = NPCaudioSource;
-            textToSpeechScript.animatorSelectedNpc = thisNpcAnimator;
-            chatTestScript.currentNpcThinkingSoundsArray = arrayThinkingNPCsounds;
-            textToSpeechScript.voiceID_name = voiceIDNameThisNpc;
-            chatTestScript.nameOfCurrentNPC = nameOfThisNPC;
-            //Maybe insert some dialogue to play that makes it clear that this NPC is now the new NPC in focus.
-        }
+    ////The code BELOW is responsible for picking which NPC the user is currently talking to. The methods are called through unity's event system, in the inspector on each NPC.
+    //public void Start_PickThisNpc_Coroutine()
+    //{
+    //    if (chatTestScript.nameOfCurrentNPC != nameOfThisNPC && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false)
+    //    {
+    //        StartCoroutine(PickThisNpc());
+    //    }
+    //}
+    //private IEnumerator PickThisNpc()
+    //{
+    //    Debug.Log("running PickThisNpc coroutine: " + nameOfThisNPC);
+    //    yield return new WaitForSeconds(gazeTimeToActivate);
+    //    if (chatTestScript.nameOfCurrentNPC != nameOfThisNPC && textToSpeechScript.isGeneratingSpeech == false & whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false)
+    //    {
+    //        Debug.Log("PickThisNPC: " + nameOfThisNPC);
+    //        //chatTestScript.messages.Clear();
+    //        chatTestScript.messages = ChatLogWithNPC;               //Sets the ChatGPT chat log to be the chatlog/prompts stored on this NPC.
+    //        textToSpeechScript.audioSource = NPCaudioSource;
+    //        textToSpeechScript.animatorSelectedNpc = thisNpcAnimator;
+    //        chatTestScript.currentNpcThinkingSoundsArray = arrayThinkingNPCsounds;
+    //        textToSpeechScript.voiceID_name = voiceIDNameThisNpc;
+    //        chatTestScript.nameOfCurrentNPC = nameOfThisNPC;
+    //        //Maybe insert some dialogue to play that makes it clear that this NPC is now the new NPC in focus.
+    //    }
         
-        /*else
-        {
-            StopCoroutine(PickThisNpc());
-        }*/
+    //    /*else
+    //    {
+    //        StopCoroutine(PickThisNpc());
+    //    }*/
 
-    }
+    //}
 
     //IEnumerator responsible for playing two random dialogue lines  supposed to instigate conversations, like: "You look like you have a question, just ask" etc.
     private IEnumerator PlayNpcDialogueAfterSetTime()
     {
-        if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.isDoneTalking == true && whisperScript.isRecording == false && playedFirstVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
+        if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedFirstVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
         {
             playedSecondVoiceLine = false;
             yield return new WaitForSeconds(0.65f);
@@ -245,7 +242,7 @@ public class NPCInteractorScript : MonoBehaviour
             yield return new WaitForSeconds(textToSpeechScript.audioSource.clip.length + 1);
         }
 
-        if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.isDoneTalking == true && whisperScript.isRecording == false && playedSecondVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
+        if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedSecondVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
         {
             playedFirstVoiceLine = false;
             yield return new WaitForSeconds(3 + NPCaudioSource.clip.length);
@@ -257,7 +254,7 @@ public class NPCInteractorScript : MonoBehaviour
     
     private void PlayConversationStarterAudioNPC()
     {
-        if (arrayNPCsounds.Length > 0 && textToSpeechScript.audioSource.isPlaying == false && whisperScript.isDoneTalking == true && whisperScript.isRecording == false)
+        if (arrayNPCsounds.Length > 0 && textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false)
         {
             //arrayConversationSoundsMax = arrayNPCsounds.Length;
             pickedSoundToPlay = Random.Range(0, arrayConversationSoundsMax);
@@ -272,43 +269,18 @@ public class NPCInteractorScript : MonoBehaviour
     //Method BELOW responsible for informing the NPC about user actions and task progression and then asking it to generate a verbal response
     public async void InformAndInitiateNpcTalk(string systemPrompt)     
     {
-        whisperScript.isDoneTalking = false;
+        whisperScript.ECAIsDoneTalking = false;
         chatTestScript.AddSystemInstructionToChatLog(systemPrompt);
         string chatGptResponse = await chatTestScript.SendRequestToChatGpt(chatTestScript.messages);
         chatTestScript.AddNpcResponseToChatLog(chatGptResponse);
         Debug.Log(chatGptResponse);
         textToSpeechScript.MakeAudioRequest(chatGptResponse);
-        whisperScript.isDoneTalking = true;
+        whisperScript.ECAIsDoneTalking = true;
     }
     
     
     //CODE BELOW is responsible for counting gaze times on individual NPCs
-    public void StartCountGaze()        //Called on action event of Hover Enter on NPC gaze collider
-    {
-        startGazeTime = Time.fixedTime;         //The time in seconds since the start of the game saved in startGazeTime float variable
-    }
-
-    public void StopGazeCount()
-    {
-        stopGazeTime = Time.fixedTime;          //The time in seconds since the start of the game stored in stopGazeTime, when the user stops looking at an NPC
-
-        switch (nameOfThisNPC)
-        {
-            case "Erik":
-                DataLogManager.Erik_GazeTime += (stopGazeTime - startGazeTime);
-                break;
-            /*case "Arne":
-                DataLogManager.Arne_GazeTime += (stopGazeTime - startGazeTime);
-                break;
-            case "Frida":
-                DataLogManager.Frida_GazeTime += (stopGazeTime - startGazeTime);
-                break;
-            case "Ingrid":
-                DataLogManager.Ingrid_GazeTime += (stopGazeTime - startGazeTime);
-                break;*/
-        }
-        
-    }
+   
 
     public void CheckErikPrimaryEmotion(string triggerString)
     {

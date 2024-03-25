@@ -24,7 +24,6 @@ public class GestureManagerNew : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(PullMockString());
         AddPointingAtTargetDescription_LeftHand("giant wolf"); // Mock description for debugging;
         AddPointingAtTargetDescription_RightHand("Tree (47)"); // Mock description for debugging;
         Debug.Log(PullCombinedGesturesString());
@@ -61,7 +60,7 @@ public class GestureManagerNew : MonoBehaviour
 
     public string PullCombinedGesturesString() // The most important method in this class! return a string that describes what the user is currently doing with their hands.
     {
-        string combinedString = "User is ";
+        string combinedString = "[User is ";
 
         //Left hand check
         if (PointingActionLeft != null)
@@ -79,6 +78,8 @@ public class GestureManagerNew : MonoBehaviour
         else if (GestureList_Right[0] != null)
             combinedString += "doing a " + GestureList_Right[0] + " with their right hand";
 
+        combinedGesturesString += "]";
+
         //Check if any gestures are being made at all, if not, send a clean string
         if (PointingActionLeft == null && GestureList_Left[0] == null && PointingActionRight == null && GestureList_Right[0] == null)
             combinedString = "";
@@ -88,11 +89,6 @@ public class GestureManagerNew : MonoBehaviour
         combinedGesturesString = combinedString;
 
         return combinedString;
-    }
-
-    public string PullMockString() //Debugging
-    {
-        return "User is pointing at the red cube with their left hand and is making a thumbs up gesture with their right hand";
     }
 
     public void AddGestureToList_Right(XRHandPose handPose)

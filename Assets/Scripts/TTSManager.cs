@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives;
 
 public class TTSManager : MonoBehaviour
 {
@@ -16,11 +17,11 @@ public class TTSManager : MonoBehaviour
 
     public async void SynthesizeAndPlay(string text)
     {
-        Debug.Log("Trying to synthesize " + text);
+        Debug.Log("Trying to synthesize :" + text);
         byte[] audioData = await openAIWrapper.RequestTextToSpeech(text, model, voice, speed);
         if (audioData != null)
         {
-            Debug.Log("Playing audio.");
+            Debug.Log("Playing the synthesized audio now.");
             audioPlayer.ProcessAudioBytes(audioData);
         }
         else

@@ -21,33 +21,36 @@ public class MicInputDetection : MonoBehaviour
     public float threshold = 0.1f;
     private int startedSpeakingPosition;
     private int stoppedSpeakingPosition;
-    private float speechPauseCounter;
+    private float speechPauseCounter, speechPauseCounterThreshold = 1.2f;
     private float[] speechWaveData;
 
-    private bool isListening;
+    public bool isListening;
 
     public Vector3 minScale;
 
     public Vector3 maxScale;
-    // Start is called before the first frame update
+
+    public float loudness;
+
     void Start()
     {
         MicroPhoneToAudioClip();
     }
 
-    // Update is called once per frame
     void Update()
     {
         speechPauseCounter += Time.deltaTime;
         
-        float loudness = GetLoudnessFromMicrophone() * loudnessSensibility;
+        loudness = GetLoudnessFromMicrophone() * loudnessSensibility;
+
+        if (!npcInteractorScript.erikSpeakable) return;
 
         if (loudness < threshold)
         {
             //The speechPauseCounter variable is so that the user can have natural breaks inbetween words they say, or so-called thinking pauses.
             loudness = 0;
 
-            if (speechPauseCounter >= 1 && isListening && whisperScript.isRecording == false && whisperScript.isDoneTalking && npcInteractorScript.erikSpeakable)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
+            if (speechPauseCounter >= speechPauseCounterThreshold && isListening && whisperScript.isTranscribing == false && whisperScript.ECAIsDoneTalking)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
             {
                 if (whisperScript.userRecordingString.Length > 0)
                 {
@@ -56,7 +59,7 @@ public class MicInputDetection : MonoBehaviour
                 }
                 
                 //Array.Clear(speechWaveData);      //Attempt to clear array, since overflow exception error
-                Debug.Log("Understood");
+                Debug.Log("speech pause went over threshold of: " + speechPauseCounterThreshold + " seconds");
                 //stoppedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);
                 //Debug.Log(stoppedSpeakingPosition); //Debugging
                 //int samplesUserSpeech = stoppedSpeakingPosition - startedSpeakingPosition;        //The sample length of the audioclip to be created that stores what the user says to the NPC.
@@ -76,9 +79,10 @@ public class MicInputDetection : MonoBehaviour
                 //userSpeechClip.SetData(speechWaveData, 0);
                 //userSpeechClip er det audioclip som skal gives til cloud services så vi kan få Speech To Text til at lave et transcript.
                 
-                whisperScript.StartRecording(); //Method responsible for transcribing the audioclip
+                whisperScript.TranscribeRecordedAudio(); //Method responsible for transcribing the audioclip
                 //userSpeechClip = null;
                 isListening = false;
+                speechPauseCounter = 0;
             }
         }
 
@@ -86,7 +90,7 @@ public class MicInputDetection : MonoBehaviour
                                     //ELLER: Afbryd ChatGPT i at svare og append hvad end brugeren siger til samtalen, hvorefter ChatGPT kan svare på ny.
         {
             speechPauseCounter = 0;
-            if (isListening == false && whisperScript.isRecording == false && whisperScript.isDoneTalking && npcInteractorScript.erikSpeakable)
+            if (isListening == false && whisperScript.isTranscribing == false && whisperScript.ECAIsDoneTalking && npcInteractorScript.erikSpeakable)
             {
                 whisperScript.userRecordingString = "";     //NEWLY ADDED!!!!!!!!!!!!
                 userSpeechClip = null;
