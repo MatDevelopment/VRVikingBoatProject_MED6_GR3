@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12087,6 +12087,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4602890311756366241}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &625157742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6583805708971542513, guid: 59c9bad3f8b4dfc4abc49baa2af56a9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4602890311756366241}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &658566907 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 773853689519989575, guid: b3ed8a0a703ebd34a9e44ed3d9f1fcf6,
@@ -13383,7 +13389,7 @@ MonoBehaviour:
   m_LeftHandMesh: {fileID: 658566907}
   m_RightHandMesh: {fileID: 839778365}
   m_HandMeshMaterial: {fileID: 2100000, guid: 613690cd962241049a0ec289a6ff835e, type: 2}
-  m_DrawMeshes: 0
+  m_DrawMeshes: 1
   m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868,
     type: 3}
   m_DebugDrawJoints: 1
@@ -13506,8 +13512,8 @@ MonoBehaviour:
   rightHand_indexEnd: {fileID: 243388478}
   leftHand_indexStart: {fileID: 1659966910}
   leftHand_indexEnd: {fileID: 1659966909}
-  leftLine: {fileID: 1738000213}
-  rightLine: {fileID: 243388479}
+  leftLineRenderer: {fileID: 1738000213}
+  rightLinerenderer: {fileID: 243388479}
   layermask: 6
   leftHandLastSelected: {fileID: 0}
   rightHandLastSelected: {fileID: 0}
@@ -13538,6 +13544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1386798712}
   - component: {fileID: 1386798711}
+  - component: {fileID: 1386798713}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -13579,6 +13586,22 @@ Transform:
   - {fileID: 4602890311756366242}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1386798713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386798710}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbde067de97f3774686a04585257dc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualBodyTransform: {fileID: 625157742}
+  trackingPoint: {fileID: 2139594442}
+  startOfWrist: {fileID: 1028541424}
+  distBetweenPoints: 0
 --- !u!1001 &1439576773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14786,7 +14809,7 @@ MonoBehaviour:
     vrTarget: {fileID: 1028541424}
     ikTarget: {fileID: 1780011902}
     trackingPositionOffset: {x: 0, y: 0, z: 0}
-    trackingRotationOffset: {x: 104, y: 0, z: 0}
+    trackingRotationOffset: {x: 98, y: 0, z: 0}
   headBodyPositionOffset: {x: 0, y: -3.75, z: 0}
   headBodyYawOffset: 0
 --- !u!95 &9118775395132943861 stripped
