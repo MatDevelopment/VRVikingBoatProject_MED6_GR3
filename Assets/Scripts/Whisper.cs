@@ -173,7 +173,7 @@ namespace OpenAI
                            // Debug.Log("Word count: " + wordInStringCount);
 
                             float estimatedTimeTillAction = EstimatedTimeTillAction(wordCount: wordInStringCount,       //Simple method that takes in the variables created above as arguments to estimate a time to play the gesture/Action animation.
-                                                        wordWeight: 0.2f, punctuationCount: punctuationsCount, punctuationWeight: 1f);
+                                                        wordWeight: 0.15f, punctuationCount: punctuationsCount, punctuationWeight: 1f);
 
                             Debug.Log("ActionString: " + responseTillActionString + " --" + 
                                  "Punctuations: " + punctuationsCount + " --" +

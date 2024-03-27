@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23307753, g: 0.21108331, b: 0.2309237, a: 1}
+  m_IndirectSpecularColor: {r: 0.23307513, g: 0.21108262, b: 0.23092423, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -43179,7 +43179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcName: Erik
-  npcAge: 0
+  npcAge: 45
   npcOccupation: 0
   npcTalents: 2
   npcPersonality: 1
@@ -45203,6 +45203,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7850403011473856658}
+    - targetCorrespondingSourceObject: {fileID: 2167672531572897428, guid: dea5600c046f8bc4ea0ea401f40f1f02,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7850403011473856659}
     - targetCorrespondingSourceObject: {fileID: 9017272046368141198, guid: dea5600c046f8bc4ea0ea401f40f1f02,
         type: 3}
       insertIndex: -1
@@ -45274,6 +45278,7 @@ MonoBehaviour:
   whisperScript: {fileID: 861633864}
   levelChangerScript: {fileID: 0}
   emotionalExpressionsScript: {fileID: 7059133609324052426}
+  ttsManagerScript: {fileID: 0}
   nameOfThisNPC: Erik
   voiceIDNameThisNpc: Gregory
   npcEmotion: 
@@ -45353,6 +45358,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb93d6cef787e74caf0a1726f796ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7850403011473856659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362939397936681360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d86693280008bb4ca4e0c1c8ccdc8cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatTestScript: {fileID: 1937782999}
+  npcInteractorScript: {fileID: 7850403011473856651}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

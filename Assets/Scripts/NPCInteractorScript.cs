@@ -41,6 +41,7 @@ public class NPCInteractorScript : MonoBehaviour
     [SerializeField] private Whisper whisperScript;
     [SerializeField] private LevelChanger levelChangerScript;
     [SerializeField] private NPCEmotionalExpressions emotionalExpressionsScript;
+    [SerializeField] private TTSManager ttsManagerScript;
     //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
 
     public string nameOfThisNPC;
@@ -78,6 +79,7 @@ public class NPCInteractorScript : MonoBehaviour
     private bool hornPickedUpOnce;
     
     public bool erikSpeakable;
+    private bool isErikVisible;
 
     //Sounds for Erik voice lines describing object
     /*[SerializeField] AudioClip HornDescribeScriptedVersion;
@@ -274,12 +276,10 @@ public class NPCInteractorScript : MonoBehaviour
         string chatGptResponse = await chatTestScript.SendRequestToChatGpt(chatTestScript.messages);
         chatTestScript.AddNpcResponseToChatLog(chatGptResponse);
         Debug.Log(chatGptResponse);
-        textToSpeechScript.MakeAudioRequest(chatGptResponse);
+        //textToSpeechScript.MakeAudioRequest(chatGptResponse);     //DEPRECATED method for TTS solution with AWS Polly API. Now switched to OpenAI TTS API.
+        ttsManagerScript.SynthesizeAndPlay(chatGptResponse);       //NEW OpenAI TTS API solution.
         whisperScript.ECAIsDoneTalking = true;
     }
-    
-    
-    //CODE BELOW is responsible for counting gaze times on individual NPCs
    
 
     public void CheckErikPrimaryEmotion(string triggerString)
@@ -289,7 +289,7 @@ public class NPCInteractorScript : MonoBehaviour
             npcEmotion = triggerString;
             
             int startIndexEmotion = whisperScript.npcResponse.IndexOf(npcEmotion);
-            whisperScript.npcResponse = whisperScript.npcResponse.Remove(startIndexEmotion, npcEmotion.Length);     //Removes the action keyword from ChatGPT's response plus the following white space
+            whisperScript.npcResponse = whisperScript.npcResponse.Remove(startIndexEmotion, npcEmotion.Length + 1);     //Removes the action keyword from ChatGPT's response plus the following white space
 
             Debug.Log("NPC Emotion: " + npcEmotion);
             //whisperScript.npcResponse = whisperScript.npcResponse.Replace(npcEmotion, "");
@@ -311,13 +311,13 @@ public class NPCInteractorScript : MonoBehaviour
     }
     
     
-    //THIS is the method meant to be used for ACTIONS
+    //THIS is the method meant to be used for GESTURES/ACTIONS
     public void AnimateBodyResponse_Erik(string triggerString, float delay)      //This could also be repurposed for ChatGPT to choose a body gesture on their own, instead of asking
                                                                     //it to pick a secondary emotion. Could be argued to potentially give ChatGPT more agency.
     {
 
         switch (triggerString)      //Seek for trigger strings and run this method in a foreach loop containing all possible actions.
-                                    //Then run a coroutine under each switch case including the calculated to play animations, which will allow things to run asynchrously
+                                    //Then run a coroutine under each switch case including the time calculated until the animation is played, which will allow things to run asynchrously
         {
             case "WAVING":
                 //thisNpcAnimator.Play(shrugAnimation.ToString());
@@ -346,12 +346,22 @@ public class NPCInteractorScript : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         thisNpcAnimator.Play(animationToPlay.ToString());
+        //thisNpcAnimator.SetTrigger("Wave");
     }
 
     public void AnimateFacialExpressionResponse_Erik(string triggerString, float blendValue)
     {
-        // Expressional Strength from 0-1
+        // Expressional Strength from 0-1, so therefore we do limit checks.
+        if (blendValue > 1)
+        {
+            blendValue = 1;
+        }
+        else if (blendValue < 0)
+        {
+            blendValue = 0;
+        }
         emotionalExpressionsScript.blendValue = blendValue;
+        
 
         switch (triggerString)
         {
@@ -379,7 +389,9 @@ public class NPCInteractorScript : MonoBehaviour
         }
     }
     
-    /*
+    
+
+    /* // OLD CODE FROM LAST PROJECT (written 26-03-2024)
     //Methods below can be used to play audio on Erik with a changeable delay.
     //Useful for making fixed states for Erik, such as him yawning or humming when idling.
     //NOT YET IMPLEMENTED: Can play sound through chatGPT string checks.
@@ -387,7 +399,7 @@ public class NPCInteractorScript : MonoBehaviour
     {
         StartCoroutine(ErikAudio(erikSound, delay));
     }
-    
+
     public IEnumerator ErikAudio(AudioClip erikSound, float delay)
     {
         NPCaudioSource.clip = erikSound;
@@ -396,9 +408,9 @@ public class NPCInteractorScript : MonoBehaviour
     }*/
 
     //------------------------------------------------OLD "USELESS" PROJECT CODE-----------------------------------------------------------------------//
-    
-    
-    
+
+
+
 /*//Method that gets called on Select of XR Grab , aka the personal belongings of the deceased that the player are able to bring to the burial
     public void AppendItemDescriptionToPrompt(string nameOfItem)    //Add a time.DeltaTime that makes sure that there are atleast 30 seconds between item checks
     {
@@ -428,7 +440,7 @@ public class NPCInteractorScript : MonoBehaviour
                 NPCaudioSource.Play();
                 thorsHammerPickedUpOnce = true;
             }
-            
+
         }
         if (levelChangerScript.Scene2Active == true && whisperScript.isDoneTalking == true && !textToSpeechScript.audioSource.isPlaying && whisperScript.isRecording == false && LLMversionPlayingScript.LLMversionIsPlaying == true)
         {
@@ -453,7 +465,7 @@ public class NPCInteractorScript : MonoBehaviour
             }
             /*else if (nameOfItem == "Blanket")
             {
-                
+
                 //chatTestScript.SendReply(itemDescription_Blanket);
                 //levelChangerScript.ItemGathered_Blanket = false;
             }#1#
@@ -475,7 +487,7 @@ public class NPCInteractorScript : MonoBehaviour
                 //levelChangerScript.ItemGathered_ThorsHammer = false;
                 pickedItemSoundToPlay++;
             }
-            
+
         }
     }*/
 
