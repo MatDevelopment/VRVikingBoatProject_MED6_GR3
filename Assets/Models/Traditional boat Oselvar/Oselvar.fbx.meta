@@ -3,7 +3,32 @@ guid: fca0974c2b6cff14ea9f76808d246a2e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CanvasMAT
+    second: {fileID: 2100000, guid: f195f63cf1e3af3438f1a76ad7effa5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HullMAT
+    second: {fileID: 2100000, guid: c5c860085bdd9ac4dae4be0425cb40da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Iron
+    second: {fileID: 2100000, guid: 0b524e19c0575924bb830cdf07a2c9aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks
+    second: {fileID: 2100000, guid: fe38c2490e7ec4c4287a72c969802c23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RopeMat
+    second: {fileID: 2100000, guid: 384ed92f690ebc64091502061d319f8c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
