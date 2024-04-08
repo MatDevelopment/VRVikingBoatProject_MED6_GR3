@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Hands.Gestures;
 
-public class GestureManagerNew : MonoBehaviour
+public class GestureManagerNew : MonoBehaviour //TODO: this function  CreateCombinedGesturesString(); is added in a lot of other methods.. re-write ths class so it is only called one place.
 {
     public GestureManagerDebuggingMenu gestureManagerDebuggingMenu;
     public List<XRHandPose> GestureList_Right, GestureList_Left;
@@ -26,11 +26,9 @@ public class GestureManagerNew : MonoBehaviour
 
     void Start()
     {
-        AddPointingAtTargetDescription_LeftHand("giant wolf"); // Mock description for debugging;
+        //AddPointingAtTargetDescription_LeftHand("giant wolf"); // Mock description for debugging;
         //AddPointingAtTargetDescription_RightHand("Tree (47)"); // Mock description for debugging;'
-        DEBUG_AddGestureToLists();
-
-        Debug.Log(PullCombinedGesturesString());
+        //DEBUG_AddGestureToLists();
 
         gestureManagerDebuggingMenu = GetComponent<GestureManagerDebuggingMenu>();
         if (!startInDebugMode) return;
@@ -58,6 +56,7 @@ public class GestureManagerNew : MonoBehaviour
         else
         {
             pointingWithLeftHand = false;
+            PointingActionLeft = "";
                     }
 
         if (GestureList_Right.Count > 0 && GestureList_Right[0] == pointingPose)
@@ -67,18 +66,21 @@ public class GestureManagerNew : MonoBehaviour
         else
         {
             pointingWithRightHand = false;
+            PointingActionRight = "";
         }
     }
     public void AddPointingAtTargetDescription_LeftHand(string interestPointDescription) // sets the current pointing string for left hand. 
     {
         PointingActionLeft = "pointing at " + interestPointDescription + " with their left hand";
+        CreateCombinedGesturesString();
     }
     public void AddPointingAtTargetDescription_RightHand(string interestPointDescription) // Duplicated for ease of readability.
     {
         PointingActionRight = "pointing at " + interestPointDescription + " with their right hand";
+        CreateCombinedGesturesString();
     }
 
-    public string PullCombinedGesturesString() // The most important method in this class! return a string that describes what the user is currently doing with their hands.
+    public string CreateCombinedGesturesString() // The most important method in this class! return a string that describes what the user is currently doing with their hands.
     {
         string combinedString = "[User is ";
 
@@ -95,13 +97,13 @@ public class GestureManagerNew : MonoBehaviour
         //Right hand check
         if (PointingActionRight != "")
             combinedString += PointingActionRight;
-        else if (GestureList_Right[0] != null)
+        else if (GestureList_Right.Count > 0)
             combinedString += "doing a " + GestureList_Right[0].name + " with their right hand";
 
         combinedString += "]";
 
         //Check if any gestures are being made at all, if not, send a clean string
-        if (PointingActionLeft == null && GestureList_Left[0] == null && PointingActionRight == null && GestureList_Right[0] == null)
+        if (PointingActionLeft == "" && GestureList_Left.Count == 0 && PointingActionRight == "" && GestureList_Right.Count == 0)
             combinedString = "";
         else
             combinedGestureHistory.Add(combinedString);
@@ -111,12 +113,25 @@ public class GestureManagerNew : MonoBehaviour
         return combinedString;
     }
 
+    public string PullLatestGestureCombination()
+    {
+        try
+        {
+            return combinedGestureHistory[combinedGestureHistory.Count - 1];
+        }
+        catch
+        {
+            Debug.LogWarning("!Gesture history is empty!");
+            return ("");
+        }
+    }
+
     public void AddGestureToList_Right(XRHandPose handPose)
     {
         GestureList_Right.Add(handPose);
 
         checkForPointingWithHands();
-
+        Invoke(nameof(CreateCombinedGesturesString), 0.3f); //Invoked so the raycast has time to hit the interest point..
         if (startInDebugMode)
             gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);
     }
@@ -125,6 +140,7 @@ public class GestureManagerNew : MonoBehaviour
         GestureList_Left.Add(handPose);
 
         checkForPointingWithHands();
+        Invoke(nameof(CreateCombinedGesturesString), 0.3f); //Invoked so the raycast has time to hit the interest point..
 
         if (startInDebugMode)
             gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);
@@ -134,6 +150,7 @@ public class GestureManagerNew : MonoBehaviour
         GestureList_Left.Remove(handPose);
 
         checkForPointingWithHands();
+        CreateCombinedGesturesString();
 
         if (startInDebugMode)
             gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);
@@ -143,6 +160,7 @@ public class GestureManagerNew : MonoBehaviour
         GestureList_Right.Remove(handPose);
 
         checkForPointingWithHands();
+        CreateCombinedGesturesString();
 
         if (startInDebugMode)
             gestureManagerDebuggingMenu.UpdateDebugTexts(GestureList_Right, GestureList_Left);

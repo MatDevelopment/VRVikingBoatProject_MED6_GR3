@@ -129,9 +129,9 @@ namespace OpenAI
 
                 if (string.IsNullOrEmpty(result.Text) == false || string.IsNullOrWhiteSpace(result.Text) == false)
                 {
-                    Debug.Log("Recorded message: " + userRecordingString + gestureManagerNew.PullCombinedGesturesString());
+                    Debug.Log("Recorded message: " + userRecordingString + gestureManagerNew.PullLatestGestureCombination());
 
-                    chatTest.AddPlayerInputToChatLog(userRecordingString + gestureManagerNew.PullCombinedGesturesString());
+                    chatTest.AddPlayerInputToChatLog(userRecordingString + gestureManagerNew.PullLatestGestureCombination());
                     ECAIsDoneTalking = false;
                     // Debug.Log($"isDoneTalking: {isDoneTalking}");
                     string chatGptResponse = await chatTest.SendRequestToChatGpt(chatTest.messages);
