@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5845,6 +5845,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boat: {fileID: 368848325}
+  amplitudeXRotation: 1
+  amplitudeZRotation: 1
+  amplitudeYPosition: 0.3
 --- !u!1001 &369340265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13242,6 +13245,7 @@ MonoBehaviour:
   dropdown: {fileID: 0}
   chatTest: {fileID: 1937782999}
   textToSpeechScript: {fileID: 1884705288}
+  npcAnimationStateController: {fileID: 0}
   MicInputDetectionScript: {fileID: 861633866}
   npcInteractorScript: {fileID: 6572797345569057211}
   ttsManagerScript: {fileID: 1283425241}
@@ -42783,7 +42787,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 881474e4a6333224eb0f7cbb2570abe3, type: 2}
+      objectReference: {fileID: 9100000, guid: f3b2d32738e77c647abdf0a7308fb68a, type: 2}
     - target: {fileID: 6429017169658477659, guid: 5ca9c789589b2f847a6468df184e1d20,
         type: 3}
       propertyPath: m_Name
@@ -42936,6 +42940,7 @@ MonoBehaviour:
   pickedSoundToPlay: 0
   pickedItemSoundToPlay: 0
   chatTestScript: {fileID: 1937782999}
+  npcAnimationStateController: {fileID: 0}
   worldInfoScript: {fileID: 1206945742}
   npcInfoScript: {fileID: 1524788274}
   taskInfoScript: {fileID: 772872307}
@@ -42960,7 +42965,7 @@ MonoBehaviour:
   npcActionStrings:
   - WAVING
   - POINTING
-  erikSpeakable: 1
+  erikSpeakable: 0
   liftArmsAnimation: {fileID: 0}
   shrugAnimation: {fileID: 0}
   pointingAnimation: {fileID: 0}

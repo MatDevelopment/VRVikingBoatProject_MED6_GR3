@@ -33,6 +33,7 @@ public class NPCInteractorScript : MonoBehaviour
     private float newNPCFocusTime = 2.8f;*/
     
     [SerializeField] private ChatTest chatTestScript;
+    [SerializeField] private NpcAnimationStateController npcAnimationStateController;
     [SerializeField] private WorldInfo worldInfoScript;
     [SerializeField] private NpcInfo npcInfoScript;
     [SerializeField] private TaskInfo taskInfoScript;
@@ -138,7 +139,7 @@ public class NPCInteractorScript : MonoBehaviour
                 //"Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick the most suitable secondary emotion for the NPC out of the following: \n" +
                 //"UNSURE, CONFUSED, AGREEMENT\n" +
                 //"End every sentence with the word BANANA.\n" +
-                "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick one or more gestures to go with the NPC's response: WAVING, POINTING.\n" +
+                "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick one or more gestures to go with the NPC's response: APPROVE, DISAPPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
                 "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n" +
                 "The gestures previously mentioned are the only gestures available to you, so please choose the most suitable gesture. All else physical movement besides these gestures are not possible.\n" +
                 //"State the NPC's secondary emotion in capitalized letters after its primary emotion, separated by white space.\n" +
@@ -167,9 +168,11 @@ public class NPCInteractorScript : MonoBehaviour
         //}
         
         thisNpcAnimator = gameObject.GetComponent<Animator>();
+        npcAnimationStateController = FindAnyObjectByType<NpcAnimationStateController>();
+
     }
-    
-    
+
+
     //This method is responsible for playing a random dialogue line when the player picks up an item, like: "Can I have a look at that?"
     //This is done so ChatGPT has time for generating a response to this user action, so the event seems more synchronized.
     private void PlayAudioOnItemPickup()
@@ -305,49 +308,12 @@ public class NPCInteractorScript : MonoBehaviour
         if(whisperScript.npcResponse.Contains(triggerString))
         {
             npcSecondaryEmotion = triggerString;
-            AnimateBodyResponse_Erik(npcSecondaryEmotion, delay);
+
+            npcAnimationStateController.AnimateBodyResponse_Erik(npcSecondaryEmotion, delay);
             //whisperScript.npcResponse = whisperScript.npcResponse.Replace(npcSecondaryEmotion, "");
         }
     }
     
-    
-    //THIS is the method meant to be used for GESTURES/ACTIONS
-    public void AnimateBodyResponse_Erik(string triggerString, float delay)      //This could also be repurposed for ChatGPT to choose a body gesture on their own, instead of asking
-                                                                    //it to pick a secondary emotion. Could be argued to potentially give ChatGPT more agency.
-    {
-
-        switch (triggerString)      //Seek for trigger strings and run this method in a foreach loop containing all possible actions.
-                                    //Then run a coroutine under each switch case including the time calculated until the animation is played, which will allow things to run asynchrously
-        {
-            case "WAVING":
-                //thisNpcAnimator.Play(shrugAnimation.ToString());
-                Debug.Log("WAVING");
-                break;
-            case "POINTING":
-                //thisNpcAnimator.Play(liftArmsAnimation.ToString());
-                Debug.Log("POINTING");
-                break;
-            /*case "CONFUSED":    //Not a secondary emotion, but thought it could be used to know when ChatGPT is pointing at something.
-                //thisNpcAnimator.Play(pointingAnimation.ToString());
-                Debug.Log("CONFUSED");
-                break;
-            case "AGREEMENT":
-                //thisNpcAnimator.Play(headnodAnimation.ToString());
-                Debug.Log("AGREEMENT");
-                break;*/
-            default:
-                //thisNpcAnimator.Play();
-                Debug.Log("DefaultAnimation");
-                break;
-        }
-    }
-
-    private IEnumerator PlayAnimationAfterDelay(Animation animationToPlay, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        thisNpcAnimator.Play(animationToPlay.ToString());
-        //thisNpcAnimator.SetTrigger("Wave");
-    }
 
     public void AnimateFacialExpressionResponse_Erik(string triggerString, float blendValue)
     {

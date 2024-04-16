@@ -21,6 +21,7 @@ namespace OpenAI
         [SerializeField] private TextToSpeech textToSpeechScript;
         //[SerializeField] private LevelChanger levelChangerScript;
         //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
+        [SerializeField] private NpcAnimationStateController npcAnimationStateController;
         [SerializeField] private MicInputDetection MicInputDetectionScript;
         [SerializeField] private NPCInteractorScript npcInteractorScript;
         [SerializeField] private TTSManager ttsManagerScript;
@@ -54,6 +55,7 @@ namespace OpenAI
         private void Start()
         {
             gestureManagerNew = FindAnyObjectByType<GestureManagerNew>();
+            npcAnimationStateController = FindAnyObjectByType<NpcAnimationStateController>();
         }
 
         private void ChangeMicrophone(int index)
@@ -188,7 +190,7 @@ namespace OpenAI
                             //Tror det har noget at gøre med at Length starter med at tælle til 1, men indeces starter fra 0.
                             npcResponse = npcResponse.Remove(startIndexAction, action.Length);      //Removes the action keyword from ChatGPT's response plus the following white space
 
-                            npcInteractorScript.AnimateBodyResponse_Erik(action, estimatedTimeTillAction);
+                            npcAnimationStateController.AnimateBodyResponse_Erik(action, estimatedTimeTillAction);
                         }
                     }
 
