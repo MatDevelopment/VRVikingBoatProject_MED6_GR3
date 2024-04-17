@@ -26,6 +26,7 @@ namespace OpenAI
         [SerializeField] private NPCInteractorScript npcInteractorScript;
         [SerializeField] private TTSManager ttsManagerScript;
         [SerializeField] private GestureManagerNew gestureManagerNew;
+        [SerializeField] private ChoosePromptGesture choosePromptGestureScript;
         
         [SerializeField] private Image progress;
         [SerializeField] private InputActionReference buttonHoldReference = null;
@@ -132,8 +133,10 @@ namespace OpenAI
                 if (string.IsNullOrEmpty(result.Text) == false || string.IsNullOrWhiteSpace(result.Text) == false)
                 {
                     Debug.Log("Recorded message: " + userRecordingString + gestureManagerNew.PullLatestGestureCombination());
-
+                    
                     chatTest.AddPlayerInputToChatLog(userRecordingString + gestureManagerNew.PullLatestGestureCombination());
+                    choosePromptGestureScript.ClearDictionaryOfPointedItems();
+                    
                     ECAIsDoneTalking = false;
                     // Debug.Log($"isDoneTalking: {isDoneTalking}");
                     string chatGptResponse = await chatTest.SendRequestToChatGpt(chatTest.messages);
