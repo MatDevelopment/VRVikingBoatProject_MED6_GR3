@@ -5,6 +5,8 @@ using UnityEngine;
 public class PointingManager : MonoBehaviour
 {
     private GestureManagerNew m_Manager;
+
+    [SerializeField] private ChoosePromptGesture choosePromptGestureScript;
     public Transform rightHand_indexStart, rightHand_indexEnd, leftHand_indexStart, leftHand_indexEnd;
     public LineRenderer leftLineRenderer, rightLinerenderer;
     public int layermask;
@@ -12,6 +14,9 @@ public class PointingManager : MonoBehaviour
     public GameObject leftHandLastSelected, rightHandLastSelected;
 
     public bool showLines;
+
+    private float counter;
+    private float pointingResetCounter;
 
 
     void Start()
@@ -24,6 +29,18 @@ public class PointingManager : MonoBehaviour
 
     void Update()
     {
+        pointingResetCounter += Time.deltaTime;     //Counter used for clearing the dictionary filled with the objects the user pointed at.
+        counter += Time.deltaTime;             //Counter used for counting the time the user is pointing at an object.
+
+        if (pointingResetCounter >= 10)     //If pointingResetCounter reaches 10 seconds, aka the user hasn't pointed their finger ...
+        {
+            if (choosePromptGestureScript.pointingTimes.Count > 0)
+            {
+                choosePromptGestureScript.ClearDictionaryOfPointedItems();  //the dictionary of pointed objects is cleared
+            }
+            pointingResetCounter = 0;   //and the pointingResetCounter is reset
+        }   
+        
         if (m_Manager.pointingWithLeftHand)
         {
             RaycastHit hit;
@@ -33,9 +50,20 @@ public class PointingManager : MonoBehaviour
                 Debug.DrawRay(leftHand_indexEnd.position, leftPointingDirection * hit.distance, Color.yellow); Debug.Log(hit.transform.gameObject);
                 if (hit.transform.gameObject != leftHandLastSelected)
                 {
-                    m_Manager.AddPointingAtTargetDescription_LeftHand(hit.transform.GetComponent<InterestPointDescription>().description);
+                    pointingResetCounter = 0;
+                    counter = 0;
+                    choosePromptGestureScript.AddPointingItemToDic(hit.transform.GetComponent<InterestPointDescription>().description);
+                    
+                    //Add to Array/List here
+                    m_Manager.AddPointingAtTargetDescription_LeftHand(choosePromptGestureScript.FindMostPointingTimeInDictionary());
                     leftHandLastSelected = hit.transform.gameObject;
-                }   
+                }
+                else if (hit.transform.gameObject == rightHandLastSelected)
+                {
+                    pointingResetCounter = 0;
+                    choosePromptGestureScript.AddPointingTime(hit.transform.gameObject.name, counter);      //If the object currently being pointed at has not changed from the last frame
+                                                                                                            //then we add the time from the last frame to count how long the user is pointing at the object
+                }
             }
             else
                 Debug.DrawRay(leftHand_indexEnd.position, leftPointingDirection * 1000, Color.white);
@@ -45,19 +73,31 @@ public class PointingManager : MonoBehaviour
                 leftLineRenderer.SetPosition(0, leftHand_indexEnd.position);
                 leftLineRenderer.SetPosition(1, leftHand_indexEnd.position + leftPointingDirection * 300);
             }
+            
         }
         if (m_Manager.pointingWithRightHand)
         {
             RaycastHit hit;
             Vector3 rightPointingDirection = (rightHand_indexEnd.position - rightHand_indexStart.position).normalized;
-            //Right hand pointing shoot ray!
+            //Right hand pointing shoot ray! pew pew
             if (Physics.Raycast(rightHand_indexEnd.position, rightPointingDirection, out hit, Mathf.Infinity, invertedLayermask))
             {
                 Debug.DrawRay(rightHand_indexEnd.position, rightPointingDirection * hit.distance, Color.yellow); Debug.Log(hit.transform.gameObject);
                 if (hit.transform.gameObject != rightHandLastSelected)
                 {
-                    m_Manager.AddPointingAtTargetDescription_RightHand(hit.transform.GetComponent<InterestPointDescription>().description);
+                    pointingResetCounter = 0;
+                    counter = 0;
+                    choosePromptGestureScript.AddPointingItemToDic(hit.transform.GetComponent<InterestPointDescription>().description);
+                    
+                    //m_Manager.AddPointingAtTargetDescription_RightHand(hit.transform.GetComponent<InterestPointDescription>().description);
+                    m_Manager.AddPointingAtTargetDescription_RightHand(choosePromptGestureScript.FindMostPointingTimeInDictionary());       //DO NULL CHECK maybe to see if the pointing description dictionary is empty.
                     rightHandLastSelected = hit.transform.gameObject;
+                }
+                else if (hit.transform.gameObject == rightHandLastSelected)
+                {
+                    pointingResetCounter = 0;
+                    choosePromptGestureScript.AddPointingTime(hit.transform.gameObject.name, counter);      //If the object currently being pointed at has not changed from the last frame
+                                                                                                            //then we add the time from the last frame to count how long the user is pointing at the object
                 }
             }
             else
