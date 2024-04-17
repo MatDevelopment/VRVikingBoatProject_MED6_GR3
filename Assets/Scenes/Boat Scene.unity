@@ -43051,9 +43051,16 @@ MonoBehaviour:
   - DISGUST
   - SCARED
   npcActionStrings:
-  - WAVING
+  - APPROVE
+  - DISAPPROVE
+  - GREETING
   - POINTING
-  erikSpeakable: 0
+  - UNSURE
+  - GRATITUDE
+  - CONDOLENCE
+  - INSULT
+  - STOP
+  erikSpeakable: 1
   liftArmsAnimation: {fileID: 0}
   shrugAnimation: {fileID: 0}
   pointingAnimation: {fileID: 0}

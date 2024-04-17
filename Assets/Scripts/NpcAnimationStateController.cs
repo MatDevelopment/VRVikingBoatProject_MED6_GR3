@@ -14,11 +14,17 @@ public class NpcAnimationStateController : MonoBehaviour
         StartCoroutine(AnimateBodyResponse_Erik("INSULT", 1));
     }
 
+    public void AnimateErik(string gestureName, float delay)
+    {
+        Debug.Log("Animate Erik!!");
+        StartCoroutine(AnimateBodyResponse_Erik(gestureName, delay));
+    }
 
     //THIS is the method meant to be used for GESTURES/ACTIONS
     public IEnumerator AnimateBodyResponse_Erik(string triggerString, float delay)      //This could also be repurposed for ChatGPT to choose a body gesture on their own, instead of asking
                                                                                 //it to pick a secondary emotion. Could be argued to potentially give ChatGPT more agency.
     {
+
 
         yield return new WaitForSeconds(delay);
 

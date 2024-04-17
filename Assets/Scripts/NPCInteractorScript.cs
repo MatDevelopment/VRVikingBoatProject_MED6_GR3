@@ -52,7 +52,7 @@ public class NPCInteractorScript : MonoBehaviour
     public string[] npcPrimaryEmotions = {"HAPPY", "SAD", "ANGRY", "SURPRISED", "SCARED", "DISGUST", "CONTEMPT"};
     //public string[] npcSecondaryEmotions = {"UNSURE", "CONFUSED", "AGREEMENT"};
     
-    public string[] npcActionStrings = {"WAVING", "POINTING"};
+    public string[] npcActionStrings = {"APPROVE", "DISAPPROVE", "GREETING", "POINTING", "UNSURE", "GRATITUDE", "CONDOLENCE", "INSULT", "STOP"};
 
     /*[TextArea(3,20)]
     [SerializeField] string itemDescription_Horn;

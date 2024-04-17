@@ -163,6 +163,7 @@ namespace OpenAI
 
                     foreach (string action in npcInteractorScript.npcActionStrings)
                     {
+
                         if (npcResponse.Contains(action))
                         {
                             string responseTillActionString = CreateStringUntilKeyword(inputString: npcResponse, actionToCheck: action);
@@ -190,7 +191,8 @@ namespace OpenAI
                             //Tror det har noget at gøre med at Length starter med at tælle til 1, men indeces starter fra 0.
                             npcResponse = npcResponse.Remove(startIndexAction, action.Length);      //Removes the action keyword from ChatGPT's response plus the following white space
 
-                            npcAnimationStateController.AnimateBodyResponse_Erik(action, estimatedTimeTillAction);
+                            Debug.Log("New response after removing action:   " + npcResponse);
+                            npcAnimationStateController.AnimateErik(action, estimatedTimeTillAction);
                         }
                     }
 
