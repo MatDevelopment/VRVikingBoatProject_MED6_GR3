@@ -30493,7 +30493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78bb1b1d9a86cce469c824195758cce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choosePromptGestureScript: {fileID: 0}
+  choosePromptGestureScript: {fileID: 1739521431}
   rightHand_indexStart: {fileID: 1895965727}
   rightHand_indexEnd: {fileID: 1895965725}
   leftHand_indexStart: {fileID: 521175380}
