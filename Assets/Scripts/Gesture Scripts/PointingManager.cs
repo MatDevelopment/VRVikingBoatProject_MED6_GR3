@@ -21,6 +21,7 @@ public class PointingManager : MonoBehaviour
 
     void Start()
     {
+        choosePromptGestureScript = FindObjectOfType<ChoosePromptGesture>();
         m_Manager = FindAnyObjectByType<GestureManagerNew>();
 
         // Bit shift the index of the layer (8) to get a bit mask // From the unity docs..

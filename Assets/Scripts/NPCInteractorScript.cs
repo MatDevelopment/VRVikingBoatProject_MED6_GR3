@@ -139,7 +139,7 @@ public class NPCInteractorScript : MonoBehaviour
                 //"Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick the most suitable secondary emotion for the NPC out of the following: \n" +
                 //"UNSURE, CONFUSED, AGREEMENT\n" +
                 //"End every sentence with the word BANANA.\n" +
-                "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick one or more gestures to go with the NPC's response: APPROVE, DISAPPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
+                "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick one or more gestures to go with the NPC's response: DISAPPROVE, APPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
                 "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n" +
                 "The gestures previously mentioned are the only gestures available to you, so please choose the most suitable gesture. All else physical movement besides these gestures are not possible.\n" +
                 //"State the NPC's secondary emotion in capitalized letters after its primary emotion, separated by white space.\n" +
