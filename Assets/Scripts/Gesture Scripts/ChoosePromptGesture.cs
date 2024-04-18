@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ChoosePromptGesture : MonoBehaviour
 {
-    [SerializeField] private GestureManagerNew m_Manager;
+    [SerializeField] private GestureManager m_Manager;
     
     public Dictionary<string, float> pointingTimes =
         new Dictionary<string, float>();

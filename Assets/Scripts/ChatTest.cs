@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using ReadyPlayerMe.AvatarCreator;
 using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 
 namespace OpenAI
 {
@@ -21,11 +23,13 @@ namespace OpenAI
         [SerializeField] private NPCInteractorScript arneInteractorScript;
         [SerializeField] private NPCInteractorScript fridaInteractorScript;
         [SerializeField] private NPCInteractorScript ingridInteractorScript;
-        
+        [SerializeField] private APICallTimeManager apiCallTimeManager;
         [SerializeField] private TextToSpeech textToSpeech;
+
+        //! tjek Mathias om vi kan slette det her
         //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
-        
-        
+
+
         public UnityEvent OnReplyReceived;
         
         //public bool isDone = true;
@@ -39,15 +43,18 @@ namespace OpenAI
 
         private void Awake()
         {
+            //! tjek Mathias om vi kan slette det her
             //LLMversionPlayingScript = GameObject.FindWithTag("LLMversionGameObject").GetComponent<LLMversionPlaying>();
         }
 
         private void Start()
         {
-                currentNpcThinkingSoundsArray = erikInteractorScript.arrayThinkingNPCsounds;
-                textToSpeech.audioSource = erikInteractorScript.NPCaudioSource;
-                textToSpeech.voiceID_name = erikInteractorScript.voiceIDNameThisNpc;
-                messages = erikInteractorScript.ChatLogWithNPC;
+            apiCallTimeManager = FindObjectOfType<APICallTimeManager>();
+
+            currentNpcThinkingSoundsArray = erikInteractorScript.arrayThinkingNPCsounds;
+            textToSpeech.audioSource = erikInteractorScript.NPCaudioSource;
+            textToSpeech.voiceID_name = erikInteractorScript.voiceIDNameThisNpc;
+            messages = erikInteractorScript.ChatLogWithNPC;
         }
         
         public async Task<string> SendRequestToChatGpt(List<ChatMessage> combinedMessages)
@@ -59,9 +66,16 @@ namespace OpenAI
             request.Temperature = 0.5f;
             request.MaxTokens = 256;
 
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
             var response = await openai.CreateChatCompletion(request);
 
-            if(response.Choices != null && response.Choices.Count > 0)
+            stopwatch.Stop();
+
+            apiCallTimeManager.AddCallDuration_ChatGPT(stopwatch.Elapsed.TotalSeconds);
+
+
+            if (response.Choices != null && response.Choices.Count > 0)
             {
                 var chatResponse = response.Choices[0].Message;
 
@@ -80,6 +94,8 @@ namespace OpenAI
                 Content = playerInput
             };
             messages.Add(userMessage);
+
+            //! tjek Mathias om vi kan slette det her
             switch (nameOfCurrentNPC)
             {
                 case "Erik":
@@ -110,6 +126,8 @@ namespace OpenAI
             };
             
             messages.Add(assistantMessage);
+
+            //! tjek Mathias om vi kan slette det her
             switch (nameOfCurrentNPC)
             {
                 case "Erik":
@@ -142,6 +160,7 @@ namespace OpenAI
             };
             messages.Add(message);
 
+            //! tjek Mathias om vi kan slette det her
             switch (nameOfCurrentNPC)
             {
                 case "Erik":

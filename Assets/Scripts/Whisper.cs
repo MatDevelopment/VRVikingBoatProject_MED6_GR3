@@ -10,22 +10,22 @@ using Unity.VisualScripting;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 
 namespace OpenAI
 {
-    public class Whisper : MonoBehaviour
+    public class Whisper : MonoBehaviour //Reponsible for converting a voice recording into text.
     {
-        //[SerializeField] private Button recordButton;
+          [SerializeField] private APICallTimeManager apiCallTimeManager;
         [SerializeField] private Dropdown dropdown;
         [SerializeField] private ChatTest chatTest;
         [SerializeField] private TextToSpeech textToSpeechScript;
-        //[SerializeField] private LevelChanger levelChangerScript;
-        //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
-        [SerializeField] private NpcAnimationStateController npcAnimationStateController;
+               [SerializeField] private NpcAnimationStateController npcAnimationStateController;
         [SerializeField] private MicInputDetection MicInputDetectionScript;
         [SerializeField] private NPCInteractorScript npcInteractorScript;
         [SerializeField] private TTSManager ttsManagerScript;
-        [SerializeField] private GestureManagerNew gestureManagerNew;
+        [SerializeField] private GestureManager gestureManagerNew;
         [SerializeField] private ChoosePromptGesture choosePromptGestureScript;
         [SerializeField] private PointingManager pointingManagerScript;
         
@@ -40,23 +40,19 @@ namespace OpenAI
 
         private AudioClip clip;
         [FormerlySerializedAs("hmmThinkingSound")] [SerializeField] private AudioClip ErikHmmSound;
-        /*[SerializeField] private AudioClip ArneHmmSound;
-        [SerializeField] private AudioClip FridaHmmSound;
-        [SerializeField] private AudioClip IngridHmmSound;*/
-        
-        public bool isTranscribing = false;
+
+                public bool isTranscribing = false;
         public bool ECAIsDoneTalking = true;
         public bool contextIsPerformed = false;
 
-        private float time;
         public float timeToInterruptTalk = 0.05f;
 
         private OpenAIApi openai = new OpenAIApi();
 
-
         private void Start()
         {
-            gestureManagerNew = FindAnyObjectByType<GestureManagerNew>();
+            apiCallTimeManager = FindObjectOfType<APICallTimeManager>();
+            gestureManagerNew = FindAnyObjectByType<GestureManager>();
             npcAnimationStateController = FindAnyObjectByType<NpcAnimationStateController>();
         }
 
@@ -67,15 +63,14 @@ namespace OpenAI
 
         public async void TranscribeRecordedAudio()
         {
-            //if (!npcInteractorScript.erikSpeakable) // Guard clause instead of putting all the code in brackets - easier to read
-            //    return;
 
             if (isTranscribing == false && ECAIsDoneTalking == true)
             {
+                //! tjek Mathias om vi kan slette det her
                 //StartCoroutine(InterruptNpcTalkingAfterDuration(timeToInterruptTalk));
                 //Debug.Log("Start recording...");
                 isTranscribing = true;
-
+                //! tjek Mathias om vi kan slette det her
                 //var index = PlayerPrefs.GetInt("user-mic-device-index");
                 //clip = Microphone.Start(dropdown.options[index].text, false, duration, 44100);
                 //contextIsPerformed = true;
@@ -83,10 +78,11 @@ namespace OpenAI
 
             if (isTranscribing == true)
             {
+                //! tjek Mathias om vi kan slette det her
                 //time = 0;
                 //progress.fillAmount = 1;
                 Debug.Log("Starting tranccription...");
-
+                //! tjek Mathias om vi kan slette det her
                 //Microphone.End(MicInputDetectionScript.microphoneName);
                 //Microphone.End(null);
 
@@ -96,13 +92,22 @@ namespace OpenAI
                 var request = new CreateAudioTranscriptionsRequest
                 {
                     FileData = new FileData() { Data = data, Name = "audio.wav" },
+                    //! tjek Mathias om vi kan slette det her
                     // File = Application.persistentDataPath + "/" + fileName,
                     //Prompt = "The transcript is the dialogue of a person speaking english with a danish accent.",
                     Model = "whisper-1",
                     Language = "da"
                 };
+                
+                Stopwatch stopwatch = Stopwatch.StartNew();
+
                 var result = await openai.CreateAudioTranscription(request);
 
+                stopwatch.Stop(); // Stop measuring time
+               
+                apiCallTimeManager.AddCallDuration_SpeechToText(stopwatch.Elapsed.TotalSeconds);
+
+                //! tjek Mathias om vi kan slette det her
                 /*if ((res.Text.Contains("Hello") && res.Text.Length < 11) || (res.Text.Contains("Hi") && res.Text.Length < 11))      //If the user's input to the NPC is Hello or Hi, and what they say is less than 11 characters long, including spaces, 
                 {                                                                                       //then the NPC only says "Hmm" and not "Let me think", which is AN audio clip contained within the sound clip array with
                     StartCoroutine(PlayHmmThinkingSound(textToSpeechScript.audioSource));         //thinking sounds. Let me think would be an unusual response to someone saying hello to you.
@@ -141,7 +146,7 @@ namespace OpenAI
                     pointingManagerScript.leftHandLastSelected = "";
                     
                     ECAIsDoneTalking = false;
-                    // Debug.Log($"isDoneTalking: {isDoneTalking}");
+  
                     string chatGptResponse = await chatTest.SendRequestToChatGpt(chatTest.messages);
 
                     npcResponse = chatGptResponse;
@@ -155,7 +160,7 @@ namespace OpenAI
                     {
                         npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion);
                     }
-
+                    //! tjek Mathias om vi kan slette det her
                     //THREE LINES BELOW are BEING DONE IN NPCInteractorScript.cs in method initialized above (CheckErikPrimaryEmotion)
                     //int startIndexEmotion = npcResponse.IndexOf(npcInteractorScript.npcEmotion);       //Finds the starting index of the NPC's emotion keyword in ChatGPT's response
                     //int endEmotionString = chatGptResponse.LastIndexOf(npcInteractorScript.npcEmotion);
@@ -172,22 +177,19 @@ namespace OpenAI
 
                         if (npcResponse.Contains(action))
                         {
-                            string responseTillActionString = CreateStringUntilKeyword(inputString: npcResponse, actionToCheck: action);
-                           // Debug.Log("ActionString: " + responseTillActionString);
+                            string responseTillActionString = AnimationDelayCalculator.CreateStringUntilKeyword(inputString: npcResponse, actionToCheck: action);
+                          
+                            int punctuationsCount = AnimationDelayCalculator.CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in responseTillActionString
+                           
+                            int wordInStringCount = AnimationDelayCalculator.CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
 
-                            int punctuationsCount = CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in responseTillActionString
-                            //Debug.Log("Punctuations: " + punctuationsCount);
-
-                            int wordInStringCount = CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
-                           // Debug.Log("Word count: " + wordInStringCount);
-
-                            float estimatedTimeTillAction = EstimatedTimeTillAction(wordCount: wordInStringCount,       //Simple method that takes in the variables created above as arguments to estimate a time to play the gesture/Action animation.
+                            float estimatedTimeTillAction = AnimationDelayCalculator.EstimatedTimeTillAction(wordCount: wordInStringCount,
                                                         wordWeight: 0.15f, punctuationCount: punctuationsCount, punctuationWeight: 1f);
 
-                            Debug.Log("ActionString: " + responseTillActionString + " --" + 
-                                 "Punctuations: " + punctuationsCount + " --" +
-                                 "Word count: " + wordInStringCount + " --" + 
-                            "ETA of action: " + estimatedTimeTillAction);
+                            Debug.Log("ActionString: " + responseTillActionString + " --" +
+                              "Punctuations: " + punctuationsCount + " --" +
+                              "Word count: " + wordInStringCount + " --" +
+                         "ETA of action: " + estimatedTimeTillAction);
 
                             int startIndexAction = npcResponse.IndexOf(action);     //Finds the starting index of the action keyword in the ChatGPT response
 
@@ -202,7 +204,7 @@ namespace OpenAI
                         }
                     }
 
-
+                    //! tjek Mathias om vi kan slette det her
                     /*int primaryEmotionInt = npcInteractorScript.npcEmotion.Length;
                     int secondEmotionInt = npcInteractorScript.npcSecondaryEmotion.Length;
 
@@ -215,7 +217,7 @@ namespace OpenAI
                     result.Text = result.Text.Replace(result.Text, "");
                     userRecordingString = result.Text;
 
-
+                    //! tjek Mathias om vi kan slette det her
                     //AWS POLLY (English):
                     //textToSpeechScript.MakeAudioRequest(npcResponse);
 
@@ -228,7 +230,7 @@ namespace OpenAI
                 //contextIsPerformed = false;
             }
         }
-        
+        //! tjek Mathias om vi kan slette det her
         /*private void Update()
         {
             if (isRecording)
@@ -246,13 +248,13 @@ namespace OpenAI
 
         public IEnumerator InterruptNpcTalkingAfterDuration(float interruptDuration)
         {
+            Debug.Log("Interrupted Erik while speaking!");
             yield return new WaitForSeconds(interruptDuration);
             
             textToSpeechScript.audioSource.Stop();
             StartCoroutine(PlayHmmThinkingSound(textToSpeechScript.audioSource, interruptDuration, ErikHmmSound));
         }
-        
-        
+
         public IEnumerator SayThinkingSoundAfterPlayerTalked()      //Gets called in Whisper.cs after the user stops talking (context.cancelled)
         {
             yield return new WaitForSeconds(0.2f);
@@ -286,57 +288,7 @@ namespace OpenAI
             
             audioSourceToPlayOn.Play();
         }
-
-        
-        public string CreateStringUntilKeyword(string inputString, string actionToCheck)
-        {
-            string responseTillAction = inputString;
-            
-            int endCharIndex = inputString.IndexOf(actionToCheck);
-            responseTillAction = inputString.Substring(0, endCharIndex);
-            
-            /*foreach (string action in npcInteractorScript.npcActionStrings)
-            {
-                if (inputString.Contains(action))
-                {
-                    int endCharIndex = inputString.IndexOf(action);
-                    responseTillAction = inputString.Substring(0, endCharIndex - 1);
-                }
-            }*/
-            return responseTillAction;
-        }
-        
-        
-        public int CountCharsUsingLinqCount(string sourceString, char charToFind)
-        {
-            return sourceString.Count(t => t == charToFind);
-        }
-
-        
-        public int CountWordsInString(string sourceString)
-        {
-            int NumberOfWords = sourceString.Split().Length;        //Counts the numbers of words in sourceString... apparently: https://stackoverflow.com/a/26794798
-            
-            return NumberOfWords;
-        }
-
-        private float EstimatedTimeTillAction(int punctuationCount, int wordCount, float punctuationWeight, float wordWeight)
-        {
-            //Punctuation time estimation
-            float punctuationTime = punctuationCount * punctuationWeight;
-            
-            //Word time estimation
-            float wordTime = (wordCount - 2) * wordWeight;      //Subtract 2 from wordcount cause ChatGPT adds two new lines which are counted as words.
-            
-            //Calculate estimated time till action by adding individual times.
-            float estimatedTimeTillAction = punctuationTime + wordTime;
-            
-            if (estimatedTimeTillAction < 0)
-            {
-                estimatedTimeTillAction = 0;
-            }
-            
-            return estimatedTimeTillAction;
-        }
+                
+      
     }
 }

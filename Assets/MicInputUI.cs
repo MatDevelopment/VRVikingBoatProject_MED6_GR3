@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MicInputUI : MonoBehaviour
+public class MicInputUI : MonoBehaviour // Responsible for displaying and updating the microphone UI.
 {
     private MicInputDetection inputDetection;
     private float lineHeight = 0.015f;
@@ -51,6 +51,7 @@ public class MicInputUI : MonoBehaviour
         }else
             iconImage.color = Color.black;
     }
+
     //public void UpdateThreshold() //TODO: threshold is not correct..!
     //{
     //    thresholdImage.fillAmount = 1 - inputDetection.threshold;

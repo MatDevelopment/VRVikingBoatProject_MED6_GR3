@@ -26,12 +26,13 @@ public class NPCInteractorScript : MonoBehaviour
     public int pickedSoundToPlay;
     public int pickedItemSoundToPlay;
 
+    //! tjek Mathias om vi kan slette det her
     /*private float notGazingTime;
     private float notGazingTimeActivate = 2.5f;
     private float gazeTime;
     private float gazeTimeActivate = 3;
     private float newNPCFocusTime = 2.8f;*/
-    
+
     [SerializeField] private ChatTest chatTestScript;
     [SerializeField] private NpcAnimationStateController npcAnimationStateController;
     [SerializeField] private WorldInfo worldInfoScript;
@@ -53,66 +54,27 @@ public class NPCInteractorScript : MonoBehaviour
     //public string[] npcSecondaryEmotions = {"UNSURE", "CONFUSED", "AGREEMENT"};
     
     public string[] npcActionStrings = {"APPROVE", "DISAPPROVE", "GREETING", "POINTING", "UNSURE", "GRATITUDE", "CONDOLENCE", "INSULT", "STOP"};
-
-    /*[TextArea(3,20)]
-    [SerializeField] string itemDescription_Horn;
-    [TextArea(3,20)]
-    [SerializeField] string itemDescription_Brooch;
-    /*[TextArea(3,20)]
-    [SerializeField] string itemDescription_Blanket;#1#
-    [TextArea(3,20)]
-    [SerializeField] string itemDescription_Knife;
-    [TextArea(3,20)]
-    [SerializeField] string itemDescription_ThorsHammer;
-
-    private bool ItemGathered_Horn = false;
-    private bool ItemGathered_Brooch = false;
-    private bool ItemGathered_Knife = false;
-    private bool ItemGathered_ThorsHammer = false;*/
     
     private bool playedFirstVoiceLine = false;
     private bool playedSecondVoiceLine = false;
 
-    //bools for checking if items have been picked up once
-    private bool knifePickedUpOnce;
-    private bool broochPickedUpOnce;
-    private bool thorsHammerPickedUpOnce;
-    private bool hornPickedUpOnce;
-    
     public bool erikSpeakable;
     private bool isErikVisible;
 
-    //Sounds for Erik voice lines describing object
-    /*[SerializeField] AudioClip HornDescribeScriptedVersion;
-    [SerializeField] AudioClip BroochDescribeScriptedVersion;
-    [SerializeField] AudioClip KnifeDescribeScriptedVersion;
-    [SerializeField] AudioClip thorsHammerDescribeScriptedVersion;*/
-    
-    //public static bool lookingAtOtherThanSelectedNPC;
-
-   
     public List<ChatMessage> ChatLogWithNPC = new List<ChatMessage>();
     //[SerializeField] private List<string> listOfOtherNpcs = new List<string>();
-
-    private Animator thisNpcAnimator;
-
-    public Animation liftArmsAnimation;
-    public Animation shrugAnimation;
-    public Animation pointingAnimation;
-    public Animation headnodAnimation;
-    
    
     private float lengthOfSceneIntroTalkDialogue;
     public bool erikSceneStartDialogueDone;
     private void Awake()
     {
+        //! tjek Mathias om vi kan slette det her
         //lengthOfSceneIntroTalkDialogue = GameObject.FindWithTag("ErikChatController").GetComponent<IntroTalk>().audioClip.length;
         //LLMversionPlayingScript = GameObject.FindWithTag("LLMversionGameObject").GetComponent<LLMversionPlaying>();
-        
+
         //The two lines ABOVE are there to facilitate the ability to switch between scenes and NOT have null references.
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         var message = new ChatMessage
@@ -152,10 +114,11 @@ public class NPCInteractorScript : MonoBehaviour
                 "Do not include the NPC name in your response.\n" +
                 "The following info is the info about the NPC's current surroundings: \n" +
                 sceneInfoScript.GetPrompt()
-                //"The following info is the info about the Traveller's current task and subtasks: \n" +
-                //taskInfoScript.GetPrompt() +
-                //"Do not mention the task names to the Traveller.\n"
-                //"If the Traveller asks for the NPC's help with their tasks that involves physical movement, then say to the Traveller that they have to do these tasks themselves because they promised to do them earlier on in the day."
+            //! tjek Mathias om vi kan slette det her
+            //"The following info is the info about the Traveller's current task and subtasks: \n" +
+            //taskInfoScript.GetPrompt() +
+            //"Do not mention the task names to the Traveller.\n"
+            //"If the Traveller asks for the NPC's help with their tasks that involves physical movement, then say to the Traveller that they have to do these tasks themselves because they promised to do them earlier on in the day."
         };
         
         ChatLogWithNPC.Add(message);
@@ -167,7 +130,6 @@ public class NPCInteractorScript : MonoBehaviour
         //NPCaudioSource.clip = arrayNPCsounds[pickedSoundToPlay];    //Sets the clip on the NPCaudioSource to be the randomly picked helpful dialogue sound
         //}
         
-        thisNpcAnimator = gameObject.GetComponent<Animator>();
         npcAnimationStateController = FindAnyObjectByType<NpcAnimationStateController>();
 
     }
@@ -203,38 +165,6 @@ public class NPCInteractorScript : MonoBehaviour
         
     }
     
-    ////The code BELOW is responsible for picking which NPC the user is currently talking to. The methods are called through unity's event system, in the inspector on each NPC.
-    //public void Start_PickThisNpc_Coroutine()
-    //{
-    //    if (chatTestScript.nameOfCurrentNPC != nameOfThisNPC && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false)
-    //    {
-    //        StartCoroutine(PickThisNpc());
-    //    }
-    //}
-    //private IEnumerator PickThisNpc()
-    //{
-    //    Debug.Log("running PickThisNpc coroutine: " + nameOfThisNPC);
-    //    yield return new WaitForSeconds(gazeTimeToActivate);
-    //    if (chatTestScript.nameOfCurrentNPC != nameOfThisNPC && textToSpeechScript.isGeneratingSpeech == false & whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false)
-    //    {
-    //        Debug.Log("PickThisNPC: " + nameOfThisNPC);
-    //        //chatTestScript.messages.Clear();
-    //        chatTestScript.messages = ChatLogWithNPC;               //Sets the ChatGPT chat log to be the chatlog/prompts stored on this NPC.
-    //        textToSpeechScript.audioSource = NPCaudioSource;
-    //        textToSpeechScript.animatorSelectedNpc = thisNpcAnimator;
-    //        chatTestScript.currentNpcThinkingSoundsArray = arrayThinkingNPCsounds;
-    //        textToSpeechScript.voiceID_name = voiceIDNameThisNpc;
-    //        chatTestScript.nameOfCurrentNPC = nameOfThisNPC;
-    //        //Maybe insert some dialogue to play that makes it clear that this NPC is now the new NPC in focus.
-    //    }
-        
-    //    /*else
-    //    {
-    //        StopCoroutine(PickThisNpc());
-    //    }*/
-
-    //}
-
     //IEnumerator responsible for playing two random dialogue lines  supposed to instigate conversations, like: "You look like you have a question, just ask" etc.
     private IEnumerator PlayNpcDialogueAfterSetTime()
     {

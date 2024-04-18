@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PointingManager : MonoBehaviour
 {
-    private GestureManagerNew m_Manager;
+    private GestureManager m_Manager;
 
     [SerializeField] private ChoosePromptGesture choosePromptGestureScript;
     public Transform rightHand_indexStart, rightHand_indexEnd, leftHand_indexStart, leftHand_indexEnd;
@@ -22,7 +22,7 @@ public class PointingManager : MonoBehaviour
     void Start()
     {
         choosePromptGestureScript = FindObjectOfType<ChoosePromptGesture>();
-        m_Manager = FindAnyObjectByType<GestureManagerNew>();
+        m_Manager = FindAnyObjectByType<GestureManager>();
 
         // Bit shift the index of the layer (8) to get a bit mask // From the unity docs..
         invertedLayermask = 1 << layermask;
@@ -51,9 +51,10 @@ public class PointingManager : MonoBehaviour
             Vector3 leftPointingDirection = (leftHand_indexEnd.position - leftHand_indexStart.position).normalized; //Calculating the direction to shoot the ray.
             //Left hand pointing shoot ray!
             if (Physics.Raycast(leftHand_indexEnd.position, leftPointingDirection, out hit, Mathf.Infinity, invertedLayermask)) {
-                Debug.DrawRay(leftHand_indexEnd.position, leftPointingDirection * hit.distance, Color.yellow); Debug.Log(hit.transform.gameObject);
-                if (hit.transform.gameObject.name != leftHandLastSelected)      //Instead of looking at the pointed at gameobject's name, maybe first look for ray collision with a certain tag
-                                                                                //like "PointOfInterest" FIRST. This can potentially be better for performance.
+
+                // Here we check for the layermask 6 = InterestPoint
+                if (hit.transform.gameObject.name != leftHandLastSelected)      
+                                                                           
                 {
                     pointingResetCounter = 0;
                     counter = 0;
@@ -70,8 +71,6 @@ public class PointingManager : MonoBehaviour
                                                                                                             //then we add the time from the last frame to count how long the user is pointing at the object
                 }
             }
-            else
-                Debug.DrawRay(leftHand_indexEnd.position, leftPointingDirection * 1000, Color.white);
 
             if (showLines)
             {
@@ -87,7 +86,6 @@ public class PointingManager : MonoBehaviour
             //Right hand pointing shoot ray! pew pew
             if (Physics.Raycast(rightHand_indexEnd.position, rightPointingDirection, out hit, Mathf.Infinity, invertedLayermask))
             {
-                Debug.DrawRay(rightHand_indexEnd.position, rightPointingDirection * hit.distance, Color.yellow); Debug.Log(hit.transform.gameObject);
                 if (hit.transform.gameObject.name != rightHandLastSelected)
                 {
                     pointingResetCounter = 0;
@@ -105,8 +103,6 @@ public class PointingManager : MonoBehaviour
                                                                                                             //then we add the time from the last frame to count how long the user is pointing at the object
                 }
             }
-            else
-                Debug.DrawRay(rightHand_indexEnd.position, rightPointingDirection * 1000, Color.white);
 
             if (showLines)
             {

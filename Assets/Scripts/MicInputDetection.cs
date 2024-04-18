@@ -10,12 +10,12 @@ public class MicInputDetection : MonoBehaviour
 {
     [SerializeField] private Whisper whisperScript;
     [SerializeField] private NPCInteractorScript npcInteractorScript;
-    
+
     public int sampleWindow = 64;
 
     public AudioSource source;
     private AudioClip microphoneClip;
-    public AudioClip userSpeechClip;
+    public AudioClip userSpeechClip;   //userSpeechClip er det audioclip som skal gives til cloud services så vi kan få Speech To Text til at lave et transcript.
 
     public float loudnessSensibility = 100;
     public float threshold = 0.1f;
@@ -40,7 +40,7 @@ public class MicInputDetection : MonoBehaviour
     void Update()
     {
         speechPauseCounter += Time.deltaTime;
-        
+
         loudness = GetLoudnessFromMicrophone() * loudnessSensibility;
 
         if (!npcInteractorScript.erikSpeakable) return;
@@ -57,68 +57,73 @@ public class MicInputDetection : MonoBehaviour
                     whisperScript.userRecordingString =
                                         whisperScript.userRecordingString.Replace(whisperScript.userRecordingString, "");
                 }
-                
-                //Array.Clear(speechWaveData);      //Attempt to clear array, since overflow exception error
+
                 Debug.Log("speech pause went over threshold of: " + speechPauseCounterThreshold + " seconds");
-                //stoppedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);
-                //Debug.Log(stoppedSpeakingPosition); //Debugging
-                //int samplesUserSpeech = stoppedSpeakingPosition - startedSpeakingPosition;        //The sample length of the audioclip to be created that stores what the user says to the NPC.
-                
-                int channels = microphoneClip.channels;     
+
+                int channels = microphoneClip.channels;
                 int frequency = microphoneClip.frequency;
                 float[] speechWaveData = new float[microphoneClip.samples * microphoneClip.channels];
-                //Samples skal muligvis have skruet op for gain, da lyden er meget lav i unity
+
                 microphoneClip.GetData(speechWaveData, startedSpeakingPosition);
-                
-                CreateAndPlay(speechWaveData,channels,frequency);
-                
-                //speechWaveData = new float[samplesUserSpeech];
-                //.GetData (speechWaveData, startedSpeakingPosition);     //Stores the user speech audio data in the float speechWaveData array.
-                //Debug.Log(speechWaveData.Length);
-                //userSpeechClip = AudioClip.Create("UserSpeechClip", samplesUserSpeech, 1, AudioSettings.outputSampleRate, false);
-                //userSpeechClip.SetData(speechWaveData, 0);
-                //userSpeechClip er det audioclip som skal gives til cloud services så vi kan få Speech To Text til at lave et transcript.
-                
+
+                CreateUserSpeechClip(speechWaveData, channels, frequency);
+
                 whisperScript.TranscribeRecordedAudio(); //Method responsible for transcribing the audioclip
-                //userSpeechClip = null;
+
                 isListening = false;
                 speechPauseCounter = 0;
             }
         }
 
         if (loudness > threshold) //Husk at add en condition her som gør at der lige bliver ventet på at ChatGPT har genereret et svar
-                                    //ELLER: Afbryd ChatGPT i at svare og append hvad end brugeren siger til samtalen, hvorefter ChatGPT kan svare på ny.
+                                  //ELLER: Afbryd ChatGPT i at svare og append hvad end brugeren siger til samtalen, hvorefter ChatGPT kan svare på ny.
         {
             speechPauseCounter = 0;
-            if (isListening == false && whisperScript.isTranscribing == false && whisperScript.ECAIsDoneTalking && npcInteractorScript.erikSpeakable)
+
+            //! Spørg Mathias hvordan det her check kan gøres bedre. Han har allerede ideer heroppe ^^
+            if (isListening == false && whisperScript.isTranscribing == false && whisperScript.ECAIsDoneTalking)
             {
                 whisperScript.userRecordingString = "";     //NEWLY ADDED!!!!!!!!!!!!
                 userSpeechClip = null;
                 StartCoroutine(whisperScript.InterruptNpcTalkingAfterDuration(whisperScript.timeToInterruptTalk));  //Runs a method to interrupt the NPC and play a "Hmm" thinking sound sample
                 Debug.Log("LISTENING");
                 startedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);        //Saves the starting position of the user speech audio
-                
-                //Debug.Log(startedSpeakingPosition);
+
                 isListening = true;
             }
-            
+
+
+            //Erik is already speaking
+            if (!whisperScript.ECAIsDoneTalking)
+            {
+                // Erik Stopper med at snakke og vi starter en ny optagelse.
+            }
+
+            //Erik is currently formulating a response
+            if (whisperScript.isTranscribing)
+            {
+                // vi starter en ny optagelse
+            }
+
+            //Erik is not formulating a response and is not speaking
+            if (whisperScript.ECAIsDoneTalking && !whisperScript.isTranscribing)
+            {
+                // Vi starter en ny optagelse.
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.K))
         {
             source.Play();
         }
-        
     }
-    
-    public void CreateAndPlay(float[] samples, int channels, int frequency)
+
+    public void CreateUserSpeechClip(float[] samples, int channels, int frequency)
     {
         userSpeechClip = AudioClip.Create("ClipName", samples.Length, channels, frequency, false);
         userSpeechClip.SetData(samples, 0);
         source.clip = userSpeechClip;
-        //source.Play();
         // This code implemented through the help of Unity discussion forums: https://forum.unity.com/threads/create-audioclip-from-byte-in-unity.1205572/
-        //return userSpeechClip;
     }
 
     public void MicroPhoneToAudioClip()
@@ -131,22 +136,22 @@ public class MicInputDetection : MonoBehaviour
     {
         return GetLoudnessFromAudioClip(Microphone.GetPosition(Microphone.devices[0]), microphoneClip);
     }
-    
-    
-    public float GetLoudnessFromAudioClip (int clipPosition, AudioClip clip)
+
+
+    public float GetLoudnessFromAudioClip(int clipPosition, AudioClip clip)
     {
         var startPosition = clipPosition - sampleWindow;    //Start measuring loudness from this point in the audio clip
-        if ( startPosition < 0 ) return 0;              //Failsafe that if startPosition is less than 0, then 0 is returned
-    
+        if (startPosition < 0) return 0;              //Failsafe that if startPosition is less than 0, then 0 is returned
+
         var waveData = new float[sampleWindow];     //The wave data from the audio clip to be looked at
-        clip.GetData ( waveData, startPosition );   //Gets sample data from the given audio clip (clip) and stores them in waveData, which has a defined sample length of 64 samples.
-    
+        clip.GetData(waveData, startPosition);   //Gets sample data from the given audio clip (clip) and stores them in waveData, which has a defined sample length of 64 samples.
+
         //compute loudness
-        var totalLoudness = 0f;         
-    
-        for ( var i = 0; i < sampleWindow; ++i )            //The value of wave data ranges from -1 to 1, with 0 meaning there is no sound.
-            totalLoudness += Mathf.Abs ( waveData [i]);     //We go through every sample and add it to the totalLoudness...
-    
+        var totalLoudness = 0f;
+
+        for (var i = 0; i < sampleWindow; ++i)            //The value of wave data ranges from -1 to 1, with 0 meaning there is no sound.
+            totalLoudness += Mathf.Abs(waveData[i]);     //We go through every sample and add it to the totalLoudness...
+
         return totalLoudness / sampleWindow;        //We then compute the totalLoudness average from the samplewindow, by dividing the totalLoudness calculated above with the ammount of samples (sampleWindow)
     }
 }

@@ -35,11 +35,12 @@ public class TextToSpeech : MonoBehaviour
 
     private void Awake()
     {
+        //! tjek Mathias om vi kan slette det her
         //List<TextToSpeech> voiceIDActorsList1 = new List<TextToSpeech>(VoiceId.FindValue(voiceID_name));
         //voiceIDActorsList = VoiceId;
         //ReadString();
         //Predicate<Person> oscarFinder = (Person p) => { return p.Name == "Oscar"; };
-        
+
     }
 
     public async void MakeAudioRequest(string message)
