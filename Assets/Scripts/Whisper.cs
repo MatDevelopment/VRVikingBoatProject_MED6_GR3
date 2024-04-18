@@ -27,6 +27,7 @@ namespace OpenAI
         [SerializeField] private TTSManager ttsManagerScript;
         [SerializeField] private GestureManagerNew gestureManagerNew;
         [SerializeField] private ChoosePromptGesture choosePromptGestureScript;
+        [SerializeField] private PointingManager pointingManagerScript;
         
         [SerializeField] private Image progress;
         [SerializeField] private InputActionReference buttonHoldReference = null;
@@ -136,6 +137,8 @@ namespace OpenAI
                     
                     chatTest.AddPlayerInputToChatLog(userRecordingString + gestureManagerNew.PullLatestGestureCombination());
                     choosePromptGestureScript.ClearDictionaryOfPointedItems();
+                    pointingManagerScript.rightHandLastSelected = "";
+                    pointingManagerScript.leftHandLastSelected = "";
                     
                     ECAIsDoneTalking = false;
                     // Debug.Log($"isDoneTalking: {isDoneTalking}");

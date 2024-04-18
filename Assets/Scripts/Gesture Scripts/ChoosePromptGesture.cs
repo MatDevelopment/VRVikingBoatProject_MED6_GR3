@@ -69,8 +69,6 @@ public class ChoosePromptGesture : MonoBehaviour
             float highestValue = valueColl.Max();       //We find the highest key value in the valueColl collection
                     
             string itemKey = pointingTimes.FirstOrDefault(x => x.Value == highestValue).Key;         //We then find the corresponding key for the key value...
-            
-            ClearDictionaryOfPointedItems();
                     
             return itemKey;     //and return it.
         }

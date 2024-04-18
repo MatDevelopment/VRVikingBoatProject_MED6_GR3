@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17922,6 +17922,7 @@ MonoBehaviour:
   ttsManagerScript: {fileID: 1283425241}
   gestureManagerNew: {fileID: 1739521427}
   choosePromptGestureScript: {fileID: 1739521431}
+  pointingManagerScript: {fileID: 1739521429}
   progress: {fileID: 0}
   buttonHoldReference: {fileID: 1533704310230560322, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
@@ -33577,7 +33578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: dumb red cube
+  description: hest
 --- !u!65 &1529749001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37758,8 +37759,8 @@ MonoBehaviour:
   leftLineRenderer: {fileID: 521175382}
   rightLinerenderer: {fileID: 1895965729}
   layermask: 6
-  leftHandLastSelected: {fileID: 0}
-  rightHandLastSelected: {fileID: 0}
+  leftHandLastSelected: 
+  rightHandLastSelected: 
   showLines: 0
 --- !u!4 &1739521430
 Transform:
@@ -52712,7 +52713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: funny blue cube
+  description: "f\xE5r"
 --- !u!65 &2038321505
 BoxCollider:
   m_ObjectHideFlags: 0
