@@ -8,6 +8,10 @@ using UnityEngine;
 
 public class MicInputDetection : MonoBehaviour
 {
+    private APIStatus apiStatus;
+    [SerializeField] private TextToSpeech textToSpeech;
+    [SerializeField] private AudioPlayer audioPlayer;
+
     [SerializeField] private Whisper whisperScript;
     [SerializeField] private NPCInteractorScript npcInteractorScript;
 
@@ -34,6 +38,9 @@ public class MicInputDetection : MonoBehaviour
 
     void Start()
     {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
+        textToSpeech = FindObjectOfType<TextToSpeech>();
+        apiStatus = FindObjectOfType<APIStatus>();
         MicroPhoneToAudioClip();
     }
 
@@ -50,7 +57,7 @@ public class MicInputDetection : MonoBehaviour
             //The speechPauseCounter variable is so that the user can have natural breaks inbetween words they say, or so-called thinking pauses.
             loudness = 0;
 
-            if (speechPauseCounter >= speechPauseCounterThreshold && isListening && whisperScript.isTranscribing == false && whisperScript.ECAIsDoneTalking)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
+            if (speechPauseCounter >= speechPauseCounterThreshold && isListening && apiStatus.isTranscribing == false && !apiStatus.isTalking)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
             {
                 if (whisperScript.userRecordingString.Length > 0)
                 {
@@ -78,38 +85,64 @@ public class MicInputDetection : MonoBehaviour
         if (loudness > threshold) //Husk at add en condition her som gør at der lige bliver ventet på at ChatGPT har genereret et svar
                                   //ELLER: Afbryd ChatGPT i at svare og append hvad end brugeren siger til samtalen, hvorefter ChatGPT kan svare på ny.
         {
-            speechPauseCounter = 0;
+            speechPauseCounter = 0; // Resets the pause counter so the microphone keep recording
 
-            //! Spørg Mathias hvordan det her check kan gøres bedre. Han har allerede ideer heroppe ^^
-            if (isListening == false && whisperScript.isTranscribing == false && whisperScript.ECAIsDoneTalking)
+            if (isListening == false)
             {
-                whisperScript.userRecordingString = "";     //NEWLY ADDED!!!!!!!!!!!!
-                userSpeechClip = null;
-                StartCoroutine(whisperScript.InterruptNpcTalkingAfterDuration(whisperScript.timeToInterruptTalk));  //Runs a method to interrupt the NPC and play a "Hmm" thinking sound sample
                 Debug.Log("LISTENING");
-                startedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);        //Saves the starting position of the user speech audio
-
                 isListening = true;
             }
 
-
-            //Erik is already speaking
-            if (!whisperScript.ECAIsDoneTalking)
+            if (apiStatus.isTranscribing == false
+                && apiStatus.isGeneratingText == false
+                && apiStatus.isGeneratingAudio == false
+                && apiStatus.isTalking == false)
             {
-                // Erik Stopper med at snakke og vi starter en ny optagelse.
+                whisperScript.userRecordingString = "";    
+                userSpeechClip = null;
+
+                startedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);        //Saves the starting position of the user speech audio
+            }
+            else if (apiStatus.isTalking)
+            {
+                whisperScript.userRecordingString = "";   
+                userSpeechClip = null;
+
+                startedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);       
+
+                StartCoroutine(audioPlayer.InterruptNpcTalkingAfterDuration(whisperScript.timeToInterruptTalk));  //Runs a method to interrupt the NPC and play a "Hmm" thinking sound sample
+            }
+            else if (apiStatus.isTranscribing == true
+                || apiStatus.isGeneratingText == true
+                || apiStatus.isGeneratingAudio == true)
+            {
+                Debug.Log("Erik is thinking!!");
+                isListening = false;
             }
 
-            //Erik is currently formulating a response
-            if (whisperScript.isTranscribing)
-            {
-                // vi starter en ny optagelse
-            }
 
-            //Erik is not formulating a response and is not speaking
-            if (whisperScript.ECAIsDoneTalking && !whisperScript.isTranscribing)
-            {
-                // Vi starter en ny optagelse.
-            }
+            //hvis Erik han snakker skal han stoppe med at snakke og sige "hmm" og begynde at lytte igen. Her stopper vi ham bare i at snakke
+            //hvik erik han tænker så skal han ikke sige "hmm"  han skal bare begynde at tænke igen. Her skal vi stoppe alle de andre API calls.
+            //Hvis Erik ikke snakker skal han bare begynde at lytte.
+
+
+
+
+
+            // old logic
+            // if (isListening == false && apiStatus.isTranscribing == false && !apiStatus.isTalking)
+            //{
+            //    whisperScript.userRecordingString = "";     //NEWLY ADDED!!!!!!!!!!!!
+            //    userSpeechClip = null;
+
+            //    Debug.Log("LISTENING");
+
+            //    StartCoroutine(whisperScript.InterruptNpcTalkingAfterDuration(whisperScript.timeToInterruptTalk));  //Runs a method to interrupt the NPC and play a "Hmm" thinking sound sample
+
+            //    startedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);        //Saves the starting position of the user speech audio
+
+            //    isListening = true;
+            //}
         }
 
         if (Input.GetKeyDown(KeyCode.K))

@@ -1,24 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
-public class NpcAnimationStateController : MonoBehaviour
+public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add illustrator gestures
 {
-    //TODO: needs to add illustrator gestures
-    Animator animator;
+    [SerializeField] APIStatus apiStatus;
+    [SerializeField] Animator animator;
+
+    private AudioPlayer audioPlayer;
 
     void Start()
     {
+        apiStatus = FindObjectOfType<APIStatus>();
+        audioPlayer = FindObjectOfType<AudioPlayer>();
         animator = GetComponent<Animator>();
-        StartCoroutine(AnimateBodyResponse_Erik("INSULT", 1));
-
     }
+
+    // Checks if the audio source is playing to call the animator to transition between talking and idle
+    private void Update()
+    { //TODO:This probably needs to be changed
+
+        if (apiStatus.isTalking == true)
+        {
+            animator.SetBool("isThinking", false);
+        }
+        else
+        {
+            animator.SetBool("isThinking", true);
+        }
+
+        if (audioPlayer.AudioSourcePlaying() == true)
+        {
+            animator.SetBool("isTalking", true);
+        }
+        else
+        {
+            animator.SetBool("isTalking", false);
+        }
+    }
+
 
     public void AnimateErik(string gestureName, float delay)
     {
         StartCoroutine(AnimateBodyResponse_Erik(gestureName, delay));
     }
-
+  
     public IEnumerator AnimateBodyResponse_Erik(string triggerString, float delay)
 
     {

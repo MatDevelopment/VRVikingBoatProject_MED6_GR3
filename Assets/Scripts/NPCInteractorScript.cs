@@ -15,16 +15,16 @@ public class NPCInteractorScript : MonoBehaviour
     [SerializeField] private GameObject NPCgameObject;
     //[SerializeField] private GameObject gazeColliderGameObject;
     public AudioSource NPCaudioSource;
-    [SerializeField] private AudioClip[] arrayNPCsounds; // The array controlling the sounds for the conversation starter sounds
-    [SerializeField] public AudioClip[] arrayThinkingNPCsounds;
-    [SerializeField] private AudioClip[] arrayNPCitemSounds; // The array controlling the sounds for item description sounds
+   // [SerializeField] private AudioClip[] arrayNPCsounds; // The array controlling the sounds for the conversation starter sounds
+    //[SerializeField] public AudioClip[] arrayThinkingNPCsounds;
+    //[SerializeField] private AudioClip[] arrayNPCitemSounds; // The array controlling the sounds for item description sounds
     
     
     private int arrayConversationSoundsMax;
     private int arrayItemSoundsMax;
-    
-    public int pickedSoundToPlay;
-    public int pickedItemSoundToPlay;
+
+    //public int pickedSoundToPlay;
+    //public int pickedItemSoundToPlay;
 
     //! tjek Mathias om vi kan slette det her
     /*private float notGazingTime;
@@ -32,7 +32,7 @@ public class NPCInteractorScript : MonoBehaviour
     private float gazeTime;
     private float gazeTimeActivate = 3;
     private float newNPCFocusTime = 2.8f;*/
-
+    [SerializeField] private APIStatus apiStatus;
     [SerializeField] private ChatTest chatTestScript;
     [SerializeField] private NpcAnimationStateController npcAnimationStateController;
     [SerializeField] private WorldInfo worldInfoScript;
@@ -47,7 +47,7 @@ public class NPCInteractorScript : MonoBehaviour
     //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
 
     public string nameOfThisNPC;
-    public string voiceIDNameThisNpc;
+    //public string voiceIDNameThisNpc;
     public string npcEmotion;
     public string npcSecondaryEmotion;
     public string[] npcPrimaryEmotions = {"HAPPY", "SAD", "ANGRY", "SURPRISED", "SCARED", "DISGUST", "CONTEMPT"};
@@ -123,7 +123,7 @@ public class NPCInteractorScript : MonoBehaviour
         
         ChatLogWithNPC.Add(message);
         
-        arrayConversationSoundsMax = arrayNPCsounds.Length;     //The length of the helpful NPC sounds array
+        //arrayConversationSoundsMax = arrayNPCsounds.Length;     //The length of the helpful NPC sounds array
         //pickedSoundToPlay = Random.Range(0, arrayConversationSoundsMax); // Grab a random sound out of the max number of sounds
         //if (arrayNPCsounds.Length != 0)
         //{
@@ -131,89 +131,77 @@ public class NPCInteractorScript : MonoBehaviour
         //}
         
         npcAnimationStateController = FindAnyObjectByType<NpcAnimationStateController>();
-
+        apiStatus = FindObjectOfType<APIStatus>();
     }
 
 
     //This method is responsible for playing a random dialogue line when the player picks up an item, like: "Can I have a look at that?"
     //This is done so ChatGPT has time for generating a response to this user action, so the event seems more synchronized.
-    private void PlayAudioOnItemPickup()
-    {
-        if (arrayNPCitemSounds.Length > 0)
-        {
-            arrayItemSoundsMax = arrayNPCitemSounds.Length;
-            //pickedItemSoundToPlay = Random.Range(0, arrayItemSoundsMax);
-            NPCaudioSource.clip = arrayNPCitemSounds[pickedItemSoundToPlay];
-            
-            NPCaudioSource.Play();
-        }
-    }
-    
-    
-    //Method responsible for both checking when Erik's start dialogue is done playing, and playing dialogue lines when gazing at NPCs (Method called in unity event system through the inspector)
-    public void StartCoroutine_PlayNpcDialogueAfterSetTime()
-    {
-        if (Time.timeSinceLevelLoad > (lengthOfSceneIntroTalkDialogue + 3) && erikSceneStartDialogueDone == false)
-        {
-            erikSceneStartDialogueDone = true;
-        }
-        if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && arrayNPCsounds.Length > 0 && erikSceneStartDialogueDone == true)
-        {
-            Debug.Log("Started NPC dialogue coroutine on: " + nameOfThisNPC);
-            StartCoroutine(PlayNpcDialogueAfterSetTime());
-        }
-        
-    }
-    
-    //IEnumerator responsible for playing two random dialogue lines  supposed to instigate conversations, like: "You look like you have a question, just ask" etc.
-    private IEnumerator PlayNpcDialogueAfterSetTime()
-    {
-        if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedFirstVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
-        {
-            playedSecondVoiceLine = false;
-            yield return new WaitForSeconds(0.65f);
-            PlayConversationStarterAudioNPC();
-            playedFirstVoiceLine = true;
-            yield return new WaitForSeconds(textToSpeechScript.audioSource.clip.length + 1);
-        }
 
-        if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedSecondVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
-        {
-            playedFirstVoiceLine = false;
-            yield return new WaitForSeconds(3 + NPCaudioSource.clip.length);
-            PlayConversationStarterAudioNPC();
-            playedSecondVoiceLine = true;
-        }
-        
-    }
-    
-    private void PlayConversationStarterAudioNPC()
-    {
-        if (arrayNPCsounds.Length > 0 && textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false)
-        {
-            //arrayConversationSoundsMax = arrayNPCsounds.Length;
-            pickedSoundToPlay = Random.Range(0, arrayConversationSoundsMax);
-            NPCaudioSource.clip = arrayNPCsounds[pickedSoundToPlay];
-            
-            NPCaudioSource.Play();
-            Debug.Log("Played conversation starter");
-        }
-        
-    }
-    
+    //Method responsible for both checking when Erik's start dialogue is done playing, and playing dialogue lines when gazing at NPCs (Method called in unity event system through the inspector)
+    //public void StartCoroutine_PlayNpcDialogueAfterSetTime()
+    //{
+    //    if (Time.timeSinceLevelLoad > (lengthOfSceneIntroTalkDialogue + 3) && erikSceneStartDialogueDone == false)
+    //    {
+    //        erikSceneStartDialogueDone = true;
+    //    }
+    //    if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && arrayNPCsounds.Length > 0 && erikSceneStartDialogueDone == true)
+    //    {
+    //        Debug.Log("Started NPC dialogue coroutine on: " + nameOfThisNPC);
+    //        StartCoroutine(PlayNpcDialogueAfterSetTime());
+    //    }
+
+    //}
+
+    ////IEnumerator responsible for playing two random dialogue lines  supposed to instigate conversations, like: "You look like you have a question, just ask" etc.
+    //private IEnumerator PlayNpcDialogueAfterSetTime()
+    //{
+    //    if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedFirstVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
+    //    {
+    //        playedSecondVoiceLine = false;
+    //        yield return new WaitForSeconds(0.65f);
+    //        PlayConversationStarterAudioNPC();
+    //        playedFirstVoiceLine = true;
+    //        yield return new WaitForSeconds(textToSpeechScript.audioSource.clip.length + 1);
+    //    }
+
+    //    if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedSecondVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
+    //    {
+    //        playedFirstVoiceLine = false;
+    //        yield return new WaitForSeconds(3 + NPCaudioSource.clip.length);
+    //        PlayConversationStarterAudioNPC();
+    //        playedSecondVoiceLine = true;
+    //    }
+
+    //}
+
+    //private void PlayConversationStarterAudioNPC()
+    //{
+    //    if (arrayNPCsounds.Length > 0 && textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false)
+    //    {
+    //        //arrayConversationSoundsMax = arrayNPCsounds.Length;
+    //        pickedSoundToPlay = Random.Range(0, arrayConversationSoundsMax);
+    //        NPCaudioSource.clip = arrayNPCsounds[pickedSoundToPlay];
+
+    //        NPCaudioSource.Play();
+    //        Debug.Log("Played conversation starter");
+    //    }
+
+    //}
+
     //Method BELOW responsible for informing the NPC about user actions and task progression and then asking it to generate a verbal response
-    public async void InformAndInitiateNpcTalk(string systemPrompt)     
+    public async void InformAndInitiateNpcTalk(string systemPrompt)
     {
-        whisperScript.ECAIsDoneTalking = false;
+       // apiStatus.isTalking = true;
         chatTestScript.AddSystemInstructionToChatLog(systemPrompt);
         string chatGptResponse = await chatTestScript.SendRequestToChatGpt(chatTestScript.messages);
         chatTestScript.AddNpcResponseToChatLog(chatGptResponse);
         Debug.Log(chatGptResponse);
         //textToSpeechScript.MakeAudioRequest(chatGptResponse);     //DEPRECATED method for TTS solution with AWS Polly API. Now switched to OpenAI TTS API.
         ttsManagerScript.SynthesizeAndPlay(chatGptResponse);       //NEW OpenAI TTS API solution.
-        whisperScript.ECAIsDoneTalking = true;
+       // whisperScript.ECAIsDoneTalking = true;
     }
-   
+
 
     public void CheckErikPrimaryEmotion(string triggerString)
     {

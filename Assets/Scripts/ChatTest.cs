@@ -16,45 +16,31 @@ namespace OpenAI
     public class ChatTest : MonoBehaviour
     {
         public string nameOfCurrentNPC;
+        [SerializeField] private APIStatus apiStatus;
         [SerializeField] private NpcInfo npcInfo;
         [SerializeField] private WorldInfo worldInfo;
 
-        [SerializeField] private NPCInteractorScript erikInteractorScript;
-        [SerializeField] private NPCInteractorScript arneInteractorScript;
-        [SerializeField] private NPCInteractorScript fridaInteractorScript;
-        [SerializeField] private NPCInteractorScript ingridInteractorScript;
+        [SerializeField] private NPCInteractorScript nPCInteractorScript;
+
         [SerializeField] private APICallTimeManager apiCallTimeManager;
-        [SerializeField] private TextToSpeech textToSpeech;
-
-        //! tjek Mathias om vi kan slette det her
-        //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
-
-
+        //[SerializeField] private TextToSpeech textToSpeech;
+   
         public UnityEvent OnReplyReceived;
-        
-        //public bool isDone = true;
 
         private float height;
         private OpenAIApi openai = new OpenAIApi();
 
         public List<ChatMessage> messages = new List<ChatMessage>();
 
-        public AudioClip[] currentNpcThinkingSoundsArray;
-
-        private void Awake()
-        {
-            //! tjek Mathias om vi kan slette det her
-            //LLMversionPlayingScript = GameObject.FindWithTag("LLMversionGameObject").GetComponent<LLMversionPlaying>();
-        }
-
+   
         private void Start()
         {
             apiCallTimeManager = FindObjectOfType<APICallTimeManager>();
-
-            currentNpcThinkingSoundsArray = erikInteractorScript.arrayThinkingNPCsounds;
-            textToSpeech.audioSource = erikInteractorScript.NPCaudioSource;
-            textToSpeech.voiceID_name = erikInteractorScript.voiceIDNameThisNpc;
-            messages = erikInteractorScript.ChatLogWithNPC;
+            apiStatus = FindObjectOfType<APIStatus>();
+            //currentNpcThinkingSoundsArray = nPCInteractorScript.arrayThinkingNPCsounds;
+            //textToSpeech.audioSource = nPCInteractorScript.NPCaudioSource;
+            //textToSpeech.voiceID_name = nPCInteractorScript.voiceIDNameThisNpc;
+            messages = nPCInteractorScript.ChatLogWithNPC;
         }
         
         public async Task<string> SendRequestToChatGpt(List<ChatMessage> combinedMessages)
@@ -67,10 +53,12 @@ namespace OpenAI
             request.MaxTokens = 256;
 
             Stopwatch stopwatch = Stopwatch.StartNew();
+            apiStatus.isGeneratingText = true;
 
             var response = await openai.CreateChatCompletion(request);
 
             stopwatch.Stop();
+            apiStatus.isGeneratingText = false;
 
             apiCallTimeManager.AddCallDuration_ChatGPT(stopwatch.Elapsed.TotalSeconds);
 
@@ -99,19 +87,10 @@ namespace OpenAI
             switch (nameOfCurrentNPC)
             {
                 case "Erik":
-                    erikInteractorScript.ChatLogWithNPC.Add(userMessage);
-                    break;
-                case "Arne":
-                    arneInteractorScript.ChatLogWithNPC.Add(userMessage);
-                    break;
-                case "Frida":
-                    fridaInteractorScript.ChatLogWithNPC.Add(userMessage);
-                    break;
-                case "Ingrid":
-                    ingridInteractorScript.ChatLogWithNPC.Add(userMessage);
+                    nPCInteractorScript.ChatLogWithNPC.Add(userMessage);
                     break;
                 default:
-                    erikInteractorScript.ChatLogWithNPC.Add(userMessage);
+                    nPCInteractorScript.ChatLogWithNPC.Add(userMessage);
                     break;
             }
             
@@ -131,19 +110,10 @@ namespace OpenAI
             switch (nameOfCurrentNPC)
             {
                 case "Erik":
-                    erikInteractorScript.ChatLogWithNPC.Add(assistantMessage);
+                    nPCInteractorScript.ChatLogWithNPC.Add(assistantMessage);
                     break;
-                /*case "Arne":
-                    arneInteractorScript.ChatLogWithNPC.Add(assistantMessage);
-                    break;
-                case "Frida":
-                    fridaInteractorScript.ChatLogWithNPC.Add(assistantMessage);
-                    break;
-                case "Ingrid":
-                    ingridInteractorScript.ChatLogWithNPC.Add(assistantMessage);
-                    break;*/
                 default:
-                    erikInteractorScript.ChatLogWithNPC.Add(assistantMessage);
+                    nPCInteractorScript.ChatLogWithNPC.Add(assistantMessage);
                     break;
             }
 
@@ -164,19 +134,10 @@ namespace OpenAI
             switch (nameOfCurrentNPC)
             {
                 case "Erik":
-                    erikInteractorScript.ChatLogWithNPC.Add(message);
-                    break;
-                case "Arne":
-                    arneInteractorScript.ChatLogWithNPC.Add(message);
-                    break;
-                case "Frida":
-                    fridaInteractorScript.ChatLogWithNPC.Add(message);
-                    break;
-                case "Ingrid":
-                    ingridInteractorScript.ChatLogWithNPC.Add(message);
+                    nPCInteractorScript.ChatLogWithNPC.Add(message);
                     break;
                 default:
-                    erikInteractorScript.ChatLogWithNPC.Add(message);
+                    nPCInteractorScript.ChatLogWithNPC.Add(message);
                     break;
                 
             }

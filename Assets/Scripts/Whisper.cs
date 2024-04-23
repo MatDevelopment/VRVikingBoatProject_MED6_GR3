@@ -12,23 +12,26 @@ using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 using System.Diagnostics;
 using Debug = UnityEngine.Debug;
+using System.Net.NetworkInformation;
 
 namespace OpenAI
 {
     public class Whisper : MonoBehaviour //Reponsible for converting a voice recording into text.
     {
-          [SerializeField] private APICallTimeManager apiCallTimeManager;
+        [SerializeField] private APIStatus apiStatus;
+        [SerializeField] private APICallTimeManager apiCallTimeManager;
         [SerializeField] private Dropdown dropdown;
         [SerializeField] private ChatTest chatTest;
-        [SerializeField] private TextToSpeech textToSpeechScript;
-               [SerializeField] private NpcAnimationStateController npcAnimationStateController;
+        //[SerializeField] private TextToSpeech textToSpeechScript;
+        [SerializeField] private NpcAnimationStateController npcAnimationStateController;
         [SerializeField] private MicInputDetection MicInputDetectionScript;
         [SerializeField] private NPCInteractorScript npcInteractorScript;
         [SerializeField] private TTSManager ttsManagerScript;
         [SerializeField] private GestureManager gestureManagerNew;
         [SerializeField] private ChoosePromptGesture choosePromptGestureScript;
         [SerializeField] private PointingManager pointingManagerScript;
-        
+        private NPCSoundBitPlayer nPCSoundBitPlayer;
+
         [SerializeField] private Image progress;
         [SerializeField] private InputActionReference buttonHoldReference = null;
 
@@ -38,11 +41,6 @@ namespace OpenAI
         public string npcResponse;
         public string userRecordingString;
 
-        private AudioClip clip;
-        [FormerlySerializedAs("hmmThinkingSound")] [SerializeField] private AudioClip ErikHmmSound;
-
-                public bool isTranscribing = false;
-        public bool ECAIsDoneTalking = true;
         public bool contextIsPerformed = false;
 
         public float timeToInterruptTalk = 0.05f;
@@ -51,8 +49,10 @@ namespace OpenAI
 
         private void Start()
         {
+            apiStatus = FindObjectOfType<APIStatus>();
             apiCallTimeManager = FindObjectOfType<APICallTimeManager>();
             gestureManagerNew = FindAnyObjectByType<GestureManager>();
+            nPCSoundBitPlayer = FindObjectOfType<NPCSoundBitPlayer>();
             npcAnimationStateController = FindAnyObjectByType<NpcAnimationStateController>();
         }
 
@@ -64,27 +64,18 @@ namespace OpenAI
         public async void TranscribeRecordedAudio()
         {
 
-            if (isTranscribing == false && ECAIsDoneTalking == true)
+            if (apiStatus.isTranscribing == false && apiStatus.isTalking == false)
             {
-                //! tjek Mathias om vi kan slette det her
-                //StartCoroutine(InterruptNpcTalkingAfterDuration(timeToInterruptTalk));
-                //Debug.Log("Start recording...");
-                isTranscribing = true;
-                //! tjek Mathias om vi kan slette det her
+                apiStatus.isTranscribing = true;
+                // Laver dropdown UI så vi kan vælge mic selv.
                 //var index = PlayerPrefs.GetInt("user-mic-device-index");
                 //clip = Microphone.Start(dropdown.options[index].text, false, duration, 44100);
                 //contextIsPerformed = true;
             }
 
-            if (isTranscribing == true)
+            if (apiStatus.isTranscribing == true)
             {
-                //! tjek Mathias om vi kan slette det her
-                //time = 0;
-                //progress.fillAmount = 1;
                 Debug.Log("Starting tranccription...");
-                //! tjek Mathias om vi kan slette det her
-                //Microphone.End(MicInputDetectionScript.microphoneName);
-                //Microphone.End(null);
 
                 byte[] data = SaveWav.Save(fileName, MicInputDetectionScript.userSpeechClip);
                 //SaveWav.TrimSilence(new List<float>())
@@ -92,19 +83,18 @@ namespace OpenAI
                 var request = new CreateAudioTranscriptionsRequest
                 {
                     FileData = new FileData() { Data = data, Name = "audio.wav" },
-                    //! tjek Mathias om vi kan slette det her
-                    // File = Application.persistentDataPath + "/" + fileName,
-                    //Prompt = "The transcript is the dialogue of a person speaking english with a danish accent.",
                     Model = "whisper-1",
                     Language = "da"
                 };
-                
+
                 Stopwatch stopwatch = Stopwatch.StartNew();
+                apiStatus.isTranscribing = true;
 
                 var result = await openai.CreateAudioTranscription(request);
 
                 stopwatch.Stop(); // Stop measuring time
-               
+                apiStatus.isTranscribing = false;
+
                 apiCallTimeManager.AddCallDuration_SpeechToText(stopwatch.Elapsed.TotalSeconds);
 
                 //! tjek Mathias om vi kan slette det her
@@ -115,11 +105,12 @@ namespace OpenAI
 
                 if (result.Text.Contains("Hello") || result.Text.Contains("Hi"))
                 {
-                    StartCoroutine(PlayHmmThinkingSound(textToSpeechScript.audioSource, 0.2f, ErikHmmSound));
+
+                    StartCoroutine(nPCSoundBitPlayer.PlayHmmThinkingSound(0.2f));
                 }
                 else if ((result.Text.Length >= 12 && !result.Text.Contains("Hello")) || (result.Text.Length >= 12 && !result.Text.Contains("Hi")))          //If what the user says is longer than 12 characters (including spaces), then the current NPC will say a thinking sound like "Hmm" or "Hmm, let me think" or "Hmm let me think for a second".
                 {
-                    StartCoroutine(SayThinkingSoundAfterPlayerTalked());
+                    StartCoroutine(nPCSoundBitPlayer.SayThinkingSoundAfterPlayerTalked());
                 }
                 else if (result.Text.Contains(deleteThisObligatedStringFromWhisperCreditString))
                 {
@@ -133,20 +124,20 @@ namespace OpenAI
                 userRecordingString = result.Text;
 
                 MicInputDetectionScript.loudness = 0;
-                isTranscribing = false;
-         
+             
+
 
                 if (string.IsNullOrEmpty(result.Text) == false || string.IsNullOrWhiteSpace(result.Text) == false)
                 {
                     Debug.Log("Recorded message: " + userRecordingString + gestureManagerNew.PullLatestGestureCombination());
-                    
+
                     chatTest.AddPlayerInputToChatLog(userRecordingString + gestureManagerNew.PullLatestGestureCombination());
                     choosePromptGestureScript.ClearDictionaryOfPointedItems();
                     pointingManagerScript.rightHandLastSelected = "";
                     pointingManagerScript.leftHandLastSelected = "";
-                    
-                    ECAIsDoneTalking = false;
-  
+
+                   
+
                     string chatGptResponse = await chatTest.SendRequestToChatGpt(chatTest.messages);
 
                     npcResponse = chatGptResponse;
@@ -160,17 +151,7 @@ namespace OpenAI
                     {
                         npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion);
                     }
-                    //! tjek Mathias om vi kan slette det her
-                    //THREE LINES BELOW are BEING DONE IN NPCInteractorScript.cs in method initialized above (CheckErikPrimaryEmotion)
-                    //int startIndexEmotion = npcResponse.IndexOf(npcInteractorScript.npcEmotion);       //Finds the starting index of the NPC's emotion keyword in ChatGPT's response
-                    //int endEmotionString = chatGptResponse.LastIndexOf(npcInteractorScript.npcEmotion);
-                    //npcResponse = npcResponse.Remove(startIndexEmotion, npcInteractorScript.npcEmotion.Length);     //Removes the action keyword from ChatGPT's response plus the following white space
 
-
-                    /*foreach (var secondaryEmotion in npcInteractorScript.npcSecondaryEmotions)
-                    {
-                        npcInteractorScript.AnimateOnSecondaryEmotion_Erik(secondaryEmotion);
-                    }*/
 
                     foreach (string action in npcInteractorScript.npcActionStrings)
                     {
@@ -178,9 +159,9 @@ namespace OpenAI
                         if (npcResponse.Contains(action))
                         {
                             string responseTillActionString = AnimationDelayCalculator.CreateStringUntilKeyword(inputString: npcResponse, actionToCheck: action);
-                          
+
                             int punctuationsCount = AnimationDelayCalculator.CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in responseTillActionString
-                           
+
                             int wordInStringCount = AnimationDelayCalculator.CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
 
                             float estimatedTimeTillAction = AnimationDelayCalculator.EstimatedTimeTillAction(wordCount: wordInStringCount,
@@ -204,11 +185,6 @@ namespace OpenAI
                         }
                     }
 
-                    //! tjek Mathias om vi kan slette det her
-                    /*int primaryEmotionInt = npcInteractorScript.npcEmotion.Length;
-                    int secondEmotionInt = npcInteractorScript.npcSecondaryEmotion.Length;
-
-                    int indexesToRemove = primaryEmotionInt + secondEmotionInt + 1;*/
                     npcInteractorScript.AnimateFacialExpressionResponse_Erik(npcInteractorScript.npcEmotion, 0.5f);
 
 
@@ -217,78 +193,14 @@ namespace OpenAI
                     result.Text = result.Text.Replace(result.Text, "");
                     userRecordingString = result.Text;
 
-                    //! tjek Mathias om vi kan slette det her
-                    //AWS POLLY (English):
-                    //textToSpeechScript.MakeAudioRequest(npcResponse);
-
                     //OpenAI TTS (Danish):
                     ttsManagerScript.SynthesizeAndPlay(npcResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
-                    ECAIsDoneTalking = true;
-                    // Debug.Log($"isDoneTalking: {isDoneTalking}");
+                    
                 }
 
                 //contextIsPerformed = false;
             }
         }
-        //! tjek Mathias om vi kan slette det her
-        /*private void Update()
-        {
-            if (isRecording)
-            {
-                time += Time.deltaTime;
-                progress.fillAmount = time / duration;      //Meant for showing how much time you have left to talk in through a fill amount of a UI progress bar etc. Not being used currently.
-            }
-            
-            if(time >= duration)
-            {
-                time = 0;
-                progress.fillAmount = 0;        //Meant for showing how much time you have left to talk in through a fill amount of a UI progress bar etc. Not being used currently.
-            }
-        }*/
 
-        public IEnumerator InterruptNpcTalkingAfterDuration(float interruptDuration)
-        {
-            Debug.Log("Interrupted Erik while speaking!");
-            yield return new WaitForSeconds(interruptDuration);
-            
-            textToSpeechScript.audioSource.Stop();
-            StartCoroutine(PlayHmmThinkingSound(textToSpeechScript.audioSource, interruptDuration, ErikHmmSound));
-        }
-
-        public IEnumerator SayThinkingSoundAfterPlayerTalked()      //Gets called in Whisper.cs after the user stops talking (context.cancelled)
-        {
-            yield return new WaitForSeconds(0.2f);
-            PickThinkingSoundToPlay(textToSpeechScript.audioSource);
-        }
-    
-        private void PickThinkingSoundToPlay(AudioSource audioSourceToPlayOn)
-        {
-            if (chatTest.currentNpcThinkingSoundsArray.Length > 0)
-            {
-                int arrayThinkingSoundsMax = chatTest.currentNpcThinkingSoundsArray.Length;
-                int pickedThinkingSoundToPlay = Random.Range(0, arrayThinkingSoundsMax);
-                audioSourceToPlayOn.clip = chatTest.currentNpcThinkingSoundsArray[pickedThinkingSoundToPlay];
-                
-                audioSourceToPlayOn.Play();
-            }
-        }
-
-        private IEnumerator PlayHmmThinkingSound(AudioSource audioSourceToPlayOn, float timeTillPlaySound, AudioClip thinkingSound)
-        {
-            yield return new WaitForSeconds(timeTillPlaySound);
-            switch (chatTest.nameOfCurrentNPC)
-            {
-                case "Erik":
-                    audioSourceToPlayOn.clip = thinkingSound;
-                    break;
-                default:
-                    audioSourceToPlayOn.clip = ErikHmmSound;
-                    break;
-            }
-            
-            audioSourceToPlayOn.Play();
-        }
-                
-      
     }
 }

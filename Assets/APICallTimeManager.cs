@@ -13,12 +13,29 @@ public class APICallTimeManager : MonoBehaviour // Responsible for holding callT
 
     public List<double> CombinedCallTimes = new List<double>();
 
-    private void CombineLastEntries()
+    private void CombineLastEntries()//Check if there is the same amount of things in the lists. else remove the last
     {
         if (CallDurations_TextToSpeech.Count == 0) return;
 
         int entryID = CallDurations_SpeechToText.Count - 1;
-        CombinedCallTimes.Add(CallDurations_SpeechToText[entryID] + CallDurations_ChatGPT[entryID] + CallDurations_TextToSpeech[entryID]);
+
+
+        int length = CallDurations_SpeechToText.Count;        
+
+        if (CallDurations_ChatGPT.Count == length && CallDurations_TextToSpeech.Count == length) // check if every list has the same number of entries
+            CombinedCallTimes.Add(CallDurations_SpeechToText[entryID] + CallDurations_ChatGPT[entryID] + CallDurations_TextToSpeech[entryID]);
+        else
+        {
+            Debug.LogWarning("FIX ME!:D one API call time list has more entries than the others.");
+
+            //Removing the last faulty entry in all of the lists.
+            if (CallDurations_SpeechToText.Count != length-1)
+                CallDurations_SpeechToText.RemoveAt(length-1);
+            if (CallDurations_ChatGPT.Count != length - 1)
+                CallDurations_ChatGPT.RemoveAt(length-1);
+            if (CallDurations_TextToSpeech.Count != length - 1)
+                CallDurations_TextToSpeech.RemoveAt(length-1);
+        }
     }
 
 

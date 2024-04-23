@@ -7,6 +7,7 @@ using Debug = UnityEngine.Debug;
 public class TTSManager : MonoBehaviour
 {
     private OpenAIWrapper openAIWrapper;
+    [SerializeField] private APIStatus apiStatus;
     [SerializeField] private APICallTimeManager apiCallTimeManager;
     [SerializeField] private AudioPlayer audioPlayer;
     [SerializeField] private TTSModel model = TTSModel.TTS_1;
@@ -16,6 +17,7 @@ public class TTSManager : MonoBehaviour
 
     private void OnEnable()
     {
+        apiStatus = FindObjectOfType<APIStatus>();
         if (!openAIWrapper) this.openAIWrapper = FindObjectOfType<OpenAIWrapper>();
         if (!audioPlayer) this.audioPlayer = GetComponentInChildren<AudioPlayer>();
         if (!apiCallTimeManager) this.apiCallTimeManager = FindObjectOfType<APICallTimeManager>();
@@ -26,11 +28,13 @@ public class TTSManager : MonoBehaviour
         Debug.Log("Trying to synthesize :" + text);
 
         Stopwatch stopwatch = Stopwatch.StartNew(); // Start measuring time
+        apiStatus.isGeneratingAudio = true;
 
         byte[] audioData = await openAIWrapper.RequestTextToSpeech(text, model, voice, speed);
 
         stopwatch.Stop(); // Stop measuring time
-
+        apiStatus.isGeneratingAudio = false;
+        
         if (audioData != null)
         {
             apiCallTimeManager.AddCallDuration_TextToSpeech(stopwatch.Elapsed.TotalSeconds);

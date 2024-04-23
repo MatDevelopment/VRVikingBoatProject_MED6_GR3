@@ -15,9 +15,11 @@ using Unity.VisualScripting;
 using UnityEngine.Serialization;
 using OpenAI;
 using static Amazon.Polly.Model.Internal.MarshallTransformations.DescribeVoicesRequestMarshaller;
+using System.Collections;
 
 public class TextToSpeech : MonoBehaviour
 {
+
     [SerializeField] private Whisper whisperScript;
 
     public AudioSource audioSource;
@@ -92,23 +94,7 @@ public class TextToSpeech : MonoBehaviour
         }
     }
 
-    // Checks if the audio source is playing to call the animator to transition between talking and idle
-    private void Update() {
-        
-        if (whisperScript.ECAIsDoneTalking) {
-            animatorSelectedNpc.SetBool("isThinking", false);
-        }
-        else {
-            animatorSelectedNpc.SetBool("isThinking", true);
-        }
-        
-        if (audioSource.isPlaying) {
-            animatorSelectedNpc.SetBool("isTalking", true);
-        }
-        else {
-            animatorSelectedNpc.SetBool("isTalking", false);
-        }
-    }
+  
 
     private void WriteIntoFile(Stream stream)
     {
@@ -143,4 +129,6 @@ public class TextToSpeech : MonoBehaviour
             audioSource.Stop();
         }
     }
+
+
 }
