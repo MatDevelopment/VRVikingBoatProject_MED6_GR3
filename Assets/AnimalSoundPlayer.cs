@@ -42,11 +42,11 @@ public class AnimalSoundPlayer : MonoBehaviour
     {
         DistanceBoatToFarm = Vector3.Distance(Boat.transform.position, Farm.transform.position);
 
-        if (DistanceBoatToFarm < 100)
+        if (DistanceBoatToFarm < 125)
         {
             counterIndex += Time.deltaTime;
 
-            while (counterIndex >= 8.0f)
+            while (counterIndex >= 12.0f)
             {
                 AudioClip randomClip = AnimalSounds[Random.Range(0, AnimalSounds.Length)];
                 AnimalAudioSource.PlayOneShot(randomClip);
