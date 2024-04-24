@@ -14,7 +14,7 @@ public class MicInputDetection : MonoBehaviour
 
     [SerializeField] private Whisper whisperScript;
     [SerializeField] private NPCInteractorScript npcInteractorScript;
-
+    [SerializeField] private MicInputUI micInputUI;
     public int sampleWindow = 64;
 
     public AudioSource source;
@@ -38,6 +38,7 @@ public class MicInputDetection : MonoBehaviour
 
     void Start()
     {
+        micInputUI = FindObjectOfType<MicInputUI>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         textToSpeech = FindObjectOfType<TextToSpeech>();
         apiStatus = FindObjectOfType<APIStatus>();
@@ -116,6 +117,7 @@ public class MicInputDetection : MonoBehaviour
                 || apiStatus.isGeneratingText == true
                 || apiStatus.isGeneratingAudio == true)
             {
+                micInputUI.SetText("Erik is thinking");
                 Debug.Log("Erik is thinking!!");
                 isListening = false;
             }

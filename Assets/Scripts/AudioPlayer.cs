@@ -10,12 +10,16 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] private NPCSoundBitPlayer nPCSoundBitPlayer;
     [SerializeField] APIStatus apiStatus;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private MicInputUI micInputUI;
+
     private bool deleteCachedFile = true;
 
     private void OnEnable()
     {
         nPCSoundBitPlayer = FindObjectOfType<NPCSoundBitPlayer>();
         apiStatus = FindObjectOfType<APIStatus>();
+        micInputUI = FindObjectOfType<MicInputUI>();
+
     }
 
     public void ProcessAudioBytes(byte[] audioData)
@@ -50,10 +54,11 @@ public class AudioPlayer : MonoBehaviour
     public IEnumerator InterruptNpcTalkingAfterDuration(float interruptDuration) //TODO: move this to another class
     {
         Debug.Log("Interrupted Erik while speaking!");
+        micInputUI.SetText("Interrupted Erik while speaking!");
         yield return new WaitForSeconds(interruptDuration);
 
         audioSource.Stop();
-        StartCoroutine(nPCSoundBitPlayer.PlayHmmThinkingSound(interruptDuration));
+        StartCoroutine(nPCSoundBitPlayer.PlayHmmThinkingSound(interruptDuration+interruptDuration));
     }
 
     public bool AudioSourcePlaying()

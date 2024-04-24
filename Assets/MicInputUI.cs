@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
     private MicInputDetection inputDetection;
     private float lineHeight = 0.015f;
     public Image fillImage, thresholdImage, thresholdMaskImage, iconImage;
+    public TextMeshProUGUI textMeshPro;
     public float decaySpeed = 0.8f, smoothLoudnessMax = 0;
     [Range(1f, 10f)]
     public float maxAmplitudeWithCurrentMicrophone = 5f;
@@ -52,6 +54,10 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
             iconImage.color = Color.black;
     }
 
+    public void SetText(string message)
+    {
+        textMeshPro.text = message;
+    }
     //public void UpdateThreshold() //TODO: threshold is not correct..!
     //{
     //    thresholdImage.fillAmount = 1 - inputDetection.threshold;

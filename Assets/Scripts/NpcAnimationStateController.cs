@@ -76,7 +76,7 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
                 break;
             case "UNSURE":
                 animator.SetTrigger("gest.Unsure");
-                //Only one variation implemented!
+                animator.SetFloat("DisapprovalType", RandomWeightedPicker.Pick(new List<int> { 0, 1 }, new List<double> { 0.7, 0.3 }));
                 break;
             case "GRATITUDE":
                 animator.SetTrigger("gest.Gratitude");
