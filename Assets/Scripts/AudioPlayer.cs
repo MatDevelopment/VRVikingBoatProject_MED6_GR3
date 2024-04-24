@@ -20,7 +20,7 @@ public class AudioPlayer : MonoBehaviour
         apiStatus = FindObjectOfType<APIStatus>();
         micInputUI = FindObjectOfType<MicInputUI>();
 
-    }
+    } 
 
     public void ProcessAudioBytes(byte[] audioData)
     {

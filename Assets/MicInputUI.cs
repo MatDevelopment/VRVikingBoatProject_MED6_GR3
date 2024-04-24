@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MicInputUI : MonoBehaviour // Responsible for displaying and updating the microphone UI.
 {
+    [SerializeField] private APIStatus apiStatus;
     private MicInputDetection inputDetection;
     private float lineHeight = 0.015f;
     public Image fillImage, thresholdImage, thresholdMaskImage, iconImage;
@@ -17,9 +18,13 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
     //TODO:I think we need some form of calibration at the start of the experience - possibly in the tutorial level? the particpant is prompted to say some words and then we save the max amplitude then..?
     void Start()
     {
-        try {
+        apiStatus = FindObjectOfType<APIStatus>();
+        try
+        {
             inputDetection = FindObjectOfType<MicInputDetection>();
-        } catch {
+        }
+        catch
+        {
             Debug.LogError("No microphone input script found!");
         }
     }
@@ -29,38 +34,41 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
         //TODO:functionality to pause update of the values.
         SmoothFadeOfLoudness();
         UpdateFill();
-       // UpdateThreshold();
+        UpdateThreshold();
     }
 
     private void SmoothFadeOfLoudness()
     {
-
-        smoothLoudnessMax -= Time.deltaTime * decaySpeed*smoothLoudnessMax/3f;
-
+        smoothLoudnessMax -= Time.deltaTime * decaySpeed * smoothLoudnessMax / 3f;
     }
     public void UpdateFill()
     {
-        if(smoothLoudnessMax< inputDetection.loudness)
+        if (smoothLoudnessMax < inputDetection.loudness)
         {
             smoothLoudnessMax = inputDetection.loudness;
         }
-        fillImage.fillAmount = smoothLoudnessMax/maxAmplitudeWithCurrentMicrophone; 
+        fillImage.fillAmount = smoothLoudnessMax / maxAmplitudeWithCurrentMicrophone;
 
 
         if (inputDetection.isListening)
         {
             iconImage.color = Color.white;
-        }else
+        }
+        else if (apiStatus.isGeneratingAudio || apiStatus.isGeneratingText || apiStatus.isTranscribing)
+            iconImage.color = Color.red;
+        else
+        {
             iconImage.color = Color.black;
+        }
     }
 
     public void SetText(string message)
     {
         textMeshPro.text = message;
     }
-    //public void UpdateThreshold() //TODO: threshold is not correct..!
-    //{
-    //    thresholdImage.fillAmount = 1 - inputDetection.threshold;
-    //    thresholdMaskImage.fillAmount =  inputDetection.threshold + lineHeight ;
-    //}
+    public void UpdateThreshold() //TODO: threshold is not correct..!
+    {
+        thresholdImage.fillAmount = 1 - inputDetection.threshold/maxAmplitudeWithCurrentMicrophone;
+        thresholdMaskImage.fillAmount = inputDetection.threshold/maxAmplitudeWithCurrentMicrophone + lineHeight;
+    }
 }
