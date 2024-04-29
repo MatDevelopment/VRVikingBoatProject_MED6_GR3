@@ -14,6 +14,9 @@ public class BoatRouteNavMesh : MonoBehaviour
     [Header ("Debug Values")]
     [SerializeField] private int TargetIndex = 0;
     [SerializeField] private float BoatToTargetDistance;
+
+    [SerializeField] private List<Transform> PointsOfInterest = new List<Transform>();
+    public Transform currentPOI;
     
     private void Awake()
     {
@@ -30,6 +33,11 @@ public class BoatRouteNavMesh : MonoBehaviour
             if (BoatToTargetDistance < 4 && TargetIndex < Targets.Count)
             {
                 TargetIndex += 1;
+            }
+
+            if (currentPOI != PointsOfInterest[TargetIndex])
+            {
+                currentPOI = PointsOfInterest[TargetIndex];
             }
         }
     }

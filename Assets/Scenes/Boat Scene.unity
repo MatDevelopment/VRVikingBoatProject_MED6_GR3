@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13615213, g: 0.16489966, b: 0.21611023, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8861,6 +8861,14 @@ MonoBehaviour:
   - {fileID: 1877181541}
   TargetIndex: 0
   BoatToTargetDistance: 0
+  PointsOfInterest:
+  - {fileID: 1023899850}
+  - {fileID: 2104260613}
+  - {fileID: 916566376}
+  - {fileID: 1651602404}
+  - {fileID: 1723885203}
+  - {fileID: 789391851}
+  currentPOI: {fileID: 1023899850}
 --- !u!1001 &369340265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59287,6 +59295,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6572797345569057216}
+    - targetCorrespondingSourceObject: {fileID: 6429017169658477659, guid: 5ca9c789589b2f847a6468df184e1d20,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6572797345569057217}
     - targetCorrespondingSourceObject: {fileID: 3520962133727090643, guid: 5ca9c789589b2f847a6468df184e1d20,
         type: 3}
       insertIndex: -1
@@ -60248,7 +60260,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6572797345569057208}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e702f35ced6d83f4aa4152ebdd8dd028, type: 3}
   m_Name: 
@@ -60273,6 +60285,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: af1063e01990c53499efb280c41a5735, type: 3}
   ErikHmmSound: {fileID: 8300000, guid: cfd69f0b01155874c88dca333a1cf51b, type: 3}
   audioSource: {fileID: 1619662688}
+--- !u!114 &6572797345569057217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6572797345569057208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3697df14c45791d45918524a3855b707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcAnimator: {fileID: 774310200435896118}
+  boatRouteScript: {fileID: 368848328}
+  defaultLookTarget: {fileID: 627053299}
+  HandIKAmount: 1
+  isLookingAtPOI: 0
+  isPointing: 0
 --- !u!1001 &6901869987547599995
 PrefabInstance:
   m_ObjectHideFlags: 0
