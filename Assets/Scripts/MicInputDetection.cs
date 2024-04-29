@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class MicInputDetection : MonoBehaviour
 {
+
     private APIStatus apiStatus;
     [SerializeField] private TextToSpeech textToSpeech;
     [SerializeField] private AudioPlayer audioPlayer;
@@ -21,8 +22,10 @@ public class MicInputDetection : MonoBehaviour
     private AudioClip microphoneClip;
     public AudioClip userSpeechClip;   //userSpeechClip er det audioclip som skal gives til cloud services så vi kan få Speech To Text til at lave et transcript.
 
+    [Range(1f, 30f)]
+    public float maxAmplitudeWithCurrentMicrophone = 15f;
     public float loudnessSensibility = 100;
-    public float threshold = 0.1f;
+    public float threshold = 6f;
     private int startedSpeakingPosition;
     private int stoppedSpeakingPosition;
     private float speechPauseCounter, speechPauseCounterThreshold = 1.5f;

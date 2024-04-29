@@ -4,23 +4,49 @@ using UnityEngine;
 
 public class MicrophoneCalibration : MonoBehaviour// Calibrating the maxAmplitude for the microphone.
 {
+    [SerializeField] private Tutorial tutorial;
+    [SerializeField] private MicInputDetection micInputDetection;
     public float loudnessSection1, loudnessSection2;
-    // Start is called before the first frame update
+
+    public float currentLoudness, maxLoudnessHeard;
+    public bool detectLoudness;
+    private const float microphoneThreshold = 0.05f; // Adjust as needed
+
+    public float averageLoudness;
+
     void Start()
     {
-        
+        tutorial = FindObjectOfType<Tutorial>();
+        micInputDetection = FindObjectOfType<MicInputDetection>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (!detectLoudness) return;
+
+        currentLoudness = micInputDetection.loudness;
+
+        if (currentLoudness > maxLoudnessHeard)
+        {
+            maxLoudnessHeard = currentLoudness;
+        }
     }
 
-    /* This class needs to:
-     * 
-     * - tell the 
-     * 
-     * 
-     */
+    public IEnumerator ListenForLoudnessForDuration(float listenDuration)
+    {
+        detectLoudness = true;
+        yield return new WaitForSeconds(listenDuration);
+
+        averageLoudness = maxLoudnessHeard;
+        if (averageLoudness >= microphoneThreshold)
+        {
+            tutorial.UserTalkedLoudEnough();
+        }
+        else
+        {
+            tutorial.UserDidNotTalkLoudEnough();
+        }
+        detectLoudness = false;
+    }
+
 }

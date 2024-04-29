@@ -6,14 +6,15 @@ using UnityEngine.UI;
 
 public class MicInputUI : MonoBehaviour // Responsible for displaying and updating the microphone UI.
 {
+  
     [SerializeField] private APIStatus apiStatus;
-    private MicInputDetection inputDetection;
+    [SerializeField] private MicInputDetection inputDetection;
     private float lineHeight = 0.015f;
     public Image fillImage, thresholdImage, thresholdMaskImage, iconImage;
     public TextMeshProUGUI textMeshPro;
     public float decaySpeed = 0.8f, smoothLoudnessMax = 0;
-    [Range(1f, 10f)]
-    public float maxAmplitudeWithCurrentMicrophone = 5f;
+  
+
 
     //TODO:I think we need some form of calibration at the start of the experience - possibly in the tutorial level? the particpant is prompted to say some words and then we save the max amplitude then..?
     void Start()
@@ -21,6 +22,7 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
         apiStatus = FindObjectOfType<APIStatus>();
         try
         {
+
             inputDetection = FindObjectOfType<MicInputDetection>();
         }
         catch
@@ -47,7 +49,7 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
         {
             smoothLoudnessMax = inputDetection.loudness;
         }
-        fillImage.fillAmount = smoothLoudnessMax / maxAmplitudeWithCurrentMicrophone;
+        fillImage.fillAmount = smoothLoudnessMax / inputDetection.maxAmplitudeWithCurrentMicrophone;
 
 
         if (inputDetection.isListening)
@@ -68,7 +70,7 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
     }
     public void UpdateThreshold() //TODO: threshold is not correct..!
     {
-        thresholdImage.fillAmount = 1 - inputDetection.threshold/maxAmplitudeWithCurrentMicrophone;
-        thresholdMaskImage.fillAmount = inputDetection.threshold/maxAmplitudeWithCurrentMicrophone + lineHeight;
+        thresholdImage.fillAmount = 1 - inputDetection.threshold/ inputDetection.maxAmplitudeWithCurrentMicrophone;
+        thresholdMaskImage.fillAmount = inputDetection.threshold/ inputDetection.maxAmplitudeWithCurrentMicrophone + lineHeight;
     }
 }
