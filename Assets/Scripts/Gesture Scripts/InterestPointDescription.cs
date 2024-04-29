@@ -5,4 +5,5 @@ using UnityEngine;
 public class InterestPointDescription : MonoBehaviour
 {
    public string description;
+   public float gazeTimeToActivate;
 }
