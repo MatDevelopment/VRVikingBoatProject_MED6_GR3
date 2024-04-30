@@ -2990,6 +2990,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 76495748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &112904633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 112904634}
+  m_Layer: 0
+  m_Name: DefaultLookTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &112904634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112904633}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 627053299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &114302119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3884,6 +3915,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1251564892}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &152386888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152386889}
+  m_Layer: 0
+  m_Name: LookTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &152386889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152386888}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 627053299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &153403165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16582,6 +16644,8 @@ Transform:
   - {fileID: 975889172}
   - {fileID: 521175377}
   - {fileID: 1895965724}
+  - {fileID: 152386889}
+  - {fileID: 112904634}
   m_Father: {fileID: 1406905935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &627658243
@@ -64310,7 +64374,8 @@ MonoBehaviour:
   npcAnimator: {fileID: 774310200435896118}
   boatRouteScript: {fileID: 368848328}
   npcAnimationStateController: {fileID: 6572797345569057212}
-  defaultLookTarget: {fileID: 627053299}
+  LookTarget: {fileID: 152386889}
+  defaultLookTarget: {fileID: 112904634}
   HandIKAmount: 1
   isLeft: 0
   isRight: 0
@@ -64318,6 +64383,7 @@ MonoBehaviour:
   isPointing: 0
   pointDebug: 0
   pointRotation: {fileID: 1521903418}
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &6901869987547599995
 PrefabInstance:
   m_ObjectHideFlags: 0

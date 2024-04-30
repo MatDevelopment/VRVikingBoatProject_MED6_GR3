@@ -1,5 +1,7 @@
+using GLTFast.Schema;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ErikIKController : MonoBehaviour
@@ -12,6 +14,7 @@ public class ErikIKController : MonoBehaviour
     private Transform leftHandIKTarget;
     
     private Transform lookIKTarget;
+    public Transform LookTarget;
     public Transform defaultLookTarget;
 
     [Range(0, 1f)]
@@ -22,14 +25,17 @@ public class ErikIKController : MonoBehaviour
 
     public bool isLookingAtPOI = false;
     public bool isPointing = false;
+    private bool hasChangedLook = true;
 
     public bool pointDebug = false;
 
     public Transform pointRotation;
+    public Vector3 startPosition;
 
     private void Start()
     {
-        lookIKTarget = defaultLookTarget;
+        lookIKTarget = LookTarget;
+        startPosition = lookIKTarget.position;
     }
 
     private void Update()
@@ -50,13 +56,18 @@ public class ErikIKController : MonoBehaviour
         }
 
         // Sets Look target
-        if (isLookingAtPOI && lookIKTarget != boatRouteScript.currentPOI)
+        if (isLookingAtPOI)
         {
-            lookIKTarget = boatRouteScript.currentPOI;
+            //lookIKTarget = boatRouteScript.currentPOI;
+            //StartCoroutine(ChangeLookTarget(startPosition, boatRouteScript.currentPOI.position, 1));
+            lookIKTarget.position = Vector3.Lerp(lookIKTarget.position, boatRouteScript.currentPOI.position, 0.2f * Time.deltaTime);
+            hasChangedLook = false;
         }
-        else if (!isLookingAtPOI)
+        else if (!isLookingAtPOI && !hasChangedLook)
         {
-            lookIKTarget = defaultLookTarget;
+            // lookIKTarget = startTransform;
+            StartCoroutine(ChangeLookTarget(boatRouteScript.currentPOI.position, defaultLookTarget.position, 1f));
+            hasChangedLook = true;
         }
 
         // Sets right hand IK target
@@ -79,12 +90,29 @@ public class ErikIKController : MonoBehaviour
             leftHandIKTarget = null;
         }
 
+        if (isPointing && isRight)
+        {
+            npcAnimator.SetBool("PointingRight", true);
+            npcAnimator.SetBool("PointingLeft", false);
+        }
+        else if (isPointing && isLeft)
+        {
+            npcAnimator.SetBool("PointingLeft", true);
+            npcAnimator.SetBool("PointingRight", false);
+        }
+        else
+        {
+            npcAnimator.SetBool("PointingRight", false);
+            npcAnimator.SetBool("PointingLeft", false);
+        }
+
         // Check rotation to look target
         var lookPos = lookIKTarget.position - pointRotation.transform.position;
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
         pointRotation.rotation = rotation;
 
+        // Trigger in the inspector to test look mechanic
         if (pointDebug)
         {
             PointingDebug();
@@ -128,5 +156,19 @@ public class ErikIKController : MonoBehaviour
     public void PointingDebug()
     {
         StartCoroutine(npcAnimationStateController.AnimateBodyResponse_Erik("POINTING", 0f));
+    }
+
+    private IEnumerator ChangeLookTarget(Vector3 startPosition, Vector3 endPosition, float duration)
+    {
+        float time = 0;
+
+        while (time < duration)
+        {
+            lookIKTarget.position = Vector3.Lerp(startPosition, endPosition, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        lookIKTarget.position = defaultLookTarget.position;
     }
 }
