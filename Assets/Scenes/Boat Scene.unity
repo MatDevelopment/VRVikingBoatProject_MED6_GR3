@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13615213, g: 0.16489966, b: 0.21611023, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12668,7 +12668,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521175379}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -28050,7 +28050,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097415367}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -31500,7 +31500,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097415360}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -34937,7 +34937,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407377832}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -37141,6 +37141,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1516150511}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1521903417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521903418}
+  m_Layer: 0
+  m_Name: PointingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1521903418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521903417}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.471, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2679463140960166050}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1523960427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41632,7 +41663,7 @@ MonoBehaviour:
   PointingActionRight: 
   combinedGesturesString: 
   combinedGestureHistory: []
-  startInDebugMode: 1
+  startInDebugMode: 0
 --- !u!114 &1739521428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41676,7 +41707,7 @@ MonoBehaviour:
   layermask: 6
   leftHandLastSelected: 
   rightHandLastSelected: 
-  showLines: 1
+  showLines: 0
 --- !u!4 &1739521430
 Transform:
   m_ObjectHideFlags: 0
@@ -45399,7 +45430,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895965726}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -55602,7 +55633,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938660104}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -59664,6 +59695,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1524788273}
+    - targetCorrespondingSourceObject: {fileID: 2106566118391206787, guid: 5ca9c789589b2f847a6468df184e1d20,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1521903418}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6429017169658477659, guid: 5ca9c789589b2f847a6468df184e1d20,
         type: 3}
@@ -60637,6 +60672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   apiStatus: {fileID: 0}
   animator: {fileID: 0}
+  ikController: {fileID: 6572797345569057217}
 --- !u!114 &6572797345569057213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60697,10 +60733,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcAnimator: {fileID: 774310200435896118}
   boatRouteScript: {fileID: 368848328}
+  npcAnimationStateController: {fileID: 6572797345569057212}
   defaultLookTarget: {fileID: 627053299}
   HandIKAmount: 1
+  isLeft: 0
+  isRight: 0
   isLookingAtPOI: 0
   isPointing: 0
+  pointDebug: 0
+  pointRotation: {fileID: 1521903418}
 --- !u!1001 &6901869987547599995
 PrefabInstance:
   m_ObjectHideFlags: 0

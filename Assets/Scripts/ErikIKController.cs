@@ -6,6 +6,7 @@ public class ErikIKController : MonoBehaviour
 {
     [SerializeField] private Animator npcAnimator;
     [SerializeField] private BoatRouteNavMesh boatRouteScript;
+    [SerializeField] private NpcAnimationStateController npcAnimationStateController;
 
     private Transform rightHandIKTarget;
     private Transform leftHandIKTarget;
@@ -14,13 +15,17 @@ public class ErikIKController : MonoBehaviour
     public Transform defaultLookTarget;
 
     [Range(0, 1f)]
-    public float HandIKAmount = 1f;
+    public float HandIKAmount = 0f;
 
-    private bool isLeft = false;
-    private bool isRight = false;
+    public bool isLeft = false;
+    public bool isRight = false;
 
     public bool isLookingAtPOI = false;
     public bool isPointing = false;
+
+    public bool pointDebug = false;
+
+    public Transform pointRotation;
 
     private void Start()
     {
@@ -31,7 +36,6 @@ public class ErikIKController : MonoBehaviour
     {
         // Checks Direction of POI
         Vector3 directionToPoi = (transform.position - boatRouteScript.currentPOI.position).normalized;
-        //Debug.Log(directionToPoi);
 
         if (directionToPoi.z < 0f && !isLeft)
         {
@@ -74,6 +78,18 @@ public class ErikIKController : MonoBehaviour
         {
             leftHandIKTarget = null;
         }
+
+        // Check rotation to look target
+        var lookPos = lookIKTarget.position - pointRotation.transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        pointRotation.rotation = rotation;
+
+        if (pointDebug)
+        {
+            PointingDebug();
+            pointDebug = false;
+        }
     }
 
     private void OnAnimatorIK(int layerIndex)
@@ -82,13 +98,13 @@ public class ErikIKController : MonoBehaviour
         {
             if (isLookingAtPOI)
             {
-                npcAnimator.SetLookAtWeight(1, 0.75f, 1f, 0.75f, 0.7f);
+                npcAnimator.SetLookAtWeight(1, 0.25f, 0.75f, 0.75f, 0.7f);
             }
             else
             {
                 npcAnimator.SetLookAtWeight(1, 0, 0.7f, 0.75f, 0.7f);
             }
-            
+
             npcAnimator.SetLookAtPosition(lookIKTarget.position);
         }
         
@@ -97,7 +113,7 @@ public class ErikIKController : MonoBehaviour
             npcAnimator.SetIKPositionWeight(AvatarIKGoal.RightHand, HandIKAmount);
             npcAnimator.SetIKRotationWeight(AvatarIKGoal.RightHand, HandIKAmount);
             npcAnimator.SetIKPosition(AvatarIKGoal.RightHand, rightHandIKTarget.position);
-            npcAnimator.SetIKRotation(AvatarIKGoal.RightHand, rightHandIKTarget.rotation);
+            npcAnimator.SetIKRotation(AvatarIKGoal.RightHand, pointRotation.rotation);
         }
 
         if (leftHandIKTarget != null)
@@ -105,7 +121,12 @@ public class ErikIKController : MonoBehaviour
             npcAnimator.SetIKPositionWeight(AvatarIKGoal.LeftHand, HandIKAmount);
             npcAnimator.SetIKRotationWeight(AvatarIKGoal.LeftHand, HandIKAmount);
             npcAnimator.SetIKPosition(AvatarIKGoal.LeftHand, leftHandIKTarget.position);
-            npcAnimator.SetIKRotation(AvatarIKGoal.LeftHand, leftHandIKTarget.rotation);
+            npcAnimator.SetIKRotation(AvatarIKGoal.LeftHand, pointRotation.rotation);
         }
+    }
+
+    public void PointingDebug()
+    {
+        StartCoroutine(npcAnimationStateController.AnimateBodyResponse_Erik("POINTING", 0f));
     }
 }

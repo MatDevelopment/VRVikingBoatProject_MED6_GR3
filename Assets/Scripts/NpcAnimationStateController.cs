@@ -7,6 +7,7 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
 {
     [SerializeField] APIStatus apiStatus;
     [SerializeField] Animator animator;
+    [SerializeField] ErikIKController ikController;
 
     private AudioPlayer audioPlayer;
 
@@ -71,7 +72,48 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
                 //Only one variation implemented!
                 break;
             case "POINTING":
-                animator.SetTrigger("gest.Pointing");
+                //animator.SetTrigger("gest.Pointing");
+                
+                if (ikController.isRight)
+                {
+                    animator.SetBool("PointingRight", true);
+                }
+                else if (ikController.isLeft)
+                {
+                    animator.SetBool("PointingLeft", true);
+                }
+
+                ikController.isPointing = true;
+                ikController.isLookingAtPOI = true;
+
+                float time = 0;
+                float duration = 3;
+
+                float startValue = 0;
+                float endValue = 1;
+
+                while (time < duration)
+                {
+                    ikController.HandIKAmount = Mathf.Lerp(startValue, endValue, time / duration);
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+
+                yield return new WaitForSeconds(2);
+
+                time = 0;
+                while (time < duration)
+                {
+                    ikController.HandIKAmount = Mathf.Lerp(endValue, startValue, time / duration);
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+
+                animator.SetBool("PointingLeft", false);
+                animator.SetBool("PointingRight", false);
+                ikController.HandIKAmount = startValue;
+                ikController.isPointing = false;
+                ikController.isLookingAtPOI = false;
                 //Only one variation implemented!
                 break;
             case "UNSURE":
