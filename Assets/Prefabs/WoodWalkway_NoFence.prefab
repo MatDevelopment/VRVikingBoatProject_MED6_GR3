@@ -78,10 +78,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5399165722701852384, guid: 377b8f869d744324499aac5472be3dde,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 377b8f869d744324499aac5472be3dde,
         type: 3}
       propertyPath: m_Name
       value: WoodWalkway_NoFence
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 377b8f869d744324499aac5472be3dde,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545731796391137060, guid: 377b8f869d744324499aac5472be3dde,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
