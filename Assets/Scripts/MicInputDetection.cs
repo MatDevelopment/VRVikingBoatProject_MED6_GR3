@@ -59,9 +59,9 @@ public class MicInputDetection : MonoBehaviour
         if (loudness < threshold)
         {
             //The speechPauseCounter variable is so that the user can have natural breaks inbetween words they say, or so-called thinking pauses.
-            loudness = 0;
+           // loudness = 0;
 
-            if (speechPauseCounter >= speechPauseCounterThreshold && isListening && apiStatus.isTranscribing == false && !apiStatus.isTalking)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
+            if (speechPauseCounter >= speechPauseCounterThreshold && isListening == true && apiStatus.isTranscribing == false && !apiStatus.isTalking)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
             {
                 if (whisperScript.userRecordingString.Length > 0)
                 {
