@@ -1,0 +1,11 @@
+Total Time: 01:39, User Prompts: 5, Erik Responses: 5, Erik Gaze Time: 0, API Call Time Averages: Combined 6.47046922, SST: 1.59902542, ChatGPT: 2.4357219, TTS: 2.4357219
+[00:10] User: Erik, hvordan går det? Hej igen, Erik.
+[00:14] Erik: [API: 5.2145816] HAPPY GREETING Det går godt, tak fordi du spørger. Hvad bringer dig ud på vandet i dag?
+[00:28] User: Hvis du kan lide denne video, så kan du gerne lide og abonnere på kanalen.
+[00:31] Erik: [API: 5.1056315] CONFUSED Jeg forstår ikke, hvad du mener. Kan du forklare?
+[00:42] User: Kan du hjælpe mig med at få nogle fisk?
+[00:45] Erik: [API: 5.0744337] HAPPY APPROVE Selvfølgelig, hop ombord. Jeg viser dig, hvordan man fanger de bedste fisk her i strømmen.
+[01:01] User: Tak for det.
+[01:06] Erik: [API: 6.1249816] HAPPY GRATITUDE Det var så lidt. Lad os se, om guderne er med os i dag og giver os et godt fangst.
+[01:24] User: Hvor skal vi tage hen for at fiske? Hvor hen skal vi tage hen for at fiske?
+[01:29] Erik: [API: 5.9997767] HAPPY POINTING Vi sætter kurs mod de stille vande ved fjordmundingen. Der plejer at være mange fisk.

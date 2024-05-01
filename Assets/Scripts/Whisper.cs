@@ -30,6 +30,7 @@ namespace OpenAI
         [SerializeField] private GestureManager gestureManagerNew;
         [SerializeField] private ChoosePromptGesture choosePromptGestureScript;
         [SerializeField] private PointingManager pointingManagerScript;
+        [SerializeField] private NewDataLogManager newDataLogManager;
         private NPCSoundBitPlayer nPCSoundBitPlayer;
 
         [SerializeField] private Image progress;
@@ -39,6 +40,7 @@ namespace OpenAI
         private readonly string fileName = "output.wav";
         private readonly int duration = 12;
         public string npcResponse;
+        public string uneditedNPCResponse;
         public string userRecordingString;
 
         public bool contextIsPerformed = false;
@@ -131,6 +133,8 @@ namespace OpenAI
                 {
                     Debug.Log("Recorded message: " + userRecordingString + gestureManagerNew.PullLatestGestureCombination());
 
+                    newDataLogManager.SendStringToDataLogger("User: " + userRecordingString);
+                    newDataLogManager.TotalUserPrompts += 1;
                     chatTest.AddPlayerInputToChatLog(userRecordingString + gestureManagerNew.PullLatestGestureCombination());
                     choosePromptGestureScript.ClearDictionaryOfPointedItems();
                     pointingManagerScript.rightHandLastSelected = "";
@@ -144,6 +148,9 @@ namespace OpenAI
 
                     Debug.Log("NPC Response: " + npcResponse);
 
+                    uneditedNPCResponse = npcResponse;
+                    // newDataLogManager.SendStringToDataLogger("Erik: " + npcResponse);
+                    newDataLogManager.TotalErikResponses += 1;
                     chatTest.AddNpcResponseToChatLog(npcResponse);
 
                     //Check for current NPC emotion in order to play animation
@@ -195,7 +202,9 @@ namespace OpenAI
 
                     //OpenAI TTS (Danish):
                     ttsManagerScript.SynthesizeAndPlay(npcResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
-                    
+
+                    // newDataLogManager.SendStringToDataLogger("Erik: " + "[API: " + apiCallTimeManager.GetLastCombinedCallTime() + "] " + uneditedNPCResponse);
+
                 }
 
                 //contextIsPerformed = false;

@@ -1,3 +1,4 @@
+using Amazon.Auth.AccessControlPolicy.ActionIdentifiers;
 using OpenAI;
 using System;
 using System.Collections;
@@ -13,6 +14,7 @@ public class NewDataLogManager : MonoBehaviour
 
     [Header("Needed Scripts")]
     [SerializeField] Whisper whisper;
+    [SerializeField] APICallTimeManager apiCallTimeManager;
 
     [Header("File Related")]
     // Variables for outputting the log file
@@ -21,6 +23,12 @@ public class NewDataLogManager : MonoBehaviour
     static string Filename = "";
     string path;
     DateTimeOffset localTime;
+
+    public List<string> StringsToLog = new List<string>();
+    public int TotalUserPrompts = 0;
+    public int TotalErikResponses = 0;
+
+    public float ErikGazeTime = 0;
 
     private void Awake()
     {
@@ -88,10 +96,63 @@ public class NewDataLogManager : MonoBehaviour
 
     public void LogUpdate()
     {
-        int currentTime = (int)Mathf.Round(Time.time);
+        // int currentTime = (int)Mathf.Round(Time.time);
+        string currentTime = FormatTime(Time.time);
+
+        // Calculating average API call times:
+        // STT
+        double totalSTTTime = 0;
+        foreach (double time in apiCallTimeManager.CallDurations_SpeechToText)
+        {
+            totalSTTTime += time;
+        }
+        double STTaverage = totalSTTTime / apiCallTimeManager.CallDurations_SpeechToText.Count;
+
+        // ChatGPT
+        double totalGPTTime = 0;
+        foreach (double time in apiCallTimeManager.CallDurations_ChatGPT)
+        {
+            totalGPTTime += time;
+        }
+        double GPTaverage = totalGPTTime / apiCallTimeManager.CallDurations_ChatGPT.Count;
+
+        // TTS
+        double totalTTSTime = 0;
+        foreach (double time in apiCallTimeManager.CallDurations_TextToSpeech)
+        {
+            totalTTSTime += time;
+        }
+        double TTSaverage = totalGPTTime / apiCallTimeManager.CallDurations_TextToSpeech.Count;
+
+        // Combined
+        double totalCombinedTime = 0;
+        foreach (double time in apiCallTimeManager.CombinedCallTimes)
+        {
+            totalCombinedTime += time;
+        }
+        double combinedAverage = totalCombinedTime / apiCallTimeManager.CombinedCallTimes.Count;
+
         // Defining what is written in the log text
-        string SensorLogText = "Experience Time = " + currentTime;
+        string SensorLogText = "Total Time: " + currentTime + ", User Prompts: " + TotalUserPrompts + ", Erik Responses: " + TotalErikResponses + ", Erik Gaze Time: " + ErikGazeTime + ", API Call Time Averages:" + " Combined " + combinedAverage + ", SST: " + STTaverage + ", ChatGPT: " + GPTaverage + ", TTS: " + TTSaverage;
         // Appending the string to the textfile which means it is written behind the current text
         sw.WriteLine(SensorLogText);
+
+        foreach (string LoggedString in StringsToLog)
+        {
+            sw.WriteLine(LoggedString);
+        }
+    }
+
+    public void SendStringToDataLogger(string DataToBeLogged)
+    {
+        StringsToLog.Add("[" + FormatTime(Time.time) + "] " + DataToBeLogged);
+    }
+
+    // Method to format time in minutes and seconds
+    private string FormatTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60);
+        int seconds = Mathf.FloorToInt(time % 60);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

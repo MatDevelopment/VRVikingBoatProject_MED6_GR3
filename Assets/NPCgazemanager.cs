@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NPCgazemanager : MonoBehaviour
 {
+    [SerializeField] NewDataLogManager newDataLogManager;
+    
     private float gazeTimeToActivate = 0.5f;
 
     private float startGazeTime = 0f;
@@ -20,6 +22,6 @@ public class NPCgazemanager : MonoBehaviour
         stopGazeTime = Time.fixedTime;          //The time in seconds since the start of the game stored in stopGazeTime, when the user stops looking at an NPC
 
 
-        DataLogManager.Erik_GazeTime += (stopGazeTime - startGazeTime);
+        newDataLogManager.ErikGazeTime += (stopGazeTime - startGazeTime);
     }
 }

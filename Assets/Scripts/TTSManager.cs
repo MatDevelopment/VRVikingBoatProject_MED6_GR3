@@ -1,3 +1,4 @@
+using OpenAI;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class TTSManager : MonoBehaviour
     [SerializeField] private APIStatus apiStatus;
     [SerializeField] private APICallTimeManager apiCallTimeManager;
     [SerializeField] private AudioPlayer audioPlayer;
+    [SerializeField] private Whisper whisper;
+    [SerializeField] private NewDataLogManager newDataLogManager;
     [SerializeField] private TTSModel model = TTSModel.TTS_1;
     [SerializeField] private TTSVoice voice = TTSVoice.Alloy;
     [SerializeField, Range(0.25f, 4.0f)] private float speed = 1f;
@@ -41,6 +44,8 @@ public class TTSManager : MonoBehaviour
 
             Debug.Log("Playing the synthesized audio now.");
             audioPlayer.ProcessAudioBytes(audioData);
+
+            newDataLogManager.SendStringToDataLogger("Erik: " + "[API: " + apiCallTimeManager.GetLastCombinedCallTime() + "] " + whisper.uneditedNPCResponse);
         }
         else
         {

@@ -21696,10 +21696,12 @@ MonoBehaviour:
   gestureManagerNew: {fileID: 1739521427}
   choosePromptGestureScript: {fileID: 1739521431}
   pointingManagerScript: {fileID: 1739521429}
+  newDataLogManager: {fileID: 1243371343}
   progress: {fileID: 0}
   buttonHoldReference: {fileID: 1533704310230560322, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   npcResponse: 
+  uneditedNPCResponse: 
   userRecordingString: 
   contextIsPerformed: 0
   timeToInterruptTalk: 0.15
@@ -34035,6 +34037,58 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1243371342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243371344}
+  - component: {fileID: 1243371343}
+  m_Layer: 0
+  m_Name: DataLogManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1243371343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243371342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd071985be8b6f44810e77e72c2da77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllowLogging: 1
+  whisper: {fileID: 861633864}
+  apiCallTimeManager: {fileID: 1442082956}
+  newFileName: Testing
+  StringsToLog: []
+  TotalUserPrompts: 0
+  TotalErikResponses: 0
+  ErikGazeTime: 0
+--- !u!4 &1243371344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243371342}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1083.736, y: 65.65037, z: 602.36444}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1251564892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34797,6 +34851,16 @@ PrefabInstance:
       propertyPath: voice
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 710117858188653579, guid: 62b0066411a704e0ea891b828f10b710,
+        type: 3}
+      propertyPath: whisper
+      value: 
+      objectReference: {fileID: 861633864}
+    - target: {fileID: 710117858188653579, guid: 62b0066411a704e0ea891b828f10b710,
+        type: 3}
+      propertyPath: newDataLogManager
+      value: 
+      objectReference: {fileID: 1243371343}
     - target: {fileID: 733171135368295313, guid: 62b0066411a704e0ea891b828f10b710,
         type: 3}
       propertyPath: audioSource
@@ -64249,6 +64313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb93d6cef787e74caf0a1726f796ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newDataLogManager: {fileID: 1243371343}
 --- !u!114 &6572797345569057211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64296,7 +64361,7 @@ MonoBehaviour:
   - CONDOLENCE
   - INSULT
   - STOP
-  erikSpeakable: 0
+  erikSpeakable: 1
   erikSceneStartDialogueDone: 0
 --- !u!114 &6572797345569057212
 MonoBehaviour:
@@ -64464,6 +64529,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1336053826}
   - {fileID: 564915322}
+  - {fileID: 1243371344}
   - {fileID: 2068892558}
   - {fileID: 1442082955}
   - {fileID: 1897685330}
