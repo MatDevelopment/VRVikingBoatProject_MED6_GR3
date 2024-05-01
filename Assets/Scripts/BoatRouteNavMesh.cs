@@ -17,6 +17,8 @@ public class BoatRouteNavMesh : MonoBehaviour
 
     [SerializeField] private List<Transform> PointsOfInterest = new List<Transform>();
     public Transform currentPOI;
+
+    public FadeController fadeController;
     
     private void Awake()
     {
@@ -30,9 +32,30 @@ public class BoatRouteNavMesh : MonoBehaviour
             BoatNavMeshAgent.destination = Targets[TargetIndex].position; 
             BoatToTargetDistance = Vector3.Distance(Boat.transform.position, Targets[TargetIndex].position);
 
-            if (BoatToTargetDistance < 4 && TargetIndex < Targets.Count)
+            if (BoatToTargetDistance < 6 && TargetIndex < Targets.Count)
             {
-                TargetIndex += 1;
+                if (Targets[TargetIndex].CompareTag("Goal"))
+                {
+                    fadeController.FadeOut();
+                    fadeController.ShowEndText();
+                    Debug.Log("Goal has been reached!");
+                }
+                else if (Targets[TargetIndex].CompareTag("Boost"))
+                {
+                    BoatNavMeshAgent.speed += 1;
+                    Debug.Log("Boat Speed has been boosted!");
+                    TargetIndex += 1;
+                }
+                else if (Targets[TargetIndex].CompareTag("Slow"))
+                {
+                    BoatNavMeshAgent.speed -= 1;
+                    Debug.Log("Boat Speed has been slowed!");
+                    TargetIndex += 1;
+                }
+                else
+                {
+                    TargetIndex += 1;
+                }  
             }
 
             if (currentPOI != PointsOfInterest[TargetIndex])
