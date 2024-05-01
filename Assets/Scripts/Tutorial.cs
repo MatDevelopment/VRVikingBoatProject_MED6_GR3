@@ -10,7 +10,7 @@ public class Tutorial : MonoBehaviour
     private float fadeSpeed_Image = 0.05f, fadeStepStrengh = 0.01f;
     private bool instructionInProgress = false;
     private Instruction currentInstruction;
-    private int currentInstructionIndex = 0;
+    //private int currentInstructionIndex = 0;
     private float instructionTimer = 0f;
     private const float countdownDuration = 3f;
     private bool userConfirmed = false;
@@ -22,34 +22,44 @@ public class Tutorial : MonoBehaviour
     public CanvasGroup blackImageCG;
     public TextMeshProUGUI instructionText;
 
-    public List<Instruction> instructions = new List<Instruction>();
+    //public List<Instruction> instructions = new List<Instruction>();
 
-    
     void Start()
     {
         if (!startExperienceWithTheTutorial) return;
 
         microphoneCalibration = FindObjectOfType<MicrophoneCalibration>();
 
-        SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Peg på den grønne terning for at starte.");
+        SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
 
         //Check for pointing on a object here
 
         //If the user passes the check, then proceed and run the DoSection function
 
         //
-
-        StartCoroutine(DoSection());
     }
-
-    private IEnumerator DoSection()
+    private void Update()
     {
-        StartInstruction(instructions[currentInstructionIndex]);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartTutorial();
+        }
+    }
+    private IEnumerator DoSection( float delay )
+    {
+        yield return new WaitForSeconds(delay);
+
+        Debug.Log("Started instruction!");
+        instructionInProgress = true;
+        instructionTimer = 0f;
+        userConfirmed = false;
+
+        StartCoroutine(Countdown(3));
 
         yield return new WaitForSeconds(3);
 
         StartCoroutine(microphoneCalibration.ListenForLoudnessForDuration(3));
-
+        SetInstructionsText("Jeg kan godt lide vikinger. De har nogle sjove hatte på");
         yield return new WaitForSeconds(3);
 
         if (userConfirmed)
@@ -58,6 +68,14 @@ public class Tutorial : MonoBehaviour
         }
     }
 
+    public void StartTutorial()
+    {
+        userGaveThumbsUp = true;
+
+        SetInstructionsText("Om 5 sekunder, sig sætningen: Jeg kan godt lide vikinger. De har nogle sjove hatte på");
+
+        StartCoroutine(DoSection(1));
+    }
     //private IEnumerator DoSection()
     //{
     //    StartInstruction(instructions[currentInstructionIndex]);
@@ -101,26 +119,10 @@ public class Tutorial : MonoBehaviour
         instructionInProgress = true;
     }
 
-    private void StartInstruction(Instruction instruction)
-    {
-        Debug.Log("Started instruction!");
-        currentInstruction = instruction;
-        instructionInProgress = true;
-        instructionTimer = 0f;
-        userConfirmed = false;
-
-        //if (countdownCoroutine != null)
-        //{
-        //    StopCoroutine(countdownCoroutine);
-        //}
-
-        StartCoroutine(Countdown());
-    }
-
-    private IEnumerator Countdown()
+    private IEnumerator Countdown(int secondsToCountDown)
     {
         Debug.Log("Started Coundown!");
-        for (int i = 3; i > 0; i--)
+        for (int i = secondsToCountDown; i > 0; i--)
         {
             SetInstructionsText(currentInstruction.instruction + "\n in " + i + " seconds");
             yield return new WaitForSeconds(1f);
@@ -128,17 +130,6 @@ public class Tutorial : MonoBehaviour
 
         SetInstructionsText(currentInstruction.instruction);
     }
-
-    //private void DisplayInstruction()
-    //{
-    //    // Display instruction UI, handle user confirmation, and failure conditions
-    //    // For example, check microphone input and set isUserConfirmed accordingly
-    //    // Here's a simplified example:
-    //    if (microphoneCalibration.currentLoudness> microphoneThreshold)
-    //    {
-    //        userConfirmed = true; // User confirmed
-    //    }
-    //}
 
     private void EndInstruction()
     {
@@ -171,10 +162,6 @@ public class Tutorial : MonoBehaviour
         instructionText.enabled = false;
     }
 
-    public void StartTutorial()
-    {
-        userGaveThumbsUp = true;
-    }
 
     [System.Serializable]
     public class Instruction

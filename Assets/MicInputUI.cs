@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class MicInputUI : MonoBehaviour // Responsible for displaying and updating the microphone UI.
 {
-  
     [SerializeField] private APIStatus apiStatus;
     [SerializeField] private MicInputDetection inputDetection;
     private float lineHeight = 0.015f;
@@ -14,15 +13,12 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
     public TextMeshProUGUI textMeshPro;
     public float decaySpeed = 0.8f, smoothLoudnessMax = 0;
   
-
-
     //TODO:I think we need some form of calibration at the start of the experience - possibly in the tutorial level? the particpant is prompted to say some words and then we save the max amplitude then..?
     void Start()
     {
         apiStatus = FindObjectOfType<APIStatus>();
         try
         {
-
             inputDetection = FindObjectOfType<MicInputDetection>();
         }
         catch
@@ -68,7 +64,7 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
     {
         textMeshPro.text = message;
     }
-    public void UpdateThreshold() //TODO: threshold is not correct..!
+    public void UpdateThreshold()
     {
         thresholdImage.fillAmount = 1 - inputDetection.threshold/ inputDetection.maxAmplitudeWithCurrentMicrophone;
         thresholdMaskImage.fillAmount = inputDetection.threshold/ inputDetection.maxAmplitudeWithCurrentMicrophone + lineHeight;
