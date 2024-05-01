@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Debug = UnityEngine.Debug;
 
@@ -38,6 +39,18 @@ public class APICallTimeManager : MonoBehaviour // Responsible for holding callT
         }
     }
 
+    public string GetLastCombinedCallTime()
+    {
+        if (CombinedCallTimes.Count > 0)
+        {
+            double lastEntry = CombinedCallTimes[CombinedCallTimes.Count - 1];
+            return lastEntry.ToString();
+        }
+        else
+        {
+            return "List is empty";
+        }
+    }
 
     public void AddCallDuration_SpeechToText(double callTime)
     {

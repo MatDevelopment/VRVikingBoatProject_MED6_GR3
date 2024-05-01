@@ -14,7 +14,7 @@ public class Tutorial : MonoBehaviour
     private float instructionTimer = 0f;
     private const float countdownDuration = 3f;
     private bool userConfirmed = false;
-    private bool userGaveThumbsUp;
+    private bool userGaveThumbsUp, userPointedAtTheGreenCube;
     //private IEnumerator countdownCoroutine;
 
     [Header("Tick to start with the tutorial enabled!")]
@@ -24,9 +24,9 @@ public class Tutorial : MonoBehaviour
 
     public List<Instruction> instructions = new List<Instruction>();
 
+    
     void Start()
     {
-
         if (!startExperienceWithTheTutorial) return;
 
         microphoneCalibration = FindObjectOfType<MicrophoneCalibration>();
@@ -38,7 +38,6 @@ public class Tutorial : MonoBehaviour
         //If the user passes the check, then proceed and run the DoSection function
 
         //
-
 
         StartCoroutine(DoSection());
     }
@@ -55,24 +54,40 @@ public class Tutorial : MonoBehaviour
 
         if (userConfirmed)
         {
-            EndInstruction();
-            if (currentInstructionIndex < instructions.Count)
-            {
-                currentInstructionIndex++;
-                StartCoroutine(DoSection());
-                Debug.Log("Do next section!");
 
-            }
-            else
-            {
-                HideTutorial();
-            }
-        }
-        else
-        {
-            StartCoroutine(DoSection());
         }
     }
+
+    //private IEnumerator DoSection()
+    //{
+    //    StartInstruction(instructions[currentInstructionIndex]);
+
+    //    yield return new WaitForSeconds(3);
+
+    //    StartCoroutine(microphoneCalibration.ListenForLoudnessForDuration(3));
+
+    //    yield return new WaitForSeconds(3);
+
+    //    if (userConfirmed)
+    //    {
+    //        EndInstruction();
+    //        if (currentInstructionIndex < instructions.Count)
+    //        {
+    //            currentInstructionIndex++;
+    //            StartCoroutine(DoSection());
+    //            Debug.Log("Do next section!");
+
+    //        }
+    //        else
+    //        {
+    //            HideTutorial();
+    //        }
+    //    }
+    //    else
+    //    {
+    //        StartCoroutine(DoSection());
+    //    }
+    //}
 
     public void UserTalkedLoudEnough()
     {
@@ -156,13 +171,9 @@ public class Tutorial : MonoBehaviour
         instructionText.enabled = false;
     }
 
-    private IEnumerator FadeFromBlack()
+    public void StartTutorial()
     {
-        while (blackImageCG.alpha > 0)
-        {
-            yield return new WaitForSeconds(fadeSpeed_Image);
-            blackImageCG.alpha -= fadeStepStrengh;
-        }
+        userGaveThumbsUp = true;
     }
 
     [System.Serializable]
