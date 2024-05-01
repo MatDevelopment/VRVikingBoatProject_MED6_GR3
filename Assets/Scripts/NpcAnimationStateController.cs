@@ -72,16 +72,7 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
                 //Only one variation implemented!
                 break;
             case "POINTING":
-                //animator.SetTrigger("gest.Pointing");
-                
-                if (ikController.isRight)
-                {
-                    animator.SetBool("PointingRight", true);
-                }
-                else if (ikController.isLeft)
-                {
-                    animator.SetBool("PointingLeft", true);
-                }
+                //animator.SetTrigger("gest.Pointing")
 
                 ikController.isPointing = true;
                 ikController.isLookingAtPOI = true;

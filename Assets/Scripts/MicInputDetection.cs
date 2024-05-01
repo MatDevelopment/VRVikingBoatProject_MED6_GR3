@@ -31,7 +31,7 @@ public class MicInputDetection : MonoBehaviour
     private float speechPauseCounter, speechPauseCounterThreshold = 1.5f;
     private float[] speechWaveData;
 
-    public bool isListening;
+    public bool isListening = false;
 
     public Vector3 minScale;
 
