@@ -12,6 +12,19 @@ TagManager:
   - DynamicGestureManager
   - leftRightHeadTriggerTag
   - topBottomHeadTriggerTag
+  - Goal
+  - Boost
+  - Slow
+  - FishingHut
+  - RuneStone
+  - Farmstead
+  - LindholmVillage
+  - LindholmHoeje
+  - MarketEntrance
+  - FabricTrader
+  - Smith
+  - BoatBuilder
+  - EriksPlace
   layers:
   - Default
   - TransparentFX
