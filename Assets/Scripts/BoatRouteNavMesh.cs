@@ -78,56 +78,56 @@ public class BoatRouteNavMesh : MonoBehaviour
                 else if (Targets[TargetIndex].CompareTag("Farmstead"))
                 {
                     Debug.Log("Boat at Farmstead");
-                    currentPOI = PointsOfInterest[3];
+                    currentPOI = PointsOfInterest[2];
                     TargetIndex += 1;
                 }
                 // Lindholm Village
                 else if (Targets[TargetIndex].CompareTag("LindholmVillage"))
                 {
                     Debug.Log("Boat at Lindholm Village");
-                    currentPOI = PointsOfInterest[4];
+                    currentPOI = PointsOfInterest[3];
                     TargetIndex += 1;
                 }
                 // Lindholm Hoeje
                 else if (Targets[TargetIndex].CompareTag("LindholmHoeje"))
                 {
                     Debug.Log("Boat at Lindholm Hoeje");
-                    currentPOI = PointsOfInterest[5];
+                    currentPOI = PointsOfInterest[4];
                     TargetIndex += 1;
                 }
                 // Market Entrance
                 else if (Targets[TargetIndex].CompareTag("MarketEntrance"))
                 {
                     Debug.Log("Boat at Market Entrance");
-                    currentPOI = PointsOfInterest[6];
+                    currentPOI = PointsOfInterest[5];
                     TargetIndex += 1;
                 }
                 // Fabric Trader
-                else if (Targets[TargetIndex].CompareTag("FabricTrader"))
-                {
-                    Debug.Log("Boat at Fabric Trader");
-                    currentPOI = PointsOfInterest[7];
-                    TargetIndex += 1;
-                }
-                // The Smith
                 else if (Targets[TargetIndex].CompareTag("Smith"))
                 {
                     Debug.Log("Boat at Smith");
-                    currentPOI = PointsOfInterest[8];
+                    currentPOI = PointsOfInterest[6];
                     TargetIndex += 1;
                 }
-                // Boat Builder
+                // The Smith
                 else if (Targets[TargetIndex].CompareTag("BoatBuilder"))
                 {
                     Debug.Log("Boat at Boat Builder");
-                    currentPOI = PointsOfInterest[9];
+                    currentPOI = PointsOfInterest[7];
+                    TargetIndex += 1;
+                }
+                // Boat Builder
+                else if (Targets[TargetIndex].CompareTag("FabricTrader"))
+                {
+                    Debug.Log("Boat at Traders");
+                    currentPOI = PointsOfInterest[8];
                     TargetIndex += 1;
                 }
                 // Eriks Place
                 else if (Targets[TargetIndex].CompareTag("EriksPlace"))
                 {
-                    Debug.Log("Boat at Boat Builder");
-                    currentPOI = PointsOfInterest[10];
+                    Debug.Log("Boat at Eriks");
+                    currentPOI = PointsOfInterest[9];
                     TargetIndex += 1;
                 }
 
