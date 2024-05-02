@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,7 +15,7 @@ public class Tutorial : MonoBehaviour
     private float instructionTimer = 0f;
     private const float countdownDuration = 3f;
     private bool userConfirmed = false;
-    private bool userGaveThumbsUp, userPointedAtTheGreenCube;
+    private bool userGaveThumbsUp, userPointedAtTheGreenCube, userCanGiveThumbsUp, userCanPointAtCube;
     //private IEnumerator countdownCoroutine;
 
     [Header("Tick to start with the tutorial enabled!")]
@@ -31,19 +32,26 @@ public class Tutorial : MonoBehaviour
         microphoneCalibration = FindObjectOfType<MicrophoneCalibration>();
 
         SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
-
+        userCanGiveThumbsUp = true;
         //Check for pointing on a object here
 
         //If the user passes the check, then proceed and run the DoSection function
 
-        //
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && userCanGiveThumbsUp)
         {
             StartTutorial();
         }
+        if (Input.GetKeyDown(KeyCode.O) && userCanPointAtCube)
+        {
+            userPointedAtTheGreenCube = true;
+        }
+
+        if (userPointedAtTheGreenCube)
+            HideTutorial();
+
     }
     private IEnumerator DoSection( float delay )
     {
@@ -54,9 +62,16 @@ public class Tutorial : MonoBehaviour
         instructionTimer = 0f;
         userConfirmed = false;
 
-        StartCoroutine(Countdown(3));
+        StartCoroutine(TryCalibrationStep());
 
-        yield return new WaitForSeconds(3);
+     
+    }
+
+    private IEnumerator TryCalibrationStep()
+    {
+        StartCoroutine(Countdown(5));
+
+        yield return new WaitForSeconds(5);
 
         StartCoroutine(microphoneCalibration.ListenForLoudnessForDuration(3));
         SetInstructionsText("Jeg kan godt lide vikinger. De har nogle sjove hatte på");
@@ -64,48 +79,36 @@ public class Tutorial : MonoBehaviour
 
         if (userConfirmed)
         {
+            SetInstructionsText("Kalibrering færdig!");
+            yield return new WaitForSeconds(2);
 
+            Step_CheckForPointing();
+        }
+        else
+        {
+            SetInstructionsText("Kalibrering mislykkedes - volumen for lav. Prøv igen.");
+            yield return new WaitForSeconds(2);
+            StartCoroutine(TryCalibrationStep());
         }
     }
 
     public void StartTutorial()
     {
+
+        if (userGaveThumbsUp) return;
+        SetInstructionsText("Om 5 sekunder skal du sige en saetning. Er du klar?");
+
+        StartCoroutine(DoSection(3));
+
         userGaveThumbsUp = true;
 
-        SetInstructionsText("Om 5 sekunder, sig sætningen: Jeg kan godt lide vikinger. De har nogle sjove hatte på");
-
-        StartCoroutine(DoSection(1));
     }
-    //private IEnumerator DoSection()
-    //{
-    //    StartInstruction(instructions[currentInstructionIndex]);
 
-    //    yield return new WaitForSeconds(3);
-
-    //    StartCoroutine(microphoneCalibration.ListenForLoudnessForDuration(3));
-
-    //    yield return new WaitForSeconds(3);
-
-    //    if (userConfirmed)
-    //    {
-    //        EndInstruction();
-    //        if (currentInstructionIndex < instructions.Count)
-    //        {
-    //            currentInstructionIndex++;
-    //            StartCoroutine(DoSection());
-    //            Debug.Log("Do next section!");
-
-    //        }
-    //        else
-    //        {
-    //            HideTutorial();
-    //        }
-    //    }
-    //    else
-    //    {
-    //        StartCoroutine(DoSection());
-    //    }
-    //}
+    private void Step_CheckForPointing()
+    {
+        userCanPointAtCube = true;
+        SetInstructionsText("Nu er du klar - peg på den grønne terning for at starte");
+    }
 
     public void UserTalkedLoudEnough()
     {
@@ -121,14 +124,12 @@ public class Tutorial : MonoBehaviour
 
     private IEnumerator Countdown(int secondsToCountDown)
     {
-        Debug.Log("Started Coundown!");
+        Debug.Log("Started A Countdown!");
         for (int i = secondsToCountDown; i > 0; i--)
         {
-            SetInstructionsText(currentInstruction.instruction + "\n in " + i + " seconds");
+            SetInstructionsText ("Om " + i + " sekunder skal du sige en saetning. Er du klar?");
             yield return new WaitForSeconds(1f);
         }
-
-        SetInstructionsText(currentInstruction.instruction);
     }
 
     private void EndInstruction()

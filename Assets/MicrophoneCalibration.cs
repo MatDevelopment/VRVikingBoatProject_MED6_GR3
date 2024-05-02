@@ -10,7 +10,7 @@ public class MicrophoneCalibration : MonoBehaviour// Calibrating the maxAmplitud
 
     public float currentLoudness, maxLoudnessHeard;
     public bool detectLoudness;
-    private const float microphoneThreshold = 0.05f; // Adjust as needed
+    private const float microphoneThreshold = 2f; // Adjust as needed
 
     public float averageLoudness;
 
@@ -41,12 +41,19 @@ public class MicrophoneCalibration : MonoBehaviour// Calibrating the maxAmplitud
         if (averageLoudness >= microphoneThreshold)
         {
             tutorial.UserTalkedLoudEnough();
+            SetMIcrophoneCalibratedValues();
         }
         else
         {
             tutorial.UserDidNotTalkLoudEnough();
         }
         detectLoudness = false;
+    }
+
+    private void SetMIcrophoneCalibratedValues()
+    {
+        micInputDetection.threshold = averageLoudness - 1;
+        micInputDetection.maxAmplitudeWithCurrentMicrophone = averageLoudness + 6;
     }
 
 }
