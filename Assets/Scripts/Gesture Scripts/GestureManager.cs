@@ -47,7 +47,7 @@ public class GestureManager : MonoBehaviour //TODO: this function  CreateCombine
         {
             pointingWithLeftHand = false;
             PointingActionLeft = "";
-                    }
+        }
 
         if (GestureList_Right.Count > 0 && GestureList_Right[0] == pointingPose)
         {

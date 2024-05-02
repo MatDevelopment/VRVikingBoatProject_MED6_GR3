@@ -31,6 +31,7 @@ namespace OpenAI
         [SerializeField] private ChoosePromptGesture choosePromptGestureScript;
         [SerializeField] private PointingManager pointingManagerScript;
         [SerializeField] private NewDataLogManager newDataLogManager;
+        [SerializeField] private HeadGestureTrigger _headGestureTrigger;
         private NPCSoundBitPlayer nPCSoundBitPlayer;
 
         [SerializeField] private Image progress;
@@ -202,6 +203,9 @@ namespace OpenAI
 
                     //OpenAI TTS (Danish):
                     ttsManagerScript.SynthesizeAndPlay(npcResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
+                    
+                    //_headGestureTrigger.SpawnHeadGestureTriggers();   //Head gesture trigger colliders are spawned when Erik starts talking. Should be destroyed after npcAudioSource.clip.length
+                    //Spawn HEADNOD and HEADSHAKE trigger prefabs here.
 
                     // newDataLogManager.SendStringToDataLogger("Erik: " + "[API: " + apiCallTimeManager.GetLastCombinedCallTime() + "] " + uneditedNPCResponse);
 

@@ -16,7 +16,7 @@ public class PointOfInterestUserGaze : MonoBehaviour
     {
         _npcInteractorScript = GameObject.FindWithTag("erikNpcInteractorScript").GetComponent<NPCInteractorScript>();
         pointOfInterestDescription = GetComponentInParent<InterestPointDescription>().description;
-        gazeTimeToActivate = GetComponentInParent<InterestPointDescription>().gazeTimeToActivate;
+        gazeTimeToActivate = GetComponentInParent<InterestPointDescription>().gazeTimeToActivate;       //Sets the gazeTimeToActivate to what it is set to on the point of interest PARENT gameobject "InterestPointDescription" script in the INSPECTOR.
     }
 
     public void StartCoroutine_RegisterUserGazeAtPointOfInterest()
@@ -28,7 +28,7 @@ public class PointOfInterestUserGaze : MonoBehaviour
     {
         yield return new WaitForSeconds(gazeTimeToActivate);
         
-        _npcInteractorScript.InformAndInitiateNpcTalk(userGazeDescription);
+        _npcInteractorScript.InformAndInitiateNpcTalk("The user is looking at the following point of interest near the shore line: " + userGazeDescription);
     }
     
 }
