@@ -6,6 +6,7 @@ public class PointingManager : MonoBehaviour
 {
     private GestureManager m_Manager;
 
+    [SerializeField] private Tutorial tutorial;
     [SerializeField] private ChoosePromptGesture choosePromptGestureScript;
     public Transform rightHand_indexStart, rightHand_indexEnd, leftHand_indexStart, leftHand_indexEnd;
     public LineRenderer leftLineRenderer, rightLinerenderer;
@@ -21,6 +22,7 @@ public class PointingManager : MonoBehaviour
 
     void Start()
     {
+        tutorial = FindObjectOfType<Tutorial>();
         choosePromptGestureScript = FindObjectOfType<ChoosePromptGesture>();
         m_Manager = FindAnyObjectByType<GestureManager>();
 
@@ -52,7 +54,11 @@ public class PointingManager : MonoBehaviour
             //Left hand pointing shoot ray!
             if (Physics.Raycast(leftHand_indexEnd.position, leftPointingDirection, out hit, Mathf.Infinity, invertedLayermask)) {
 
-                // Here we check for the layermask 6 = InterestPoint
+                if (hit.transform.gameObject.name == "TutorialCube")
+                                    {
+                    tutorial.SetPointedAtGreenCubeTrue();
+                }
+                    // Here we check for the layermask 6 = InterestPoint
                 if (hit.transform.gameObject.name != leftHandLastSelected)      
                                                                            
                 {
@@ -86,6 +92,11 @@ public class PointingManager : MonoBehaviour
             //Right hand pointing shoot ray! pew pew
             if (Physics.Raycast(rightHand_indexEnd.position, rightPointingDirection, out hit, Mathf.Infinity, invertedLayermask))
             {
+                if (hit.transform.gameObject.name == "TutorialCube")
+                {
+                    tutorial.SetPointedAtGreenCubeTrue();
+                }
+
                 if (hit.transform.gameObject.name != rightHandLastSelected)
                 {
                     pointingResetCounter = 0;

@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
+    [SerializeField] BoatRouteNavMesh boatRouteNavMesh;
+    [SerializeField] BoatTilt tilter;
+    [SerializeField] FadeController fadeController;
     [SerializeField] MicrophoneCalibration microphoneCalibration;
     private float fadeSpeed_Image = 0.05f, fadeStepStrengh = 0.01f;
     private bool instructionInProgress = false;
@@ -27,9 +30,15 @@ public class Tutorial : MonoBehaviour
 
     void Start()
     {
+        boatRouteNavMesh = FindObjectOfType<BoatRouteNavMesh>();
+        tilter = FindAnyObjectByType<BoatTilt>();
+
         if (!startExperienceWithTheTutorial) return;
 
         microphoneCalibration = FindObjectOfType<MicrophoneCalibration>();
+
+        boatRouteNavMesh.StopTheBoat();
+        tilter.enabled = false;
 
         SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
         userCanGiveThumbsUp = true;
@@ -42,17 +51,20 @@ public class Tutorial : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && userCanGiveThumbsUp)
         {
-            StartTutorial();
+            SetMadeThumbsUpGestureTrue();
         }
         if (Input.GetKeyDown(KeyCode.O) && userCanPointAtCube)
         {
-            userPointedAtTheGreenCube = true;
+            SetPointedAtGreenCubeTrue();
         }
 
         if (userPointedAtTheGreenCube)
+        {
             HideTutorial();
-
+            boatRouteNavMesh.StartTheBoat();
+        }
     }
+
     private IEnumerator DoSection( float delay )
     {
         yield return new WaitForSeconds(delay);
@@ -63,8 +75,6 @@ public class Tutorial : MonoBehaviour
         userConfirmed = false;
 
         StartCoroutine(TryCalibrationStep());
-
-     
     }
 
     private IEnumerator TryCalibrationStep()
@@ -94,14 +104,9 @@ public class Tutorial : MonoBehaviour
 
     public void StartTutorial()
     {
-
-        if (userGaveThumbsUp) return;
         SetInstructionsText("Om 5 sekunder skal du sige en saetning. Er du klar?");
 
         StartCoroutine(DoSection(3));
-
-        userGaveThumbsUp = true;
-
     }
 
     private void Step_CheckForPointing()
@@ -161,8 +166,20 @@ public class Tutorial : MonoBehaviour
     {
         blackImageCG.alpha = 0;
         instructionText.enabled = false;
+        tilter.enabled = true;
     }
 
+    public void SetPointedAtGreenCubeTrue()
+    {
+        userPointedAtTheGreenCube = true;
+    }
+
+    public void SetMadeThumbsUpGestureTrue()
+    {
+        userGaveThumbsUp = true;
+
+        StartTutorial();
+    }
 
     [System.Serializable]
     public class Instruction
