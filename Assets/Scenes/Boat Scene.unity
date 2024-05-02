@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7995,7 +7995,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295793450}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -12630,74 +12630,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 515180233}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &516743325
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 14.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 267.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2449922378593444564, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6725540278565118532, guid: 359060b16ef2d964ebdad6e9215fba00,
-        type: 3}
-      propertyPath: m_Name
-      value: SandStorm
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 359060b16ef2d964ebdad6e9215fba00, type: 3}
 --- !u!1001 &520483214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13510,7 +13442,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533192048}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -62650,7 +62582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   microphoneCalibration: {fileID: 0}
-  startExperienceWithTheTutorial: 1
+  startExperienceWithTheTutorial: 0
   blackImageCG: {fileID: 295793452}
   instructionText: {fileID: 533192050}
 --- !u!1 &2070725988
@@ -65493,4 +65425,3 @@ SceneRoots:
   - {fileID: 1159915811}
   - {fileID: 785691906}
   - {fileID: 1006431320}
-  - {fileID: 516743325}
