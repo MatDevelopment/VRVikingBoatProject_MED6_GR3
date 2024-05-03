@@ -31,8 +31,9 @@ public class BoatRouteNavMesh : MonoBehaviour
     {
         BoatNavMeshAgent.speed = 0;
     }
-    public void StartTheBoat()
+    public IEnumerator StartTheBoat(float delay)
     {
+        yield return new WaitForSeconds(delay);
         BoatNavMeshAgent.speed = originalSpeed;
     }
 

@@ -54,4 +54,13 @@ public class FadeController : MonoBehaviour
     {
         fadeAnimator.SetTrigger("ShowEndText");
     }
+
+    public void FadeInAfterTime(float delay)
+    {
+        Invoke(nameof(FadeIn), delay);
+    }
+    public void FadeOutAfterTime(float delay)
+    {
+        Invoke(nameof(FadeOut), delay);
+    }
 }

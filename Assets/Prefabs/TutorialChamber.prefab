@@ -5247,6 +5247,7 @@ GameObject:
   - component: {fileID: 7306107016377182466}
   - component: {fileID: 6409868478629782319}
   - component: {fileID: 6672823368292199767}
+  - component: {fileID: 7856252344236905130}
   m_Layer: 6
   m_Name: TutorialCube
   m_TagString: Untagged
@@ -5341,6 +5342,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7856252344236905130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9030024407276681480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b79fe6002988c54781eb721678119c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1123051270567003317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5418,6 +5431,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1412486c478be9c4ca6ce9dad8f561ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1412486c478be9c4ca6ce9dad8f561ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1412486c478be9c4ca6ce9dad8f561ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1412486c478be9c4ca6ce9dad8f561ea,
         type: 3}

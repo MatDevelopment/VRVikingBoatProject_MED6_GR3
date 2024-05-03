@@ -30,6 +30,8 @@ public class NewDataLogManager : MonoBehaviour
 
     public float ErikGazeTime = 0;
 
+    public float timeThatTutorialEnded;
+
     private void Awake()
     {
         // Get the current date and time in GMT+2

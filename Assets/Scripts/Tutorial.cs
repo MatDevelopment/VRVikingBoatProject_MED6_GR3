@@ -7,29 +7,32 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
+    [SerializeField] NewDataLogManager dataLogManager;
     [SerializeField] BoatRouteNavMesh boatRouteNavMesh;
     [SerializeField] BoatTilt tilter;
     [SerializeField] FadeController fadeController;
     [SerializeField] MicrophoneCalibration microphoneCalibration;
     private float fadeSpeed_Image = 0.05f, fadeStepStrengh = 0.01f;
     private bool instructionInProgress = false;
-    private Instruction currentInstruction;
+
     //private int currentInstructionIndex = 0;
     private float instructionTimer = 0f;
     private const float countdownDuration = 3f;
     private bool userConfirmed = false;
     private bool userGaveThumbsUp, userPointedAtTheGreenCube, userCanGiveThumbsUp, userCanPointAtCube;
     //private IEnumerator countdownCoroutine;
+    public GameObject tutorialRoom, greenCube;
+    public Light tutorialLight;
 
     [Header("Tick to start with the tutorial enabled!")]
     public bool startExperienceWithTheTutorial;
-    public CanvasGroup blackImageCG;
+    //public CanvasGroup blackImageCG;
     public TextMeshProUGUI instructionText;
 
-    //public List<Instruction> instructions = new List<Instruction>();
 
     void Start()
     {
+        fadeController = FindObjectOfType<FadeController>();
         boatRouteNavMesh = FindObjectOfType<BoatRouteNavMesh>();
         tilter = FindAnyObjectByType<BoatTilt>();
 
@@ -42,26 +45,32 @@ public class Tutorial : MonoBehaviour
 
         SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
         userCanGiveThumbsUp = true;
+        HideGreenCube();
         //Check for pointing on a object here
 
         //If the user passes the check, then proceed and run the DoSection function
 
+        //FadeOutTutorial();
+
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && userCanGiveThumbsUp)
+        if (Input.GetKeyDown(KeyCode.Space) /*&& userCanGiveThumbsUp*/)
         {
+            userCanGiveThumbsUp = true;
+            Step_CheckForPointing();
             SetMadeThumbsUpGestureTrue();
         }
-        if (Input.GetKeyDown(KeyCode.O) && userCanPointAtCube)
+        if (Input.GetKeyDown(KeyCode.O) /*&& userCanPointAtCube*/)
         {
+            userCanPointAtCube = true;
             SetPointedAtGreenCubeTrue();
         }
 
         if (userPointedAtTheGreenCube)
         {
-            HideTutorial();
-            boatRouteNavMesh.StartTheBoat();
+            FadeOutTutorial();
+            boatRouteNavMesh.StartTheBoat(1);
         }
     }
 
@@ -112,6 +121,7 @@ public class Tutorial : MonoBehaviour
     private void Step_CheckForPointing()
     {
         userCanPointAtCube = true;
+        ShowGreenCube();
         SetInstructionsText("Nu er du klar - peg på den grønne terning for at starte");
     }
 
@@ -137,13 +147,13 @@ public class Tutorial : MonoBehaviour
         }
     }
 
-    private void EndInstruction()
-    {
-        Debug.Log("Ended instruction!");
-        instructionInProgress = false;
-        userConfirmed = false;
-        instructionText.text = "";
-    }
+    //private void EndInstruction()
+    //{
+    //    Debug.Log("Ended instruction!");
+    //    instructionInProgress = false;
+    //    userConfirmed = false;
+    //    instructionText.text = "";
+    //}
 
     private void SetInstructionsText(string input)
     {
@@ -158,37 +168,124 @@ public class Tutorial : MonoBehaviour
 
     private void ShowTutorial()
     {
-        blackImageCG.alpha = 1;
+        //blackImageCG.alpha = 1;
         instructionText.enabled = true;
     }
 
     private void HideTutorial()
     {
-        blackImageCG.alpha = 0;
+        //blackImageCG.alpha = 0;
         instructionText.enabled = false;
-       if(tilter != null) tilter.enabled = true;
+        if (tilter != null) tilter.enabled = true;
+
+    }
+
+    private void FadeOutTutorial()
+    {
+        //blackImageCG.alpha = 0;
+        instructionText.enabled = false;
+        if (tilter != null) tilter.enabled = true;
+        StartCoroutine(FadeRoomMaterials());
+        StartCoroutine(boatRouteNavMesh.StartTheBoat(1));
+        StartCoroutine(FadeRoomMaterials());
+        
+        //fadeController.FadeOutAfterTime(1);
+    }
+
+    IEnumerator FadeRoomMaterials()
+    {
+        float fadeDuration = 0.7f; 
+        
+
+        Material[] mats = tutorialRoom.GetComponent<MeshRenderer>().materials;
+
+        Color originalColor = mats[0].color; // Assuming the object has at least one material
+        Color transparentColor = new Color(originalColor.r, originalColor.g, originalColor.b, 0);
+
+        float elapsedTime = 0;
+
+        while (elapsedTime < fadeDuration)
+        {
+            float t = elapsedTime / fadeDuration;
+            Color currentColor = Color.Lerp(originalColor, transparentColor, t);
+
+            foreach (Material mat in mats)
+            {
+                mat.color = currentColor;
+            }
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        elapsedTime = 100;
+        // Ensure the final color is fully transparent
+        foreach (Material mat in mats)
+        {
+            mat.color = transparentColor;
+        }
+
+        DestroyTutorialRoom();
+        //Invoke(nameof(DestroyTutorialRoom), 1);
+        //Destroy(tutorialRoom); // Destroy the GameObject when the fading is complete
+    }
+
+    private void DestroyTutorialRoom()
+    {
+        foreach(Transform gm in tutorialRoom.GetComponentsInChildren<Transform>())
+        {
+            gm.gameObject.SetActive(false);
+        }
+        dataLogManager.timeThatTutorialEnded = Time.time;
+
+        //Destroy(tutorialRoom);
     }
 
     public void SetPointedAtGreenCubeTrue()
+    {
+        if (userCanPointAtCube && !userPointedAtTheGreenCube)
+        {
+            Invoke(nameof(InvokedSetTrue), 1.5f);
+
+            Destroy(greenCube);
+            //fadeController.FadeIn();
+
+            GameObject greenParticles = Instantiate(Resources.Load("GreenParticles"), greenCube.transform.position, Quaternion.identity) as GameObject;
+            Destroy(greenParticles, 3);
+        }
+    }
+
+    private void InvokedSetTrue()
     {
         userPointedAtTheGreenCube = true;
     }
 
     public void SetMadeThumbsUpGestureTrue()
     {
-        userGaveThumbsUp = true;
+        if (userCanGiveThumbsUp && !userGaveThumbsUp)
+        {
+            userGaveThumbsUp = true;
 
-        StartTutorial();
+            StartTutorial();
+        }
     }
 
-    [System.Serializable]
-    public class Instruction
+    public void SetLookedAtObjectTrue()
     {
-        public string instruction;
-
-        public Instruction(string instruction)
+        if (userCanGiveThumbsUp && !userGaveThumbsUp)
         {
-            this.instruction = instruction;
+            userGaveThumbsUp = true;
+
+            StartTutorial();
         }
+    }
+
+    private void ShowGreenCube()
+    {
+        greenCube.SetActive(true);
+    }
+    private void HideGreenCube()
+    {
+        greenCube.SetActive(false);
     }
 }
