@@ -66,7 +66,7 @@ public class ErikIKController : MonoBehaviour
         else if (!isLookingAtPOI && !hasChangedLook)
         {
             // lookIKTarget = startTransform;
-            StartCoroutine(ChangeLookTarget(boatRouteScript.currentPOI.position, defaultLookTarget.position, 1f));
+            // StartCoroutine(ChangeLookTarget(1f));
             hasChangedLook = true;
         }
 
@@ -158,13 +158,13 @@ public class ErikIKController : MonoBehaviour
         StartCoroutine(npcAnimationStateController.AnimateBodyResponse_Erik("POINTING", 0f));
     }
 
-    private IEnumerator ChangeLookTarget(Vector3 startPosition, Vector3 endPosition, float duration)
+    public IEnumerator ChangeLookTarget(float duration)
     {
         float time = 0;
 
         while (time < duration)
         {
-            lookIKTarget.position = Vector3.Lerp(startPosition, endPosition, time / duration);
+            lookIKTarget.position = Vector3.Lerp(boatRouteScript.currentPOI.position, defaultLookTarget.position, time / duration);
             time += Time.deltaTime;
             yield return null;
         }

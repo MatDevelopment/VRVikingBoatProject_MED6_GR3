@@ -16,9 +16,32 @@ public class BoatRouteNavMesh : MonoBehaviour
     [SerializeField] private int TargetIndex = 0;
     [SerializeField] private float BoatToTargetDistance;
 
+    [Header("Points of Interests")]
     [SerializeField] private List<Transform> PointsOfInterest = new List<Transform>();
     public Transform currentPOI;
 
+    [Header("Fishing Hut")]
+    [SerializeField] private Animator fishingAnimator;
+    [SerializeField] private AudioSource fishingAudio;
+
+    [Header("Rune Stone")]
+    [SerializeField] private AudioSource runeAudio;
+
+    [Header("Farmstead")]
+    [SerializeField] private ParticleSystem sandstormParticleSystem;
+    [SerializeField] private AudioSource sandstormAudio;
+
+    [Header("Lindholm Hoeje")]
+    [SerializeField] private GameObject burialFire;
+    [SerializeField] private AudioSource burialAudio;
+
+    [Header("Smith")]
+    [SerializeField] private AudioSource smithAudio;
+
+    [Header("Boat Builder")]
+    [SerializeField] private AudioSource boatBuilderAudio;
+
+    [Header("Fade")]
     public FadeController fadeController;
     
     private void Awake()
@@ -78,6 +101,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Fishing Hut");
                     currentPOI = PointsOfInterest[0];
                     TargetIndex += 1;
+
+                    // Fisherman Casting Line
+                    fishingAnimator.SetTrigger("Fish");
+                    fishingAudio.Play();
                 }
                 // Rune Stone
                 else if (Targets[TargetIndex].CompareTag("RuneStone"))
@@ -85,6 +112,9 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Rune Stone");
                     currentPOI = PointsOfInterest[1];
                     TargetIndex += 1;
+
+                    // Crows
+                    runeAudio.Play();
                 }
                 // Farmstead
                 else if (Targets[TargetIndex].CompareTag("Farmstead"))
@@ -92,6 +122,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Farmstead");
                     currentPOI = PointsOfInterest[2];
                     TargetIndex += 1;
+
+                    // Sandstorm Effect
+                    sandstormParticleSystem.Play();
+                    sandstormAudio.Play();
                 }
                 // Lindholm Village
                 else if (Targets[TargetIndex].CompareTag("LindholmVillage"))
@@ -106,6 +140,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Lindholm Hoeje");
                     currentPOI = PointsOfInterest[4];
                     TargetIndex += 1;
+
+                    // Thorsten Burial
+                    burialFire.SetActive(true);
+                    burialAudio.Play();
                 }
                 // Market Entrance
                 else if (Targets[TargetIndex].CompareTag("MarketEntrance"))
@@ -114,21 +152,27 @@ public class BoatRouteNavMesh : MonoBehaviour
                     currentPOI = PointsOfInterest[5];
                     TargetIndex += 1;
                 }
-                // Fabric Trader
+                // Blacksmith
                 else if (Targets[TargetIndex].CompareTag("Smith"))
                 {
                     Debug.Log("Boat at Smith");
                     currentPOI = PointsOfInterest[6];
                     TargetIndex += 1;
+
+                    // Hammer
+                    smithAudio.Play();
                 }
-                // The Smith
+                // Boatbuilder
                 else if (Targets[TargetIndex].CompareTag("BoatBuilder"))
                 {
                     Debug.Log("Boat at Boat Builder");
                     currentPOI = PointsOfInterest[7];
                     TargetIndex += 1;
+
+                    // Woodworking
+                    boatBuilderAudio.Play();
                 }
-                // Boat Builder
+                // Traders
                 else if (Targets[TargetIndex].CompareTag("FabricTrader"))
                 {
                     Debug.Log("Boat at Traders");

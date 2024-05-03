@@ -92,6 +92,9 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
 
                 yield return new WaitForSeconds(2);
 
+                ikController.isLookingAtPOI = false;
+                StartCoroutine(ikController.ChangeLookTarget(3f));
+
                 time = 0;
                 while (time < duration)
                 {
@@ -104,7 +107,6 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
                 animator.SetBool("PointingRight", false);
                 ikController.HandIKAmount = startValue;
                 ikController.isPointing = false;
-                ikController.isLookingAtPOI = false;
                 //Only one variation implemented!
                 break;
             case "UNSURE":
