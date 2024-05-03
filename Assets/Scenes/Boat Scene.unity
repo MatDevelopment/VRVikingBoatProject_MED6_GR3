@@ -13091,7 +13091,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 10
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 5
@@ -31199,6 +31199,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 865584914}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &868948298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 868948299}
+  m_Layer: 6
+  m_Name: pointRotation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &868948299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868948298}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.518, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1942604078086958539}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &869217723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47221,6 +47252,7 @@ MonoBehaviour:
   TotalUserPrompts: 0
   TotalErikResponses: 0
   ErikGazeTime: 0
+  timeThatTutorialEnded: 0
 --- !u!4 &1243371344
 Transform:
   m_ObjectHideFlags: 0
@@ -82978,12 +83010,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1792daf2e8318094daf4dd590d017d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataLogManager: {fileID: 0}
   boatRouteNavMesh: {fileID: 0}
   tilter: {fileID: 0}
   fadeController: {fileID: 0}
   microphoneCalibration: {fileID: 0}
+  tutorialRoom: {fileID: 0}
+  greenCube: {fileID: 0}
+  tutorialLight: {fileID: 0}
   startExperienceWithTheTutorial: 0
-  blackImageCG: {fileID: 295793452}
   instructionText: {fileID: 533192050}
 --- !u!1 &2069292253
 GameObject:
@@ -86653,6 +86688,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1293820551}
+    - targetCorrespondingSourceObject: {fileID: 8095960580239209980, guid: 102b78dcb33808d46ac8f56f7c51ef71,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 868948299}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5619051290865238246, guid: 102b78dcb33808d46ac8f56f7c51ef71,
         type: 3}
@@ -86682,6 +86721,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dynamicGestureManager: {fileID: 0}
+  _animator: {fileID: 1942604078086958544}
+  _lookTarget: {fileID: 627053299}
+  pointRotation: {fileID: 868948299}
+  waveDebug: 0
 --- !u!95 &1942604078086958544 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9138430272958806246, guid: 102b78dcb33808d46ac8f56f7c51ef71,
