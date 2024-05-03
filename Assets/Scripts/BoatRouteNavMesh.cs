@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class BoatRouteNavMesh : MonoBehaviour
 {
+    private float originalSpeed;
     // Script inspired by Code Monkey -> https://www.youtube.com/watch?v=atCOd4o7tG4
     [SerializeField] private GameObject Boat;
     [SerializeField] private List<Transform> Targets = new List<Transform>();
@@ -23,6 +24,16 @@ public class BoatRouteNavMesh : MonoBehaviour
     private void Awake()
     {
         BoatNavMeshAgent = GetComponent<NavMeshAgent>();
+        originalSpeed = BoatNavMeshAgent.speed;
+    }
+
+    public void StopTheBoat()
+    {
+        BoatNavMeshAgent.speed = 0;
+    }
+    public void StartTheBoat()
+    {
+        BoatNavMeshAgent.speed = originalSpeed;
     }
 
     private void Update()

@@ -166,7 +166,7 @@ public class Tutorial : MonoBehaviour
     {
         blackImageCG.alpha = 0;
         instructionText.enabled = false;
-        tilter.enabled = true;
+       if(tilter != null) tilter.enabled = true;
     }
 
     public void SetPointedAtGreenCubeTrue()
