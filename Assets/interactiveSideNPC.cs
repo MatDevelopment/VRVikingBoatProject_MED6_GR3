@@ -85,7 +85,7 @@ public class interactiveSideNPC : MonoBehaviour
     private IEnumerator lookAtPlayer()
     {
         float time = 0;
-        float duration = 3;
+        float duration = 1;
 
         float startValue = 0;
         float endValue = 1;
@@ -99,6 +99,7 @@ public class interactiveSideNPC : MonoBehaviour
             yield return null;
         }
 
+        //handWeight = handEndValue;
         _animator.SetTrigger("Wave");
         yield return new WaitForSeconds(2);
 

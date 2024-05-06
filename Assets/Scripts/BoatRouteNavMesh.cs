@@ -1,3 +1,4 @@
+using OpenAI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,6 +35,7 @@ public class BoatRouteNavMesh : MonoBehaviour
     [Header("Lindholm Hoeje")]
     [SerializeField] private GameObject burialFire;
     [SerializeField] private AudioSource burialAudio;
+    [SerializeField] private ParticleSystem burialParticleSystem;
 
     [Header("Smith")]
     [SerializeField] private AudioSource smithAudio;
@@ -43,6 +45,7 @@ public class BoatRouteNavMesh : MonoBehaviour
 
     [Header("Fade")]
     public FadeController fadeController;
+    [SerializeField] ChatTest chatTest;
     
     private void Awake()
     {
@@ -102,6 +105,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     currentPOI = PointsOfInterest[0];
                     TargetIndex += 1;
 
+                    // System Instruction
+                    string fishingDescription = "You are now passing a fishing hut on the right. Beside the fishing hut there is a small pier where Erik's good friend Ole is currently fishing.";
+                    chatTest.AddSystemInstructionToChatLog(fishingDescription);
+
                     // Fisherman Casting Line
                     fishingAnimator.SetTrigger("Fish");
                     fishingAudio.Play();
@@ -113,6 +120,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     currentPOI = PointsOfInterest[1];
                     TargetIndex += 1;
 
+                    // System Instruction
+                    string runeDescription = "You are now passing a runestone on the left.";
+                    chatTest.AddSystemInstructionToChatLog(runeDescription);
+
                     // Crows
                     runeAudio.Play();
                 }
@@ -122,6 +133,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Farmstead");
                     currentPOI = PointsOfInterest[2];
                     TargetIndex += 1;
+
+                    // System Instruction
+                    string farmDescription = "You are now passing a farmstead on the left. The farm's crops are being covered in sand by a sandstorm which could kill some of the yield.";
+                    chatTest.AddSystemInstructionToChatLog(farmDescription);
 
                     // Sandstorm Effect
                     sandstormParticleSystem.Play();
@@ -133,6 +148,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Lindholm Village");
                     currentPOI = PointsOfInterest[3];
                     TargetIndex += 1;
+
+                    // System Instruction
+                    string villageDescription = "You are now passing Lindholm village on the right. Lindholm is a small village consisting of a few farms just beside a sacred burial mound";
+                    chatTest.AddSystemInstructionToChatLog(villageDescription);
                 }
                 // Lindholm Hoeje
                 else if (Targets[TargetIndex].CompareTag("LindholmHoeje"))
@@ -141,9 +160,15 @@ public class BoatRouteNavMesh : MonoBehaviour
                     currentPOI = PointsOfInterest[4];
                     TargetIndex += 1;
 
+                    // System Instruction
+                    string burialDescription = "You are now passing Lindholm Hoeje on the right. Lindholm Hoeje is a burial mound where the dead are burned in stoneformations immitating a ship's hull symbolising their journey to the afterlife." +
+                        "A burial has just started as you pass";
+                    chatTest.AddSystemInstructionToChatLog(burialDescription);
+
                     // Thorsten Burial
                     burialFire.SetActive(true);
                     burialAudio.Play();
+                    burialParticleSystem.Play();
                 }
                 // Market Entrance
                 else if (Targets[TargetIndex].CompareTag("MarketEntrance"))
@@ -151,6 +176,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Market Entrance");
                     currentPOI = PointsOfInterest[5];
                     TargetIndex += 1;
+
+                    // System Instruction
+                    string marketDescription = "You are now approaching the entrance to the market. The market is a large hub for commerce filled with people especially sailors who pass by northern Jutland";
+                    chatTest.AddSystemInstructionToChatLog(marketDescription);
                 }
                 // Blacksmith
                 else if (Targets[TargetIndex].CompareTag("Smith"))
@@ -158,6 +187,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Smith");
                     currentPOI = PointsOfInterest[6];
                     TargetIndex += 1;
+
+                    // System Instruction
+                    string smithDescription = "You are now passing a blacksmith on the left. He is hammering away on the anvil creating armour for people who will be going on a viking journey soon.";
+                    chatTest.AddSystemInstructionToChatLog(smithDescription);
 
                     // Hammer
                     smithAudio.Play();
@@ -169,6 +202,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     currentPOI = PointsOfInterest[7];
                     TargetIndex += 1;
 
+                    // System Instruction
+                    string boatDescription = "You are now passing a shipyard on the right. Half finished ships are being worked on.";
+                    chatTest.AddSystemInstructionToChatLog(boatDescription);
+
                     // Woodworking
                     boatBuilderAudio.Play();
                 }
@@ -178,6 +215,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Traders");
                     currentPOI = PointsOfInterest[8];
                     TargetIndex += 1;
+
+                    // System Instruction
+                    string traderDescription = "You are now passing a series of traders on the right. The first trader sells fresh fish, the second sells crops and the last sells woven fabrics like clothing and sails.";
+                    chatTest.AddSystemInstructionToChatLog(traderDescription);
                 }
                 // Eriks Place
                 else if (Targets[TargetIndex].CompareTag("EriksPlace"))
@@ -185,6 +226,10 @@ public class BoatRouteNavMesh : MonoBehaviour
                     Debug.Log("Boat at Eriks");
                     currentPOI = PointsOfInterest[9];
                     TargetIndex += 1;
+
+                    // System Instruction
+                    string eriksDescription = "You are now approaching Eriks own home on the left. The home is a small fishing hut with a pier and is the place the trip will end.";
+                    chatTest.AddSystemInstructionToChatLog(eriksDescription);
                 }
 
                 // Default
