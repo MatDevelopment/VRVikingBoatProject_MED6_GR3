@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InterestPointDescription : MonoBehaviour
 {
-   public string description;
-   public float gazeTimeToActivate;
+    [TextArea(15, 20)]
+    public string description;
+    public float gazeTimeToActivate;
 }

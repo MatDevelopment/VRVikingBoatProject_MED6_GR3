@@ -18,7 +18,7 @@ public class BoatRouteNavMesh : MonoBehaviour
     [SerializeField] private float BoatToTargetDistance;
 
     [Header("Points of Interests")]
-    [SerializeField] private List<Transform> PointsOfInterest = new List<Transform>();
+    [SerializeField] private List<GameObject> PointsOfInterest = new List<GameObject>();
     public Transform currentPOI;
 
     [Header("Fishing Hut")]
@@ -102,11 +102,15 @@ public class BoatRouteNavMesh : MonoBehaviour
                 else if (Targets[TargetIndex].CompareTag("FishingHut"))
                 {
                     Debug.Log("Boat at Fishing Hut");
-                    currentPOI = PointsOfInterest[0];
+                    currentPOI = PointsOfInterest[0].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string fishingDescription = "You are now passing a fishing hut on the right. Beside the fishing hut there is a small pier where Erik's good friend Ole is currently fishing.";
+                    string fishingDescription = "You are now passing a fishing hut on the right. ";
+                        // "Beside the fishing hut there is a small pier where Erik's good friend Ole is currently fishing.";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[0].GetComponent<InterestPointDescription>();
+                    fishingDescription = fishingDescription + interestPointDescription.description;
+                    Debug.Log("Fishing Description: " + fishingDescription);
                     chatTest.AddSystemInstructionToChatLog(fishingDescription);
 
                     // Fisherman Casting Line
@@ -117,11 +121,14 @@ public class BoatRouteNavMesh : MonoBehaviour
                 else if (Targets[TargetIndex].CompareTag("RuneStone"))
                 {
                     Debug.Log("Boat at Rune Stone");
-                    currentPOI = PointsOfInterest[1];
+                    currentPOI = PointsOfInterest[1].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string runeDescription = "You are now passing a runestone on the left.";
+                    string runeDescription = "You are now passing a runestone on the left. ";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[1].GetComponent<InterestPointDescription>();
+                    runeDescription = runeDescription + interestPointDescription.description;
+                    Debug.Log("Rune Description: " + runeDescription);
                     chatTest.AddSystemInstructionToChatLog(runeDescription);
 
                     // Crows
@@ -131,11 +138,15 @@ public class BoatRouteNavMesh : MonoBehaviour
                 else if (Targets[TargetIndex].CompareTag("Farmstead"))
                 {
                     Debug.Log("Boat at Farmstead");
-                    currentPOI = PointsOfInterest[2];
+                    currentPOI = PointsOfInterest[2].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string farmDescription = "You are now passing a farmstead on the left. The farm's crops are being covered in sand by a sandstorm which could kill some of the yield.";
+                    string farmDescription = "You are now passing a farmstead on the left. ";
+                    // "The farm's crops are being covered in sand by a sandstorm which could kill some of the yield.";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[2].GetComponent<InterestPointDescription>();
+                    farmDescription = farmDescription + interestPointDescription.description;
+                    Debug.Log("Farm Description: " + farmDescription);
                     chatTest.AddSystemInstructionToChatLog(farmDescription);
 
                     // Sandstorm Effect
@@ -146,23 +157,31 @@ public class BoatRouteNavMesh : MonoBehaviour
                 else if (Targets[TargetIndex].CompareTag("LindholmVillage"))
                 {
                     Debug.Log("Boat at Lindholm Village");
-                    currentPOI = PointsOfInterest[3];
+                    currentPOI = PointsOfInterest[3].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string villageDescription = "You are now passing Lindholm village on the right. Lindholm is a small village consisting of a few farms just beside a sacred burial mound";
+                    string villageDescription = "You are now passing Lindholm village on the right. ";
+                        // "Lindholm is a small village consisting of a few farms just beside a sacred burial mound";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[3].GetComponent<InterestPointDescription>();
+                    villageDescription = villageDescription + interestPointDescription.description;
+                    Debug.Log("Village Description: " + villageDescription);
                     chatTest.AddSystemInstructionToChatLog(villageDescription);
                 }
                 // Lindholm Hoeje
                 else if (Targets[TargetIndex].CompareTag("LindholmHoeje"))
                 {
                     Debug.Log("Boat at Lindholm Hoeje");
-                    currentPOI = PointsOfInterest[4];
+                    currentPOI = PointsOfInterest[4].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string burialDescription = "You are now passing Lindholm Hoeje on the right. Lindholm Hoeje is a burial mound where the dead are burned in stoneformations immitating a ship's hull symbolising their journey to the afterlife." +
-                        "A burial has just started as you pass";
+                    string burialDescription = "You are now passing Lindholm Hoeje on the right. ";
+                        // "Lindholm Hoeje is a burial mound where the dead are burned in stoneformations immitating a ship's hull symbolising their journey to the afterlife." +
+                        // "A burial has just started as you pass";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[4].GetComponent<InterestPointDescription>();
+                    burialDescription = burialDescription + interestPointDescription.description;
+                    Debug.Log("Burial Description: " + burialDescription);
                     chatTest.AddSystemInstructionToChatLog(burialDescription);
 
                     // Thorsten Burial
@@ -174,22 +193,30 @@ public class BoatRouteNavMesh : MonoBehaviour
                 else if (Targets[TargetIndex].CompareTag("MarketEntrance"))
                 {
                     Debug.Log("Boat at Market Entrance");
-                    currentPOI = PointsOfInterest[5];
+                    currentPOI = PointsOfInterest[5].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string marketDescription = "You are now approaching the entrance to the market. The market is a large hub for commerce filled with people especially sailors who pass by northern Jutland";
+                    string marketDescription = "You are now approaching the entrance to the market. ";
+                        // "The market is a large hub for commerce filled with people especially sailors who pass by northern Jutland";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[5].GetComponent<InterestPointDescription>();
+                    marketDescription = marketDescription + interestPointDescription.description;
+                    Debug.Log("Market Description: " + marketDescription);
                     chatTest.AddSystemInstructionToChatLog(marketDescription);
                 }
                 // Blacksmith
                 else if (Targets[TargetIndex].CompareTag("Smith"))
                 {
                     Debug.Log("Boat at Smith");
-                    currentPOI = PointsOfInterest[6];
+                    currentPOI = PointsOfInterest[6].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string smithDescription = "You are now passing a blacksmith on the left. He is hammering away on the anvil creating armour for people who will be going on a viking journey soon.";
+                    string smithDescription = "You are now passing a blacksmith on the left. ";
+                        // "He is hammering away on the anvil creating armour for people who will be going on a viking journey soon.";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[6].GetComponent<InterestPointDescription>();
+                    smithDescription = smithDescription + interestPointDescription.description;
+                    Debug.Log("Blacksmith Description: " + smithDescription);
                     chatTest.AddSystemInstructionToChatLog(smithDescription);
 
                     // Hammer
@@ -199,11 +226,15 @@ public class BoatRouteNavMesh : MonoBehaviour
                 else if (Targets[TargetIndex].CompareTag("BoatBuilder"))
                 {
                     Debug.Log("Boat at Boat Builder");
-                    currentPOI = PointsOfInterest[7];
+                    currentPOI = PointsOfInterest[7].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string boatDescription = "You are now passing a shipyard on the right. Half finished ships are being worked on.";
+                    string boatDescription = "You are now passing a shipyard on the right. ";
+                        // "Half finished ships are being worked on.";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[7].GetComponent<InterestPointDescription>();
+                    boatDescription = boatDescription + interestPointDescription.description;
+                    Debug.Log("Boat Description: " + boatDescription);
                     chatTest.AddSystemInstructionToChatLog(boatDescription);
 
                     // Woodworking
@@ -213,22 +244,30 @@ public class BoatRouteNavMesh : MonoBehaviour
                 else if (Targets[TargetIndex].CompareTag("FabricTrader"))
                 {
                     Debug.Log("Boat at Traders");
-                    currentPOI = PointsOfInterest[8];
+                    currentPOI = PointsOfInterest[8].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string traderDescription = "You are now passing a series of traders on the right. The first trader sells fresh fish, the second sells crops and the last sells woven fabrics like clothing and sails.";
+                    string traderDescription = "You are now passing a series of traders on the right. ";
+                        // "The first trader sells fresh fish, the second sells crops and the last sells woven fabrics like clothing and sails.";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[8].GetComponent<InterestPointDescription>();
+                    traderDescription = traderDescription + interestPointDescription.description;
+                    Debug.Log("Trader Description: " + traderDescription);
                     chatTest.AddSystemInstructionToChatLog(traderDescription);
                 }
                 // Eriks Place
                 else if (Targets[TargetIndex].CompareTag("EriksPlace"))
                 {
                     Debug.Log("Boat at Eriks");
-                    currentPOI = PointsOfInterest[9];
+                    currentPOI = PointsOfInterest[9].transform;
                     TargetIndex += 1;
 
                     // System Instruction
-                    string eriksDescription = "You are now approaching Eriks own home on the left. The home is a small fishing hut with a pier and is the place the trip will end.";
+                    string eriksDescription = "You are now approaching Eriks own home on the left. ";
+                        // "The home is a small fishing hut with a pier and is the place the trip will end.";
+                    InterestPointDescription interestPointDescription = PointsOfInterest[9].GetComponent<InterestPointDescription>();
+                    eriksDescription = eriksDescription + interestPointDescription.description;
+                    Debug.Log("Eriks House Description: " + eriksDescription);
                     chatTest.AddSystemInstructionToChatLog(eriksDescription);
                 }
 

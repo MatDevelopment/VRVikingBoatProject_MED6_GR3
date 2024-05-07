@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13615213, g: 0.16489966, b: 0.21611023, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1440,6 +1440,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 38545356}
+  - component: {fileID: 38545358}
+  - component: {fileID: 38545357}
   m_Layer: 0
   m_Name: FabricTrader
   m_TagString: Untagged
@@ -1466,6 +1468,42 @@ Transform:
   - {fileID: 8347619146030579981}
   m_Father: {fileID: 1025065191}
   m_LocalEulerAnglesHint: {x: 0, y: 11.5, z: 0}
+--- !u!114 &38545357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38545355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: A series of traders. The first trader sells fresh fish, the second
+    sells crops and the last sells woven fabrics like clothing and sails.
+  gazeTimeToActivate: 5
+--- !u!135 &38545358
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38545355}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 50
+  m_Center: {x: -5, y: 0, z: 20}
 --- !u!1001 &40721580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11699,6 +11737,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 298016797}
+  - component: {fileID: 298016799}
+  - component: {fileID: 298016798}
   m_Layer: 0
   m_Name: EriksCrib
   m_TagString: Untagged
@@ -11732,6 +11772,42 @@ Transform:
   - {fileID: 1255844824}
   m_Father: {fileID: 1025065191}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &298016798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298016796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Eriks Home. The home is a small fishing hut with a pier and is the
+    place the trip will end.
+  gazeTimeToActivate: 5
+--- !u!135 &298016799
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298016796}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 25
+  m_Center: {x: -5, y: 0, z: 0}
 --- !u!1 &300159688
 GameObject:
   m_ObjectHideFlags: 0
@@ -13413,16 +13489,16 @@ MonoBehaviour:
   TargetIndex: 0
   BoatToTargetDistance: 0
   PointsOfInterest:
-  - {fileID: 1023899850}
-  - {fileID: 2104260613}
-  - {fileID: 916566376}
-  - {fileID: 1651602404}
-  - {fileID: 1723885203}
-  - {fileID: 1700113293}
-  - {fileID: 1102402485}
-  - {fileID: 629162801}
-  - {fileID: 38545356}
-  - {fileID: 298016797}
+  - {fileID: 1023899849}
+  - {fileID: 2104260612}
+  - {fileID: 916566375}
+  - {fileID: 1651602403}
+  - {fileID: 1723885202}
+  - {fileID: 1700113292}
+  - {fileID: 1102402484}
+  - {fileID: 629162800}
+  - {fileID: 38545355}
+  - {fileID: 298016796}
   currentPOI: {fileID: 1023899850}
   fishingAnimator: {fileID: 1942604078086958544}
   fishingAudio: {fileID: 1942604078086958545}
@@ -24052,6 +24128,8 @@ GameObject:
   m_Component:
   - component: {fileID: 629162801}
   - component: {fileID: 629162802}
+  - component: {fileID: 629162804}
+  - component: {fileID: 629162803}
   m_Layer: 0
   m_Name: BoatBuilder
   m_TagString: Untagged
@@ -24178,6 +24256,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &629162803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629162800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: A Shipyard. Half finished ships are being worked on.
+  gazeTimeToActivate: 5
+--- !u!135 &629162804
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629162800}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 35
+  m_Center: {x: 6, y: 0, z: 3}
 --- !u!1 &631403490
 GameObject:
   m_ObjectHideFlags: 0
@@ -38138,7 +38251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: 'A farm where your cousin Thorwald lives. He '
+  description: A farmstead where your cousin Thorwald lives. The farm's crops are
+    being covered in sand by a sandstorm which could kill some of the yield.
   gazeTimeToActivate: 5
 --- !u!82 &916566379
 AudioSource:
@@ -42676,8 +42790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: 'A fishing hut. On the small bridge a good friend Ole is fishing.
-    He is blind '
+  description: A fishing hut. Beside the fishing hut there is a small pier where
+    Erik's good friend Ole is currently fishing.
   gazeTimeToActivate: 5
 --- !u!1 &1024385763
 GameObject:
@@ -48168,6 +48282,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1102402485}
   - component: {fileID: 1102402486}
+  - component: {fileID: 1102402488}
+  - component: {fileID: 1102402487}
   m_Layer: 0
   m_Name: Smith
   m_TagString: Untagged
@@ -48298,6 +48414,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1102402487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102402484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: The Blacksmith. He is hammering away on the anvil creating armour
+    for people who will be going on a viking journey soon.
+  gazeTimeToActivate: 5
+--- !u!135 &1102402488
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102402484}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 14
+  m_Center: {x: -2, y: 0, z: -5}
 --- !u!4 &1102668270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3056839777480616592, guid: fae95b050912a774f8f3b1345afa906e,
@@ -66473,7 +66625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Lindholm town
+  description: Lindholm Village. Lindholm is a small village consisting of a few
+    farms just beside a sacred burial mound.
   gazeTimeToActivate: 5
 --- !u!135 &1651602406
 SphereCollider:
@@ -68528,6 +68681,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700113293}
+  - component: {fileID: 1700113295}
+  - component: {fileID: 1700113294}
   m_Layer: 0
   m_Name: MarketEntrance
   m_TagString: Untagged
@@ -68543,13 +68698,49 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700113292}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.13276848, z: -0, w: 0.99114716}
   m_LocalPosition: {x: -520.23, y: 1.72, z: 387.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1025065191}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 15.259, z: 0}
+--- !u!114 &1700113294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700113292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: The Market Entrance. The market is a large hub for commerce filled
+    with people especially sailors who pass by northern Jutland.
+  gazeTimeToActivate: 5
+--- !u!65 &1700113295
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700113292}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 100, z: 200}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1700249048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69656,7 +69847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "Lindholm H\xF8je. A burial place"
+  description: "Lindholm H\xF8je. Lindholm H\xF8je is a burial mound where the dead
+    are burned in stoneformations immitating a ship's hull symbolising their journey
+    to the afterlife."
   gazeTimeToActivate: 5
 --- !u!135 &1723885205
 SphereCollider:
@@ -69677,7 +69870,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 90
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &1723885206
 AudioSource:
@@ -90862,7 +91055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ae0345d03964040b6c7fb7248b1a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: a runestone
+  description: A runestone. The runestone describes the story of a great man who
+    first settled the area.
   gazeTimeToActivate: 5
 --- !u!135 &2104260615
 SphereCollider:
