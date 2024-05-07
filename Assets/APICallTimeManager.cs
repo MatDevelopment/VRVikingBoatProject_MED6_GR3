@@ -29,13 +29,13 @@ public class APICallTimeManager : MonoBehaviour // Responsible for holding callT
         {
             Debug.LogWarning("FIX ME!:D one API call time list has more entries than the others.");
 
-            //Removing the last faulty entry in all of the lists.
-            if (CallDurations_SpeechToText.Count != length-1)
-                CallDurations_SpeechToText.RemoveAt(length-1);
-            if (CallDurations_ChatGPT.Count != length - 1)
-                CallDurations_ChatGPT.RemoveAt(length-1);
-            if (CallDurations_TextToSpeech.Count != length - 1)
-                CallDurations_TextToSpeech.RemoveAt(length-1);
+            //Removing the last faulty entry in all of the lists. // This code doesn't work! :o
+            //if (CallDurations_SpeechToText.Count != length-1)
+            //    CallDurations_SpeechToText.RemoveAt(length-1);
+            //if (CallDurations_ChatGPT.Count != length - 1)
+            //    CallDurations_ChatGPT.RemoveAt(length-1);
+            //if (CallDurations_TextToSpeech.Count != length - 1)
+            //    CallDurations_TextToSpeech.RemoveAt(length-1);
         }
     }
 
@@ -52,11 +52,36 @@ public class APICallTimeManager : MonoBehaviour // Responsible for holding callT
         }
     }
 
+    private void checkIfAllEntriesListsHaveSameAmountOfEntries()
+    {
+        int max = CallDurations_SpeechToText.Count;
+
+        if (CallDurations_ChatGPT.Count > max)
+        {
+            max = CallDurations_ChatGPT.Count;
+        }
+
+        if (CallDurations_TextToSpeech.Count > max)
+        {
+            max = CallDurations_TextToSpeech.Count;
+        }
+
+        if (CallDurations_SpeechToText.Count < max)
+            CallDurations_SpeechToText.Add(0);
+
+        if (CallDurations_ChatGPT.Count < max)
+            CallDurations_ChatGPT.Add(0);
+
+        if (CallDurations_TextToSpeech.Count < max)
+            CallDurations_TextToSpeech.Add(0);
+    }
+
     public void AddCallDuration_SpeechToText(double callTime)
     {
         CallDurations_SpeechToText.Add(callTime);
 
         Debug.Log("SpeechToText API call took: " + callTime + " seconds."); // Log time taken
+
     }
 
     public void AddCallDuration_ChatGPT(double callTime)
@@ -69,9 +94,11 @@ public class APICallTimeManager : MonoBehaviour // Responsible for holding callT
     public void AddCallDuration_TextToSpeech(double callTime)
     {
         CallDurations_TextToSpeech.Add(callTime);
-        CombineLastEntries();
+        
 
         Debug.Log("TextToSpeech API call took: " + callTime + " seconds.");
 
+        checkIfAllEntriesListsHaveSameAmountOfEntries();
+        CombineLastEntries();
     }
 }

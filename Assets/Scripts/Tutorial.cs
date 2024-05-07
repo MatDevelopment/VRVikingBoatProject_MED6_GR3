@@ -21,14 +21,20 @@ public class Tutorial : MonoBehaviour
     private bool userConfirmed = false;
     private bool userGaveThumbsUp, userPointedAtTheGreenCube, userCanGiveThumbsUp, userCanPointAtCube;
     //private IEnumerator countdownCoroutine;
-    public GameObject tutorialRoom, greenCube;
+    public GameObject tutorialRoom, greenCube, gazeCube1, gazeCube2;
     public Light tutorialLight;
 
     [Header("Tick to start with the tutorial enabled!")]
-    public bool startExperienceWithTheTutorial;
+    public bool startExperienceWithTheTutorial, useGesturesForConfirmation;
     //public CanvasGroup blackImageCG;
     public TextMeshProUGUI instructionText;
 
+    public bool lookingAtGazeCube1, lookingAtGazeCube2;
+    public Slider gaze1Slider, gaze2Slider;
+
+    private bool CanLookAtCube2;
+
+    private bool userStartedCalibrationStep;
 
     void Start()
     {
@@ -43,7 +49,19 @@ public class Tutorial : MonoBehaviour
         boatRouteNavMesh.StopTheBoat();
         tilter.enabled = false;
 
-        SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
+        if (useGesturesForConfirmation)
+        {
+   
+            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
+        }
+        else if (!useGesturesForConfirmation)
+        {
+            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Kig på den orange terning for at starte.");
+            gazeCube2.SetActive(false);
+            gaze2Slider.transform.parent.gameObject.SetActive(false);
+        }
+
+        if(useGesturesForConfirmation)
         userCanGiveThumbsUp = true;
         HideGreenCube();
         //Check for pointing on a object here
@@ -57,21 +75,52 @@ public class Tutorial : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) /*&& userCanGiveThumbsUp*/)
         {
-            userCanGiveThumbsUp = true;
-            Step_CheckForPointing();
-            SetMadeThumbsUpGestureTrue();
+            if (useGesturesForConfirmation)
+            {
+                userCanGiveThumbsUp = true;
+                Step_CheckForPointing();
+                SetMadeThumbsUpGestureTrue();
+            }
+            else
+            {
+                SetLookedAtGazecube1True();
+            }
         }
         if (Input.GetKeyDown(KeyCode.O) /*&& userCanPointAtCube*/)
         {
-            userCanPointAtCube = true;
-            SetPointedAtGreenCubeTrue();
+            if (useGesturesForConfirmation)
+            {
+                userCanPointAtCube = true;
+                SetPointedAtGreenCubeTrue();
+            }
+            else if (!useGesturesForConfirmation)
+            {
+                Step_CheckForLookAtGaze2();
+            }
         }
-
         if (userPointedAtTheGreenCube)
         {
             FadeOutTutorial();
             boatRouteNavMesh.StartTheBoat(1);
         }
+
+        if (lookingAtGazeCube1)
+            gaze1Slider.value += Time.deltaTime;
+        else if (!lookingAtGazeCube1)
+            gaze1Slider.value = 0;
+
+        if (gaze1Slider.value >= 1 && !userStartedCalibrationStep)
+            SetLookedAtGazecube1True();
+
+
+        if (lookingAtGazeCube2)
+            gaze2Slider.value += Time.deltaTime;
+        else if (!lookingAtGazeCube2)
+            gaze2Slider.value = 0;
+
+        if (gaze2Slider.value >= 1)
+            FadeOutTutorial();
+
     }
 
     private IEnumerator DoSection( float delay )
@@ -101,7 +150,13 @@ public class Tutorial : MonoBehaviour
             SetInstructionsText("Kalibrering færdig!");
             yield return new WaitForSeconds(2);
 
-            Step_CheckForPointing();
+            if (useGesturesForConfirmation)
+                Step_CheckForPointing();
+            else if (!useGesturesForConfirmation)
+            {
+                Step_CheckForLookAtGaze2();
+              
+            }
         }
         else
         {
@@ -113,7 +168,7 @@ public class Tutorial : MonoBehaviour
 
     public void StartTutorial()
     {
-        SetInstructionsText("Om 5 sekunder skal du sige en saetning. Er du klar?");
+        SetInstructionsText("Om 5 sekunder skal du sige en sætning. Er du klar?");
 
         StartCoroutine(DoSection(3));
     }
@@ -124,6 +179,16 @@ public class Tutorial : MonoBehaviour
         ShowGreenCube();
         SetInstructionsText("Nu er du klar - peg på den grønne terning for at starte");
     }
+
+    private void Step_CheckForLookAtGaze2()
+    {
+        //userCanPointAtCube = true;
+        gazeCube2.SetActive(true);
+        gaze2Slider.transform.parent.gameObject.SetActive(true);
+        CanLookAtCube2 = true;
+        SetInstructionsText("Nu er du klar - kig på den lilla terning for at starte");
+    }
+
 
     public void UserTalkedLoudEnough()
     {
@@ -142,7 +207,7 @@ public class Tutorial : MonoBehaviour
         Debug.Log("Started A Countdown!");
         for (int i = secondsToCountDown; i > 0; i--)
         {
-            SetInstructionsText ("Om " + i + " sekunder skal du sige en saetning. Er du klar?");
+            SetInstructionsText ("Om " + i + " sekunder skal du sige en sætning. Er du klar?");
             yield return new WaitForSeconds(1f);
         }
     }
@@ -164,21 +229,54 @@ public class Tutorial : MonoBehaviour
     {
         if (startExperienceWithTheTutorial) ShowTutorial();
         else if (!startExperienceWithTheTutorial) HideTutorial();
+
+        if (startExperienceWithTheTutorial && useGesturesForConfirmation)
+            ShowGestureObjects();
+        else if (startExperienceWithTheTutorial && !useGesturesForConfirmation)
+            ShowGazeObjects();
     }
 
     private void ShowTutorial()
     {
+
+        tutorialRoom.SetActive(true);
         //blackImageCG.alpha = 1;
         instructionText.enabled = true;
     }
 
     private void HideTutorial()
     {
+        tutorialRoom.SetActive(false);
         //blackImageCG.alpha = 0;
         instructionText.enabled = false;
         if (tilter != null) tilter.enabled = true;
 
     }
+
+    private void ShowGestureObjects()
+    {
+        greenCube.SetActive(true);
+        gazeCube1.SetActive(false);
+        gazeCube2.SetActive(false);
+        gaze1Slider.transform.parent.gameObject.SetActive(false);
+        gaze2Slider.transform.parent.gameObject.SetActive(false);
+
+    }
+
+    private void ShowGazeObjects()
+    {
+        greenCube.SetActive(false);
+        gazeCube1.SetActive(true);
+        gazeCube2.SetActive(false);
+        gaze1Slider.transform.parent.gameObject.SetActive(true);
+        if ( CanLookAtCube2 == true)
+        gaze2Slider.transform.parent.gameObject.SetActive(true);
+        else
+            gaze2Slider.transform.parent.gameObject.SetActive(false);
+
+
+    }
+
 
     private void FadeOutTutorial()
     {
@@ -187,10 +285,30 @@ public class Tutorial : MonoBehaviour
         if (tilter != null) tilter.enabled = true;
         StartCoroutine(FadeRoomMaterials());
         StartCoroutine(boatRouteNavMesh.StartTheBoat(1));
-        StartCoroutine(FadeRoomMaterials());
+        //StartCoroutine(FadeRoomMaterials());
         
         //fadeController.FadeOutAfterTime(1);
     }
+
+    public void SetLookingAtGazeCube1True()
+    {
+        lookingAtGazeCube1 = true;
+    }
+
+    public void SetLookingAtGazeCube2True()
+    {
+        lookingAtGazeCube2 = true;
+    }
+
+    public void SetLookingAtGazeCube1False()
+    {
+        lookingAtGazeCube1 = false;
+    }
+    public void SetLookingAtGazeCube2False()
+    {
+        lookingAtGazeCube2 = false;
+    }
+
 
     IEnumerator FadeRoomMaterials()
     {
@@ -232,10 +350,7 @@ public class Tutorial : MonoBehaviour
 
     private void DestroyTutorialRoom()
     {
-        foreach(Transform gm in tutorialRoom.GetComponentsInChildren<Transform>())
-        {
-            gm.gameObject.SetActive(false);
-        }
+        tutorialRoom.SetActive(false);
         dataLogManager.timeThatTutorialEnded = Time.time;
 
         //Destroy(tutorialRoom);
@@ -260,6 +375,8 @@ public class Tutorial : MonoBehaviour
         userPointedAtTheGreenCube = true;
     }
 
+    
+
     public void SetMadeThumbsUpGestureTrue()
     {
         if (userCanGiveThumbsUp && !userGaveThumbsUp)
@@ -270,14 +387,21 @@ public class Tutorial : MonoBehaviour
         }
     }
 
-    public void SetLookedAtObjectTrue()
+    public void SetLookedAtGazecube1True()
     {
-        if (userCanGiveThumbsUp && !userGaveThumbsUp)
-        {
-            userGaveThumbsUp = true;
-
+ gazeCube1.SetActive(false);
+        gaze1Slider.transform.parent.gameObject.SetActive(false);
             StartTutorial();
-        }
+        userStartedCalibrationStep = true;
+        
+    }
+
+    public void SetLookedAtGazecube2True()
+    {
+        gazeCube2.SetActive(false);
+        gaze2Slider.transform.parent.gameObject.SetActive(false);
+        StartTutorial();
+
     }
 
     private void ShowGreenCube()
