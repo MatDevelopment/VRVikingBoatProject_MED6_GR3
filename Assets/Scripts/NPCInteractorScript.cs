@@ -7,6 +7,7 @@ using OpenAI;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class NPCInteractorScript : MonoBehaviour
@@ -44,6 +45,7 @@ public class NPCInteractorScript : MonoBehaviour
     [SerializeField] private LevelChanger levelChangerScript;
     [SerializeField] private NPCEmotionalExpressions emotionalExpressionsScript;
     [SerializeField] private TTSManager ttsManagerScript;
+    [SerializeField] private MicInputDetection _micInputDetection;
     //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
 
     public string nameOfThisNPC;
@@ -60,11 +62,14 @@ public class NPCInteractorScript : MonoBehaviour
 
     public bool erikSpeakable;
     private bool isErikVisible;
+    public bool erikAbleToInitiateTalk;
 
     public List<ChatMessage> ChatLogWithNPC = new List<ChatMessage>();
     //[SerializeField] private List<string> listOfOtherNpcs = new List<string>();
    
     private float lengthOfSceneIntroTalkDialogue;
+    [FormerlySerializedAs("timeCounter")] public float initiateTalkTimeCounter;
+    
     public bool erikSceneStartDialogueDone;
     private void Awake()
     {
@@ -132,6 +137,31 @@ public class NPCInteractorScript : MonoBehaviour
         
         npcAnimationStateController = FindAnyObjectByType<NpcAnimationStateController>();
         apiStatus = FindObjectOfType<APIStatus>();
+    }
+
+    private void Update()
+    {
+        if (apiStatus.isTranscribing == false && apiStatus.isGeneratingAudio == false && apiStatus.isGeneratingText == false && apiStatus.isTalking == false && _micInputDetection.isListening == false)       //If nothing is being done concerning talk (Talking, listening etc.), then we count the timer up.
+        {
+            initiateTalkTimeCounter = Time.deltaTime;
+        }
+        else
+        {
+            initiateTalkTimeCounter = 0;
+        }
+        //Timecounter is reset after text to speech is done generating an audio clip and plays it. (In Whisper script)
+
+        if (initiateTalkTimeCounter >= 15)        //When the timeCounter reaches 15 seconds, then...
+        {
+            InformAndInitiateNpcTalk("You and the Traveller have not talked for a little more than 15 seconds. Initiate a conversation with a talking topic possibly related to what you and the Traveller have talked about.");
+            initiateTalkTimeCounter = 0;
+            //erikAbleToInitiateTalk = true;  //Erik is able to initiate conversation again.
+        }
+        else
+        {
+            //erikAbleToInitiateTalk = false;
+        }
+        
     }
 
 

@@ -67,7 +67,7 @@ namespace OpenAI
         public async void TranscribeRecordedAudio()
         {
 
-            if (apiStatus.isTranscribing == false && apiStatus.isTalking == false)
+            if (apiStatus.isTranscribing == false && apiStatus.isTalking == false)      //Maybe also check for apiStatus.isGeneratingText && micInputDetection.isListening && apiStatus.isGeneratingAudio
             {
                 apiStatus.isTranscribing = true;
                 // Laver dropdown UI så vi kan vælge mic selv.
@@ -78,7 +78,7 @@ namespace OpenAI
 
             if (apiStatus.isTranscribing == true)
             {
-                Debug.Log("Starting tranccription...");
+                Debug.Log("Starting transcription...");
 
                 byte[] data = SaveWav.Save(fileName, MicInputDetectionScript.userSpeechClip);
                 //SaveWav.TrimSilence(new List<float>())
@@ -91,7 +91,7 @@ namespace OpenAI
                 };
 
                 Stopwatch stopwatch = Stopwatch.StartNew();
-                apiStatus.isTranscribing = true;
+                apiStatus.isTranscribing = true;  //REDUNDANT????
 
                 var result = await openai.CreateAudioTranscription(request);
 
@@ -203,7 +203,7 @@ namespace OpenAI
 
                     //OpenAI TTS (Danish):
                     ttsManagerScript.SynthesizeAndPlay(npcResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
-                    
+
                     //_headGestureTrigger.SpawnHeadGestureTriggers();   //Head gesture trigger colliders are spawned when Erik starts talking. Should be destroyed after npcAudioSource.clip.length
                     //Spawn HEADNOD and HEADSHAKE trigger prefabs here.
 

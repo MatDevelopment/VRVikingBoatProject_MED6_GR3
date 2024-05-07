@@ -89,6 +89,7 @@ public class MicInputDetection : MonoBehaviour
         if (loudness > threshold) //Husk at add en condition her som gør at der lige bliver ventet på at ChatGPT har genereret et svar
                                   //ELLER: Afbryd ChatGPT i at svare og append hvad end brugeren siger til samtalen, hvorefter ChatGPT kan svare på ny.
         {
+            //npcInteractorScript.timeCounter = 0;
             speechPauseCounter = 0; // Resets the pause counter so the microphone keep recording
 
             if (isListening == false)
