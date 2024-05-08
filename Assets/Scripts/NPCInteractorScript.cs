@@ -159,7 +159,7 @@ public class NPCInteractorScript : MonoBehaviour
         if (apiStatus.isTranscribing == false && apiStatus.isGeneratingAudio == false && apiStatus.isGeneratingText == false && apiStatus.isTalking == false && _micInputDetection.isListening == false && _gestureVersionManager.GestureVersion)       //If nothing is being done concerning talk (Talking, listening etc.), then we count the timer up.
         {
             if(erikSpeakable) // To prevent Erik from instigating conversation during testing
-            initiateTalkTimeCounter += Time.deltaTime;
+                initiateTalkTimeCounter += Time.deltaTime;
         }
         else
         {
