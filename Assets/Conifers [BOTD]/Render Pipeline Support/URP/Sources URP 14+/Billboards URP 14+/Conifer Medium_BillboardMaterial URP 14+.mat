@@ -89,7 +89,7 @@ Material:
     - _OcclusionStrength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 1
+    - _Smoothness: 0
     - _TranslucencyStrength: 0.5
     - _TreeScale: 1
     - _TreeWidth: 1
@@ -100,7 +100,7 @@ Material:
     - _WindStrength: 0.79
     m_Colors:
     - _BaseWindMultipliers: {r: 1, g: 1, b: 1, a: 0}
-    - _HueVariation: {r: 0, g: 0.5921569, b: 0.9019608, a: 0.0627451}
-    - _SpecColor: {r: 0, g: 0.44313726, b: 0.02745098, a: 1}
+    - _HueVariation: {r: 0.031867117, g: 0.3301887, b: 0, a: 0.0627451}
+    - _SpecColor: {r: 0, g: 0.46226418, b: 0.046226375, a: 1}
     - _Translucency: {r: 1, g: 8, b: 0, a: 0}
   m_BuildTextureStacks: []

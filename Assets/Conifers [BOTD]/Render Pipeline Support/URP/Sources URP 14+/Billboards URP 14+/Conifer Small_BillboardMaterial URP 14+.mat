@@ -76,7 +76,7 @@ Material:
     - _ViewDependency: 0.8
     - _WindStrength: 0.16
     m_Colors:
-    - _HueVariation: {r: 0, g: 0.9, b: 0.8255172, a: 0.1}
+    - _HueVariation: {r: 0, g: 0, b: 0, a: 0.1}
     - _SpecColor: {r: 0, g: 0.3207547, b: 0.01986975, a: 1}
     - _Translucency: {r: 1, g: 8, b: 0, a: 0}
   m_BuildTextureStacks: []
