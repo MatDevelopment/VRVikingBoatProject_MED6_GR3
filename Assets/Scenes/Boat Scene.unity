@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25778,19 +25778,7 @@ MonoBehaviour:
     m_Variable: {fileID: 11400000, guid: fa9ea808d42914d47a4052f9bb0f143e, type: 2}
   m_ValueUpdated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
-        m_MethodName: set_alpha
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &680189838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25852,7 +25840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1336053825}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -25879,30 +25867,30 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NPCInteractorScript, Assembly-CSharp
-        m_MethodName: Start_PickThisNpc_Coroutine
-        m_Mode: 1
+      - m_Target: {fileID: 6572797345569057209}
+        m_TargetAssemblyTypeName: UserGazeErik, Assembly-CSharp
+        m_MethodName: StartCoroutine_IsErikVisibleAfterDuration
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: StopAllCoroutines
-        m_Mode: 1
+      - m_Target: {fileID: 6572797345569057209}
+        m_TargetAssemblyTypeName: UserGazeErik, Assembly-CSharp
+        m_MethodName: StartCoroutine_IsErikVisibleAfterDuration
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -36872,7 +36860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9f5d4560d3be141a6b25c631709e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiStatus: {fileID: 0}
+  apiStatus: {fileID: 1442082957}
   inputDetection: {fileID: 0}
   fillImage: {fileID: 546066979}
   thresholdImage: {fileID: 1272530771}
@@ -112971,7 +112959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatTestScript: {fileID: 1937782999}
   npcInteractorScript: {fileID: 6572797345569057211}
-  _apiStatus: {fileID: 0}
+  _apiStatus: {fileID: 1442082957}
 --- !u!114 &6572797345569057210
 MonoBehaviour:
   m_ObjectHideFlags: 0
