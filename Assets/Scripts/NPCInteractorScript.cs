@@ -52,12 +52,14 @@ public class NPCInteractorScript : MonoBehaviour
     public string nameOfThisNPC;
     //public string voiceIDNameThisNpc;
     public string npcEmotion;
+    public float npcEmotionValue = 0.5f;
     public string npcSecondaryEmotion;
     public string[] npcPrimaryEmotions = {"HAPPY", "SAD", "ANGRY", "SURPRISED", "SCARED", "DISGUST", "CONTEMPT"};
     //public string[] npcSecondaryEmotions = {"UNSURE", "CONFUSED", "AGREEMENT"};
     
     public string[] npcActionStrings = {"APPROVE", "DISAPPROVE", "GREETING", "POINTING", "UNSURE", "GRATITUDE", "CONDOLENCE", "INSULT", "STOP"};
-    
+    public string[] npcPointingTargets = { "FISHINGHUT", "RUNESTONE", "FARMSTEAD", "VILLAGE", "BURIALMOUND", "MARKETENTRANCE", "BLACKSMITH", "BOATBUILDER", "TRADERS", "ERIKSHUT" };
+
     private bool playedFirstVoiceLine = false;
     private bool playedSecondVoiceLine = false;
 
@@ -127,9 +129,11 @@ public class NPCInteractorScript : MonoBehaviour
                 Role = "system",
                 Content =
                     "Do not say anything about the emotional state of the NPC or what the NPC is thinking, but simply take this information into account.\n" +
-                    "Start your response with the NPC's current primary emotional state in capitalized letters, in the same message without new line and seperated by white space. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT\n" +
+                    "Start your response with the NPC's current primary emotional state in capitalized letters, in the same message without new line and seperated by white space. Just before the primary emotion, without a new line and seperated by whitespace with square brackets on either side, give a number from 1 to 10, where 1 is not emotional and 10 is very emotional, based on how emotional the NPC is. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT\n" +
                     "Only choose ONE emotion per response, and only choose an emotion if you deem it necessary.\n" +
                     "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick one or more gestures to go with the NPC's response: DISAPPROVE, APPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
+                    "When POINTING the NPC can only choose between a given set of targets and only after the NPC have been given permission for the specific target. Write the chosen target whithout new line and after POINTING seperated by white space. The only available targets are: FISHINGHUT, RUNESTONE, FARMSTEAD, VILLAGE, BURIALMOUND, MARKETENTRANCE, BLACKSMITH, BOATBUILDER, TRADERS, ERIKSHUT.\n" +
+                    "The NPC now has permission to be POINTING at FISHINGHUT\n" +
                     "The gestures previously mentioned are the only gestures available to you, so please choose the most suitable gesture. All else physical movement besides these gestures are not possible.\n" +
                     "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n"
 
@@ -248,6 +252,21 @@ public class NPCInteractorScript : MonoBehaviour
        // whisperScript.ECAIsDoneTalking = true;
     }
 
+
+    public void CheckEmotionBlendvalue()
+    {
+        if (whisperScript.npcResponse.Contains("["))
+        {
+            int startIndex = whisperScript.npcResponse.IndexOf("[");
+            int endIndex = whisperScript.npcResponse.IndexOf("]");
+            string result = whisperScript.npcResponse.Substring(startIndex + 1, endIndex - startIndex - 1);
+            whisperScript.npcResponse = whisperScript.npcResponse.Remove(startIndex, endIndex + 1);
+            float blendValue = float.Parse(result);
+            blendValue = blendValue / 10;
+            Debug.Log("Blend Value: " + blendValue);
+            npcEmotionValue = blendValue;
+        }
+    }
 
     public void CheckErikPrimaryEmotion(string triggerString)
     {

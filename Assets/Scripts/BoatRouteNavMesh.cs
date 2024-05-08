@@ -18,7 +18,7 @@ public class BoatRouteNavMesh : MonoBehaviour
     [SerializeField] private float BoatToTargetDistance;
 
     [Header("Points of Interests")]
-    [SerializeField] private List<GameObject> PointsOfInterest = new List<GameObject>();
+    public List<GameObject> PointsOfInterest = new List<GameObject>();
     public Transform currentPOI;
 
     [Header("Fishing Hut")]

@@ -33,6 +33,7 @@ namespace OpenAI
         [SerializeField] private NewDataLogManager newDataLogManager;
         [SerializeField] private HeadGestureTrigger _headGestureTrigger;
         [SerializeField] private GestureVersionManager _gestureVersionManager;
+        [SerializeField] private ErikIKController ikController;
         private NPCSoundBitPlayer nPCSoundBitPlayer;
         
 
@@ -184,7 +185,22 @@ namespace OpenAI
                         {
                             npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion);
                         }
-                        
+
+                        // Checks and sets the emotion blendvalue
+                        npcInteractorScript.CheckEmotionBlendvalue();
+
+                        // Checks for the chosen point target
+                        foreach (string target in npcInteractorScript.npcPointingTargets)
+                        {
+                            if (npcResponse.Contains(target))
+                            {
+                                ikController.ChooseLookTarget(target);
+
+                                int startIndexAction = npcResponse.IndexOf(target);
+                                npcResponse = npcResponse.Remove(startIndexAction, target.Length);
+                            }
+                        }
+
                         foreach (string action in npcInteractorScript.npcActionStrings)
                         {
 
@@ -216,7 +232,7 @@ namespace OpenAI
                                 npcAnimationStateController.AnimateErik(action, estimatedTimeTillAction);
                             }
                         }
-                        npcInteractorScript.AnimateFacialExpressionResponse_Erik(npcInteractorScript.npcEmotion, 0.5f);
+                        npcInteractorScript.AnimateFacialExpressionResponse_Erik(npcInteractorScript.npcEmotion, npcInteractorScript.npcEmotionValue);
                     }
 
                     Debug.Log("Edited response: " + npcResponse);

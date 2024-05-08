@@ -16,6 +16,7 @@ public class ErikIKController : MonoBehaviour
     private Transform lookIKTarget;
     public Transform LookTarget;
     public Transform defaultLookTarget;
+    public Transform chosenLookTarget;
 
     [Range(0, 1f)]
     public float HandIKAmount = 0f;
@@ -41,7 +42,7 @@ public class ErikIKController : MonoBehaviour
     private void Update()
     {
         // Checks Direction of POI
-        Vector3 directionToPoi = (transform.position - boatRouteScript.currentPOI.position).normalized;
+        Vector3 directionToPoi = (transform.position - chosenLookTarget.position).normalized;
 
         if (directionToPoi.z < 0f && !isLeft)
         {
@@ -60,7 +61,7 @@ public class ErikIKController : MonoBehaviour
         {
             //lookIKTarget = boatRouteScript.currentPOI;
             //StartCoroutine(ChangeLookTarget(startPosition, boatRouteScript.currentPOI.position, 1));
-            lookIKTarget.position = Vector3.Lerp(lookIKTarget.position, boatRouteScript.currentPOI.position, 0.2f * Time.deltaTime);
+            lookIKTarget.position = Vector3.Lerp(lookIKTarget.position, chosenLookTarget.position, 0.2f * Time.deltaTime);
             hasChangedLook = false;
         }
         else if (!isLookingAtPOI && !hasChangedLook)
@@ -73,7 +74,7 @@ public class ErikIKController : MonoBehaviour
         // Sets right hand IK target
         if (isPointing && isRight && rightHandIKTarget != boatRouteScript.currentPOI)
         {
-            rightHandIKTarget = boatRouteScript.currentPOI;
+            rightHandIKTarget = chosenLookTarget;
         }
         else if (!isPointing || leftHandIKTarget != null)
         {
@@ -83,7 +84,7 @@ public class ErikIKController : MonoBehaviour
         // Sets left hand IK target
         if (isPointing && isLeft && leftHandIKTarget != boatRouteScript.currentPOI)
         {
-            leftHandIKTarget = boatRouteScript.currentPOI;
+            leftHandIKTarget = chosenLookTarget;
         }
         else if (!isPointing || rightHandIKTarget != null)
         {
@@ -164,11 +165,48 @@ public class ErikIKController : MonoBehaviour
 
         while (time < duration)
         {
-            lookIKTarget.position = Vector3.Lerp(boatRouteScript.currentPOI.position, defaultLookTarget.position, time / duration);
+            lookIKTarget.position = Vector3.Lerp(chosenLookTarget.position, defaultLookTarget.position, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
 
         lookIKTarget.position = defaultLookTarget.position;
+    }
+
+    public void ChooseLookTarget(string triggerString)
+    {
+        switch (triggerString)
+        {
+            case "FISHINGHUT":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[0].transform;
+                break;
+            case "RUNESTONE":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[1].transform;
+                break;
+            case "FARMSTEAD":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[2].transform;
+                break;
+            case "VILLAGE":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[3].transform;
+                break;
+            case "BURIALMOUND":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[4].transform;
+                break;
+            case "MARKETENTRANCE":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[5].transform;
+                break;
+            case "BLACKSMITH":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[6].transform;
+                break;
+            case "BOATBUILDER":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[7].transform;
+                break;
+            case "TRADERS":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[8].transform;
+                break;
+            case "ERIKSHUT":
+                chosenLookTarget = boatRouteScript.PointsOfInterest[9].transform;
+                break;
+        }
     }
 }
