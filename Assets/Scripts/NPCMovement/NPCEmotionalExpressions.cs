@@ -271,7 +271,6 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Happy");
-            StopAllCoroutines();
             StartCoroutine(WaitThenDefault(10));
         }
     }
@@ -315,7 +314,6 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Sad");
-            StopAllCoroutines();
             StartCoroutine(WaitThenDefault(10));
         }
     }
@@ -339,6 +337,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
         int RightMouthStretch = 56;
 
         int[] shapes = { LeftBrowLowerer, RightBrowLowerer, LeftLidRaiser, RightLidRaiser, LeftLidTightener, RightLidTightener, LeftMouthStretch, RightMouthStretch };
+        ResetEmotionalState(shapes);
 
         // Smoothing and changing each blendshape
         foreach (int shape in shapes)
@@ -362,7 +361,6 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Angry");
-            StopAllCoroutines();
             StartCoroutine(WaitThenDefault(10));
         }
     }
@@ -408,7 +406,6 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Surprised");
-            StopAllCoroutines();
             StartCoroutine(WaitThenDefault(10));
         }
     }
@@ -462,7 +459,6 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Scared");
-            StopAllCoroutines();
             StartCoroutine(WaitThenDefault(10));
         }
     }
@@ -508,7 +504,6 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Disgusted");
-            StopAllCoroutines();
             StartCoroutine(WaitThenDefault(10));
         }
     }
