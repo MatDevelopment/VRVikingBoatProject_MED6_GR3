@@ -141,9 +141,9 @@ public class Tutorial : MonoBehaviour
 
         yield return new WaitForSeconds(5);
 
-        StartCoroutine(microphoneCalibration.ListenForLoudnessForDuration(3));
+        StartCoroutine(microphoneCalibration.ListenForLoudnessForDuration(8));
         SetInstructionsText("Jeg kan godt lide vikinger. De har nogle sjove hatte på");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(8);
 
         if (userConfirmed)
         {
