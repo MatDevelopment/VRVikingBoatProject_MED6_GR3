@@ -82,10 +82,12 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
 
                 float startValue = 0;
                 float endValue = 1;
+                float bodyEndValue = 0.25f;
 
                 while (time < duration)
                 {
                     ikController.HandIKAmount = Mathf.Lerp(startValue, endValue, time / duration);
+                    ikController.BodyIKAmount = Mathf.Lerp(startValue, bodyEndValue, time / duration);
                     time += Time.deltaTime;
                     yield return null;
                 }
@@ -99,6 +101,7 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
                 while (time < duration)
                 {
                     ikController.HandIKAmount = Mathf.Lerp(endValue, startValue, time / duration);
+                    ikController.BodyIKAmount = Mathf.Lerp(bodyEndValue, startValue, time / duration);
                     time += Time.deltaTime;
                     yield return null;
                 }
@@ -107,6 +110,7 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
                 animator.SetBool("PointingRight", false);
                 ikController.HandIKAmount = startValue;
                 ikController.isPointing = false;
+                ikController.BodyIKAmount = startValue;
                 //Only one variation implemented!
                 break;
             case "UNSURE":

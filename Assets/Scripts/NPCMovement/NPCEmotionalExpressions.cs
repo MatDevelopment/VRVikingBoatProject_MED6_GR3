@@ -20,6 +20,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
     // Based on Ekman's 7 Emotional States
     public string currentMood = "isStatic";
 
+    public bool isDefault = false;
     public bool isHappy = false;
     public bool isSad = false;
     public bool isAngry = false;
@@ -27,6 +28,8 @@ public class NPCEmotionalExpressions : MonoBehaviour
     public bool isScared = false;
     public bool isDisgusted = false;
     public bool isContempted = false;
+
+    private bool isResetting = false;
 
     private void Awake()
     {
@@ -94,6 +97,13 @@ public class NPCEmotionalExpressions : MonoBehaviour
         }
 
         // Emotional State Logic
+        if (isDefault == true)
+        {
+            currentMood = "isDefault";
+            isDefault = false;
+            // Happy(blendValue);
+        }
+
         if (isHappy == true)
         {
             currentMood = "isHappy";
@@ -212,7 +222,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
             CombinedValue += skinnedMeshRenderer.GetBlendShapeWeight(i);
         }
 
-        float AverageValue = CombinedValue / blendShapeCount - 15;
+        float AverageValue = CombinedValue / (blendShapeCount - 15);
 
         if (AverageValue <= 0)
         {
@@ -223,6 +233,12 @@ public class NPCEmotionalExpressions : MonoBehaviour
 
     void Happy(float blendValue)
     {
+        if (isResetting)
+        {
+            StopAllCoroutines();
+            isResetting = false;
+        }
+        
         // FACS: 6 + 12
         int LeftLipRaiser = 63;
         int RightLipRaiser = 64;
@@ -255,10 +271,18 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Happy");
+            StopAllCoroutines();
+            StartCoroutine(WaitThenDefault(10));
         }
     }
     void Sad(float blendValue)
     {
+        if (isResetting)
+        {
+            StopAllCoroutines();
+            isResetting = false;
+        }
+
         // FACS: 1 + 4 + 15
         int innerBrowRaiser = 18;
         int LeftBrowLowerer = 16;
@@ -291,11 +315,19 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Sad");
+            StopAllCoroutines();
+            StartCoroutine(WaitThenDefault(10));
         }
     }
 
     void Angry(float blendValue)
     {
+        if (isResetting)
+        {
+            StopAllCoroutines();
+            isResetting = false;
+        }
+
         // FACS: 4 + 5 + 7 + 23
         int LeftBrowLowerer = 16;
         int RightBrowLowerer = 17;
@@ -330,11 +362,19 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Angry");
+            StopAllCoroutines();
+            StartCoroutine(WaitThenDefault(10));
         }
     }
 
     void Surprised(float blendValue)
     {
+        if (isResetting)
+        {
+            StopAllCoroutines();
+            isResetting = false;
+        }
+
         // FACS: 1 + 2 + 5B + 26
         int InnerBrowRaiser = 18;
         int LeftOuterBrowRaiser = 19;
@@ -368,11 +408,19 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Surprised");
+            StopAllCoroutines();
+            StartCoroutine(WaitThenDefault(10));
         }
     }
 
     void Scared(float blendValue)
     {
+        if (isResetting)
+        {
+            StopAllCoroutines();
+            isResetting = false;
+        }
+
         // FACS: 1 + 2 + 4 + 5 + 7 + 20 + 26
         int InnerBrowRaiser = 18;
         int LeftOuterBrowRaiser = 19;
@@ -414,11 +462,19 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Scared");
+            StopAllCoroutines();
+            StartCoroutine(WaitThenDefault(10));
         }
     }
 
     void Disgust(float blendValue)
     {
+        if (isResetting)
+        {
+            StopAllCoroutines();
+            isResetting = false;
+        }
+
         // FACS: 9 + 15 + 17
         int LeftNoseWrinkler = 33;
         int RightNoseWrinkler = 34;
@@ -452,11 +508,19 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Disgusted");
+            StopAllCoroutines();
+            StartCoroutine(WaitThenDefault(10));
         }
     }
 
     void Contempt(float blendValue)
     {
+        if (isResetting)
+        {
+            StopAllCoroutines();
+            isResetting = false;
+        }
+
         // FACS: R12A + R14A
         int RightLipCornerPuller = 38;
         int RightDimpler = 54;
@@ -486,6 +550,14 @@ public class NPCEmotionalExpressions : MonoBehaviour
         {
             currentMood = "isStatic";
             Debug.Log("Contempted");
+            StartCoroutine(WaitThenDefault(10));
         }
+    }
+
+    private IEnumerator WaitThenDefault(float waitTime)
+    {
+        isResetting = true;
+        yield return new WaitForSeconds(waitTime);
+        isDefault = true;
     }
 }

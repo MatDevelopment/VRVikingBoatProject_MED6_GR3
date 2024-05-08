@@ -19,6 +19,8 @@ public class ErikIKController : MonoBehaviour
 
     [Range(0, 1f)]
     public float HandIKAmount = 0f;
+    [Range(0, 1f)]
+    public float BodyIKAmount = 0f;
 
     public bool isLeft = false;
     public bool isRight = false;
@@ -30,12 +32,10 @@ public class ErikIKController : MonoBehaviour
     public bool pointDebug = false;
 
     public Transform pointRotation;
-    public Vector3 startPosition;
 
     private void Start()
     {
         lookIKTarget = LookTarget;
-        startPosition = lookIKTarget.position;
     }
 
     private void Update()
@@ -126,11 +126,11 @@ public class ErikIKController : MonoBehaviour
         {
             if (isLookingAtPOI)
             {
-                npcAnimator.SetLookAtWeight(1, 0.25f, 0.75f, 0.75f, 0.7f);
+                npcAnimator.SetLookAtWeight(1, BodyIKAmount, 0.75f, 0.75f, 0.7f);
             }
             else
             {
-                npcAnimator.SetLookAtWeight(1, 0, 0.7f, 0.75f, 0.7f);
+                npcAnimator.SetLookAtWeight(1, BodyIKAmount, 0.7f, 0.75f, 0.7f);
             }
 
             npcAnimator.SetLookAtPosition(lookIKTarget.position);
