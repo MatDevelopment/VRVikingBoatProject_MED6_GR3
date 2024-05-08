@@ -32,7 +32,9 @@ namespace OpenAI
         [SerializeField] private PointingManager pointingManagerScript;
         [SerializeField] private NewDataLogManager newDataLogManager;
         [SerializeField] private HeadGestureTrigger _headGestureTrigger;
+        [SerializeField] private GestureVersionManager _gestureVersionManager;
         private NPCSoundBitPlayer nPCSoundBitPlayer;
+        
 
         [SerializeField] private Image progress;
         [SerializeField] private InputActionReference buttonHoldReference = null;
@@ -54,9 +56,11 @@ namespace OpenAI
         {
             apiStatus = FindObjectOfType<APIStatus>();
             apiCallTimeManager = FindObjectOfType<APICallTimeManager>();
+            _headGestureTrigger = FindObjectOfType<HeadGestureTrigger>();
             gestureManagerNew = FindAnyObjectByType<GestureManager>();
             nPCSoundBitPlayer = FindObjectOfType<NPCSoundBitPlayer>();
             npcAnimationStateController = FindAnyObjectByType<NpcAnimationStateController>();
+            _gestureVersionManager = FindObjectOfType<GestureVersionManager>();
         }
 
         private void ChangeMicrophone(int index)
@@ -132,14 +136,31 @@ namespace OpenAI
 
                 if (string.IsNullOrEmpty(result.Text) == false || string.IsNullOrWhiteSpace(result.Text) == false)
                 {
-                    Debug.Log("Recorded message: " + userRecordingString + gestureManagerNew.PullLatestGestureCombination());
+                    if (_gestureVersionManager.GestureVersion == true)
+                    {
+                        Debug.Log("Recorded message: " + userRecordingString + gestureManagerNew.PullLatestGestureCombination());
+                    }
+                    else if(_gestureVersionManager.GestureVersion == false)
+                    {
+                        Debug.Log("Recorded message: " + userRecordingString);
+                    }
+                    
 
                     newDataLogManager.SendStringToDataLogger("User: " + userRecordingString);
                     newDataLogManager.TotalUserPrompts += 1;
-                    chatTest.AddPlayerInputToChatLog(userRecordingString + gestureManagerNew.PullLatestGestureCombination());
-                    choosePromptGestureScript.ClearDictionaryOfPointedItems();
-                    pointingManagerScript.rightHandLastSelected = "";
-                    pointingManagerScript.leftHandLastSelected = "";
+                    
+                    if (_gestureVersionManager.GestureVersion == true)
+                    {
+                        chatTest.AddPlayerInputToChatLog(userRecordingString + gestureManagerNew.PullLatestGestureCombination());
+                        choosePromptGestureScript.ClearDictionaryOfPointedItems();
+                        pointingManagerScript.rightHandLastSelected = "";
+                        pointingManagerScript.leftHandLastSelected = "";
+                    }
+                    else if (_gestureVersionManager.GestureVersion == false)
+                    {
+                        chatTest.AddPlayerInputToChatLog(userRecordingString);
+                    }
+                    
 
                    
 
@@ -160,41 +181,41 @@ namespace OpenAI
                         npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion);
                     }
 
-
-                    foreach (string action in npcInteractorScript.npcActionStrings)
+                    if (_gestureVersionManager.GestureVersion)
                     {
-
-                        if (npcResponse.Contains(action))
+                        foreach (string action in npcInteractorScript.npcActionStrings)
                         {
-                            string responseTillActionString = AnimationDelayCalculator.CreateStringUntilKeyword(inputString: npcResponse, actionToCheck: action);
 
-                            int punctuationsCount = AnimationDelayCalculator.CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in responseTillActionString
+                            if (npcResponse.Contains(action))
+                            {
+                                string responseTillActionString = AnimationDelayCalculator.CreateStringUntilKeyword(inputString: npcResponse, actionToCheck: action);
 
-                            int wordInStringCount = AnimationDelayCalculator.CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
+                                int punctuationsCount = AnimationDelayCalculator.CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in responseTillActionString
 
-                            float estimatedTimeTillAction = AnimationDelayCalculator.EstimatedTimeTillAction(wordCount: wordInStringCount,
-                                                        wordWeight: 0.15f, punctuationCount: punctuationsCount, punctuationWeight: 1f);
+                                int wordInStringCount = AnimationDelayCalculator.CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
 
-                            Debug.Log("ActionString: " + responseTillActionString + " --" +
-                              "Punctuations: " + punctuationsCount + " --" +
-                              "Word count: " + wordInStringCount + " --" +
-                         "ETA of action: " + estimatedTimeTillAction);
+                                float estimatedTimeTillAction = AnimationDelayCalculator.EstimatedTimeTillAction(wordCount: wordInStringCount,
+                                    wordWeight: 0.15f, punctuationCount: punctuationsCount, punctuationWeight: 1f);
 
-                            int startIndexAction = npcResponse.IndexOf(action);     //Finds the starting index of the action keyword in the ChatGPT response
+                                Debug.Log("ActionString: " + responseTillActionString + " --" +
+                                          "Punctuations: " + punctuationsCount + " --" +
+                                          "Word count: " + wordInStringCount + " --" +
+                                          "ETA of action: " + estimatedTimeTillAction);
 
-                            responseTillActionString = "";
+                                int startIndexAction = npcResponse.IndexOf(action);     //Finds the starting index of the action keyword in the ChatGPT response
 
-                            //Man kan godt løbe ind i problemer med Remove her, og ved ikke helt hvorfor.
-                            //Tror det har noget at gøre med at Length starter med at tælle til 1, men indeces starter fra 0.
-                            npcResponse = npcResponse.Remove(startIndexAction, action.Length);      //Removes the action keyword from ChatGPT's response plus the following white space
+                                responseTillActionString = "";
 
-                            Debug.Log("New response after removing action:   " + npcResponse);
-                            npcAnimationStateController.AnimateErik(action, estimatedTimeTillAction);
+                                //Man kan godt løbe ind i problemer med Remove her, og ved ikke helt hvorfor.
+                                //Tror det har noget at gøre med at Length starter med at tælle til 1, men indeces starter fra 0.
+                                npcResponse = npcResponse.Remove(startIndexAction, action.Length);      //Removes the action keyword from ChatGPT's response plus the following white space
+
+                                Debug.Log("New response after removing action:   " + npcResponse);
+                                npcAnimationStateController.AnimateErik(action, estimatedTimeTillAction);
+                            }
                         }
+                        npcInteractorScript.AnimateFacialExpressionResponse_Erik(npcInteractorScript.npcEmotion, 0.5f);
                     }
-
-                    npcInteractorScript.AnimateFacialExpressionResponse_Erik(npcInteractorScript.npcEmotion, 0.5f);
-
 
                     Debug.Log("Edited response: " + npcResponse);
 

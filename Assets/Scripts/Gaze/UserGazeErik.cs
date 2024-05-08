@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,13 @@ public class UserGazeErik : MonoBehaviour
     [SerializeField] private ChatTest chatTestScript;
     [SerializeField] private NPCInteractorScript npcInteractorScript;
     [SerializeField] private APIStatus _apiStatus;
-    
+    [SerializeField] private GestureVersionManager _gestureVersionManager;
+
+
+    private void Awake()
+    {
+        _gestureVersionManager = FindObjectOfType<GestureVersionManager>();
+    }
     /*private void OnBecameInvisible()
     {
         isErikVisible = false;
@@ -58,7 +65,7 @@ public class UserGazeErik : MonoBehaviour
 
     public void StartCoroutine_IsErikVisibleAfterDuration(float gazeTimeDuration)
     {
-        if (_apiStatus.isTalking)
+        if (_apiStatus.isTalking && _gestureVersionManager.GestureVersion)
         {
             StartCoroutine(IsErikVisibleAfterDuration(gazeTimeDuration));
         }

@@ -56,7 +56,7 @@ public class MicInputDetection : MonoBehaviour
 
         if (!npcInteractorScript.erikSpeakable) return;
 
-        if (loudness < threshold)
+        if (loudness < threshold)       //What you say will sometimes be SPAMMED in the same response, which is possibly due to this Update check... Find other way to do it...
         {
             //The speechPauseCounter variable is so that the user can have natural breaks inbetween words they say, or so-called thinking pauses.
            // loudness = 0;
