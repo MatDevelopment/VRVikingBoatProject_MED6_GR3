@@ -128,6 +128,7 @@ public class NPCInteractorScript : MonoBehaviour
                 Content =
                     "Do not say anything about the emotional state of the NPC or what the NPC is thinking, but simply take this information into account.\n" +
                     "Start your response with the NPC's current primary emotional state in capitalized letters, in the same message without new line and seperated by white space. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT\n" +
+                    "Only choose ONE emotion per response, and only choose an emotion if you deem it necessary.\n" +
                     "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick one or more gestures to go with the NPC's response: DISAPPROVE, APPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
                     "The gestures previously mentioned are the only gestures available to you, so please choose the most suitable gesture. All else physical movement besides these gestures are not possible.\n" +
                     "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n"

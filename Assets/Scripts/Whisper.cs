@@ -175,14 +175,16 @@ namespace OpenAI
                     newDataLogManager.TotalErikResponses += 1;
                     chatTest.AddNpcResponseToChatLog(npcResponse);
 
-                    //Check for current NPC emotion in order to play animation
-                    foreach (string primaryEmotion in npcInteractorScript.npcPrimaryEmotions)
-                    {
-                        npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion);
-                    }
+                    
 
                     if (_gestureVersionManager.GestureVersion)
                     {
+                        //Check for current NPC emotion in order to play animation
+                        foreach (string primaryEmotion in npcInteractorScript.npcPrimaryEmotions)
+                        {
+                            npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion);
+                        }
+                        
                         foreach (string action in npcInteractorScript.npcActionStrings)
                         {
 
