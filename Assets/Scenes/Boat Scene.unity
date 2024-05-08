@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13615213, g: 0.16489966, b: 0.21611023, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26309,14 +26309,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6572797345569057209}
-        m_TargetAssemblyTypeName: UserGazeErik, Assembly-CSharp
-        m_MethodName: StartCoroutine_IsErikVisibleAfterDuration
-        m_Mode: 4
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 10
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -26325,13 +26325,25 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6572797345569057209}
         m_TargetAssemblyTypeName: UserGazeErik, Assembly-CSharp
-        m_MethodName: StartCoroutine_IsErikVisibleAfterDuration
+        m_MethodName: StartCoroutine_SmallGazeObservationErik
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 10
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6572797345569057209}
+        m_TargetAssemblyTypeName: UserGazeErik, Assembly-CSharp
+        m_MethodName: StartCoroutine_BigGazeObservationErik
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 4
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -114457,6 +114469,9 @@ MonoBehaviour:
   npcInteractorScript: {fileID: 6572797345569057211}
   _apiStatus: {fileID: 1442082957}
   _gestureVersionManager: {fileID: 0}
+  gazeTimeOnErikWhileHeIsTalking: 0
+  smallRude: 0
+  bigRude: 0
 --- !u!114 &6572797345569057210
 MonoBehaviour:
   m_ObjectHideFlags: 0

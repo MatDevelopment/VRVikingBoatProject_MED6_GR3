@@ -72,6 +72,7 @@ public class NPCInteractorScript : MonoBehaviour
    
     private float lengthOfSceneIntroTalkDialogue;
     [FormerlySerializedAs("timeCounter")] public float initiateTalkTimeCounter;
+    [SerializeField] private float initiateTalkErikTime = 15f;
     
     public bool erikSceneStartDialogueDone;
     private void Awake()
@@ -171,7 +172,7 @@ public class NPCInteractorScript : MonoBehaviour
         }
         //Timecounter is reset after text to speech is done generating an audio clip and plays it. (In Whisper script)
 
-        if (initiateTalkTimeCounter >= 15)        //When the timeCounter reaches 15 seconds, then...
+        if (initiateTalkTimeCounter >= initiateTalkErikTime)        //When the timeCounter reaches 15 seconds, then...
         {
             InformAndInitiateNpcTalk("You and the Traveller have not talked for a little more than 15 seconds. Initiate a conversation with a talking topic possibly related to what you and the Traveller have talked about.");
             initiateTalkTimeCounter = 0;
