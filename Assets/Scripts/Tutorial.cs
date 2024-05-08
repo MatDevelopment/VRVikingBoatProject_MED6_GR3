@@ -383,7 +383,7 @@ public class Tutorial : MonoBehaviour
         {
             userGaveThumbsUp = true;
 
-            StartTutorial();
+            StartTutorial(); 
         }
     }
 

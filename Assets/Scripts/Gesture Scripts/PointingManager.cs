@@ -59,7 +59,7 @@ public class PointingManager : MonoBehaviour
                     tutorial.SetPointedAtGreenCubeTrue();
                 }
                     // Here we check for the layermask 6 = InterestPoint
-                if (hit.transform.gameObject.name != leftHandLastSelected)      
+                else if (hit.transform.gameObject.name != leftHandLastSelected)      
                                                                            
                 {
                     pointingResetCounter = 0;
@@ -97,7 +97,7 @@ public class PointingManager : MonoBehaviour
                     tutorial.SetPointedAtGreenCubeTrue();
                 }
 
-                if (hit.transform.gameObject.name != rightHandLastSelected)
+                else if (hit.transform.gameObject.name != rightHandLastSelected)
                 {
                     pointingResetCounter = 0;
                     counter = 0;
