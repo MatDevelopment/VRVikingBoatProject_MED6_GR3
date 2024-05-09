@@ -14,25 +14,20 @@ public class UserGazeErik : MonoBehaviour
     [SerializeField] private NPCInteractorScript npcInteractorScript;
     [SerializeField] private APIStatus _apiStatus;
     [SerializeField] private GestureVersionManager _gestureVersionManager;
-
-    [SerializeField] private float gazeTimeOnErikWhileHeIsTalking;
-    [SerializeField] private float smallRude;
-    [SerializeField] private float bigRude;
-    
-
-    private bool LookingAtErik = false;
+    [SerializeField] private MicInputDetection _micInputDetection;
 
 
     private void Awake()
     {
         _gestureVersionManager = FindObjectOfType<GestureVersionManager>();
+        _micInputDetection = FindObjectOfType<MicInputDetection>();
     }
 
     IEnumerator SmallGazeObservationErik(float timeUntilObservation)
     {
         yield return new WaitForSeconds(timeUntilObservation);
         
-        chatTestScript.AddSystemInstructionToChatLog("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik considers this to be a little rude and will take it into consideration in the future.");
+        chatTestScript.AddSystemInstructionToChatLog("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik will take this into consideration when responding to the Traveller next time.");
         
     }
     
@@ -45,7 +40,8 @@ public class UserGazeErik : MonoBehaviour
 
     public void StartCoroutine_SmallGazeObservationErik(float timeUntilObservation)
     {
-        if (_apiStatus.isTalking && _gestureVersionManager.GestureVersion)
+        //If Erik is only talking (No ChatGPT processes are running and Erik is not listening), then we make Erik able to observe the user not looking at Erik while he is talking.
+        if (_apiStatus.isTalking && _apiStatus.isTranscribing == false && _apiStatus.isGeneratingAudio == false && _apiStatus.isGeneratingText == false && _micInputDetection.isListening == false && _gestureVersionManager.GestureVersion)
         {
             StartCoroutine(SmallGazeObservationErik(timeUntilObservation));
         }
@@ -53,7 +49,8 @@ public class UserGazeErik : MonoBehaviour
     
     public void StartCoroutine_BigGazeObservationErik(float timeUntilObservation)
     {
-        if (_apiStatus.isTalking && _gestureVersionManager.GestureVersion)
+        //If Erik is only talking (No ChatGPT processes are running and Erik is not listening), then we make Erik able to observe the user not looking at Erik while he is talking.
+        if (_apiStatus.isTalking && _apiStatus.isTranscribing == false && _apiStatus.isGeneratingAudio == false && _apiStatus.isGeneratingText == false && _micInputDetection.isListening == false && _gestureVersionManager.GestureVersion)
         {
             StartCoroutine(BigGazeObservationErik(timeUntilObservation));
         }

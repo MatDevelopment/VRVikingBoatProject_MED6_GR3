@@ -26331,7 +26331,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 2
+          m_FloatArgument: 4
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -26343,7 +26343,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 4
+          m_FloatArgument: 8
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -114452,9 +114452,7 @@ MonoBehaviour:
   npcInteractorScript: {fileID: 6572797345569057211}
   _apiStatus: {fileID: 1442082957}
   _gestureVersionManager: {fileID: 0}
-  gazeTimeOnErikWhileHeIsTalking: 0
-  smallRude: 0
-  bigRude: 0
+  _micInputDetection: {fileID: 0}
 --- !u!114 &6572797345569057210
 MonoBehaviour:
   m_ObjectHideFlags: 0

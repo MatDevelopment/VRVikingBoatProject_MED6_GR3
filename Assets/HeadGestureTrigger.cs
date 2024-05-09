@@ -36,7 +36,6 @@ public class HeadGestureTrigger : MonoBehaviour
         //HEADNOD DETECTION
         if (collider.gameObject.CompareTag("topBottomHeadTriggerTag"))
         {
-            //Debug.Log("Wave INCREMENT");
             topBottomHead_Counter++;
             
             if (topBottomHead_Counter == 2)
@@ -44,6 +43,7 @@ public class HeadGestureTrigger : MonoBehaviour
                 //StartCoroutine(_dynamicGestureManager.justWavedDuration_Active(3f));
                 //_dynamicGestureManager.wavePerformed?.Invoke();
                 Debug.Log("HEADNOD Detected");
+                _chatTest.AddSystemInstructionToChatLog("The Traveller just did a headnod in acknowledgement of what Erik has just said. Erik will take this into consideration.");
                 DestroyTopBottomTriggersInstances();
                 topBottomHead_Counter = 0;
             }
@@ -53,7 +53,6 @@ public class HeadGestureTrigger : MonoBehaviour
         //HEADSHAKE DETECTION
         if (collider.gameObject.CompareTag("leftRightHeadTriggerTag"))
         {
-            //Debug.Log("Wave INCREMENT");
             topBottomHead_Counter++;
 
             if (leftRightHead_Counter == 2)
@@ -61,24 +60,25 @@ public class HeadGestureTrigger : MonoBehaviour
                 //StartCoroutine(_dynamicGestureManager.justWavedDuration_Active(3f));
                 //_dynamicGestureManager.wavePerformed?.Invoke();
                 Debug.Log("HEADSHAKE Detected");
+                _chatTest.AddSystemInstructionToChatLog("The Traveller just did a headshake in disagreement of what Erik has just said. Erik will take this into consideration.");
                 DestroyLeftRightTriggersInstances();
                 leftRightHead_Counter = 0;
             }
         }
     }
     
-    public void SpawnHeadGestureTriggers()        //Method to be called in event in inspector. Hierarchy: User Gesture Manager > Gesture Detection > Right Hand Gesture Detection > Canvas_rightImages > Custom Gesture - Wave Pose > Gesture Performed (event)
+    public void SpawnHeadGestureTriggers(float timeUntilTriggerDestroy)        //Method to be called in event in inspector. Hierarchy: User Gesture Manager > Gesture Detection > Right Hand Gesture Detection > Canvas_rightImages > Custom Gesture - Wave Pose > Gesture Performed (event)
     {
         //Debug.Log("SpawnedWaveTrigger!:DDD");
         //Vector3 thisGameObjectPosition = transform.localPosition; //WRONG. Use TransformPoint to go from local space to world point.
         
         //Right/left head trigger positions
-        Vector3 rightHeadTriggerPosition = transform.TransformPoint(Vector3.right * 1.8f);
-        Vector3 leftHeadTriggerPosition = transform.TransformPoint(Vector3.left * 1.8f);
+        Vector3 rightHeadTriggerPosition = transform.TransformPoint(Vector3.right * 1.5f);
+        Vector3 leftHeadTriggerPosition = transform.TransformPoint(Vector3.left * 1.5f);
         
         //Top/bottom head trigger positions
-        Vector3 topHeadTriggerPosition = transform.TransformPoint(Vector3.up * 1.8f);
-        Vector3 bottomHeadTriggerPosition = transform.TransformPoint(Vector3.down * 1.8f);
+        Vector3 topHeadTriggerPosition = transform.TransformPoint(Vector3.up * 1.5f);
+        Vector3 bottomHeadTriggerPosition = transform.TransformPoint(Vector3.down * 1.5f);
         
         /*Vector3 topHeadTriggerPosition = transform.TransformPoint(transform.position.x, transform.position.y, transform.position.z);
         Vector3 bottomHeadTriggerPosition = transform.TransformPoint(transform.position.x, transform.position.y + 0.2f, transform.position.z);*/
@@ -89,10 +89,10 @@ public class HeadGestureTrigger : MonoBehaviour
         topHeadTriggerInstance = Instantiate(topBottomTriggerPrefab, topHeadTriggerPosition, transform.rotation, boatParent);
         bottomHeadTriggerInstance = Instantiate(topBottomTriggerPrefab, bottomHeadTriggerPosition, transform.rotation, boatParent);
         
-        Destroy(rightHeadTriggerInstance, 3f);
-        Destroy(leftHeadTriggerInstance, 3f);
-        Destroy(topHeadTriggerInstance, 3f);
-        Destroy(bottomHeadTriggerInstance, 3f);
+        Destroy(rightHeadTriggerInstance, timeUntilTriggerDestroy);
+        Destroy(leftHeadTriggerInstance, timeUntilTriggerDestroy);
+        Destroy(topHeadTriggerInstance, timeUntilTriggerDestroy);
+        Destroy(bottomHeadTriggerInstance, timeUntilTriggerDestroy);
     }
     
     public void DestroyTopBottomTriggersInstances()
