@@ -35,9 +35,11 @@ public class Tutorial : MonoBehaviour
     private bool CanLookAtCube2;
 
     private bool userStartedCalibrationStep;
+    [SerializeField] private GestureVersionManager gestureVersionManager;
 
     void Start()
     {
+
         fadeController = FindObjectOfType<FadeController>();
         boatRouteNavMesh = FindObjectOfType<BoatRouteNavMesh>();
         tilter = FindAnyObjectByType<BoatTilt>();
@@ -286,8 +288,10 @@ public class Tutorial : MonoBehaviour
         StartCoroutine(FadeRoomMaterials());
         StartCoroutine(boatRouteNavMesh.StartTheBoat(1));
         //StartCoroutine(FadeRoomMaterials());
-        
+
         //fadeController.FadeOutAfterTime(1);
+
+        gestureVersionManager.tutorialDone = true;
     }
 
     public void SetLookingAtGazeCube1True()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class GestureVersionManager : MonoBehaviour
 {
     public bool GestureVersion = true;
+    public bool tutorialDone = false;
 
     [SerializeField] private GameObject userGestureManagerGameObject;
     // Start is called before the first frame update
