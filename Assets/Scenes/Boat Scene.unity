@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13615213, g: 0.16489966, b: 0.21611023, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19663,7 +19663,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533192048}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -43787,12 +43787,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 32.44
-  m_Center: {x: 4.428459, y: -0.64600754, z: 15.083954}
+  m_Radius: 46.523453
+  m_Center: {x: 6.389786, y: 14.26265, z: 18.832062}
 --- !u!114 &1023899852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44913,7 +44913,7 @@ RectTransform:
   m_Father: {fileID: 259395547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -46451,8 +46451,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 23
-  m_Center: {x: 9, y: 2, z: 20}
+  m_Radius: 46.523453
+  m_Center: {x: 6.389786, y: 14.26265, z: 18.832062}
 --- !u!1 &1090161737
 GameObject:
   m_ObjectHideFlags: 0
@@ -49653,7 +49653,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 14
+  m_Radius: 20
   m_Center: {x: -2, y: 0, z: -5}
 --- !u!4 &1102668270 stripped
 Transform:
@@ -54690,7 +54690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd071985be8b6f44810e77e72c2da77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllowLogging: 0
+  AllowLogging: 1
   whisper: {fileID: 861633864}
   apiCallTimeManager: {fileID: 1442082956}
   newFileName: Testing
@@ -73348,7 +73348,7 @@ PrefabInstance:
     - target: {fileID: 239967312357079524, guid: f23a92d4b3b758a43bdaaa5dea9085a7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 585283591430202206, guid: f23a92d4b3b758a43bdaaa5dea9085a7,
         type: 3}
@@ -92657,7 +92657,7 @@ MonoBehaviour:
   gazeCube1: {fileID: 1773719700}
   gazeCube2: {fileID: 1773719699}
   tutorialLight: {fileID: 1773719702}
-  startExperienceWithTheTutorial: 0
+  startExperienceWithTheTutorial: 1
   useGesturesForConfirmation: 0
   instructionText: {fileID: 533192050}
   lookingAtGazeCube1: 0
@@ -115031,6 +115031,7 @@ MonoBehaviour:
   ttsManagerScript: {fileID: 1283425241}
   _micInputDetection: {fileID: 861633866}
   _gestureVersionManager: {fileID: 0}
+  _newDataLogManager: {fileID: 0}
   nameOfThisNPC: Erik
   npcEmotion: 
   npcEmotionValue: 0.5
@@ -115065,7 +115066,6 @@ MonoBehaviour:
   - TRADERS
   - ERIKSHUT
   erikSpeakable: 1
-  erikAbleToInitiateTalk: 0
   initiateTalkTimeCounter: 0
   initiateTalkErikTime: 15
   erikSceneStartDialogueDone: 0

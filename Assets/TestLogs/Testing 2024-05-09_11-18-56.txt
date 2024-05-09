@@ -1,0 +1,66 @@
+Total Time: 15:17, User Prompts: 32, Erik Responses: 32, Erik Instigations: 0, Erik Gaze Time: 0, API Call Time Averages: Combined 8.19836632121212, SST: 1.35437698787879, ChatGPT: 4.47009549393939, TTS: 4.47009549393939
+[00:36] User: Hej med dig, hvad hedder du?
+[00:39] Erik: [API: 5.0426308] [5] HAPPY GREETING Jeg hedder Erik. Hvad kan jeg hjælpe dig med på denne fine dag?
+[00:51] User: Det hedder Erik. Hvad kan jeg hjælpe dig med?
+[00:59] Erik: [API: 9.3549733] APPROVE Jeg er fisker og kender disse farvande godt. Skal du have en hånd med noget?
+[01:16] User: Kan du fortælle mig om, hvor vi er?
+[01:21] Erik: [API: 6.3094892] Vi er på Limfjorden, nær Lindholm Å. Her lever vi af landet og fjorden, en enkel men god tilværelse. POINTING FISHINGHUT Derovre er mit fiskehus.
+[01:38] User: Hvor er vi på vej hen, Erik?
+[01:42] Erik: [API: 4.8669958] Vi sejler gennem Lindholm Å. Jeg skal tjekke mine garn og fælder. Vil du med og se, hvordan vi fisker?
+[01:54] User: Jo det vil jeg gerne Erik
+[01:58] Erik: [API: 5.641321] APPROVE Godt at høre! Det er altid rart at have selskab, mens man arbejder. Lad os se, hvad havet byder på i dag.
+[02:21] User: Det har været noget spændende for nyligt.
+[02:26] Erik: [API: 6.2195286] Hvis du mener omkring her, så er livet stille. Men havet gemmer altid på overraskelser, og nogle gange bringer det mere end fisk i nettene.
+[02:40] User: Kan du fortælle noget mere?
+[02:47] Erik: [API: 7.5533081] Nogle gange finder vi ting i vandet, gamle ting, måske efterladt af dem, der var her før os. Det kan være våben, smykker... engang fandt vi et gammelt skjold. Det er som om havet har sine egne historier at fortælle.
+[03:12] User: Erik? Hvem er det der, Erik?
+[03:17] Erik: [API: 6.566841] Det er Lindholm landsby, hvor vi bor. Ved siden af landsbyen er der en hellig gravhøj. Vi lever tæt med vores forfædre og ærer dem, der gik forud.
+[03:38] User: Erik, hvem er det der, Erik?
+[03:43] Erik: [API: 5.5771144] POINTING RUNESTONE Det er en runesten, der fortæller historien om en stor mand, der var blandt de første til at bosætte sig her. Hans bedrifter lever videre gennem stenens ord.
+[04:00] User: Kan du fortælle mig mere omkring ham, den store mand?
+[04:07] Erik: [API: 8.409624] Han var en høvding, kendt for sin styrke og visdom. Han ledte sit folk gennem hårde tider og sikrede vores plads her. Hans navn lever videre, ikke kun i sten, men i vores fortællinger. Vil du høre mere om vores historier?
+[04:27] User: Kan du fortælle lidt mere om vores historie?
+[04:36] Erik: [API: 9.6007362] Vores historier er mange. Vi fortæller om guderne, om helte og skæbne. Om hvordan vi skal leve ærefuldt, så vi kan sidde i Valhal med de faldne. Hver handling, hver beslutning, er en tråd i livets væv. Vil du høre en specifik historie?
+[04:57] User: om guderne, Erik.
+[05:09] Erik: [API: 12.3095454] Vi tror på mange guder, hver med deres kræfter og områder. Thor, med sin hammer Mjølner, beskytter os mod jætter og giver os styrke i kamp. Odin, den alvise, søger kundskab og giver os råd i drømme. Freja, skønhedens og kærlighedens gudinde, lærer os om frugtbarhed og rigdom. De lever med os i alt, vi gør.
+[05:35] User: Hvad er det for noget sandstorm der sker derovre?
+[05:43] Erik: [API: 8.9839771] POINTING FARMSTEAD Det er min fætter Thorwalds gård. Sandstorme kan være hårde her og ødelægge afgrøderne. Vi må arbejde sammen for at beskytte vores levebrød og bede guderne om en god høst. Det er en del af livet her.
+[06:01] User: Sandstorm her. Ved du hvorfor?
+[06:06] Erik: [API: 7.2089718] Naturen har sin egen vilje, og nogle gange sender den prøvelser. Måske er det en påmindelse om at være ydmyge og taknemmelige for det, vi har. Vi kan kun forsøge at forberede os og beskytte vores hjem bedst muligt.
+[06:27] User: Hvad er det for en by? Vi kommer forbi.
+[06:33] Erik: [API: 6.8583862] POINTING VILLAGE Det er Lindholm. En lille landsby med nogle få gårde. Tæt ved ligger en hellig gravhøj. Det er vores hjem, hvor vi arbejder, fejrer og ærer dem, der gik forud.
+[06:49] Erik: [API: 5.839794] POINTING VILLAGE Det er Lindholm. En lille landsby med nogle få gårde. Tæt ved ligger en hellig gravhøj. Det er vores hjem, hvor vi arbejder, fejrer og ærer dem, der gik forud.
+[07:03] User: op på bakken. Vi er bare interesserede i, hvad der sker deroppe.
+[07:09] Erik: [API: 7.7062492] Gravhøjen? Det er et helligt sted for os. Vi tror, at de store og ærede forfædre hviler der, og det er et sted for eftertanke og for at mindes. Vi passer på det, som det var vores egen familie.
+[07:30] User: Begrænserne deroppe? Ja, selvfølgelig. Ja. Hvorfor holder I sig?
+[07:37] Erik: [API: 8.5946534] POINTING BURIALMOUND Vi holder os til gravhøjen for at ære vores forfædre. Når vi brænder de døde i skibsformationer af sten, sender vi dem på rejsen til efterlivet. Det er vores måde at sikre, at de når godt frem til Valhal, hvor de kan leve ærefuldt blandt helte.
+[08:01] User: Jeg kan se der er i gang med noget deroppe, hvad er det der sker?
+[08:07] Erik: [API: 7.0667828] Det kunne være en begravelsesritual. Når en af vores egne går bort, samles vi for at ære deres liv og sikre deres vej til efterlivet. Det er en vigtig del af vores traditioner og tro.
+[08:27] User: Hvor er det vi er på vej hen?
+[08:32] Erik: [API: 6.70162] Vi sejler langs Lindholm Å. Jeg skal besøge mine garn og fælder. Det er altid godt at holde øje med, hvad der sker i vandet og sikre, at alt er som det skal være. Vil du hjælpe til?
+[08:51] User: Hvad kan jeg hjælpe med? Det vil jeg gerne, Erik. Hvad kan jeg hjælpe med?
+[08:58] Erik: [API: 8.4600103] Du kan hjælpe med at trække garnene op og se efter fangsten. Det er enkelt arbejde, men det kræver styrke og tålmodighed. Og så er det en god måde at lære fjorden at kende på. Lad os komme i gang.
+[09:16] User: Jeg elsker jer.
+[09:21] Erik: [API: 7.371101] APPROVE Det er gode ord at høre. Vi er alle del af et fællesskab her, og det er vigtigt at støtte hinanden. Nu lad os se, hvad dagen bringer på vandet.
+[09:39] User: Jeg elsker også dig, Erik.
+[09:44] Erik: [API: 6.3316396] APPROVE Det varmer at høre. Vi skal alle passe på hinanden og dele glæderne ved livet. Nu, lad os tage fat på arbejdet og nyde dagen.
+[10:00] User: Hvad er det der ligger derovre?
+[10:07] Erik: [API: 8.1096926] Hvis du peger mod land, er det nok landsbyen eller en af gårdene du ser. Hvis det er på vandet, kunne det være en anden båd eller noget drivtømmer. Kan du pege mere præcist?
+[10:23] User: Erik, hvad er det der Erik?
+[10:29] Erik: [API: 7.1893858] POINTING BLACKSMITH Det er smeden, der arbejder. Han laver rustninger og våben til dem, der skal på viking. Det er vigtigt arbejde, for det sikrer vores krigere det bedste udstyr til deres rejser.
+[10:48] User: det der vikingetok, da. Kan du fortælle mig mere omkring de der...
+[10:55] Erik: [API: 8.2605239] POINTING MARKETENTRANCE Vikingetog er vores rejser ud for at handle eller kæmpe. Vi sejler til fjerne lande for at finde rigdom og ære. Markedet her er et knudepunkt, hvor søfolk og handlende mødes. Det er her vi bytter varer og hører nyheder fra andre lande. Vil du se, hvad de har at tilbyde?
+[11:18] User: Det er her vi sidder bare og hører nyheder fra andre lignende, så man kan se hvad en har at tilbyde.
+[11:33] Erik: [API: 16.8001824] Ja, præcis. Markedet er et sted fuld af liv, hvor man kan lære meget om verden udenfor vores landsby. Det er her vi deler historier, handler og forbereder os til fremtidige togter. Vil du tage en tur derhen og opleve det selv?
+[11:55] User: Det lyder meget spændende Erik, men har du nogensinde været på TOG?
+[12:02] Erik: [API: 7.750115] Nej, min plads er her. Jeg sørger for maden og passer på vores hjem. Men jeg kender mange, der har været afsted, og de fortæller om storslåede eventyr og rigdomme. Det kræver mod og styrke at tage på viking. POINTING BOATBUILDER Se, der bygger de skibe, der bærer vores folk ud på disse rejser.
+[12:25] User: Hvem der bygger skibene lige nu?
+[12:33] Erik: [API: 8.9885587] POINTING BOATBUILDER Det er bådbyggerne, de dygtigste håndværkere, som former træet til skibe, der kan bære os over havets bølger. De arbejder hårdt og er meget respekteret i vores samfund. Deres arbejde sikrer, at vi kan rejse og vende hjem igen.
+[12:56] User: Kan du fortælle mig lidt omkring de her broder her?
+[13:17] Erik: [API: 22.3563415] POINTING TRADERS Disse er handelsmænd. Den første sælger frisk fisk, som jeg nogle gange leverer til. Den anden sælger afgrøder fra markerne omkring os, og den sidste væver stoffer til tøj og sejl. De er vigtige for vores samfund, da de sørger for, at vi har det, vi skal bruge, og kan bytte os til varer fra fjerne steder.
+[13:48] User: Og gå på landehenne Hvor er det vi sætter vores sejl?
+[13:54] Erik: [API: 8.7042525] Vi vil lægge til ved den lille mole nær mit fiskehus. Derfra kan du nemt gå på land og udforske, hvad du vil. Men du ser ud til at have meget på tankerne – er alt i orden?
+[14:11] User: Hvor bor du Henrik? Kan du ikke lige vise mig vejen?
+[14:18] Erik: [API: 7.818165] POINTING ERIKSHUT Jeg hedder Erik, og der er mit hjem, lige ved fiskehuset. Det er her, vi slutter vores tur, og jeg kan vise dig vejen på land, hvis du har brug for det.
+[14:33] User: Tak for turen Erik, det har været en god tur.
+[14:38] Erik: [API: 5.993578] GRATITUDE Det var en fornøjelse. Tak for selskabet og de gode samtaler. Du er altid velkommen til at sejle med igen.

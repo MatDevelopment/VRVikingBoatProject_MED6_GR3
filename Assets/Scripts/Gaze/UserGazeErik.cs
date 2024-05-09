@@ -15,12 +15,14 @@ public class UserGazeErik : MonoBehaviour
     [SerializeField] private APIStatus _apiStatus;
     [SerializeField] private GestureVersionManager _gestureVersionManager;
     [SerializeField] private MicInputDetection _micInputDetection;
+    [SerializeField] private NewDataLogManager _newDataLogManager;
 
 
     private void Awake()
     {
         _gestureVersionManager = FindObjectOfType<GestureVersionManager>();
         _micInputDetection = FindObjectOfType<MicInputDetection>();
+        _newDataLogManager = FindObjectOfType<NewDataLogManager>();
     }
 
     IEnumerator SmallGazeObservationErik(float timeUntilObservation)
@@ -28,7 +30,6 @@ public class UserGazeErik : MonoBehaviour
         yield return new WaitForSeconds(timeUntilObservation);
         
         chatTestScript.AddSystemInstructionToChatLog("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik will take this into consideration when responding to the Traveller next time.");
-        
     }
     
     IEnumerator BigGazeObservationErik(float timeUntilObservation)
@@ -36,6 +37,7 @@ public class UserGazeErik : MonoBehaviour
         yield return new WaitForSeconds(timeUntilObservation);
         
         npcInteractorScript.InformAndInitiateNpcTalk("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik will question the Traveller about this.");
+        _newDataLogManager.TotalErikInstigations++;
     }
 
     public void StartCoroutine_SmallGazeObservationErik(float timeUntilObservation)

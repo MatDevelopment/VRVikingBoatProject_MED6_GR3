@@ -47,6 +47,7 @@ public class NPCInteractorScript : MonoBehaviour
     [SerializeField] private TTSManager ttsManagerScript;
     [SerializeField] private MicInputDetection _micInputDetection;
     [SerializeField] private GestureVersionManager _gestureVersionManager;
+    [SerializeField] private NewDataLogManager _newDataLogManager;
     //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
 
     public string nameOfThisNPC;
@@ -65,7 +66,6 @@ public class NPCInteractorScript : MonoBehaviour
 
     public bool erikSpeakable;
     private bool isErikVisible;
-    public bool erikAbleToInitiateTalk;
 
     public List<ChatMessage> ChatLogWithNPC = new List<ChatMessage>();
     //[SerializeField] private List<string> listOfOtherNpcs = new List<string>();
@@ -87,6 +87,7 @@ public class NPCInteractorScript : MonoBehaviour
     void Start()
     {
         _gestureVersionManager = FindObjectOfType<GestureVersionManager>();
+        _newDataLogManager = FindObjectOfType<NewDataLogManager>();
         
         var message = new ChatMessage
         {
@@ -113,12 +114,13 @@ public class NPCInteractorScript : MonoBehaviour
                 npcInfoScript.GetPrompt() +
                 "Do not include the NPC name in your response.\n" +
                 "The following info is the info about the NPC's current surroundings: \n" +
-                sceneInfoScript.GetPrompt()
+                sceneInfoScript.GetPrompt() +
             //! tjek Mathias om vi kan slette det her
             //"The following info is the info about the Traveller's current task and subtasks: \n" +
             //taskInfoScript.GetPrompt() +
             //"Do not mention the task names to the Traveller.\n"
             //"If the Traveller asks for the NPC's help with their tasks that involves physical movement, then say to the Traveller that they have to do these tasks themselves because they promised to do them earlier on in the day."
+                "If the Traveller talks about videos or subscribing, then ignore this and subvert the conversation to another topic related to your boatride with the Traveller. \n"
         };
         
         ChatLogWithNPC.Add(message);
@@ -175,71 +177,12 @@ public class NPCInteractorScript : MonoBehaviour
         if (initiateTalkTimeCounter >= initiateTalkErikTime)        //When the timeCounter reaches 15 seconds, then...
         {
             InformAndInitiateNpcTalk("You and the Traveller have not talked for a little more than 15 seconds. Initiate a conversation with a talking topic possibly related to what you and the Traveller have talked about.");
+            _newDataLogManager.TotalErikInstigations++;
             initiateTalkTimeCounter = 0;
-            //erikAbleToInitiateTalk = true;  //Erik is able to initiate conversation again.
-        }
-        else
-        {
-            //erikAbleToInitiateTalk = false;
         }
         
     }
-
-
-    //This method is responsible for playing a random dialogue line when the player picks up an item, like: "Can I have a look at that?"
-    //This is done so ChatGPT has time for generating a response to this user action, so the event seems more synchronized.
-
-    //Method responsible for both checking when Erik's start dialogue is done playing, and playing dialogue lines when gazing at NPCs (Method called in unity event system through the inspector)
-    //public void StartCoroutine_PlayNpcDialogueAfterSetTime()
-    //{
-    //    if (Time.timeSinceLevelLoad > (lengthOfSceneIntroTalkDialogue + 3) && erikSceneStartDialogueDone == false)
-    //    {
-    //        erikSceneStartDialogueDone = true;
-    //    }
-    //    if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && arrayNPCsounds.Length > 0 && erikSceneStartDialogueDone == true)
-    //    {
-    //        Debug.Log("Started NPC dialogue coroutine on: " + nameOfThisNPC);
-    //        StartCoroutine(PlayNpcDialogueAfterSetTime());
-    //    }
-
-    //}
-
-    ////IEnumerator responsible for playing two random dialogue lines  supposed to instigate conversations, like: "You look like you have a question, just ask" etc.
-    //private IEnumerator PlayNpcDialogueAfterSetTime()
-    //{
-    //    if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedFirstVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
-    //    {
-    //        playedSecondVoiceLine = false;
-    //        yield return new WaitForSeconds(0.65f);
-    //        PlayConversationStarterAudioNPC();
-    //        playedFirstVoiceLine = true;
-    //        yield return new WaitForSeconds(textToSpeechScript.audioSource.clip.length + 1);
-    //    }
-
-    //    if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedSecondVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
-    //    {
-    //        playedFirstVoiceLine = false;
-    //        yield return new WaitForSeconds(3 + NPCaudioSource.clip.length);
-    //        PlayConversationStarterAudioNPC();
-    //        playedSecondVoiceLine = true;
-    //    }
-
-    //}
-
-    //private void PlayConversationStarterAudioNPC()
-    //{
-    //    if (arrayNPCsounds.Length > 0 && textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false)
-    //    {
-    //        //arrayConversationSoundsMax = arrayNPCsounds.Length;
-    //        pickedSoundToPlay = Random.Range(0, arrayConversationSoundsMax);
-    //        NPCaudioSource.clip = arrayNPCsounds[pickedSoundToPlay];
-
-    //        NPCaudioSource.Play();
-    //        Debug.Log("Played conversation starter");
-    //    }
-
-    //}
-
+    
     //Method BELOW responsible for informing the NPC about user actions and task progression and then asking it to generate a verbal response
     public async void InformAndInitiateNpcTalk(string systemPrompt)
     {
@@ -359,7 +302,59 @@ public class NPCInteractorScript : MonoBehaviour
 
     //------------------------------------------------OLD "USELESS" PROJECT CODE-----------------------------------------------------------------------//
 
+    //This method is responsible for playing a random dialogue line when the player picks up an item, like: "Can I have a look at that?"
+    //This is done so ChatGPT has time for generating a response to this user action, so the event seems more synchronized.
 
+    //Method responsible for both checking when Erik's start dialogue is done playing, and playing dialogue lines when gazing at NPCs (Method called in unity event system through the inspector)
+    //public void StartCoroutine_PlayNpcDialogueAfterSetTime()
+    //{
+    //    if (Time.timeSinceLevelLoad > (lengthOfSceneIntroTalkDialogue + 3) && erikSceneStartDialogueDone == false)
+    //    {
+    //        erikSceneStartDialogueDone = true;
+    //    }
+    //    if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && arrayNPCsounds.Length > 0 && erikSceneStartDialogueDone == true)
+    //    {
+    //        Debug.Log("Started NPC dialogue coroutine on: " + nameOfThisNPC);
+    //        StartCoroutine(PlayNpcDialogueAfterSetTime());
+    //    }
+
+    //}
+
+    ////IEnumerator responsible for playing two random dialogue lines  supposed to instigate conversations, like: "You look like you have a question, just ask" etc.
+    //private IEnumerator PlayNpcDialogueAfterSetTime()
+    //{
+    //    if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedFirstVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
+    //    {
+    //        playedSecondVoiceLine = false;
+    //        yield return new WaitForSeconds(0.65f);
+    //        PlayConversationStarterAudioNPC();
+    //        playedFirstVoiceLine = true;
+    //        yield return new WaitForSeconds(textToSpeechScript.audioSource.clip.length + 1);
+    //    }
+
+    //    if (textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false && playedSecondVoiceLine == false && DialogueTrigger.dialogueOptionChosen == false)
+    //    {
+    //        playedFirstVoiceLine = false;
+    //        yield return new WaitForSeconds(3 + NPCaudioSource.clip.length);
+    //        PlayConversationStarterAudioNPC();
+    //        playedSecondVoiceLine = true;
+    //    }
+
+    //}
+
+    //private void PlayConversationStarterAudioNPC()
+    //{
+    //    if (arrayNPCsounds.Length > 0 && textToSpeechScript.audioSource.isPlaying == false && whisperScript.ECAIsDoneTalking == true && whisperScript.isTranscribing == false)
+    //    {
+    //        //arrayConversationSoundsMax = arrayNPCsounds.Length;
+    //        pickedSoundToPlay = Random.Range(0, arrayConversationSoundsMax);
+    //        NPCaudioSource.clip = arrayNPCsounds[pickedSoundToPlay];
+
+    //        NPCaudioSource.Play();
+    //        Debug.Log("Played conversation starter");
+    //    }
+
+    //}
 
 /*//Method that gets called on Select of XR Grab , aka the personal belongings of the deceased that the player are able to bring to the burial
     public void AppendItemDescriptionToPrompt(string nameOfItem)    //Add a time.DeltaTime that makes sure that there are atleast 30 seconds between item checks
