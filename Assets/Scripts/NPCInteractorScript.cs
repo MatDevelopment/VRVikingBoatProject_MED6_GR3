@@ -12,6 +12,8 @@ using Random = UnityEngine.Random;
 
 public class NPCInteractorScript : MonoBehaviour
 {
+    [Header("Erik options")]
+    public bool erikSpeakable;
     //private bool isGazingUpon;
     [SerializeField] private GameObject NPCgameObject;
     //[SerializeField] private GameObject gazeColliderGameObject;
@@ -64,7 +66,7 @@ public class NPCInteractorScript : MonoBehaviour
     private bool playedFirstVoiceLine = false;
     private bool playedSecondVoiceLine = false;
 
-    public bool erikSpeakable;
+   
     private bool isErikVisible;
 
     public List<ChatMessage> ChatLogWithNPC = new List<ChatMessage>();

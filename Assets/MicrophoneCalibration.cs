@@ -52,7 +52,7 @@ public class MicrophoneCalibration : MonoBehaviour// Calibrating the maxAmplitud
 
     private void SetMIcrophoneCalibratedValues()
     {
-        micInputDetection.threshold = averageLoudness - 2.5f;
+        micInputDetection.threshold = averageLoudness - 3.2f;
         micInputDetection.maxAmplitudeWithCurrentMicrophone = averageLoudness + 6;
     }
 

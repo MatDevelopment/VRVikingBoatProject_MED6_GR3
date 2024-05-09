@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5036,8 +5036,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
-  m_Height: 1
+  m_Radius: 0.14
+  m_Height: 0.38
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &119959790
@@ -6432,8 +6432,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
-  m_Height: 1
+  m_Radius: 0.14
+  m_Height: 0.38
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &157722547
@@ -34205,7 +34205,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 2200
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -54042,7 +54042,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230328679}
   m_LocalRotation: {x: -0, y: -0.7226898, z: -0, w: 0.69117266}
-  m_LocalPosition: {x: 0, y: 0, z: 0.26604235}
+  m_LocalPosition: {x: 0, y: 0, z: 0.535}
   m_LocalScale: {x: 0.0024999997, y: 0.0025, z: 0.0024999997}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54051,7 +54051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.81789106, y: 0.398}
+  m_AnchoredPosition: {x: -0.798, y: 0.398}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1230328681
@@ -73340,6 +73340,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 139489524942351680, guid: f23a92d4b3b758a43bdaaa5dea9085a7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.891
+      objectReference: {fileID: 0}
+    - target: {fileID: 139489524942351680, guid: f23a92d4b3b758a43bdaaa5dea9085a7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.531
+      objectReference: {fileID: 0}
     - target: {fileID: 239967312357079524, guid: f23a92d4b3b758a43bdaaa5dea9085a7,
         type: 3}
       propertyPath: m_Name
@@ -114990,6 +115000,7 @@ MonoBehaviour:
   _apiStatus: {fileID: 1442082957}
   _gestureVersionManager: {fileID: 0}
   _micInputDetection: {fileID: 0}
+  _newDataLogManager: {fileID: 0}
 --- !u!114 &6572797345569057210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115015,6 +115026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80fe7cf1b5fc224fa0daf2560959841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  erikSpeakable: 1
   NPCgameObject: {fileID: 1222532055}
   NPCaudioSource: {fileID: 1222532059}
   apiStatus: {fileID: 1442082957}
@@ -115065,7 +115077,6 @@ MonoBehaviour:
   - BOATBUILDER
   - TRADERS
   - ERIKSHUT
-  erikSpeakable: 1
   initiateTalkTimeCounter: 0
   initiateTalkErikTime: 15
   erikSceneStartDialogueDone: 0
