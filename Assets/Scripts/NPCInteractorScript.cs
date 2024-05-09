@@ -106,7 +106,7 @@ public class NPCInteractorScript : MonoBehaviour
                 "Reply to only NPC lines not to the Traveller's lines.\n" +
                 //"The NPC is NOT able to physically move around. This includes pointing, head-nodding, walking, running and everything related to physical movement. Do not say this to the Traveller.\n" +
                 "If the Traveller does not say anything then ask the Traveller what is on their mind.\n" +
-                "Your responses should be no longer than 35 words.\n" +
+                "Your responses should be no longer than 65 words.\n" +
                 "The following info is the info about the world: \n" +
                 worldInfoScript.GetPrompt() +
                 "The following info is the info about the NPC: \n" +
