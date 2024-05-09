@@ -41,6 +41,7 @@ public class BoatRouteNavMesh : MonoBehaviour
 
     [Header("Smith")]
     [SerializeField] private AudioSource smithAudio;
+    [SerializeField] private Animator smithAnimator;
 
     [Header("Boat Builder")]
     [SerializeField] private AudioSource boatBuilderAudio;
@@ -261,6 +262,7 @@ public class BoatRouteNavMesh : MonoBehaviour
 
                     // Hammer
                     smithAudio.Play();
+                    smithAnimator.SetTrigger("Hammering");
                 }
                 // Boatbuilder
                 else if (Targets[TargetIndex].CompareTag("BoatBuilder"))
