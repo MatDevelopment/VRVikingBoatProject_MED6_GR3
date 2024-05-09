@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13615213, g: 0.16489966, b: 0.21611023, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13852,7 +13852,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 5
@@ -13896,6 +13896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc7f7d8d7cce6d4ca03c53d16bdd0fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestureVersionManager: {fileID: 928690117}
   Boat: {fileID: 368848325}
   Targets:
   - {fileID: 1220279636}
@@ -54696,6 +54697,7 @@ MonoBehaviour:
   StringsToLog: []
   TotalUserPrompts: 0
   TotalErikResponses: 0
+  TotalErikInstigations: 0
   ErikGazeTime: 0
   timeThatTutorialEnded: 0
 --- !u!4 &1243371344
@@ -115143,6 +115145,7 @@ MonoBehaviour:
   npcAnimator: {fileID: 774310200435896118}
   boatRouteScript: {fileID: 368848328}
   npcAnimationStateController: {fileID: 6572797345569057212}
+  xrRigOffset: {fileID: 627053298}
   LookTarget: {fileID: 152386889}
   defaultLookTarget: {fileID: 112904634}
   chosenLookTarget: {fileID: 152386889}

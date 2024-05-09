@@ -27,6 +27,7 @@ public class NewDataLogManager : MonoBehaviour
     public List<string> StringsToLog = new List<string>();
     public int TotalUserPrompts = 0;
     public int TotalErikResponses = 0;
+    public int TotalErikInstigations = 0;
 
     public float ErikGazeTime = 0;
 
@@ -135,7 +136,7 @@ public class NewDataLogManager : MonoBehaviour
         double combinedAverage = totalCombinedTime / apiCallTimeManager.CombinedCallTimes.Count;
 
         // Defining what is written in the log text
-        string SensorLogText = "Total Time: " + currentTime + ", User Prompts: " + TotalUserPrompts + ", Erik Responses: " + TotalErikResponses + ", Erik Gaze Time: " + ErikGazeTime + ", API Call Time Averages:" + " Combined " + combinedAverage + ", SST: " + STTaverage + ", ChatGPT: " + GPTaverage + ", TTS: " + TTSaverage;
+        string SensorLogText = "Total Time: " + currentTime + ", User Prompts: " + TotalUserPrompts + ", Erik Responses: " + TotalErikResponses + ", Erik Instigations: " + TotalErikInstigations + ", Erik Gaze Time: " + ErikGazeTime + ", API Call Time Averages:" + " Combined " + combinedAverage + ", SST: " + STTaverage + ", ChatGPT: " + GPTaverage + ", TTS: " + TTSaverage;
         // Appending the string to the textfile which means it is written behind the current text
         sw.WriteLine(SensorLogText);
 

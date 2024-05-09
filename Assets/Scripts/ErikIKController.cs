@@ -9,6 +9,7 @@ public class ErikIKController : MonoBehaviour
     [SerializeField] private Animator npcAnimator;
     [SerializeField] private BoatRouteNavMesh boatRouteScript;
     [SerializeField] private NpcAnimationStateController npcAnimationStateController;
+    [SerializeField] private GameObject xrRigOffset;
 
     private Transform rightHandIKTarget;
     private Transform leftHandIKTarget;
@@ -41,6 +42,8 @@ public class ErikIKController : MonoBehaviour
 
     private void Update()
     {
+        defaultLookTarget = xrRigOffset.transform;
+        
         // Checks Direction of POI
         Vector3 directionToPoi = (transform.position - chosenLookTarget.position).normalized;
 
