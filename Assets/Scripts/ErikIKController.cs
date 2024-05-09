@@ -37,6 +37,8 @@ public class ErikIKController : MonoBehaviour
 
     private void Start()
     {
+        defaultLookTarget = xrRigOffset.transform;
+        LookTarget = defaultLookTarget;
         lookIKTarget = LookTarget;
     }
 
