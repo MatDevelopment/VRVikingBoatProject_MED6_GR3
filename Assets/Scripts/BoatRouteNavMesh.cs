@@ -46,7 +46,9 @@ public class BoatRouteNavMesh : MonoBehaviour
     [Header("Fade")]
     public FadeController fadeController;
     [SerializeField] ChatTest chatTest;
-    
+
+    private string extraSystemInfo = "The NPC does not need to talk about the location they are passing, only talk when it fits into the current conversation topic";
+
     private void Awake()
     {
         BoatNavMeshAgent = GetComponent<NavMeshAgent>();
@@ -109,7 +111,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                     string fishingDescription = "You are now passing a fishing hut on the right. ";
                         // "Beside the fishing hut there is a small pier where Erik's good friend Ole is currently fishing.";
                     InterestPointDescription interestPointDescription = PointsOfInterest[0].GetComponent<InterestPointDescription>();
-                    fishingDescription = fishingDescription + interestPointDescription.description;
+                    fishingDescription = fishingDescription + interestPointDescription.description + " " + extraSystemInfo;
                     Debug.Log("Fishing Description: " + fishingDescription);
                     chatTest.AddSystemInstructionToChatLog(fishingDescription);
 
@@ -127,7 +129,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                     // System Instruction
                     string runeDescription = "You are now passing a runestone on the left. ";
                     InterestPointDescription interestPointDescription = PointsOfInterest[1].GetComponent<InterestPointDescription>();
-                    runeDescription = runeDescription + interestPointDescription.description;
+                    runeDescription = runeDescription + interestPointDescription.description + " " + extraSystemInfo + " The NPC now has permission to be POINTING at RUNESTONE";
                     Debug.Log("Rune Description: " + runeDescription);
                     chatTest.AddSystemInstructionToChatLog(runeDescription);
 
@@ -145,7 +147,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                     string farmDescription = "You are now passing a farmstead on the left. ";
                     // "The farm's crops are being covered in sand by a sandstorm which could kill some of the yield.";
                     InterestPointDescription interestPointDescription = PointsOfInterest[2].GetComponent<InterestPointDescription>();
-                    farmDescription = farmDescription + interestPointDescription.description;
+                    farmDescription = farmDescription + interestPointDescription.description + " " + extraSystemInfo + " The NPC now has permission to be POINTING at FARMSTEAD";
                     Debug.Log("Farm Description: " + farmDescription);
                     chatTest.AddSystemInstructionToChatLog(farmDescription);
 
@@ -164,7 +166,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                     string villageDescription = "You are now passing Lindholm village on the right. ";
                         // "Lindholm is a small village consisting of a few farms just beside a sacred burial mound";
                     InterestPointDescription interestPointDescription = PointsOfInterest[3].GetComponent<InterestPointDescription>();
-                    villageDescription = villageDescription + interestPointDescription.description;
+                    villageDescription = villageDescription + interestPointDescription.description + " " + extraSystemInfo + " The NPC now has permission to be POINTING at VILLAGE";
                     Debug.Log("Village Description: " + villageDescription);
                     chatTest.AddSystemInstructionToChatLog(villageDescription);
                 }
@@ -180,7 +182,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                         // "Lindholm Hoeje is a burial mound where the dead are burned in stoneformations immitating a ship's hull symbolising their journey to the afterlife." +
                         // "A burial has just started as you pass";
                     InterestPointDescription interestPointDescription = PointsOfInterest[4].GetComponent<InterestPointDescription>();
-                    burialDescription = burialDescription + interestPointDescription.description;
+                    burialDescription = burialDescription + interestPointDescription.description + " " + extraSystemInfo + " The NPC now has permission to be POINTING at BURIALMOUND";
                     Debug.Log("Burial Description: " + burialDescription);
                     chatTest.AddSystemInstructionToChatLog(burialDescription);
 
@@ -200,7 +202,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                     string marketDescription = "You are now approaching the entrance to the market. ";
                         // "The market is a large hub for commerce filled with people especially sailors who pass by northern Jutland";
                     InterestPointDescription interestPointDescription = PointsOfInterest[5].GetComponent<InterestPointDescription>();
-                    marketDescription = marketDescription + interestPointDescription.description;
+                    marketDescription = marketDescription + interestPointDescription.description + " " + extraSystemInfo + " The NPC now has permission to be POINTING at MARKETENTRANCE";
                     Debug.Log("Market Description: " + marketDescription);
                     chatTest.AddSystemInstructionToChatLog(marketDescription);
                 }
@@ -215,7 +217,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                     string smithDescription = "You are now passing a blacksmith on the left. ";
                         // "He is hammering away on the anvil creating armour for people who will be going on a viking journey soon.";
                     InterestPointDescription interestPointDescription = PointsOfInterest[6].GetComponent<InterestPointDescription>();
-                    smithDescription = smithDescription + interestPointDescription.description;
+                    smithDescription = smithDescription + interestPointDescription.description + " " + extraSystemInfo + " The NPC now has permission to be POINTING at BLACKSMITH";
                     Debug.Log("Blacksmith Description: " + smithDescription);
                     chatTest.AddSystemInstructionToChatLog(smithDescription);
 
@@ -233,7 +235,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                     string boatDescription = "You are now passing a shipyard on the right. ";
                         // "Half finished ships are being worked on.";
                     InterestPointDescription interestPointDescription = PointsOfInterest[7].GetComponent<InterestPointDescription>();
-                    boatDescription = boatDescription + interestPointDescription.description;
+                    boatDescription = boatDescription + interestPointDescription.description + " " + extraSystemInfo + " The NPC now has permission to be POINTING at BOATBUILDER";
                     Debug.Log("Boat Description: " + boatDescription);
                     chatTest.AddSystemInstructionToChatLog(boatDescription);
 
@@ -251,7 +253,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                     string traderDescription = "You are now passing a series of traders on the right. ";
                         // "The first trader sells fresh fish, the second sells crops and the last sells woven fabrics like clothing and sails.";
                     InterestPointDescription interestPointDescription = PointsOfInterest[8].GetComponent<InterestPointDescription>();
-                    traderDescription = traderDescription + interestPointDescription.description;
+                    traderDescription = traderDescription + interestPointDescription.description + " " + extraSystemInfo + " The NPC now has permission to be POINTING at TRADERS";
                     Debug.Log("Trader Description: " + traderDescription);
                     chatTest.AddSystemInstructionToChatLog(traderDescription);
                 }
@@ -266,7 +268,7 @@ public class BoatRouteNavMesh : MonoBehaviour
                     string eriksDescription = "You are now approaching Eriks own home on the left. ";
                         // "The home is a small fishing hut with a pier and is the place the trip will end.";
                     InterestPointDescription interestPointDescription = PointsOfInterest[9].GetComponent<InterestPointDescription>();
-                    eriksDescription = eriksDescription + interestPointDescription.description;
+                    eriksDescription = eriksDescription + interestPointDescription.description + " " + extraSystemInfo + " The NPC now has permission to be POINTING at ERIKSHUT";
                     Debug.Log("Eriks House Description: " + eriksDescription);
                     chatTest.AddSystemInstructionToChatLog(eriksDescription);
                 }
