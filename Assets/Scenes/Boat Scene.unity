@@ -69173,8 +69173,8 @@ AudioSource:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.020293862
-      value: 0.18410283
+      time: 0.31020132
+      value: 0.66007024
       inSlope: -1.4952523
       outSlope: -1.4952523
       tangentMode: 0
@@ -69182,32 +69182,14 @@ AudioSource:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.27646387
-      value: 0.08983425
-      inSlope: 0.006999347
-      outSlope: 0.006999347
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.77472556
-      value: 0.007385254
-      inSlope: -0.46391186
-      outSlope: -0.46391186
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.21078327
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.81439865
-      value: 0
-      inSlope: 0.010001478
-      outSlope: 0.010001478
+      time: 0.7320775
+      value: 0.30143738
+      inSlope: -0.87999976
+      outSlope: -0.87999976
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.20643562
-      outWeight: 0.33333334
+      outWeight: 0.75456023
     - serializedVersion: 3
       time: 1
       value: 0
@@ -69279,6 +69261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Boat: {fileID: 368848325}
   Farm: {fileID: 916566375}
+  DistanceBoatToFarm: 0
   AnimalAudioSource: {fileID: 1667419199}
   AnimalSounds:
   - {fileID: 8300000, guid: a57bd503b4e147d41a3535eeb02c1646, type: 3}
@@ -114549,6 +114532,7 @@ MonoBehaviour:
   erikSpeakable: 1
   erikAbleToInitiateTalk: 0
   initiateTalkTimeCounter: 0
+  initiateTalkErikTime: 15
   erikSceneStartDialogueDone: 0
 --- !u!114 &6572797345569057212
 MonoBehaviour:
