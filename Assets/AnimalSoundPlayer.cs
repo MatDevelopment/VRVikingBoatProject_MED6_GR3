@@ -7,7 +7,7 @@ public class AnimalSoundPlayer : MonoBehaviour
     [Header ("Game Objects")]
     [SerializeField] private GameObject Boat;
     [SerializeField] private GameObject Farm;
-    private float DistanceBoatToFarm;
+    [SerializeField] private float DistanceBoatToFarm;
     float counterIndex = 0.0f;
 
     [Header ("Audio")]
@@ -42,7 +42,7 @@ public class AnimalSoundPlayer : MonoBehaviour
     {
         DistanceBoatToFarm = Vector3.Distance(Boat.transform.position, Farm.transform.position);
 
-        if (DistanceBoatToFarm < 125)
+        if (DistanceBoatToFarm < 150)
         {
             counterIndex += Time.deltaTime;
 
