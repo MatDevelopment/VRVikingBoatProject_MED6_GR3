@@ -19958,7 +19958,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533192048}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -73856,7 +73856,7 @@ PrefabInstance:
     - target: {fileID: 239967312357079524, guid: f23a92d4b3b758a43bdaaa5dea9085a7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 585283591430202206, guid: f23a92d4b3b758a43bdaaa5dea9085a7,
         type: 3}
@@ -93171,14 +93171,14 @@ MonoBehaviour:
   gazeCube1: {fileID: 1773719700}
   gazeCube2: {fileID: 1773719699}
   tutorialLight: {fileID: 1773719702}
-  startExperienceWithTheTutorial: 1
+  startExperienceWithTheTutorial: 0
   useGesturesForConfirmation: 1
   instructionText: {fileID: 533192050}
   lookingAtGazeCube1: 0
   lookingAtGazeCube2: 0
   gaze1Slider: {fileID: 1131640984}
   gaze2Slider: {fileID: 2040362819}
-  gestureVersionManager: {fileID: 0}
+  gestureVersionManager: {fileID: 928690117}
 --- !u!1 &2069292253
 GameObject:
   m_ObjectHideFlags: 0
