@@ -19,24 +19,25 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Armature|GEST_HandToHeart' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'mixamorig:RightHandIndex1'
+    animationImportWarnings: "\nClip 'Armature|Armature|Armature|BASE_Thinking' has
+      import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Armature|Armature|GEST_HandToHeart' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'mixamorig:Neck' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'mixamorig:RightHandIndex1'
       has translation animation that will be discarded.\n\t'mixamorig:RightHandRing1'
-      has translation animation that will be discarded.\n\nClip 'Armature|GEST_HeadShake'
+      has translation animation that will be discarded.\n\nClip 'Armature|Armature|Armature|GEST_HeadShake'
       has import animation warnings that might lower retargeting quality:\nNote:
       Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'Armature|GEST_IdleSit' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'Armature|GEST_PointFarAway' has import animation warnings that might lower
-      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
-      quality.\n\t'mixamorig:Neck' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\nClip 'Armature|GEST_PrayElbowsOut' has
-      import animation warnings that might lower retargeting quality:\nNote: Activate
-      translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
+      'Armature|Armature|Armature|GEST_IdleSit' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'mixamorig:Neck' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Armature|Armature|Armature|GEST_PrayElbowsOut'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'mixamorig:LeftHandThumb1'
       has scale animation that will be discarded.\n\t'mixamorig:LeftHandThumb2' has
       translation animation that will be discarded.\n\t'mixamorig:LeftHandThumb2'
@@ -76,10 +77,10 @@ ModelImporter:
       will be discarded.\n\t'mixamorig:RightHandPinky1' has scale animation that
       will be discarded.\n\t'mixamorig:RightHandPinky2' has scale animation that
       will be discarded.\n\t'mixamorig:RightHandPinky3' has scale animation that
-      will be discarded.\n\nClip 'Armature|GEST_SelfHandShake' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'mixamorig:LeftHandThumb1'
+      will be discarded.\n\nClip 'Armature|Armature|Armature|GEST_SelfHandShake'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'mixamorig:LeftHandThumb1'
       has scale animation that will be discarded.\n\t'mixamorig:LeftHandThumb2' has
       translation animation that will be discarded.\n\t'mixamorig:LeftHandThumb2'
       has scale animation that will be discarded.\n\t'mixamorig:LeftHandThumb3' has
@@ -121,10 +122,10 @@ ModelImporter:
       animation that will be discarded.\n\t'mixamorig:RightHandPinky1' has scale
       animation that will be discarded.\n\t'mixamorig:RightHandPinky2' has scale
       animation that will be discarded.\n\t'mixamorig:RightHandPinky3' has scale
-      animation that will be discarded.\n\nClip 'Armature|GEST_ShakeHand' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'mixamorig:RightHandThumb1'
+      animation that will be discarded.\n\nClip 'Armature|Armature|Armature|GEST_ShakeHand'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'mixamorig:RightHandThumb1'
       has translation animation that will be discarded.\n\t'mixamorig:RightHandThumb1'
       has scale animation that will be discarded.\n\t'mixamorig:RightHandThumb2'
       has scale animation that will be discarded.\n\t'mixamorig:RightHandThumb3'
@@ -134,22 +135,22 @@ ModelImporter:
       has translation animation that will be discarded.\n\t'mixamorig:RightHandMiddle3'
       has translation animation that will be discarded.\n\t'mixamorig:RightHandRing1'
       has translation animation that will be discarded.\n\t'mixamorig:RightHandPinky1'
-      has translation animation that will be discarded.\n\nClip 'Armature|GEST_ShrugFast'
+      has translation animation that will be discarded.\n\nClip 'Armature|Armature|Armature|GEST_ShrugFast'
       has import animation warnings that might lower retargeting quality:\nNote:
       Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'Armature|GEST_StopShowPalms' has import animation warnings that might lower
-      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
-      quality.\n\t'mixamorig:Neck' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\t'mixamorig:LeftForeArm' has translation
-      animation that will be discarded.\n\t'mixamorig:LeftHandMiddle3' has translation
-      animation that will be discarded.\n\t'mixamorig:RightHand' has translation
-      animation that will be discarded.\n\t'mixamorig:RightHandIndex3' has translation
-      animation that will be discarded.\n\t'mixamorig:RightHandMiddle3' has translation
-      animation that will be discarded.\n\nClip 'Armature|GEST_ThumbsDown' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'mixamorig:RightArm'
+      'Armature|Armature|Armature|GEST_StopShowPalms' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'mixamorig:Neck' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'mixamorig:LeftForeArm'
+      has translation animation that will be discarded.\n\t'mixamorig:LeftHandMiddle3'
+      has translation animation that will be discarded.\n\t'mixamorig:RightHand'
+      has translation animation that will be discarded.\n\t'mixamorig:RightHandIndex3'
+      has translation animation that will be discarded.\n\t'mixamorig:RightHandMiddle3'
+      has translation animation that will be discarded.\n\nClip 'Armature|Armature|Armature|GEST_ThumbsDown'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'mixamorig:RightArm'
       has scale animation that will be discarded.\n\t'mixamorig:RightForeArm' has
       scale animation that will be discarded.\n\t'mixamorig:RightHand' has translation
       animation that will be discarded.\n\t'mixamorig:RightHand' has scale animation
@@ -162,17 +163,21 @@ ModelImporter:
       that will be discarded.\n\t'mixamorig:RightHandMiddle3' has translation animation
       that will be discarded.\n\t'mixamorig:RightHandRing1' has translation animation
       that will be discarded.\n\t'mixamorig:RightHandPinky1' has translation animation
-      that will be discarded.\n\nClip 'Armature|GEST_ThumbsUp' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\nClip
-      'Armature|GEST_Wave' has import animation warnings that might lower retargeting
-      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'mixamorig:RightHandIndex1'
+      that will be discarded.\n\nClip 'Armature|Armature|Armature|GEST_ThumbsUp'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Armature|Armature|GEST_Wave' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'mixamorig:Neck' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'mixamorig:RightHandIndex1'
       has translation animation that will be discarded.\n\t'mixamorig:RightHandMiddle1'
       has translation animation that will be discarded.\n\t'mixamorig:RightHandRing1'
       has translation animation that will be discarded.\n\t'mixamorig:RightHandPinky1'
-      has translation animation that will be discarded.\n"
+      has translation animation that will be discarded.\n\nClip 'Armature|BASE_Bored'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Neck'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -184,7 +189,442 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|BASE_Thinking
+      takeName: Armature|Armature|Armature|BASE_Thinking
+      internalID: 2471006915119659486
+      firstFrame: 0
+      lastFrame: 144
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_HandToHeart
+      takeName: Armature|Armature|Armature|GEST_HandToHeart
+      internalID: -6089258610241162556
+      firstFrame: 0
+      lastFrame: 95
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_HeadShake
+      takeName: Armature|Armature|Armature|GEST_HeadShake
+      internalID: -1727270972477340334
+      firstFrame: 0
+      lastFrame: 54
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_IdleSit
+      takeName: Armature|Armature|Armature|GEST_IdleSit
+      internalID: -1662756530936230133
+      firstFrame: 0
+      lastFrame: 129
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_PointLoopLeft
+      takeName: Armature|Armature|Armature|GEST_PointLoopLeft
+      internalID: 1295612418186363592
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_PointLoopRight
+      takeName: Armature|Armature|Armature|GEST_PointLoopRight
+      internalID: -4275538900654363351
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_PrayElbowsOut
+      takeName: Armature|Armature|Armature|GEST_PrayElbowsOut
+      internalID: -2383978201205240534
+      firstFrame: 0
+      lastFrame: 57
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_SelfHandShake
+      takeName: Armature|Armature|Armature|GEST_SelfHandShake
+      internalID: 170245801316655131
+      firstFrame: 0
+      lastFrame: 63
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_ShakeHand
+      takeName: Armature|Armature|Armature|GEST_ShakeHand
+      internalID: 5276274994010888147
+      firstFrame: 0
+      lastFrame: 129
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_ShrugFast
+      takeName: Armature|Armature|Armature|GEST_ShrugFast
+      internalID: -939607784308960135
+      firstFrame: 0
+      lastFrame: 76
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_StopShowPalms
+      takeName: Armature|Armature|Armature|GEST_StopShowPalms
+      internalID: -6309020135350734070
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_ThumbsDown
+      takeName: Armature|Armature|Armature|GEST_ThumbsDown
+      internalID: 5183837038767964167
+      firstFrame: 0
+      lastFrame: 66
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_ThumbsUp
+      takeName: Armature|Armature|Armature|GEST_ThumbsUp
+      internalID: 4730525113346561426
+      firstFrame: 0
+      lastFrame: 85
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|GEST_Wave
+      takeName: Armature|Armature|Armature|GEST_Wave
+      internalID: -3111280625337156982
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|BASE_Bored
+      takeName: Armature|BASE_Bored
+      internalID: 3133818761859122398
+      firstFrame: 0
+      lastFrame: 385
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
