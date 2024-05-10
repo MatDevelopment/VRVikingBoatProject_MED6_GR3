@@ -19,6 +19,8 @@ public class BoatRouteNavMesh : MonoBehaviour
     [SerializeField] private int TargetIndex = 0;
     [SerializeField] private float BoatToTargetDistance;
 
+    [SerializeField] private bool isFinished = false;
+
     [Header("Points of Interests")]
     public List<GameObject> PointsOfInterest = new List<GameObject>();
     public Transform currentPOI;
@@ -48,12 +50,14 @@ public class BoatRouteNavMesh : MonoBehaviour
 
     [Header("Fade")]
     public FadeController fadeController;
+    [SerializeField] GameObject endChamber;
     [SerializeField] ChatTest chatTest;
 
     private string extraSystemInfo = "The NPC does not need to talk about the location they are passing, only talk when it fits into the current conversation topic";
 
     private void Awake()
     {
+        endChamber.SetActive(false);
         BoatNavMeshAgent = GetComponent<NavMeshAgent>();
         originalSpeed = BoatNavMeshAgent.speed;
     }
@@ -80,10 +84,13 @@ public class BoatRouteNavMesh : MonoBehaviour
                 // Generic Targets
                 
                 // End:
-                if (Targets[TargetIndex].CompareTag("Goal"))
+                if (Targets[TargetIndex].CompareTag("Goal") && isFinished == false)
                 {
                     fadeController.FadeOut();
-                    fadeController.ShowEndText();
+                    Invoke(nameof(showEndChamber), 4.0f);
+                    fadeController.FadeInAfterTime(2.0f);
+                    isFinished = true;
+                    fadeController.FadeOutAfterTime(20.0f);
                     Debug.Log("Goal has been reached!");
                 }
                 // Speed Increase
@@ -343,5 +350,10 @@ public class BoatRouteNavMesh : MonoBehaviour
             //    currentPOI = PointsOfInterest[TargetIndex];
             //}
         }
+    }
+
+    public void showEndChamber()
+    {
+        endChamber.SetActive(true);
     }
 }
