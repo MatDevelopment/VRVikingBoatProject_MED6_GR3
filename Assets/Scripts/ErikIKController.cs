@@ -29,7 +29,6 @@ public class ErikIKController : MonoBehaviour
 
     public bool isLookingAtPOI = false;
     public bool isPointing = false;
-    private bool hasChangedLook = true;
 
     public bool pointDebug = false;
 
@@ -67,13 +66,11 @@ public class ErikIKController : MonoBehaviour
             //lookIKTarget = boatRouteScript.currentPOI;
             //StartCoroutine(ChangeLookTarget(startPosition, boatRouteScript.currentPOI.position, 1));
             lookIKTarget.position = Vector3.Lerp(lookIKTarget.position, chosenLookTarget.position, 0.2f * Time.deltaTime);
-            hasChangedLook = false;
         }
-        else if (!isLookingAtPOI && !hasChangedLook)
+        else if (!isLookingAtPOI)
         {
             // lookIKTarget = startTransform;
-            // StartCoroutine(ChangeLookTarget(1f));
-            hasChangedLook = true;
+            lookIKTarget.position = Vector3.Lerp(lookIKTarget.position, defaultLookTarget.position, 0.2f * Time.deltaTime); ;
         }
 
         // Sets right hand IK target
