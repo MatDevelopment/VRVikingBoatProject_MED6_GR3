@@ -13,6 +13,7 @@ public class TTSManager : MonoBehaviour
     [SerializeField] private AudioPlayer audioPlayer;
     [SerializeField] private Whisper whisper;
     [SerializeField] private NewDataLogManager newDataLogManager;
+    [SerializeField] private MicInputUI micInputUI;
     [SerializeField] private TTSModel model = TTSModel.TTS_1;
     [SerializeField] private TTSVoice voice = TTSVoice.Alloy;
     [SerializeField, Range(0.25f, 4.0f)] private float speed = 1f;
@@ -35,6 +36,7 @@ public class TTSManager : MonoBehaviour
 
         byte[] audioData = await openAIWrapper.RequestTextToSpeech(text, model, voice, speed);
 
+        micInputUI.SetText("");
         stopwatch.Stop(); // Stop measuring time
         apiStatus.isGeneratingAudio = false;
         
