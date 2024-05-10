@@ -206,10 +206,19 @@ public class NPCInteractorScript : MonoBehaviour
         {
             int startIndex = whisperScript.npcResponse.IndexOf("[");
             int endIndex = whisperScript.npcResponse.IndexOf("]");
-            string result = whisperScript.npcResponse.Substring(startIndex + 1, endIndex - startIndex - 1);
+            string blendString = whisperScript.npcResponse.Substring(startIndex + 1, endIndex - startIndex - 1);
             whisperScript.npcResponse = whisperScript.npcResponse.Remove(startIndex, endIndex + 1);
-            float blendValue = float.Parse(result);
-            blendValue = blendValue / 10;
+
+            float blendValue = 0.5f;
+            if (float.TryParse(blendString, out float result)) 
+            {
+                blendValue = float.Parse(blendString);
+                blendValue = blendValue / 10;
+            } else
+            {
+                Debug.Log("Could not read emotion value: blendValue set to default 0.5");
+            }
+
             Debug.Log("Blend Value: " + blendValue);
             npcEmotionValue = blendValue;
         }

@@ -70,7 +70,7 @@ public class ErikIKController : MonoBehaviour
         else if (!isLookingAtPOI)
         {
             // lookIKTarget = startTransform;
-            lookIKTarget.position = Vector3.Lerp(lookIKTarget.position, defaultLookTarget.position, 0.2f * Time.deltaTime); ;
+            lookIKTarget.position = Vector3.Lerp(lookIKTarget.position, defaultLookTarget.position, 0.5f * Time.deltaTime); ;
         }
 
         // Sets right hand IK target
