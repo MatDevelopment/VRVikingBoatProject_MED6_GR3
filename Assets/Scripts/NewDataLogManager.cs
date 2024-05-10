@@ -101,6 +101,8 @@ public class NewDataLogManager : MonoBehaviour
     {
         // int currentTime = (int)Mathf.Round(Time.time);
         string currentTime = FormatTime(Time.time);
+        string tutorialTime = FormatTime(timeThatTutorialEnded);
+        string currentTimeMinusTutorialTimes = FormatTime(Time.time - timeThatTutorialEnded) ;
 
         // Calculating average API call times:
         // STT
@@ -136,7 +138,7 @@ public class NewDataLogManager : MonoBehaviour
         double combinedAverage = totalCombinedTime / apiCallTimeManager.CombinedCallTimes.Count;
 
         // Defining what is written in the log text
-        string SensorLogText = "Total Time: " + currentTime + ", User Prompts: " + TotalUserPrompts + ", Erik Responses: " + TotalErikResponses + ", Erik Instigations: " + TotalErikInstigations + ", Erik Gaze Time: " + ErikGazeTime + ", API Call Time Averages:" + " Combined " + combinedAverage + ", SST: " + STTaverage + ", ChatGPT: " + GPTaverage + ", TTS: " + TTSaverage;
+        string SensorLogText = "Total Time: " + currentTime + " Tutorial Time: " + timeThatTutorialEnded + " Total Time minus tutorial: " + currentTimeMinusTutorialTimes + ", User Prompts: " + TotalUserPrompts + ", Erik Responses: " + TotalErikResponses + ", Erik Instigations: " + TotalErikInstigations + ", Erik Gaze Time: " + ErikGazeTime + ", API Call Time Averages:" + " Combined " + combinedAverage + ", SST: " + STTaverage + ", ChatGPT: " + GPTaverage + ", TTS: " + TTSaverage;
         // Appending the string to the textfile which means it is written behind the current text
         sw.WriteLine(SensorLogText);
 

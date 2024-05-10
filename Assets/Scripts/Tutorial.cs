@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.TextCore.LowLevel;
 using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
@@ -33,7 +34,7 @@ public class Tutorial : MonoBehaviour
     public Slider gaze1Slider, gaze2Slider;
 
     private bool CanLookAtCube2;
-
+  
     private bool userStartedCalibrationStep;
     [SerializeField] private GestureVersionManager gestureVersionManager;
 
@@ -53,7 +54,7 @@ public class Tutorial : MonoBehaviour
 
         if (useGesturesForConfirmation)
         {
-   
+
             SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
         }
         else if (!useGesturesForConfirmation)
@@ -63,8 +64,8 @@ public class Tutorial : MonoBehaviour
             gaze2Slider.transform.parent.gameObject.SetActive(false);
         }
 
-        if(useGesturesForConfirmation)
-        userCanGiveThumbsUp = true;
+        if (useGesturesForConfirmation)
+            userCanGiveThumbsUp = true;
         HideGreenCube();
         //Check for pointing on a object here
 
@@ -120,12 +121,12 @@ public class Tutorial : MonoBehaviour
         else if (!lookingAtGazeCube2)
             gaze2Slider.value = 0;
 
-        if (gaze2Slider.value >= 1)
+        if (gaze2Slider.value >= 1 && !gestureVersionManager.tutorialDone)
             FadeOutTutorial();
 
     }
 
-    private IEnumerator DoSection( float delay )
+    private IEnumerator DoSection(float delay)
     {
         yield return new WaitForSeconds(delay);
 
@@ -157,7 +158,7 @@ public class Tutorial : MonoBehaviour
             else if (!useGesturesForConfirmation)
             {
                 Step_CheckForLookAtGaze2();
-              
+
             }
         }
         else
@@ -209,7 +210,7 @@ public class Tutorial : MonoBehaviour
         Debug.Log("Started A Countdown!");
         for (int i = secondsToCountDown; i > 0; i--)
         {
-            SetInstructionsText ("Om " + i + " sekunder skal du sige en sætning. Er du klar?");
+            SetInstructionsText("Om " + i + " sekunder skal du sige en sætning. Er du klar?");
             yield return new WaitForSeconds(1f);
         }
     }
@@ -262,7 +263,6 @@ public class Tutorial : MonoBehaviour
         gazeCube2.SetActive(false);
         gaze1Slider.transform.parent.gameObject.SetActive(false);
         gaze2Slider.transform.parent.gameObject.SetActive(false);
-
     }
 
     private void ShowGazeObjects()
@@ -271,14 +271,11 @@ public class Tutorial : MonoBehaviour
         gazeCube1.SetActive(true);
         gazeCube2.SetActive(false);
         gaze1Slider.transform.parent.gameObject.SetActive(true);
-        if ( CanLookAtCube2 == true)
-        gaze2Slider.transform.parent.gameObject.SetActive(true);
+        if (CanLookAtCube2 == true)
+            gaze2Slider.transform.parent.gameObject.SetActive(true);
         else
             gaze2Slider.transform.parent.gameObject.SetActive(false);
-
-
     }
-
 
     private void FadeOutTutorial()
     {
@@ -291,7 +288,6 @@ public class Tutorial : MonoBehaviour
 
         //fadeController.FadeOutAfterTime(1);
 
-        gestureVersionManager.tutorialDone = true;
     }
 
     public void SetLookingAtGazeCube1True()
@@ -316,8 +312,8 @@ public class Tutorial : MonoBehaviour
 
     IEnumerator FadeRoomMaterials()
     {
-        float fadeDuration = 0.7f; 
-        
+        float fadeDuration = 0.7f;
+
 
         Material[] mats = tutorialRoom.GetComponent<MeshRenderer>().materials;
 
@@ -354,8 +350,12 @@ public class Tutorial : MonoBehaviour
 
     private void DestroyTutorialRoom()
     {
+        if (gestureVersionManager.tutorialDone) return;
+        StopCoroutine(nameof(FadeRoomMaterials));
         tutorialRoom.SetActive(false);
         dataLogManager.timeThatTutorialEnded = Time.time;
+
+        gestureVersionManager.tutorialDone = true;
 
         //Destroy(tutorialRoom);
     }
@@ -379,7 +379,7 @@ public class Tutorial : MonoBehaviour
         userPointedAtTheGreenCube = true;
     }
 
-    
+
 
     public void SetMadeThumbsUpGestureTrue()
     {
@@ -387,17 +387,16 @@ public class Tutorial : MonoBehaviour
         {
             userGaveThumbsUp = true;
 
-            StartTutorial(); 
+            StartTutorial();
         }
     }
 
     public void SetLookedAtGazecube1True()
     {
- gazeCube1.SetActive(false);
+        gazeCube1.SetActive(false);
         gaze1Slider.transform.parent.gameObject.SetActive(false);
-            StartTutorial();
+        StartTutorial();
         userStartedCalibrationStep = true;
-        
     }
 
     public void SetLookedAtGazecube2True()
@@ -405,15 +404,16 @@ public class Tutorial : MonoBehaviour
         gazeCube2.SetActive(false);
         gaze2Slider.transform.parent.gameObject.SetActive(false);
         StartTutorial();
-
     }
 
     private void ShowGreenCube()
     {
-        greenCube.SetActive(true);
+        if (greenCube != null)
+            greenCube.SetActive(true);
     }
     private void HideGreenCube()
     {
-        greenCube.SetActive(false);
+        if (greenCube != null)
+            greenCube.SetActive(false);
     }
 }

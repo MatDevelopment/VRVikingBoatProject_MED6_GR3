@@ -137,10 +137,11 @@ public class NPCInteractorScript : MonoBehaviour
                     "Start your response with the NPC's current primary emotional state in capitalized letters, in the same message without new line and seperated by white space. Just before the primary emotion, without a new line and seperated by whitespace with square brackets on either side, give a number from 1 to 10, where 1 is not emotional and 10 is very emotional, based on how emotional the NPC is. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT\n" +
                     "Only choose ONE emotion per response, and only choose an emotion if you deem it necessary.\n" +
                     "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick ONE gestures to go with the NPC's response: DISAPPROVE, APPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
-                    "When POINTING the NPC can only choose between a given set of targets and only after the NPC have been given permission for the specific target. Write the chosen target whithout new line and after POINTING seperated by white space. The only available targets are: FISHINGHUT, RUNESTONE, FARMSTEAD, VILLAGE, BURIALMOUND, MARKETENTRANCE, BLACKSMITH, BOATBUILDER, TRADERS, ERIKSHUT.\n" +
-                    "The NPC now has permission to be POINTING at FISHINGHUT\n" +
                     "The gestures previously mentioned are the only gestures available to you, so please choose the most suitable gesture. All else physical movement besides these gestures are not possible.\n" +
-                    "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n"
+                    "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n"+
+                    "When POINTING the NPC can only choose between a given set of targets and only after the NPC have been given permission for the specific target. Write the chosen target whithout new line and after POINTING seperated by white space. The only available targets are: FISHINGHUT, RUNESTONE, FARMSTEAD, VILLAGE, BURIALMOUND, MARKETENTRANCE, BLACKSMITH, BOATBUILDER, TRADERS, ERIKSHUT.\n" +
+                    "The NPC now has permission to be POINTING at FISHINGHUT\n"
+                   
 
                     //OLD tested prompts (for inspiration)
                     //"Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick the most suitable secondary emotion for the NPC out of the following: \n" +
