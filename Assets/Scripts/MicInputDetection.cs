@@ -121,7 +121,7 @@ public class MicInputDetection : MonoBehaviour
                 || apiStatus.isGeneratingText == true
                 || apiStatus.isGeneratingAudio == true)
             {
-                micInputUI.SetText("Erik is thinking");
+                micInputUI.SetText("Erik tænker");
                 isListening = false;
             }
 

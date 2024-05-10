@@ -19,7 +19,6 @@ public class AudioPlayer : MonoBehaviour
         nPCSoundBitPlayer = FindObjectOfType<NPCSoundBitPlayer>();
         apiStatus = FindObjectOfType<APIStatus>();
         micInputUI = FindObjectOfType<MicInputUI>();
-
     } 
 
     public void ProcessAudioBytes(byte[] audioData)
@@ -53,8 +52,7 @@ public class AudioPlayer : MonoBehaviour
     }
     public IEnumerator InterruptNpcTalkingAfterDuration(float interruptDuration) //TODO: move this to another class
     {
-        Debug.Log("Interrupted Erik while speaking!");
-        micInputUI.SetText("Interrupted Erik while speaking!");
+        micInputUI.SetTextAndMakeItEmptyAfterAWhile("Du afbrød Erik i at snakke!");
         yield return new WaitForSeconds(interruptDuration);
 
         audioSource.Stop();

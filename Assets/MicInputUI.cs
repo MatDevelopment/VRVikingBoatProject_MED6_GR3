@@ -64,6 +64,17 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
     {
         textMeshPro.text = message;
     }
+
+    public void SetTextAndMakeItEmptyAfterAWhile(string message)
+    {
+        textMeshPro.text = message;
+        Invoke(nameof(SetTextAndMakeItEmptyAfterAWhile), 2);
+    }
+
+    private void setTextEmpty()
+    {
+        textMeshPro.text = "";
+    }
     public void UpdateThreshold()
     {
         thresholdImage.fillAmount = 1 - inputDetection.threshold/ inputDetection.maxAmplitudeWithCurrentMicrophone;

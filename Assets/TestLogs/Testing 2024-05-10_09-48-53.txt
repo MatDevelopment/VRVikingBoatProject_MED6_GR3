@@ -1,0 +1,5 @@
+Total Time: 00:50, User Prompts: 2, Erik Responses: 2, Erik Instigations: 0, Erik Gaze Time: 0, API Call Time Averages: Combined 6.60732735, SST: 2.5493281, ChatGPT: 2.49476635, TTS: 2.49476635
+[00:32] User: Ååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååå
+[00:36] Erik: [API: 7.1840033] [5] HAPPY APPROVE Hvad tænker du på, ven? Er der noget, der tynger dit sind?
+[00:43] User: Okay, he is thinking, hello, hello, hello, hello, hello, hello, hello, hello, hello,
+[00:47] Erik: [API: 6.0306514] [1] HAPPY GREETING Goddag! Er der noget, du gerne vil vide om vores rejse eller omegnen her?

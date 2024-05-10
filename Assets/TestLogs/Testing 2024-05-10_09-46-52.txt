@@ -1,0 +1,4 @@
+Total Time: 01:08, User Prompts: 1, Erik Responses: 1, Erik Instigations: 1, Erik Gaze Time: 0, API Call Time Averages: Combined 6.7718748, SST: 1.356317, ChatGPT: 3.04969905, TTS: 3.04969905
+[00:34] User: Det er kunst, man kan møde det her.
+[00:40] Erik: [API: 8.7144739] [5] HAPPY Fiskeri er min kunst. At arbejde med nettene og kende vandets veje, det kræver sin snilde. Vil du se, hvor jeg opbevarer mine redskaber? POINTING FISHINGHUT
+[00:56] Erik: [API: 4.8292757] [5] HAPPY Fiskeri er min kunst. At arbejde med nettene og kende vandets veje, det kræver sin snilde. Vil du se, hvor jeg opbevarer mine redskaber? POINTING FISHINGHUT
