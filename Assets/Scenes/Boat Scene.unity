@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19962,7 +19962,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533192048}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -55548,7 +55548,7 @@ MonoBehaviour:
   AllowLogging: 1
   whisper: {fileID: 861633864}
   apiCallTimeManager: {fileID: 1442082956}
-  newFileName: Pilot1_gesture
+  newFileName: Pilot2_NOgesture
   StringsToLog: []
   TotalUserPrompts: 0
   TotalErikResponses: 0
@@ -74748,7 +74748,7 @@ PrefabInstance:
     - target: {fileID: 239967312357079524, guid: f23a92d4b3b758a43bdaaa5dea9085a7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 585283591430202206, guid: f23a92d4b3b758a43bdaaa5dea9085a7,
         type: 3}
@@ -94132,7 +94132,7 @@ MonoBehaviour:
   gazeCube1: {fileID: 1773719700}
   gazeCube2: {fileID: 1773719699}
   tutorialLight: {fileID: 1773719702}
-  startExperienceWithTheTutorial: 0
+  startExperienceWithTheTutorial: 1
   useGesturesForConfirmation: 1
   instructionText: {fileID: 533192050}
   lookingAtGazeCube1: 0

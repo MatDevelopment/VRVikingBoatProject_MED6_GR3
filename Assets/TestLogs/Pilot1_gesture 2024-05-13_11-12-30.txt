@@ -1,0 +1,67 @@
+Total Time: 15:18 Tutorial Time: 43.56879 Total Time minus tutorial: 14:34, User Prompts: 25, Erik Responses: 25, Erik Instigations: 16, Erik Gaze Time: 434.4662, Erik Percent Gaze Time: 49.66168, API Call Time Averages: Combined 5.80745416585366, SST: 0.856082278048781, ChatGPT: 3.22755721463415, TTS: 3.22755721463415
+[00:58] User: Ej, den er så rød
+[01:02] Erik: [API: 5.7286628] [5] HAPPY APPROVE Det må være solen, der maler himlen så flot. Havet spejler farverne, og det er som et maleri, ikke sandt?
+[01:27] Erik: [API: 3.7564683] [5] HAPPY APPROVE Det må være solen, der maler himlen så flot. Havet spejler farverne, og det er som et maleri, ikke sandt?
+[01:45] User: Er det en, du kender, der står der?
+[01:49] Erik: [API: 4.943297] [4] HAPPY Jeg kan ikke se så langt fra båden, men det kunne godt være en fra landsbyen. Folk her kender hinanden godt.
+[02:02] User: Det kunne godt være, at jeg er en kollegne skue. Folk her kender hende, når de gør det.
+[02:07] Erik: [API: 6.625364] [3] HAPPY Det lyder som om, hun er velkendt heromkring. Det er godt at have folk, som man kan stole på og dele hverdagen med.
+[02:31] Erik: [API: 2.4446666] [3] HAPPY Det lyder som om, hun er velkendt heromkring. Det er godt at have folk, som man kan stole på og dele hverdagen med.
+[02:53] Erik: [API: 3.3198504] [3] HAPPY Det lyder som om, hun er velkendt heromkring. Det er godt at have folk, som man kan stole på og dele hverdagen med.
+[03:18] Erik: [API: 4.8161546] [3] HAPPY Det lyder som om, hun er velkendt heromkring. Det er godt at have folk, som man kan stole på og dele hverdagen med.
+[03:36] User: Jeg synes det er meget smukt, og skal jeg snakke til den registrerede person?
+[03:42] Erik: [API: 7.5834107] [4] HAPPY Hvis du ser en bekendt, så vink endelig. Det er altid godt at hilse på dem, vi møder på vores vej.
+[03:55] User: Du er min bekendte. Amen, Maga. Du er min bekendte.
+[03:59] Erik: [API: 6.1539089] [3] HAPPY Jeg er glad for at høre det. At have venner på sin rejse er en velsignelse. POINTING RUNESTONE Se den runesten; den fortæller en historie om fællesskab og styrke.
+[04:12] User: 🤣 🤣 🤣 🤣 🤣
+[04:16] Erik: [API: 5.2926248] [5] HAPPY Det er godt at se dit humør så højt! En god latter kan gøre selv den længste rejse behagelig.
+[04:29] User: Hvad fortæller Rune Stenen om... ... ... ... ... ... ... ... ... ... ... ... ... ...
+[04:34] Erik: [API: 6.2974818] [4] HAPPY Runestenen fortæller om en mand, der var vigtig for vores landsby. Han bragte os sammen og lærte os at samarbejde. Det er en stærk fortælling.
+[05:02] Erik: [API: 4.1596304] [4] HAPPY Runestenen fortæller om en mand, der var vigtig for vores landsby. Han bragte os sammen og lærte os at samarbejde. Det er en stærk fortælling.
+[05:11] User: Kan du høre om vores gamle fortællinger?
+[05:18] Erik: [API: 8.4101536] [4] HAPPY Ja, de gamle fortællinger giver os visdom og binder os sammen. De lærer os om livet og de guder, vi ærer. POINTING FARMSTEAD Thorwalds gård der, han kender også mange fortællinger, når han ikke kæmper mod sandet for sine afgrøder.
+[05:38] User: Hvad er der nu? Vi kender også mange fortællinger Han ikke kæmper mod sandheden Kæmper han imod sandhed?
+[05:45] Erik: [API: 8.6072295] [5] HAPPY Nej, nej, han kæmper mod sandet fra stormene, der kan ødelægge hans høst. Det er en hård kamp mod naturens kræfter. Fortællingerne, vi deler, er vores sandheder og lærdomme fra fortiden.
+[06:15] Erik: [API: 3.1509597] [5] HAPPY Nej, nej, han kæmper mod sandet fra stormene, der kan ødelægge hans høst. Det er en hård kamp mod naturens kræfter. Fortællingerne, vi deler, er vores sandheder og lærdomme fra fortiden.
+[06:35] User: Jeg fangede en mega stor fisk her.
+[06:41] Erik: [API: 8.0685231] [5] HAPPY Det må have været en stor dag for dig! At fange en stor fisk er altid en god historie at fortælle. POINTING VILLAGE I landsbyen der, vi deler ofte historier om vores fangster.
+[06:52] User: Hvad fanden?
+[06:56] Erik: [API: 5.0596343] Er der noget galt? Fortæl mig, hvad der er på sinde.
+[07:18] Erik: [API: 3.8441031] Er der noget galt? Fortæl mig, hvad der er på sinde.
+[07:28] User: Hvad synes du om at fiske? Har du prøvet det her hele tiden?
+[07:33] Erik: [API: 6.4373338] [6] HAPPY Fiskeri er mit levebrød og min passion. Jeg har fisket her siden jeg var dreng. Det er her, jeg finder ro og forbundethed med fjorden.
+[07:50] User: Vi ser på højre side, er det vikingegraver?
+[07:57] Erik: [API: 8.7724387] [5] HAPPY Ja, det er Lindholm Høje. Det er et helligt sted, hvor vi ærer dem, der er gået videre. POINTING BURIALMOUND De stenformationer du ser, symboliserer skibene, der fører de døde på deres sidste rejse.
+[08:25] User: der skulle symbolisere det. Hvordan kom I på, at det skulle være cirkler?
+[08:31] Erik: [API: 7.5074428] [4] HAPPY De stenformationer, der er lagt i cirkler, er ikke noget, vi selv har fundet på. Det er en gammel tradition, der går mange generationer tilbage. De viser vej for de døde og markerer deres hvilested.
+[09:02] Erik: [API: 3.6724894] [4] HAPPY De stenformationer, der er lagt i cirkler, er ikke noget, vi selv har fundet på. Det er en gammel tradition, der går mange generationer tilbage. De viser vej for de døde og markerer deres hvilested.
+[09:14] User: Kan du fortælle mere om det?
+[09:22] Erik: [API: 9.6128352] [4] HAPPY Vi tror, at når vi forlader denne verden, rejser vi til en anden, hvor de tapre og ærefulde møder de guder, vi ærer. POINTING MARKETENTRANCE Og her ved markedsindgangen møder vi levende fra nær og fjern for at handle og dele historier.
+[09:41] User: Hvad? Har din rygte okay?
+[09:44] Erik: [API: 4.0898236] Jeg forstår ikke helt, hvad du mener. Kan du forklare mere?
+[09:52] User: Bare til det giver lidt ondt Det var bare måden du drejede
+[09:57] Erik: [API: 6.6309285] Er du bekymret for min ryg? Det går fint, tak. Roen på vandet og arbejdet med nettene holder mig stærk.
+[10:23] Erik: [API: 4.1196653] Er du bekymret for min ryg? Det går fint, tak. Roen på vandet og arbejdet med nettene holder mig stærk.
+[10:41] User: Jeg synes også, at arbejdet bidrager til at holde afstande.
+[10:48] Erik: [API: 8.6783773] [4] HAPPY Ja, arbejde styrker både krop og sjæl. POINTING BLACKSMITH Se smeden der, hans arbejde kræver stor styrke og præcision. Han forbereder krigernes rustninger til rejserne.
+[11:02] Erik: [API: 3.6705261] [4] HAPPY Ja, arbejde styrker både krop og sjæl. POINTING BLACKSMITH Se smeden der, hans arbejde kræver stor styrke og præcision. Han forbereder krigernes rustninger til rejserne.
+[11:08] User: Det virker til at han bare slår lidt ud i luften.
+[11:13] Erik: [API: 6.8861542] [3] HAPPY Små slag med hammeren er en del af smedens kunst. Hvert slag former metallet, selv de, der virker små.
+[11:27] Erik: [API: 4.1791952] [3] HAPPY Små slag med hammeren er en del af smedens kunst. Hvert slag former metallet, selv de, der virker små.
+[11:40] User: Jeg beundrer bare smidens arbejde.
+[11:44] Erik: [API: 5.6777624] [4] HAPPY Det forstår jeg godt. En smeds arbejde er vigtigt og værd at respektere. Hans evner holder os sikre og styrker vores værktøj og våben.
+[12:12] Erik: [API: 3.8496097] [4] HAPPY Det forstår jeg godt. En smeds arbejde er vigtigt og værd at respektere. Hans evner holder os sikre og styrker vores værktøj og våben.
+[12:24] User: herovre til højre. Nej, det har jeg ikke. Men det virker til der er nogen der er i gang.
+[12:30] Erik: [API: 6.9274775] [4] HAPPY POINTING BOATBUILDER Ja, skibsbyggerne er altid travlt beskæftiget. At bygge et skib er et stort håndværk, og det kræver mange dygtige hænder.
+[12:46] User: Er det så et marked, der er derover?
+[12:52] Erik: [API: 6.9577347] [5] HAPPY Ja, det er vores markedsplads. Der kan man finde varer fra nær og fjern, og det er et samlingspunkt for handel og nyheder. POINTING MARKETENTRANCE Vil du tage derover senere?
+[13:05] Erik: [API: 4.7753825] [5] HAPPY Ja, det er vores markedsplads. Der kan man finde varer fra nær og fjern, og det er et samlingspunkt for handel og nyheder. POINTING MARKETENTRANCE Vil du tage derover senere?
+[13:21] User: Jeg vil være meget interesseret i, hvad de sælger.
+[13:27] Erik: [API: 7.0506113] [5] HAPPY De har et bredt udvalg. Fisk fra vores farvande, afgrøder fra markerne, og vævede stoffer. POINTING TRADERS Der er nok at udforske for en nysgerrig sjæl som dig.
+[13:40] Erik: [API: 4.3579675] [5] HAPPY De har et bredt udvalg. Fisk fra vores farvande, afgrøder fra markerne, og vævede stoffer. POINTING TRADERS Der er nok at udforske for en nysgerrig sjæl som dig.
+[13:49] User: Jeg var bare optaget af vandmelonen.
+[13:54] Erik: [API: 5.9637358] [4] HAPPY Ah, vandmeloner er en sjældenhed her. De må være bragt hertil af handelsfolk. Nyd synet og smagen af sådanne eksotiske varer!
+[14:22] Erik: [API: 5.5274686] [4] HAPPY Ah, vandmeloner er en sjældenhed her. De må være bragt hertil af handelsfolk. Nyd synet og smagen af sådanne eksotiske varer!
+[14:40] User: og have noget at vende med nogen. Jeg tror jeg skal hvile mig med fjorden og op på markedet.
+[14:46] Erik: [API: 7.6704398] [5] HAPPY Det lyder som en god plan. Markedet og fjorden har begge deres charme. Må din hvile blive genopbyggende og dit besøg på markedet givende.
+[15:16] Erik: [API: 6.8280973] [5] HAPPY Det lyder som en god plan. Markedet og fjorden har begge deres charme. Må din hvile blive genopbyggende og dit besøg på markedet givende.
