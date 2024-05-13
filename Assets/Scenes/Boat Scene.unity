@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -55548,7 +55548,7 @@ MonoBehaviour:
   AllowLogging: 1
   whisper: {fileID: 861633864}
   apiCallTimeManager: {fileID: 1442082956}
-  newFileName: Testing
+  newFileName: Pilot1_gesture
   StringsToLog: []
   TotalUserPrompts: 0
   TotalErikResponses: 0
