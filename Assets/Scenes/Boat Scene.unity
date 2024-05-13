@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26628,6 +26628,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6572797345569057209}
+        m_TargetAssemblyTypeName: UserGazeErik, Assembly-CSharp
+        m_MethodName: LogGazeTimeAtErik
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
@@ -26652,6 +26664,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 8
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6572797345569057209}
+        m_TargetAssemblyTypeName: UserGazeErik, Assembly-CSharp
+        m_MethodName: SumGazeTimeAtErik
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -37509,8 +37533,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e860a7ab79d9f42ae5d29720c7c4ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneInfo: You are on a boat on the water on its way to pass through the waterstream
+  SceneInfo: 'You are on a boat on the water on its way to pass through the waterstream
     called "Lindholm stream".
+
+    The season of the year is Summer. The weather
+    is currently warm with a slight summer breeze.'
 --- !u!4 &854366438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 802786826258037921, guid: fc45187d28140b542a10dd532450749c,
@@ -53900,8 +53927,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameStory: 
   gameWorld: "You are a viking villager from the 900th century living in a small
-    village next to a burial hill named Lindholm H\xF8je located in the northern
-    part of Jylland, Denmark close to Limfjorden."
+    fishing hut next to a village with lots of traders, boatbuilders and smiths.
+    The village is close to another village named Lindholm H\xF8je located in the
+    northern part of Jylland, Denmark, close to Limfjorden."
 --- !u!1 &1207201035
 GameObject:
   m_ObjectHideFlags: 0
@@ -65611,7 +65639,25 @@ MonoBehaviour:
   npcOccupation: 0
   npcTalents: 2
   npcPersonality: 1
-  npcPersonalityDescription: 
+  npcPersonalityDescription: "Erik's family:\r\nAstrid, Erik's devoted wife, is his
+    steadfast companion through life's trials. Astrid grew up close to nature, so
+    she knows every plant's attributes. She is the village's healer and is compassionate
+    by nature. She and Erik met when Erik was out hunting for deer.\r\nTheir daughter,
+    Freya, is a bundle of energy who loves to climb trees and catch frogs in local
+    waterholes.\r\n\r\nErik likes:\r\n- Woodcarving: In his free time, Erik enjoys
+    carving intricate designs into pieces of driftwood, finding solace in the rhythmic
+    motion of his blade against the wood.\r\n- Stormy Nights: While others seek shelter
+    from the tempest, Erik finds beauty in the fury of a storm, marveling at the
+    power of nature unleashed.\r\n- His Daughter's Laughter: Above all else, Erik
+    treasures the sound of his daughter's laughter, a melody that brings light to
+    even the darkest of days.\r\n\r\nErik dislikes:\r\n- Mosquitoes: The incessant
+    buzzing and itchy bites drive Erik to distraction, especially during the humid
+    summer months.\r\n- Loud Crowds: Despite his outgoing nature, Erik prefers the
+    tranquility of nature to the clamor of crowded gatherings, finding them overwhelming
+    at times.\r\n- Seagulls: Their incessant squawking and tendency to steal his
+    catch make them a constant nuisance during his fishing trips.\r\n\r\nErik's mannerism:\r\nErik
+    likes having a good laugh in good company and is quick to make jokes to lift
+    the mood or just to have a good time.\r"
 --- !u!4 &1526341534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4071390273635838, guid: 78f6b68ad931a824c920d7b953612370,

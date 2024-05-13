@@ -17,6 +17,8 @@ public class UserGazeErik : MonoBehaviour
     [SerializeField] private MicInputDetection _micInputDetection;
     [SerializeField] private NewDataLogManager _newDataLogManager;
 
+    private float startGazeTimeErik;
+
 
     private void Awake()
     {
@@ -56,6 +58,20 @@ public class UserGazeErik : MonoBehaviour
         {
             StartCoroutine(BigGazeObservationErik(timeUntilObservation));
         }
+    }
+
+    public void LogGazeTimeAtErik()      //Called when looking at Erik
+    {
+        startGazeTimeErik = Time.time;
+    }
+
+    public void SumGazeTimeAtErik() //Called when looking away from Erik
+    {
+        float endGazeTimeErik = Time.time;
+
+        float thisSumGazeTime = endGazeTimeErik - startGazeTimeErik;
+
+        _newDataLogManager.ErikGazeTime += thisSumGazeTime;
     }
     
     
