@@ -83,7 +83,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _AlphaTestRef: 0.5
+    - _AlphaTestRef: 0.178
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
