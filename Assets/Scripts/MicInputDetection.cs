@@ -92,7 +92,7 @@ public class MicInputDetection : MonoBehaviour
             //npcInteractorScript.timeCounter = 0;
             speechPauseCounter = 0; // Resets the pause counter so the microphone keep recording
 
-            if (isListening == false)
+            if (isListening == false && apiStatus.isTranscribing == false && apiStatus.isGeneratingAudio == false && apiStatus.isTalking == false)
             {
                 Debug.Log("LISTENING");
                 isListening = true;
@@ -105,7 +105,7 @@ public class MicInputDetection : MonoBehaviour
             {
                 whisperScript.userRecordingString = "";    
                 userSpeechClip = null;
-
+                 
                 startedSpeakingPosition = Microphone.GetPosition(Microphone.devices[0]);        //Saves the starting position of the user speech audio
             }
             else if (apiStatus.isTalking)
