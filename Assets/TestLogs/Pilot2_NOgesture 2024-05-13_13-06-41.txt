@@ -1,0 +1,73 @@
+Total Time: 15:37 Tutorial Time: 35.66859 Total Time minus tutorial: 15:01, User Prompts: 36, Erik Responses: 36, Erik Instigations: 0, Erik Gaze Time: 389.0618, Erik Percent Gaze Time: 43.13675, API Call Time Averages: Combined 6.95069065833333, SST: 1.58156571944444, ChatGPT: 3.35458684166667, TTS: 3.35458684166667
+[00:39] User: Så er vi færdige.
+[00:43] Erik: [API: 4.8168384] Godt, det var en fin tur på vandet. Skal vi tilbage til lands, eller er der andet, du søger?
+[00:56] User: Og når jeg ikke kan lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan jeg ikke lytte til dig, så kan
+[01:01] Erik: [API: 7.9417999] Det lyder som om, du har det svært med at høre. Måske er der noget, der forstyrrer dine tanker? Fortæl mig, hvad der tynger dig.
+[01:11] User: Tak for at du har været med.
+[01:15] Erik: [API: 4.8114833] Det var min fornøjelse. Hav en god dag, og må vinden være med dig.
+[01:50] User: Prøv at sætte den lige, det kræver at jeg snakker højt nok Og så kan jeg lade, nu går den ikke op til linjen
+[01:56] Erik: [API: 7.8305203] Det lyder som om du har brug for hjælp med noget. Kan du forklare lidt mere, så jeg kan forstå, hvordan jeg kan hjælpe dig bedst?
+[02:12] User: Få sætter mig med snak.
+[02:15] Erik: [API: 4.4342412] Hvis du vil tale, så lytter jeg. Hvad har du på hjerte?
+[02:27] User: Skal vi have en fisk her?
+[02:31] Erik: [API: 5.5490016] Ja, det kunne vi. Ole ved præcis, hvor de bedste fiskesteder er. Lad os se, om vi kan fange noget.
+[03:00] User: Tror du jeg har fanget noget? Det har været sultrygt, jeg kan mærke det.
+[03:04] Erik: [API: 5.8764952] Det lyder lovende! Lad os tjekke din line og se, om du har heldet med dig i dag. Naturens tegn kan ofte lede os til en god fangst.
+[03:35] User: Vi seender hende.
+[03:38] Erik: [API: 5.3511479] Jeg forstår ikke helt, hvad du mener. Kan du fortælle mig mere, eller hvordan kan jeg hjælpe dig?
+[03:59] User: Hvad er det for noget?
+[04:04] Erik: [API: 6.955131] Det er en runesten. Den fortæller historien om en stor mand, som var en af de første, der bosatte sig her i området. Det er gammel viden, mejslet i sten for at mindes og ære dem, der gik forud for os.
+[04:34] User: Nå, vi får bare hænden.
+[04:40] Erik: [API: 6.9790475] Det er sådan det er. Nogle dage giver havet, og andre dage tager det. Men vi må værdsætte det, vi får. Skal vi prøve et andet sted at fiske?
+[04:55] User: Hvor er vi på vej hen?
+[05:01] Erik: [API: 7.830667] Vi er på vej gennem Lindholm strømmen. Når vi er igennem, kan vi vende tilbage til lands eller fortsætte på vandet, hvis du ønsker at fiske mere eller bare nyde turen. Hvad føler du for?
+[05:18] User: Jeg tror heller ikke, at jeg vil.
+[05:23] Erik: [API: 7.0346804] Det er helt i orden. Vi behøver ikke at gøre noget, du ikke har lyst til. Vi kan bare nyde sejlturen og den friske brise. Er der andet, du har lyst til at tale om eller gøre?
+[05:41] User: Hvad hedder det?
+[05:46] Erik: [API: 6.3024277] Hvis du taler om gården derovre, så er det Thorwalds gård. Han er min fætter. Men ser du sandstormen? Den kan skade afgrøderne. Det er en svær tid for ham.
+[06:01] User: Ja, det lyder ikke så godt.
+[06:09] Erik: [API: 9.0543543] Nej, det er hårdt når naturen viser sin styrke på den måde. Vi hjælper hinanden så godt vi kan, når sådanne prøvelser rammer. Det minder os om at værdsætte de gode dage.
+[06:24] User: Hvad er det der hender?
+[06:30] Erik: [API: 7.7676103] Det er Lindholm. En lille landsby med nogle gårde ved siden af en hellig gravhøj. Folkene her lever et enkelt liv, meget ligesom os, og gravhøjen minder os om vores forfædre og de traditioner, vi holder i live.
+[06:54] User: Traditioner.
+[07:01] Erik: [API: 8.3197051] Ja, traditioner er vigtige for os. De binder os sammen og hjælper os med at huske vores historie og ære dem, der kom før os. De lærer os også, hvordan vi skal leve og arbejde i harmoni med naturen og hinanden.
+[07:29] User: Hav det lækkert, og vi ses i morgen.
+[07:35] Erik: [API: 8.2882612] Tak, og du også. Vi ses i morgen. Måtte dine drømme være lyse og dine net fyldt med fisk. Farvel!
+[07:47] User: Hvad tror du, at vi skal løse i morgen?
+[07:52] Erik: [API: 6.457336] Vi kan tage ud og fiske igen, hvis havet er roligt. Eller måske hjælpe til på gården, hvis Thorwald har brug for det efter sandstormen. Der er altid noget at tage sig til. Hvad har du lyst til?
+[08:08] User: Nå, hvor er sandstormene der.
+[08:14] Erik: [API: 6.9030951] Sandstormene kommer fra tid til anden, især når det er tørt og vinden er stærk. Vi må bare være forberedte og beskytte det, vi kan. Det er en del af livet her.
+[08:35] User: Spis kun fisk Nu nævner du fisk meget, spis kun fisk
+[08:42] Erik: [API: 7.7885353] Fisk er en stor del af vores kost, ja. Det er sundt og giver styrke. Men vi spiser også det, vi dyrker og jager. Det handler om at leve af det, naturen giver os.
+[08:59] User: Det var meget fedt at møde jer.
+[09:03] Erik: [API: 5.8085045] Tak, det var også godt at møde dig. Sikke en fornøjelse at dele vores tid og historier. Pas godt på dig selv.
+[09:20] User: 😆 🤣 🤣
+[09:24] Erik: [API: 5.8329331] Et godt grin er som en dag med god fangst – det varmer hjertet. Del gerne flere smil, det gør livet lysere!
+[09:38] User: Hvad fanden bøger vi på vejen indenfor?
+[09:46] Erik: [API: 9.7487544] Jeg er ikke sikker på, hvad du mener med "bøger" på vejen indenfor. Hvis du taler om markedspladsen, så er det et sted, hvor folk handler og udveksler varer. Der er altid liv og travlhed.
+[10:06] User: Hvem er smittet?
+[10:12] Erik: [API: 7.3571281] Jeg forstår ikke helt. Hvis du taler om sygdom, så håber jeg ingen er smittet. Det er vigtigt at passe på hinanden og holde sig sund. Har du hørt noget om sygdom her i området?
+[10:28] User: Det var jeg heldigvis ikke.
+[10:33] Erik: [API: 7.2047916] Det er godt at høre. At være sund og rask er en velsignelse, især når man lever et liv, hvor man skal kunne stole på sin krop. Pas godt på dig selv.
+[10:53] User: Hvem er det?
+[11:01] Erik: [API: 8.9672745] Hvis du taler om smeden derovre, så er det vores lokale smed. Han arbejder hårdt på at lave rustninger til dem, der skal ud på vikingetogt snart. En dygtig håndværker, som sørger for at vores krigere er godt udrustet.
+[11:23] User: Hvor er vi?
+[11:29] Erik: [API: 6.8346272] Vi er nær ved landsbyen Lindholm, tæt ved Limfjorden i det nordlige Jylland. Her er der handelsfolk, bådbyggere og smede, og vi er lige forbi smeden, der laver rustninger. Er der noget specifikt, du søger her?
+[11:47] User: Både byggerne.
+[11:53] Erik: [API: 8.1230378] Ja, de arbejder hårdt i skibsværftet. De bygger skibe, som vil bære vores folk over havene, både til handel og togter. Det er et stolt håndværk, og skibene er smukke, ikke sandt?
+[12:08] User: Tak fordi I så med.
+[12:12] Erik: [API: 5.1123693] Det var en fornøjelse at dele turen med dig. Jeg håber, vi ses igen. Pas godt på dig selv. Farvel!
+[12:29] User: Hvad er det for musik jeg hører? Hvad er det for musik jeg hører? Hvad er det for musik jeg hører? Hvad er det for musik jeg hører? Hvad er det for musik jeg hører?
+[12:34] Erik: [API: 7.534671] Musik? Det må være lydene fra landsbyen. Måske er der en fest, hvor de spiller på fløjter og trommer. Det er altid livligt, når folk samles og deler glæde gennem musik. Skal vi se nærmere på det?
+[12:51] User: Det er det, jeg tænker.
+[12:58] Erik: [API: 8.6761072] Det er godt at tænke og reflektere, især når man er omgivet af livet i landsbyen. Hver handlende her har sin del i vores fællesskab, ligesom musikken binder os sammen. Er der noget bestemt, du overvejer?
+[13:17] User: Hvad er specifikt?
+[13:24] Erik: [API: 7.4279968] Når jeg siger "specifikt", mener jeg, om der er noget bestemt, du tænker på eller søger? Noget du vil købe, et sted du vil besøge, eller en opgave du vil udføre?
+[13:40] User: Tak for denne her tur.
+[13:44] Erik: [API: 5.3523622] Det var en glæde at dele turen med dig. Må du have en tryg rejse videre. Far vel!
+[13:56] User: Jeg har sagt farvel et par gange.
+[14:02] Erik: [API: 6.9396332] Undskyld, hvis jeg ikke har forstået. Nogle gange er det svært at sige farvel. Men nu skal vi så sige det: Farvel og tak for godt selskab. Må din vej være lykkebringende.
+[14:18] User: En fylde fisk.
+[14:23] Erik: [API: 6.324116] En fyldt net med fisk er en god dag på havet. Hvis du ønsker at fiske mere, så lad os sætte kursen og håbe på en god fangst. Ellers kan vi nyde fiskene fra dagens tur.
+[14:38] User: Jeg tror bare vi tager dem for dagens tur.
+[14:43] Erik: [API: 6.6881781] Det lyder som en god plan. Vi kan forberede dem til et måltid og dele historier om dagen. Det er altid godt at slutte dagen med et måltid og godt selskab.
