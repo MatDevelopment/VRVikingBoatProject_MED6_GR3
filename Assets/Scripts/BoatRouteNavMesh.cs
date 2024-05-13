@@ -50,7 +50,7 @@ public class BoatRouteNavMesh : MonoBehaviour
 
     [Header("Fade")]
     public FadeController fadeController;
-    [SerializeField] GameObject endChamber;
+    [SerializeField] GameObject endChamber, endText1, endText2;
     [SerializeField] ChatTest chatTest;
 
     private string extraSystemInfo = "The NPC does not need to talk about the location they are passing, only talk when it fits into the current conversation topic";
@@ -87,7 +87,8 @@ public class BoatRouteNavMesh : MonoBehaviour
                 if (Targets[TargetIndex].CompareTag("Goal") && isFinished == false)
                 {
                     fadeController.FadeOut();
-                    Invoke(nameof(showEndChamber), 4.0f);
+                    Invoke(nameof(showEndChamber), 3.8f);
+                    Invoke(nameof(showText), 4.4f);
                     fadeController.FadeInAfterTime(2.0f);
                     isFinished = true;
                     fadeController.FadeOutAfterTime(20.0f);
@@ -355,5 +356,12 @@ public class BoatRouteNavMesh : MonoBehaviour
     public void showEndChamber()
     {
         endChamber.SetActive(true);
+    }
+
+    public void showText()
+    {
+        endText1.SetActive(true);
+        endText2.SetActive(true);
+
     }
 }

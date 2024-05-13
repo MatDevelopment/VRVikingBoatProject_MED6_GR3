@@ -14232,6 +14232,8 @@ MonoBehaviour:
   boatBuilderAudio: {fileID: 629162802}
   fadeController: {fileID: 1859696670}
   endChamber: {fileID: 1514333830}
+  endText1: {fileID: 819596563}
+  endText2: {fileID: 994063512}
   chatTest: {fileID: 1937782999}
 --- !u!1001 &369340265
 PrefabInstance:
@@ -36298,7 +36300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &819596564
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43326,7 +43328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &994063513
 RectTransform:
   m_ObjectHideFlags: 0
