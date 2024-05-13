@@ -59,12 +59,74 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
                 animator.SetTrigger("gest.Approval"); // Sets the trigger which is the same for all the layers.
                 //the list of ints are the different values for the blend tree   
                 //the list of doubles are the Proablities for each value to be chosen
-                animator.SetFloat("ApprovalType", RandomWeightedPicker.Pick(new List<int> { 0, 1 }, new List<double> { 0.2, 0.8 }));//Pick between the values and set the float in the animator. This determines the gesture variation to be played.
+                int chosenGesture = RandomWeightedPicker.Pick(new List<int> { 0, 1 }, new List<double> { 0.7, 0.3 });
+                animator.SetFloat("ApprovalType", chosenGesture);//Pick between the values and set the float in the animator. This determines the gesture variation to be played.
+
+                if (chosenGesture == 0)
+                {
+                    float headTime = 0;
+                    float headDuration = 0.5f;
+
+                    float headStartValue = 0.75f;
+                    float headEndValue = 0;
+
+                    while (headTime < headDuration)
+                    {
+                        ikController.HeadIKAmount = Mathf.Lerp(headStartValue, headEndValue, headTime / headDuration);
+                        headTime += Time.deltaTime;
+                        yield return null;
+                    }
+
+                    ikController.HeadIKAmount = headEndValue;
+
+                    yield return new WaitForSeconds(1);
+
+                    while (headTime < headDuration)
+                    {
+                        ikController.HeadIKAmount = Mathf.Lerp(headEndValue, headStartValue, headTime / headDuration);
+                        headTime += Time.deltaTime;
+                        yield return null;
+                    }
+
+                    ikController.HeadIKAmount = headStartValue;
+                }
+
                 break;
 
             case "DISAPPROVE":
                 animator.SetTrigger("gest.Disapproval");
-                animator.SetFloat("DisapprovalType", RandomWeightedPicker.Pick(new List<int> { 0, 1 }, new List<double> { 0.2, 0.8 }));
+
+                int dissapproveChosenGesture = RandomWeightedPicker.Pick(new List<int> { 0, 1 }, new List<double> { 0.7, 0.3 });
+                animator.SetFloat("DisapprovalType", dissapproveChosenGesture);
+
+                if (dissapproveChosenGesture == 0)
+                {
+                    float headTime = 0;
+                    float headDuration = 0.5f;
+
+                    float headStartValue = 0.75f;
+                    float headEndValue = 0;
+
+                    while (headTime < headDuration)
+                    {
+                        ikController.HeadIKAmount = Mathf.Lerp(headStartValue, headEndValue, headTime / headDuration);
+                        headTime += Time.deltaTime;
+                        yield return null;
+                    }
+
+                    ikController.HeadIKAmount = headEndValue;
+
+                    yield return new WaitForSeconds(1);
+
+                    while (headTime < headDuration)
+                    {
+                        ikController.HeadIKAmount = Mathf.Lerp(headEndValue, headStartValue, headTime / headDuration);
+                        headTime += Time.deltaTime;
+                        yield return null;
+                    }
+
+                    ikController.HeadIKAmount = headStartValue;
+                }
                 break;
 
             case "GREETING":

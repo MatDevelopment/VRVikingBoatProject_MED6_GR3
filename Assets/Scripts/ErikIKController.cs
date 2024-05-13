@@ -23,6 +23,8 @@ public class ErikIKController : MonoBehaviour
     public float HandIKAmount = 0f;
     [Range(0, 1f)]
     public float BodyIKAmount = 0f;
+    [Range(0, 1f)]
+    public float HeadIKAmount = 0.75f;
 
     public bool isLeft = false;
     public bool isRight = false;
@@ -31,6 +33,8 @@ public class ErikIKController : MonoBehaviour
     public bool isPointing = false;
 
     public bool pointDebug = false;
+    public bool headNodDebug = false;
+    public bool headShakeDebug = false;
 
     public Transform pointRotation;
 
@@ -121,6 +125,18 @@ public class ErikIKController : MonoBehaviour
             PointingDebug();
             pointDebug = false;
         }
+
+        if (headNodDebug)
+        {
+            StartCoroutine(npcAnimationStateController.AnimateBodyResponse_Erik("APPROVE", 0f));
+            headNodDebug = false;
+        }
+
+        if (headShakeDebug)
+        {
+            StartCoroutine(npcAnimationStateController.AnimateBodyResponse_Erik("DISAPPROVE", 0f));
+            headShakeDebug = false;
+        }
     }
 
     private void OnAnimatorIK(int layerIndex)
@@ -129,11 +145,11 @@ public class ErikIKController : MonoBehaviour
         {
             if (isLookingAtPOI)
             {
-                npcAnimator.SetLookAtWeight(1, BodyIKAmount, 0.75f, 0.75f, 0.7f);
+                npcAnimator.SetLookAtWeight(1, BodyIKAmount, HeadIKAmount, 0.75f, 0.7f);
             }
             else
             {
-                npcAnimator.SetLookAtWeight(1, BodyIKAmount, 0.7f, 0.75f, 0.7f);
+                npcAnimator.SetLookAtWeight(1, BodyIKAmount, HeadIKAmount, 0.75f, 0.7f);
             }
 
             npcAnimator.SetLookAtPosition(lookIKTarget.position);
