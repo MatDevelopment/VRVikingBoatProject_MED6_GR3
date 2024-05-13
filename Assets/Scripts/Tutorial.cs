@@ -26,7 +26,7 @@ public class Tutorial : MonoBehaviour
     public Light tutorialLight;
 
     [Header("Tick to start with the tutorial enabled!")]
-    public bool startExperienceWithTheTutorial, useGesturesForConfirmation;
+    public bool startExperienceWithTheTutorial;
     //public CanvasGroup blackImageCG;
     public TextMeshProUGUI instructionText;
 
@@ -52,19 +52,19 @@ public class Tutorial : MonoBehaviour
         boatRouteNavMesh.StopTheBoat();
         tilter.enabled = false;
 
-        if (useGesturesForConfirmation)
+        if (gestureVersionManager.GestureVersion)
         {
 
             SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
         }
-        else if (!useGesturesForConfirmation)
+        else if (!gestureVersionManager.GestureVersion)
         {
             SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Kig på den orange terning for at starte.");
             gazeCube2.SetActive(false);
             gaze2Slider.transform.parent.gameObject.SetActive(false);
         }
 
-        if (useGesturesForConfirmation)
+        if (gestureVersionManager.GestureVersion)
             userCanGiveThumbsUp = true;
         HideGreenCube();
         //Check for pointing on a object here
@@ -78,7 +78,7 @@ public class Tutorial : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) /*&& userCanGiveThumbsUp*/)
         {
-            if (useGesturesForConfirmation)
+            if (gestureVersionManager.GestureVersion)
             {
                 userCanGiveThumbsUp = true;
                 Step_CheckForPointing();
@@ -91,12 +91,12 @@ public class Tutorial : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.O) /*&& userCanPointAtCube*/)
         {
-            if (useGesturesForConfirmation)
+            if (gestureVersionManager.GestureVersion)
             {
                 userCanPointAtCube = true;
                 SetPointedAtGreenCubeTrue();
             }
-            else if (!useGesturesForConfirmation)
+            else if (!gestureVersionManager.GestureVersion)
             {
                 Step_CheckForLookAtGaze2();
             }
@@ -153,9 +153,9 @@ public class Tutorial : MonoBehaviour
             SetInstructionsText("Kalibrering færdig!");
             yield return new WaitForSeconds(2);
 
-            if (useGesturesForConfirmation)
+            if (gestureVersionManager.GestureVersion)
                 Step_CheckForPointing();
-            else if (!useGesturesForConfirmation)
+            else if (!gestureVersionManager.GestureVersion)
             {
                 Step_CheckForLookAtGaze2();
 
@@ -233,9 +233,9 @@ public class Tutorial : MonoBehaviour
         if (startExperienceWithTheTutorial) ShowTutorial();
         else if (!startExperienceWithTheTutorial) HideTutorial();
 
-        if (startExperienceWithTheTutorial && useGesturesForConfirmation)
+        if (startExperienceWithTheTutorial && gestureVersionManager.GestureVersion)
             ShowGestureObjects();
-        else if (startExperienceWithTheTutorial && !useGesturesForConfirmation)
+        else if (startExperienceWithTheTutorial && !gestureVersionManager.GestureVersion)
             ShowGazeObjects();
     }
 

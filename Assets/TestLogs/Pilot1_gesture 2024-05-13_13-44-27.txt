@@ -1,0 +1,5 @@
+Total Time: 01:57 Tutorial Time: 51.91906 Total Time minus tutorial: 01:05, User Prompts: 1, Erik Responses: 1, Erik Instigations: 2, Erik Gaze Time: 0, Erik Percent Gaze Time: 0, API Call Time Averages: Combined 4.3133878, SST: 0.578288433333333, ChatGPT: 1.9685988, TTS: 1.9685988
+[00:27] User: Det er det på. Og.
+[00:29] Erik: [API: 4.1803588] [5] HAPPY Hvad har du på hjerte?
+[01:10] Erik: [API: 3.9234762] [5] HAPPY Hvad har du på hjerte?
+[01:36] Erik: [API: 4.8363284] [5] HAPPY Hvad har du på hjerte?

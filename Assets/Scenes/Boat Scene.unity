@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -46017,6 +46017,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443280500581222241, guid: 359060b16ef2d964ebdad6e9215fba00,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4443280500581222241, guid: 359060b16ef2d964ebdad6e9215fba00,
         type: 3}
@@ -94133,7 +94138,6 @@ MonoBehaviour:
   gazeCube2: {fileID: 1773719699}
   tutorialLight: {fileID: 1773719702}
   startExperienceWithTheTutorial: 1
-  useGesturesForConfirmation: 1
   instructionText: {fileID: 533192050}
   lookingAtGazeCube1: 0
   lookingAtGazeCube2: 0

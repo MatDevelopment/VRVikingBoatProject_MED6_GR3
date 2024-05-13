@@ -68,7 +68,7 @@ public class MicInputUI : MonoBehaviour // Responsible for displaying and updati
     public void SetTextAndMakeItEmptyAfterAWhile(string message)
     {
         textMeshPro.text = message;
-        Invoke(nameof(SetTextAndMakeItEmptyAfterAWhile), 2);
+        Invoke(nameof(setTextEmpty), 2.5f);
     }
 
     private void setTextEmpty()
