@@ -11,10 +11,10 @@ public class UIExample : MonoBehaviour
     [SerializeField] private InputField input;
     [SerializeField] private TTSManager ttsManager;
     
-    public void OnTalkButton()
+    /*public void OnTalkButton()
     {
         if (ttsManager) ttsManager.SynthesizeAndPlay(input.text, (TTSModel) modelDropdown.value, (TTSVoice) voiceDropdown.value, speedSlider.value);
-    }
+    }*/
 
     public void UpdateSpeedLabel(Single value)
     {

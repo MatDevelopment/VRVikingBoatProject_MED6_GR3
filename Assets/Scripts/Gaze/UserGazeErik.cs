@@ -38,7 +38,7 @@ public class UserGazeErik : MonoBehaviour
     {
         yield return new WaitForSeconds(timeUntilObservation);
         
-        npcInteractorScript.InformAndInitiateNpcTalk("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik will question the Traveller about this and ask if the Traveller likes the scenery on the boat ride.");
+        chatTestScript.AddSystemInstructionToChatLog("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik will question the Traveller about this and include it in his next response in a joyful manner.");
         _newDataLogManager.TotalErikInstigations++;
     }
 

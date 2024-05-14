@@ -1,0 +1,64 @@
+Total Time: 15:32 Tutorial Time: 57.05375 Total Time minus tutorial: 14:35, User Prompts: 24, Erik Responses: 24, Erik Instigations: 18, Erik Gaze Time: 326.3677, Erik Percent Gaze Time: 37.26854, API Call Time Averages: Combined 5.75571563589744, SST: 0.872085548717949, ChatGPT: 3.28680104871795, TTS: 3.28680104871795
+[01:15] Erik: [API: 3.0893053] 
+[01:27] User: Hjælp! Hjælp!
+[01:31] Erik: [API: 5.834372] [HAPPY] [2] Hvad er galt? Kan jeg hjælpe dig med noget? POINTING FISHINGHUT
+[01:44] User: Jeg har vændt det forkert Der er ikke noget galt udover din arm
+[01:49] Erik: [API: 6.3197056] [HAPPY] [3] Åh, du fik mig til at tro, der var en nødsituation! Lad os nyde sejladsen og den gode brise istedet.
+[02:15] Erik: [API: 4.5829706] [HAPPY] [3] Åh, du fik mig til at tro, der var en nødsituation! Lad os nyde sejladsen og den gode brise istedet.
+[02:28] User: Jeg kan ikke lide at drikke fisk Ja, men jeg kan ikke lide at drikke fisk
+[02:32] Erik: [API: 5.7521165] [CONFUSED] [3] At drikke fisk? Nej, fisk er til at spise. Fiskeri handler også om tålmodighed og være ét med naturen. GRATITUDE
+[03:00] Erik: [API: 5.7988192] [CONFUSED] [3] At drikke fisk? Nej, fisk er til at spise. Fiskeri handler også om tålmodighed og være ét med naturen. GRATITUDE
+[03:15] User: Hej Ole! Ja, jeg har vinket til ham.
+[03:19] Erik: [API: 5.3516527] [SURPRISED] [4] Ah, du kender allerede Ole! Et godt valg, han er en venlig sjæl. Håber han vinker tilbage.
+[03:45] Erik: [API: 4.3488924] [SURPRISED] [4] Ah, du kender allerede Ole! Et godt valg, han er en venlig sjæl. Håber han vinker tilbage.
+[04:03] User: Hvor meget fisker man?
+[04:08] Erik: [API: 6.1009073] Det kommer an på årstiden og vejret. Om sommeren er det mere, da fiskene er mange, og vejret er mildt. Vi lever af det, vi fanger – nogle dage er bedre end andre. POINTING RUNESTONE
+[04:27] User: Tak fordi I så med.
+[04:32] Erik: [API: 6.3371522] Du må være fascineret af runestenen. Den fortæller historien om en stor mand fra vores fortid. Disse sten er vore forfædres visdom. POINTING RUNESTONE
+[05:00] Erik: [API: 4.1373755] Du må være fascineret af runestenen. Den fortæller historien om en stor mand fra vores fortid. Disse sten er vore forfædres visdom. POINTING RUNESTONE
+[05:15] User: Det virker bøvlet.
+[05:20] Erik: [API: 5.9039378] [DISAPPROVE] Måske, men det er vores tradition. Det binder os sammen og fortæller om vores historie. Det er vigtigt at huske, hvor vi kommer fra.
+[05:48] Erik: [API: 5.287343] [DISAPPROVE] Måske, men det er vores tradition. Det binder os sammen og fortæller om vores historie. Det er vigtigt at huske, hvor vi kommer fra.
+[06:05] User: Nej, det er jeg ikke.
+[06:10] Erik: [API: 6.0074875] Jeg kan se, du er mere optaget af landskabet end landbrug. Nyder du udsigten? Udforskning er også en vigtig del af livet!
+[06:25] User: Okay.
+[06:29] Erik: [API: 6.0038179] Det er altid godt at være åben for nye oplevelser. Hvis du nogensinde vil lære at fiske, så siger du bare til!
+[06:42] User: Det er meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget meget
+[06:47] Erik: [API: 7.9175711] [CONFUSED] [5] Det lyder som du har meget at sige om vores landsby! Er der noget specielt, du har på hjerte? POINTING VILLAGE
+[07:01] User: Hej hej.
+[07:07] Erik: [API: 7.1834741] Hej igen! Du synes at nyde at pege på alting. Det er godt at se din interesse i vores område. POINTING VILLAGE
+[07:23] User: Hvad prægger du på? Hvad prægger du på?
+[07:29] Erik: [API: 7.3670158] Jeg pointer på vores landsby. Det er her jeg og min familie bor, og hvor vi arbejder, lever og fejrer livet. POINTING VILLAGE
+[07:54] Erik: [API: 3.7563314] Jeg pointer på vores landsby. Det er her jeg og min familie bor, og hvor vi arbejder, lever og fejrer livet. POINTING VILLAGE
+[08:08] User: Hej.
+[08:11] Erik: [API: 4.6344638] Hej, der! Ser du Lindholm Høje? Det er her vi ærer vores afdøde og mindes deres liv. POINTING BURIALMOUND
+[08:24] User: Hvorfor brænder det?
+[08:29] Erik: [API: 6.2688908] Det er en gammel skik. Vi brænder de afdøde for at sende dem videre på deres rejse. Vi tror, det fører dem til næste verden.
+[08:40] User: Det er også en af de bedste værdener.
+[08:44] Erik: [API: 5.0354546] Ja, det er en vigtig del af vores tro og værdier. Vi håber alle på en god færd, når vores tid her er forbi.
+[09:12] Erik: [API: 6.3421927] Ja, det er en vigtig del af vores tro og værdier. Vi håber alle på en god færd, når vores tid her er forbi.
+[09:26] User: Jeg har ikke noget i livet efter døden Der er ikke noget
+[09:32] Erik: [API: 7.5636985] Det er forskelligt for hver person. Vi vælger hver især hvad vi tror på. Det vigtigste er at leve et godt liv nu. POINTING MARKETENTRANCE
+[09:59] Erik: [API: 5.4879037] Det er forskelligt for hver person. Vi vælger hver især hvad vi tror på. Det vigtigste er at leve et godt liv nu. POINTING MARKETENTRANCE
+[10:11] User: Det er da meget fedt.
+[10:16] Erik: [API: 6.2386449] Jeg er glad for at høre, du kan lide det. Markedet er hjertet i vores samfund, og der er altid noget nyt at se eller prøve.
+[10:45] Erik: [API: 5.6228767] Jeg er glad for at høre, du kan lide det. Markedet er hjertet i vores samfund, og der er altid noget nyt at se eller prøve.
+[10:56] User: Nej.
+[11:02] Erik: [API: 6.8168632] Det kunne være en god oplevelse. Du finder mange forskellige varer og håndværk her. Måske den lokale smed kan fange din interesse. POINTING BLACKSMITH
+[11:18] User: Og så kan vi gå hen.
+[11:23] Erik: [API: 6.318105] Ja, lad os gå derhen! Der er altid noget at se hos smeden, og lyden af hamrens slag er som musik her i landsbyen.
+[11:51] Erik: [API: 6.0651418] Ja, lad os gå derhen! Der er altid noget at se hos smeden, og lyden af hamrens slag er som musik her i landsbyen.
+[12:07] User: Nej, det hele er meget fedt, er det ikke?
+[12:12] Erik: [API: 5.4128908] Absolut! Det er imponerende at se, hvordan tingene bliver lavet med hænderne – fra smedes jern til skibsbyggeres både. POINTING BOATBUILDER
+[12:41] Erik: [API: 7.1416701] Absolut! Det er imponerende at se, hvordan tingene bliver lavet med hænderne – fra smedes jern til skibsbyggeres både. POINTING BOATBUILDER
+[12:54] User: Ja. Ja.
+[13:01] Erik: [API: 8.8188127] Det er godt at høre! Så forstår du også havets betydning for os. Det binder os sammen og giver os føde. POINTING BOATBUILDER
+[13:27] Erik: [API: 4.831251] Det er godt at høre! Så forstår du også havets betydning for os. Det binder os sammen og giver os føde. POINTING BOATBUILDER
+[13:41] User: Ja. Ja.
+[13:45] Erik: [API: 5.7228047] Det er glædeligt at høre. Lokalt håndværk viser færdigheder og traditioner, som er overleveret gennem generationer. POINTING TRADERS
+[14:12] Erik: [API: 4.0368106] Det er glædeligt at høre. Lokalt håndværk viser færdigheder og traditioner, som er overleveret gennem generationer. POINTING TRADERS
+[14:23] User: Nå, ikke endnu.
+[14:28] Erik: [API: 6.2582127] Der er tid endnu. Ah, ser du hytten der? Det er her jeg bor og forbereder mine fangster. Snart er vores rejse ved vejs ende. POINTING ERIKSHUT
+[14:45] User: Det er nok en lille hytte
+[14:49] Erik: [API: 5.5067874] Ja, den er beskeden, men den er hjem for mig og min familie. Det enkle liv ved vandet er alt, hvad vi behøver. POINTING ERIKSHUT
+[15:14] Erik: [API: 3.2691862] Ja, den er beskeden, men den er hjem for mig og min familie. Det enkle liv ved vandet er alt, hvad vi behøver. POINTING ERIKSHUT

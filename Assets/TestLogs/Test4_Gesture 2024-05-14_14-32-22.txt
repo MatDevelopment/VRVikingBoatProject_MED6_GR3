@@ -1,0 +1,55 @@
+Total Time: 15:06 Tutorial Time: 36.68822 Total Time minus tutorial: 14:29, User Prompts: 24, Erik Responses: 24, Erik Instigations: 5, Erik Gaze Time: 309.7585, Erik Percent Gaze Time: 35.62756, API Call Time Averages: Combined 9.95050568518518, SST: 1.37838866666667, ChatGPT: 5.94059582222222, TTS: 5.94059582222222
+[00:44] User: Hvad gør du?
+[00:49] Erik: [API: 6.6792793] [5] HAPPY POINTING FISHINGHUT Jeg passer fiskernet og nyder dagen. Se mit fiskerhjem derovre, hvor jeg bor med min familie. Der er ikke noget bedre end en varm sommerdag på vandet, vel?
+[01:10] User: Hvad skal jeg lave?
+[01:20] Erik: [API: 11.0614086] Hvis du hjælper med at holde udkig efter skoler af fisk, kunne vi måske få en god fangst. Ellers kan du bare nyde sejladsen og den friske brise. Hvad end du vælger, er det godt at have selskab på åbent vand.
+[01:37] User: Jamen det gør jeg så
+[01:42] Erik: [API: 6.2996958] [3] HAPPY Det er godt at høre! Hold øjnene skarpe og kig efter de sølvglinsende sværme. Det kan være et tegn på fisk. Og så kan du fortælle mig, hvis du ser noget, APPROVE mens vi nyder turen.
+[02:12] Erik instigates talk: Fortæl mig, har du sejlet meget før? Der er noget særligt ved at mærke vandet bære en, ikke sandt?
+[02:13] Erik: [API: 5.2959094] [3] HAPPY Det er godt at høre! Hold øjnene skarpe og kig efter de sølvglinsende sværme. Det kan være et tegn på fisk. Og så kan du fortælle mig, hvis du ser noget, APPROVE mens vi nyder turen.
+[02:28] User: Ja, det er da rigtigt nok. Jeg har ikke sagt det så meget.
+[02:36] Erik: [API: 9.2270758] Hver gang er som en ny oplevelse. Sådan føler min gode ven Ole derovre det også, når han fisker fra molen. Det er aldrig for sent at nyde havets ro og de mange eventyr, det bringer med sig.
+[03:05] User: Spooky. Spooky.
+[03:14] Erik: [API: 10.3958574] [4] HAPPY Ha-ha, ja, naturen har mange ansigter. Men her på Limfjorden er det meste fredfyldt, så der er sjældent noget at frygte. Er der noget særligt, du har lagt mærke til på vores rejse? Din nysgerrighed tyder på, at der måske er noget, der har fanget dit øje.
+[03:36] User: Ja, du sagde du ville have fisk, jeg har ikke fået det endnu.
+[03:44] Erik: [API: 9.2182908] [5] HAPPY Det kommer, det kommer. Fiskene kan være lunefulde, men tålmodighed er en fiskers bedste ven. Lad os nyde dagen og vente på, at de viser sig. Imens kan vi sludre og lade tiden gå. Hvad kan du godt lide at lave, når du ikke er ude at sejle?
+[04:06] User: Jeg kan godt lide at filtrere.
+[04:15] Erik: [API: 10.4228996] Det lyder som et fint håndværk. At skabe noget med hænderne kan være så tilfredsstillende. POINTING RUNESTONE Som den historie, der er udmejslet på den runesten der. Det er en anden måde at efterlade et mærke på verden. Hvad filtrerer du normalt?
+[04:41] User: Hvad snakker du om?
+[04:49] Erik: [API: 9.7018825] Ah, undskyld hvis jeg forvirrede dig. Jeg talte om de tegn på runestenen - hvordan vores folk efterlader historier i sten. Det minder mig om dit håndværk med at filtrere, hvordan du også skaber og efterlader noget bestandigt. Men fortæl, hvad interesserer dig ved at filtrere?
+[05:14] User: Jeg tror du hørte forkert, jeg mener at fælletræer...
+[05:22] Erik: [API: 9.5422432] Ahh, at fælde træer! Det er ganske vist et vigtigt arbejde, især i vores landsby, hvor træ er nødvendigt for både byggeri og varme. Er der en særlig grund til, at du nyder det arbejde? POINTING FARMSTEAD Som min fætter Thorwald derovre, der passer gården og ærterne, arbejde med naturen kan være meget givende.
+[05:52] User: Ja, men det ved jeg ikke. Det gjorde min far, så det kan jeg også godt lide at gøre.
+[06:05] Erik: [API: 14.9518016] Det giver god mening. Vi følger ofte i fodsporene på dem, vi ser op til. Det er som en slægtens bånd, der binder os til fortiden og vejleder os i nutiden. Måske vil din datter en dag finde glæde i det samme arbejde, ligesom du har gjort. Det er vigtigt at værdsætte de traditioner og evner vi giver videre.
+[06:44] User: Øhm, undskyld afbrud, bare fortæl videre
+[06:55] Erik: [API: 13.3304413] Ingen grund til undskyldning, det er godt at tale om disse ting. POINTING VILLAGE Og se, vi passerer Lindholm. Alle i byen har deres roller og traditioner, præcis som din familie har lært dig at fælde træer. Hver handling vi laver, binder os sammen som et fællesskab. Det er det, der holder os stærke, uanset vind og vejr.
+[07:31] Erik instigates talk: Nå, men hvordan går det med din familie? Fortsætter I traditioner, som din far har lært dig?
+[07:33] Erik: [API: 3.5257434] Ingen grund til undskyldning, det er godt at tale om disse ting. POINTING VILLAGE Og se, vi passerer Lindholm. Alle i byen har deres roller og traditioner, præcis som din familie har lært dig at fælde træer. Hver handling vi laver, binder os sammen som et fællesskab. Det er det, der holder os stærke, uanset vind og vejr.
+[07:51] User: 🤣 Mmmh Jeg tror det går da meget godt 🤣
+[08:04] Erik: [API: 14.7311307] Det er godt at høre. At grine sammen er en vigtig del af livet, lige som de traditioner, vi holder i live. POINTING BURIALMOUND Ligesom vores forfædre, der ærer de afdøde her ved Lindholm Høje, bringer vores traditioner os tættere sammen og binder os til fortiden. Skal vi ikke hædre dem med et øjebliks stilhed, som vi sejler forbi?
+[08:30] User: Kærne.
+[08:35] Erik: [API: 6.3025867] Undskyld, jeg forstår ikke helt. Mente du "kærne" som i at lave smør, eller er der noget andet, du tænker på?
+[08:48] User: 🤣 🤣 🤣 🤣 🤣 🤣 🤣 🤣 🤣 🤣 🤣 🤣 🤣 🤣
+[08:53] Erik: [API: 6.8478138] Det er altid godt at høre latter, det lyser op i enhvers dag. Fortæl, hvad finder du så morsomt? Skulle vi dele en vittighed og lade latteren flyde frit her på fjorden?
+[09:10] User: Ja, hvis du har en, så siger du bare.
+[09:20] Erik: [API: 11.6270709] Hvad sagde havet til stranden? Ingenting, det vinkede bare! APPROVE Men lad os nu lade gåderne ligge lidt og fokusere på markedet, som vi nærmer os. POINTING MARKETENTRANCE Der kan man finde varer fra fjerne lande og høre gode historier fra sømændene. Er der noget særligt, du leder efter på markedet?
+[09:44] User: Jeg er altså ikke sikker på, at denne video virker på dansk.
+[10:02] Erik: [API: 18.8301823] Ah, måske er du forvirret. Vi taler bare sammen her på båden, ingen videoer her. Lad os holde vores opmærksomhed på vandet og de historier, der venter. Og markedet der, ser du noget, der fanger din interesse?
+[10:26] User: Det er rigtig vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt vildt
+[10:37] Erik: [API: 13.3413188] Det lyder som om du er meget begejstret! Verden kan være et overvældende sted med så mange ting at se og opleve. Se bare smeden der – POINTING BLACKSMITH – hans arbejde er ganske vigtigt for de vikinger, der skal ud på rejse. Håndværket og færdighederne bag det vi skaber, kan virkelig være utrolige. Hvad tænker du på?
+[11:13] Erik instigates talk: Du ser ud til at have mange tanker, er der noget bestemt du søger, eller nyder du bare synet af vores landsbyliv?
+[11:15] Erik: [API: 4.005585] Det lyder som om du er meget begejstret! Verden kan være et overvældende sted med så mange ting at se og opleve. Se bare smeden der – POINTING BLACKSMITH – hans arbejde er ganske vigtigt for de vikinger, der skal ud på rejse. Håndværket og færdighederne bag det vi skaber, kan virkelig være utrolige. Hvad tænker du på?
+[11:27] User: Jeg nyder det bare.
+[11:34] Erik: [API: 8.2005575] Det er godt at høre. Der er noget særligt ved at lade øjeblikkene flyde uden et bestemt mål. Livet er til for at nydes, lige som denne sejltur vi deler. Lad os fortsætte og se, hvad dagen bringer.
+[11:52] User: Hvad sker der dernede?
+[12:02] Erik: [API: 11.416252] POINTING BOATBUILDER Ah, du har øje for skibsværftet. Der nede arbejder skibsbyggerne hårdt på at skabe de skibe, der vil bære vikingerne over havene. Det er imponerende håndværk, der kræver stor dygtighed og tålmodighed. Hver plank og hvert søm er en del af en større rejse.
+[12:26] User: Hvem er det længere ned?
+[12:32] Erik: [API: 7.9124747] Hvis du peger mod værftet, så er det skibsbyggerne, du ser. Mænd og kvinder som arbejder sammen om at bygge de bedste skibe til lange rejser over saltvandet. De er godt respekteret for deres viden og styrke. Har du tænkt på at lære skibsbyggeri?
+[12:50] User: Nej, ikke hver aften. Det er ved siden af, det er lige nået markedet.
+[13:01] Erik: [API: 11.7541451] POINTING TRADERS Jeg forstår. Når vi er ved siden af markedet, er der altid et mylder af handel og travlhed. Hver købmand har sit eget at tilbyde, som fiskemanden med den friske fangst, bonden med afgrøder og væveren med stof og sejl. Det er en stor del af livet her, at bytte og handle med det, vi har. Er der noget, der frister dig?
+[13:31] User: Har de McDonald's?
+[13:39] Erik: [API: 9.4070996] Det navn kender jeg ikke. Vi har ingen McDonald's her. Men vi har gode handelsmænd, der sælger alle slags fødevarer, røget fisk og friskt brød. Hvis du er sulten, skal vi nok finde noget lækkert til dig. Hvad med en god stykke saltet fisk eller nybagt brød?
+[14:01] User: Er det din livrest?
+[14:10] Erik: [API: 10.2014031] Ah, du spørger om min yndlingsmad! Jeg er meget glad for friskfangede fisk, tilberedt enkelt på bålet med lidt urter min kone har samlet. En god, enkel måltid efter en lang dag på havet. POINTING ERIKSHUT Og her er vi ved mit hjem, hvor sådan et måltid ofte venter. Hvad med dig, har du en livret?
+[14:33] User: Nej.
+[14:45] Erik: [API: 14.4335046] Nå, det kan være svært at vælge med så mange gode smage i verden. Uanset om du har en livret eller ej, er det vigtigt, at måltidet nydes. Og nu er vi næsten ved enden af vores sejltur. Jeg håber, du har nydt turen og selskabet. Er der noget andet, du gerne vil vide om livet her?

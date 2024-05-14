@@ -1,6 +1,7 @@
 using OpenAI;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives;
 using Debug = UnityEngine.Debug;
@@ -27,7 +28,7 @@ public class TTSManager : MonoBehaviour
         if (!apiCallTimeManager) this.apiCallTimeManager = FindObjectOfType<APICallTimeManager>();
     }
 
-    public async void SynthesizeAndPlay(string text)
+    public async Task SynthesizeAndPlay(string text)
     {
         Debug.Log("Trying to synthesize :" + text);
 
@@ -55,11 +56,11 @@ public class TTSManager : MonoBehaviour
         }
     }
 
-    public async void SynthesizeAndPlay(string text, TTSModel model, TTSVoice voice, float speed)
+    /*public async void SynthesizeAndPlay(string text, TTSModel model, TTSVoice voice, float speed)
     {
         this.model = model;
         this.voice = voice;
         this.speed = speed;
         SynthesizeAndPlay(text);
-    }
+    }*/
 }

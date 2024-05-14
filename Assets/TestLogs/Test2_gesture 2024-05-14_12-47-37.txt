@@ -1,0 +1,54 @@
+Total Time: 15:36 Tutorial Time: 66.28415 Total Time minus tutorial: 14:30, User Prompts: 25, Erik Responses: 25, Erik Instigations: 7, Erik Gaze Time: 271.9559, Erik Percent Gaze Time: 31.25918, API Call Time Averages: Combined 8.84012271071429, SST: 1.30342626785714, ChatGPT: 4.85072908571429, TTS: 4.85072908571429
+[01:25] Erik: [API: 3.8182583] 
+[01:36] User: Det er meget stille og roligt
+[01:41] Erik: [API: 7.3656722] [5] HAPPY Ja, fjorden bringer fred til sjælen. Nyd det, mens vi glider forbi Lindholm. POINTING FISHINGHUT Kan du se det lille fiskerhus derovre? Det er der, jeg tilbringer mine dage med net og snøre.
+[02:04] User: Det ser rigtig fint ud Hvem er det der står der?
+[02:07] Erik: [API: 5.0718758] APPROVE Ah, det er Ole, min gode ven. Han holder også af at fiske. Han kender vandene her som sin egen lomme.
+[02:34] Erik: [API: 5.2642161] APPROVE Ah, det er Ole, min gode ven. Han holder også af at fiske. Han kender vandene her som sin egen lomme.
+[03:02] User: Jeg fisker ikke så meget derovre i min fængsel
+[03:08] Erik: [API: 10.0232852] Hver har sin måde at leve på. Fiskeri er en stor del af livet her, men det vigtigste er at finde glæde i de ting, man gør. Hvad bringer så glæde i dit liv?
+[03:38] Erik: [API: 4.7693702] Hver har sin måde at leve på. Fiskeri er en stor del af livet her, men det vigtigste er at finde glæde i de ting, man gør. Hvad bringer så glæde i dit liv?
+[03:56] User: Og et par søskende Ja, det har jeg Jeg har et par forældre
+[04:05] Erik: [API: 9.6448195] Det lyder som en god familie. Det er vigtigt at have folk omkring sig, som man kan stole på og dele livets op- og nedture med. Hvordan er det at have søskende? Jeg er enebarn selv.
+[04:25] User: Det er meget hyggeligt
+[04:31] Erik: [API: 8.0007897] Det er godt at høre. At have familien tæt på giver en særlig varme i hjertet. Ser du den runesten der? POINTING RUNESTONE Den minder os om vores forfædre og de bånd, der binder os sammen gennem generationer.
+[04:54] User: Jeg er faktisk også lidt vikinger Ja
+[05:00] Erik: [API: 7.1143182] Ja? Det er altid godt at møde nogen med samme blod. Vores forfædre var dygtige søfarende og krigere, men også bønder og handelsfolk. Hvad er din historie?
+[05:18] User: og min familie laver rigtig meget mad
+[05:22] Erik: [API: 6.0720604] Det lyder dejligt! Et godt måltid bringer folk sammen. Hos os er det oftest fisk, men Astrid kan lave magiske ting med de simpleste urter. Hvad er din yndlingsret?
+[05:39] User: Jeg kan rigtig godt lide bålstikkylling Hmm Jeg kan rigtig godt lide det
+[05:47] Erik: [API: 9.4282108] Bålstegt kylling, det lyder lækkert! Der er noget særligt ved mad lavet over åben ild, ikke sandt? Det minder mig om festmåltider efter en god fangst. Ser du bondegården der? POINTING FARMSTEAD Min kusine Thorwald har problemer med sandstormen, der dækker hans marker. Naturen kan være både gavmild og nådesløs.
+[06:12] User: i nærheden, hvor der er mange folk du kender herinde.
+[06:22] Erik: [API: 11.3115076] Det er sandt, jeg kender mange her - det er fordelen ved et lille samfund. Vi støtter hinanden, hvad enten det er i dårlige tider eller når der er grund til at fejre. Det er godt at have et netværk af kendte ansigter. Hvordan er det i dit samfund? Er det også tæt forbundne folk?
+[06:43] User: Øh, ja. Man kender ham.
+[06:51] Erik: [API: 8.7523281] Godt at høre, at du også værdsætter fællesskabet. Og se, vi passerer lige Lindholm. POINTING VILLAGE Her er nogle af de gårde, hvor mine venner og slægtninge bor. Vi holder alle sammen, ligesom det sikkert også er hjemme hos dig.
+[07:10] User: Hvad er det tårn, der er?
+[07:19] Erik: [API: 10.4921302] Det du ser er ikke et tårn, men Lindholm Høje. Det er et helligt sted, hvor vi ærer de døde. De brændes på skibssætninger af sten, som symbol på deres rejse til det hinsides. Det er et sted fyldt med historier og ærefrygt.
+[07:46] User: Kommer vi længere?
+[07:54] Erik: [API: 9.039099] Ja, vi skal endnu længere. Markedet derude er et travlt sted, især for søfarende der kommer forbi. Her kan man handle med varer fra fjern og nær. Er du vant til sådan et travl marked, eller foretrækker du stilheden her på vandet?
+[08:15] User: på vandet.
+[08:25] Erik: [API: 11.1597755] Vandets ro er noget helt særligt, jeg forstår godt hvis du foretrækker det. Markedet der kan være ganske larmende. POINTING BURIALMOUND Men husk at værdsætte stilheden, mens vi sejler forbi Lindholm Høje, vores forfædres hvilested. Det er godt at reflektere over livet, når man ser sådan et sted.
+[08:58] User: Hvor er vi? Haha, brænder de noget deroppe?
+[09:09] Erik: [API: 11.9180564] Vi er lige ved Lindholm Høje. Ja, det er vores måde at ære de døde på. Vi bruger skibssætninger af sten til at forestille et skib, som symboliserer rejsen til efterlivet. Det er en gammel tradition for at sikre, at de døde har det godt på deres sidste færd.
+[09:38] User: Kan du fortælle mig noget mere om jeres ritual?
+[09:47] Erik: [API: 10.390634] Vores ritual er en måde at vise respekt for dem, der har forladt denne verden. Ved at brænde de afdøde på en skibssætning sender vi dem på en rejse til det hinsides, hvor de vil blive modtaget af krigerne, der allerede hviler der. Det er en vigtig del af vores liv at ære de, der har gået forud.
+[10:19] User: Hvad kan du fortælle mig om de skjolde der hænger op på husene?
+[10:26] Erik: [API: 8.5947163] Skjoldene symboliserer husets styrke og de krigeres mod, der bor der. Det er en tradition og et tegn på beskyttelse, både åndelig og fysisk. Hvert skjold har sit eget design, som ofte fortæller en historie om slægtens bedrifter eller står for familiens værdier.
+[10:50] User: Og hvem er det der står derovre?
+[10:56] Erik: [API: 6.7401182] Det afhænger af, hvor du peger hen. Der er mange, der kommer og går på markedet, og alle har deres egen historie. Kan du beskrive dem nærmere? Måske kender jeg dem.
+[11:15] User: Jeg vil gerne høre om ham, der derovre hamrer på noget metal
+[11:24] Erik: [API: 10.1153341] Ah, det må være smeden du taler om. POINTING BLACKSMITH Han er kendt for sit håndværk og skaber det stærkeste rustning og de skarpeste våben vi har. Hans arbejde er altafgørende, især for dem der forbereder sig på en vikingerejse. Hans evner sikrer, at vikingerne er godt udrustet til deres togter.
+[11:47] User: Hvor sejler I så hen på tøj?
+[11:57] Erik: [API: 11.4952996] Vikinger tager på togter til mange forskellige steder. De sejler mod vest til de britiske øer, sydover til Frankerriget eller endda længere væk til Miklagård. Nogle søger handel, andre eventyr eller erobring. Hver rejse er unik, og hvad de bringer hjem, varierer lige så meget som de lande, de besøger.
+[12:23] User: Kan du høre musikken?
+[12:30] Erik: [API: 8.2535288] Ja, musikken bærer over vandet. Det er lyden af liv og arbejde, og ofte fejrer vi enden på en hård dags arbejde med sang og dans. Det holder humøret højt og fællesskabet stærkt. Kan du lide musik?
+[12:48] User: Og så er den færdig med at tænde. Jeg synes, den er meget færdig.
+[12:57] Erik: [API: 10.0650859] Det kan være, at du hører lyden fra smedjen eller skibsværftet, hvor de arbejder på at fuldende skibene. Musikkens rytme er i alt det, vores folk laver; den hjælper med at holde takten, når der arbejdes hårdt. Musikken er færdig, når festen er forbi, og arbejdet er gjort.
+[13:18] User: Kan man køre nogle sjove ting på markedet?
+[13:26] Erik: [API: 8.8603046] Markedet er fuld af liv og sjove ting. Man kan finde alt fra frisk fisk til vævede stoffer. POINTING TRADERS Se de handlende der? De tilbyder varer som kan glæde både voksne og børn – spil, smykker, og undertiden eksotiske ting bragt hjem fra fjerne lande. Er der noget specielt, du leder efter?
+[13:49] User: Ør...
+[13:58] Erik: [API: 9.6622407] Det lyder som om du måske er i tvivl. Tag dig tid til at gå rundt og se. Markedet kan være overvældende, men det er også det perfekte sted at finde noget unikt – måske noget, du ikke engang vidste, du ledte efter. Husk, det vigtigste er oplevelsen og de historier, du kan bringe hjem.
+[14:24] User: Nu er vi på vej ud igen.
+[14:36] Erik: [API: 13.1519242] Ja, vi begynder at komme væk fra markedets travlhed. Du ser ud til at have en stor nysgerrighed – det er en god egenskab. Der er altid mere at udforske og nye steder at se, både her og på dine fremtidige rejser. Hvad søger du mest efter på dine ture? Eventyr? Handel? Fortællinger?
+[15:02] User: Jeg synes det er nogle gode fortællinger, der kan komme ud af turen.
+[15:12] Erik: [API: 10.9484763] Fortællinger er en stærk del af vores kultur. De binder os sammen og lærer os om verden og os selv. Og se, vi nærmer os min hytte. POINTING ERIKSHUT Det er her ved denne simple fiskerhytte, at jeg finder ro og inspiration til mine egne fortællinger. Hvad er nogle af de bedste historier, du har taget med hjem?

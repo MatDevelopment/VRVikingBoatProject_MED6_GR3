@@ -241,7 +241,7 @@ namespace OpenAI
                     userRecordingString = "";
 
                     //OpenAI TTS (Danish):
-                    ttsManagerScript.SynthesizeAndPlay(chatGptResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
+                    await ttsManagerScript.SynthesizeAndPlay(chatGptResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
 
                     if (_gestureVersionManager.GestureVersion)
                     {

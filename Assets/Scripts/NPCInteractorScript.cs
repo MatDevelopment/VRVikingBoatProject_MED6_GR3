@@ -198,7 +198,8 @@ public class NPCInteractorScript : MonoBehaviour
         chatTestScript.AddSystemInstructionToChatLog(systemPrompt);
         string chatGptResponse = await chatTestScript.SendRequestToChatGpt(chatTestScript.messages);
         chatTestScript.AddNpcResponseToChatLog(chatGptResponse);
-        //Debug.Log(chatGptResponse);
+        Debug.Log("Erik instigated talk: " + chatGptResponse);
+        _newDataLogManager.SendStringToDataLogger("Erik instigates talk: " + chatGptResponse);
         
         foreach (string primaryEmotion in npcPrimaryEmotions)
         {
@@ -232,7 +233,7 @@ public class NPCInteractorScript : MonoBehaviour
                 int wordInStringCount = AnimationDelayCalculator.CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
 
                 float estimatedTimeTillAction = AnimationDelayCalculator.EstimatedTimeTillAction(wordCount: wordInStringCount,
-                    wordWeight: 0.28f, punctuationCount: punctuationsCount, punctuationWeight: 1.5f);
+                    wordWeight: 0.23f, punctuationCount: punctuationsCount, punctuationWeight: 1.1f);
 
                 Debug.Log("ActionString: " + responseTillActionString + " --" +
                           "Punctuations: " + punctuationsCount + " --" +
@@ -254,7 +255,7 @@ public class NPCInteractorScript : MonoBehaviour
         AnimateFacialExpressionResponse_Erik(npcEmotion, npcEmotionValue);
         
         //textToSpeechScript.MakeAudioRequest(chatGptResponse);     //DEPRECATED method for TTS solution with AWS Polly API. Now switched to OpenAI TTS API.
-        ttsManagerScript.SynthesizeAndPlay(chatGptResponse);       //NEW OpenAI TTS API solution.
+        await ttsManagerScript.SynthesizeAndPlay(chatGptResponse);       //NEW OpenAI TTS API solution.
        // whisperScript.ECAIsDoneTalking = true;
     }
 
