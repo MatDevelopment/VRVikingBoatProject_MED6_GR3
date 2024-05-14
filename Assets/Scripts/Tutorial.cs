@@ -13,6 +13,8 @@ public class Tutorial : MonoBehaviour
     [SerializeField] BoatTilt tilter;
     [SerializeField] FadeController fadeController;
     [SerializeField] MicrophoneCalibration microphoneCalibration;
+    [SerializeField] private NPCInteractorScript npcInteractorScript;
+
     private float fadeSpeed_Image = 0.05f, fadeStepStrengh = 0.01f;
     private bool instructionInProgress = false;
 
@@ -40,6 +42,7 @@ public class Tutorial : MonoBehaviour
 
     void Start()
     {
+        npcInteractorScript.erikSpeakable = false;
 
         fadeController = FindObjectOfType<FadeController>();
         boatRouteNavMesh = FindObjectOfType<BoatRouteNavMesh>();
@@ -356,6 +359,7 @@ public class Tutorial : MonoBehaviour
         dataLogManager.timeThatTutorialEnded = Time.time;
 
         gestureVersionManager.tutorialDone = true;
+        npcInteractorScript.erikSpeakable = true;
 
         //Destroy(tutorialRoom);
     }

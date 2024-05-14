@@ -28,7 +28,7 @@ public class MicInputDetection : MonoBehaviour
     public float threshold = 6f;
     private int startedSpeakingPosition;
     private int stoppedSpeakingPosition;
-    private float speechPauseCounter, speechPauseCounterThreshold = 1.5f;
+    private float speechPauseCounter, speechPauseCounterThreshold = 2f;
     private float[] speechWaveData;
 
     public bool isListening = false;
