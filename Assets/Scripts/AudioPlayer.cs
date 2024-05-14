@@ -41,7 +41,7 @@ public class AudioPlayer : MonoBehaviour
 
             audioSource.Play();
             apiStatus.isTalking = true;
-            apiStatus.StartCoroutine(apiStatus.SetIsTalkingFalseAfterTime(audioClip.length));
+            apiStatus.StartCoroutine(apiStatus.SetIsTalkingFalseAfterTime(audioClip.length - 2));
         }
         else
         {
@@ -52,7 +52,7 @@ public class AudioPlayer : MonoBehaviour
     }
     public IEnumerator InterruptNpcTalkingAfterDuration(float interruptDuration) //TODO: move this to another class
     {
-        micInputUI.SetTextAndMakeItEmptyAfterAWhile("Du afbrød Erik i at snakke!");
+        micInputUI.SetTextAndMakeItEmptyAfterAWhile("Du afbrï¿½d Erik i at snakke!");
         yield return new WaitForSeconds(interruptDuration);
 
         audioSource.Stop();

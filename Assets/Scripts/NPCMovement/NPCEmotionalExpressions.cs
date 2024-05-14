@@ -183,6 +183,7 @@ public class NPCEmotionalExpressions : MonoBehaviour
                 Contempt(blendValue);
                 break;
             default:
+                DefaultExpression();
                 break;
         }
     }
