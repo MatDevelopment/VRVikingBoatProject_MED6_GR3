@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.695
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13616303, g: 0.16491209, b: 0.21608786, a: 0.695}
+  m_IndirectSpecularColor: {r: 0.13616094, g: 0.16491234, b: 0.2161028, a: 0.695}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19975,7 +19975,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Sig s\xE6tningen: \"Jeg kan godt lide vikinger\""
+  m_text: 'Sig saetningen: "Jeg kan godt lide vikinger"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c2947b99ab146ab41892cac39c429007, type: 2}
   m_sharedMaterial: {fileID: -2430515245147374939, guid: c2947b99ab146ab41892cac39c429007,
@@ -26651,7 +26651,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 4
+          m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -26663,7 +26663,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 8
+          m_FloatArgument: 15
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -37929,7 +37929,6 @@ MonoBehaviour:
   progress: {fileID: 0}
   buttonHoldReference: {fileID: 1533704310230560322, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  npcResponse: 
   uneditedNPCResponse: 
   userRecordingString: 
   contextIsPerformed: 0
@@ -47941,6 +47940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gesture Detection
       objectReference: {fileID: 0}
+    - target: {fileID: 4616003846657173069, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4715875188409667440, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -48493,17 +48497,17 @@ PrefabInstance:
     - target: {fileID: 5140552128150864056, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5140552128150864056, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5140552128150864056, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -72
       objectReference: {fileID: 0}
     - target: {fileID: 5559839819711747851, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
@@ -49118,7 +49122,7 @@ PrefabInstance:
     - target: {fileID: 8139778912794425762, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8170563602617025104, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
@@ -49594,17 +49598,17 @@ PrefabInstance:
     - target: {fileID: 8624378088493047639, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8624378088493047639, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8624378088493047639, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -72
       objectReference: {fileID: 0}
     - target: {fileID: 8640794170766135858, guid: 12e7c6e2a052ca344a4b1b5616e1597c,
         type: 3}
@@ -55553,7 +55557,7 @@ MonoBehaviour:
   AllowLogging: 1
   whisper: {fileID: 861633864}
   apiCallTimeManager: {fileID: 1442082956}
-  newFileName: Test1_gesture
+  newFileName: Test2_gesture
   StringsToLog: []
   TotalUserPrompts: 0
   TotalErikResponses: 0
@@ -57334,7 +57338,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.57
+  m_Radius: 5
   m_Height: 7
   m_Direction: 1
   m_Center: {x: 0.003607351, y: 0.5946277, z: -4.3307313e-10}
@@ -61096,17 +61100,17 @@ PrefabInstance:
     - target: {fileID: 7094882771131234136, guid: 2880a0b687e33984e82788a28d3becaf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1152.53
+      value: 1152.01
       objectReference: {fileID: 0}
     - target: {fileID: 7094882771131234136, guid: 2880a0b687e33984e82788a28d3becaf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.21
+      value: 7.26
       objectReference: {fileID: 0}
     - target: {fileID: 7094882771131234136, guid: 2880a0b687e33984e82788a28d3becaf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 100.12
+      value: 97.86
       objectReference: {fileID: 0}
     - target: {fileID: 7094882771131234136, guid: 2880a0b687e33984e82788a28d3becaf,
         type: 3}
@@ -93295,13 +93299,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053820762}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.04797821, y: 0, z: 0, w: 0.9988484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 768899122}
-  m_LocalEulerAnglesHint: {x: -5.5, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!210 &2053820764
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -94132,6 +94136,7 @@ MonoBehaviour:
   tilter: {fileID: 342425776}
   fadeController: {fileID: 1859696670}
   microphoneCalibration: {fileID: 2068892557}
+  npcInteractorScript: {fileID: 0}
   tutorialRoom: {fileID: 1773719698}
   greenCube: {fileID: 1773719701}
   gazeCube1: {fileID: 1773719700}
@@ -116902,6 +116907,7 @@ MonoBehaviour:
   _micInputDetection: {fileID: 861633866}
   _gestureVersionManager: {fileID: 0}
   _newDataLogManager: {fileID: 0}
+  _erikIKController: {fileID: 0}
   nameOfThisNPC: Erik
   npcEmotion: 
   npcEmotionValue: 0.5

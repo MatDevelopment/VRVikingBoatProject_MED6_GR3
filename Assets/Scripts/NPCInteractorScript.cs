@@ -50,6 +50,7 @@ public class NPCInteractorScript : MonoBehaviour
     [SerializeField] private MicInputDetection _micInputDetection;
     [SerializeField] private GestureVersionManager _gestureVersionManager;
     [SerializeField] private NewDataLogManager _newDataLogManager;
+    [SerializeField] private ErikIKController _erikIKController;
     //[SerializeField] private LLMversionPlaying LLMversionPlayingScript;
 
     public string nameOfThisNPC;
@@ -90,6 +91,7 @@ public class NPCInteractorScript : MonoBehaviour
     {
         _gestureVersionManager = FindObjectOfType<GestureVersionManager>();
         _newDataLogManager = FindObjectOfType<NewDataLogManager>();
+        _erikIKController = FindObjectOfType<ErikIKController>();
         
         var message = new ChatMessage
         {
@@ -122,7 +124,8 @@ public class NPCInteractorScript : MonoBehaviour
             //taskInfoScript.GetPrompt() +
             //"Do not mention the task names to the Traveller.\n"
             //"If the Traveller asks for the NPC's help with their tasks that involves physical movement, then say to the Traveller that they have to do these tasks themselves because they promised to do them earlier on in the day."
-                "If the Traveller talks about videos or subscribing, then ignore this and subvert the conversation to another topic related to your boatride with the Traveller. \n"
+                "If the Traveller talks about videos or subscribing, then ignore this and subvert the conversation to another topic related to your boatride with the Traveller. \n" +
+                "If the Traveller says something along the lines of 'Thanks for watching', then ignore this and subvert the conversation to another topic related to your boatride with the Traveller. \n"
         };
         
         ChatLogWithNPC.Add(message);
@@ -134,9 +137,11 @@ public class NPCInteractorScript : MonoBehaviour
                 Role = "system",
                 Content =
                     "Do not say anything about the emotional state of the NPC or what the NPC is thinking, but simply take this information into account.\n" +
-                    "Start your response with the NPC's current primary emotional state in capitalized letters, in the same message without new line and seperated by white space. Just before the primary emotion, without a new line and seperated by whitespace with square brackets on either side, give a number from 1 to 10, where 1 is not emotional and 10 is very emotional, based on how emotional the NPC is. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT\n" +
+                    "Start your response with the NPC's current emotional state in capitalized letters, in the same message without new line and seperated by white space. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT \n" +
+                    "Just before the primary emotion, without a new line and seperated by whitespace with square brackets on either side, give a number from 1 to 10, where 1 is not emotional and 10 is very emotional, based on how emotional the NPC is.\n" +
+                    //"DO NOT place the NPC's current emotional state within square brackets. \n" +
                     "Only choose ONE emotion per response, and only choose an emotion if you deem it necessary.\n" +
-                    "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick ONE gestures to go with the NPC's response: DISAPPROVE, APPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
+                    "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick ONLY ONE gestures to go with the NPC's response: DISAPPROVE, APPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
                     "The gestures previously mentioned are the only gestures available to you, so please choose the most suitable gesture. All else physical movement besides these gestures are not possible.\n" +
                     "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n"+
                     "When POINTING the NPC can only choose between a given set of targets and only after the NPC have been given permission for the specific target. Write the chosen target whithout new line and after POINTING seperated by white space. The only available targets are: FISHINGHUT, RUNESTONE, FARMSTEAD, VILLAGE, BURIALMOUND, MARKETENTRANCE, BLACKSMITH, BOATBUILDER, TRADERS, ERIKSHUT.\n" +
@@ -193,21 +198,75 @@ public class NPCInteractorScript : MonoBehaviour
         chatTestScript.AddSystemInstructionToChatLog(systemPrompt);
         string chatGptResponse = await chatTestScript.SendRequestToChatGpt(chatTestScript.messages);
         chatTestScript.AddNpcResponseToChatLog(chatGptResponse);
-        Debug.Log(chatGptResponse);
+        //Debug.Log(chatGptResponse);
+        
+        foreach (string primaryEmotion in npcPrimaryEmotions)
+        {
+            CheckErikPrimaryEmotion(primaryEmotion, chatGptResponse);
+        }
+
+        // Checks and sets the emotion blendvalue
+        CheckEmotionBlendvalue(chatGptResponse);
+
+        // Checks for the chosen point target
+        foreach (string target in npcPointingTargets)
+        {
+            if (chatGptResponse.Contains(target))
+            {
+                _erikIKController.ChooseLookTarget(target);
+
+                int startIndexAction = chatGptResponse.IndexOf(target);
+                chatGptResponse = chatGptResponse.Remove(startIndexAction, target.Length);
+            }
+        }
+
+        foreach (string action in npcActionStrings)
+        {
+
+            if (chatGptResponse.Contains(action))
+            {
+                string responseTillActionString = AnimationDelayCalculator.CreateStringUntilKeyword(inputString: chatGptResponse, actionToCheck: action);
+
+                int punctuationsCount = AnimationDelayCalculator.CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in responseTillActionString
+
+                int wordInStringCount = AnimationDelayCalculator.CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
+
+                float estimatedTimeTillAction = AnimationDelayCalculator.EstimatedTimeTillAction(wordCount: wordInStringCount,
+                    wordWeight: 0.28f, punctuationCount: punctuationsCount, punctuationWeight: 1.5f);
+
+                Debug.Log("ActionString: " + responseTillActionString + " --" +
+                          "Punctuations: " + punctuationsCount + " --" +
+                          "Word count: " + wordInStringCount + " --" +
+                          "ETA of action: " + estimatedTimeTillAction);
+
+                int startIndexAction = chatGptResponse.IndexOf(action);     //Finds the starting index of the action keyword in the ChatGPT response
+
+                responseTillActionString = "";
+
+                //Man kan godt løbe ind i problemer med Remove her, og ved ikke helt hvorfor.
+                //Tror det har noget at gøre med at Length starter med at tælle til 1, men indeces starter fra 0.
+                chatGptResponse = chatGptResponse.Remove(startIndexAction, action.Length);      //Removes the action keyword from ChatGPT's response plus the following white space
+
+                Debug.Log("New response after removing action:   " + chatGptResponse);
+                npcAnimationStateController.AnimateErik(action, estimatedTimeTillAction);
+            }
+        }
+        AnimateFacialExpressionResponse_Erik(npcEmotion, npcEmotionValue);
+        
         //textToSpeechScript.MakeAudioRequest(chatGptResponse);     //DEPRECATED method for TTS solution with AWS Polly API. Now switched to OpenAI TTS API.
         ttsManagerScript.SynthesizeAndPlay(chatGptResponse);       //NEW OpenAI TTS API solution.
        // whisperScript.ECAIsDoneTalking = true;
     }
 
 
-    public void CheckEmotionBlendvalue()
+    public void CheckEmotionBlendvalue(string npcResponse)
     {
-        if (whisperScript.npcResponse.Contains("["))
+        if (npcResponse.Contains("["))
         {
-            int startIndex = whisperScript.npcResponse.IndexOf("[");
-            int endIndex = whisperScript.npcResponse.IndexOf("]");
-            string blendString = whisperScript.npcResponse.Substring(startIndex + 1, endIndex - startIndex - 1);
-            whisperScript.npcResponse = whisperScript.npcResponse.Remove(startIndex, endIndex + 1);
+            int startIndex = npcResponse.IndexOf("[");
+            int endIndex = npcResponse.IndexOf("]");
+            string blendString = npcResponse.Substring(startIndex + 1, endIndex - startIndex - 1);
+            npcResponse = npcResponse.Remove(startIndex, endIndex + 1);
 
             float blendValue = 0.5f;
             if (float.TryParse(blendString, out float result)) 
@@ -224,16 +283,18 @@ public class NPCInteractorScript : MonoBehaviour
         }
     }
 
-    public void CheckErikPrimaryEmotion(string triggerString)
+    public void CheckErikPrimaryEmotion(string triggerString, string npcResponse)
     {
-        if (whisperScript.npcResponse.Contains(triggerString))
+        if (npcResponse.Contains(triggerString))
         {
             npcEmotion = triggerString;
             
-            int startIndexEmotion = whisperScript.npcResponse.IndexOf(npcEmotion);
-            whisperScript.npcResponse = whisperScript.npcResponse.Remove(startIndexEmotion, npcEmotion.Length + 1);     //Removes the action keyword from ChatGPT's response plus the following white space
+            //https://www.jetbrains.com/help/resharper/StringIndexOfIsCultureSpecific.1.html
+            //int startIndexEmotion = npcResponse.IndexOf(npcEmotion, StringComparison.Ordinal);    //TRY THIS if it still doesn't work.
+            int startIndexEmotion = npcResponse.IndexOf(triggerString);
+            npcResponse = npcResponse.Remove(startIndexEmotion, triggerString.Length + 1);     //Removes the action keyword from ChatGPT's response plus the following white space
 
-            Debug.Log("NPC Emotion: " + npcEmotion);
+            Debug.Log("NPC Emotion: " + triggerString);
             //whisperScript.npcResponse = whisperScript.npcResponse.Replace(npcEmotion, "");
             //return triggerString;
         }
@@ -242,9 +303,9 @@ public class NPCInteractorScript : MonoBehaviour
     
     //Method that animates Erik when the NPC's response contains a set trigger string.
     //Currently being used in Whisper.cs when the user has finished their utterance.
-    public void AnimateOnAction_Erik(string triggerString, int delay)
+    public void AnimateOnAction_Erik(string triggerString, int delay, string npcResponse)
     {
-        if(whisperScript.npcResponse.Contains(triggerString))
+        if(npcResponse.Contains(triggerString))
         {
             npcSecondaryEmotion = triggerString;
 

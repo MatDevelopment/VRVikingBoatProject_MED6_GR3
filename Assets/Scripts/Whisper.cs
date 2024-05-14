@@ -43,7 +43,7 @@ namespace OpenAI
         private readonly string deleteThisObligatedStringFromWhisperCreditString = "Subs by www.zeoranger.co.uk";
         private readonly string fileName = "output.wav";
         private readonly int duration = 12;
-        public string npcResponse;
+        //public string npcResponse;
         public string uneditedNPCResponse;
         public string userRecordingString;
 
@@ -167,14 +167,14 @@ namespace OpenAI
 
                     string chatGptResponse = await chatTest.SendRequestToChatGpt(chatTest.messages);
 
-                    npcResponse = chatGptResponse;
+                    //npcResponse = chatGptResponse;
 
-                    Debug.Log("NPC Response: " + npcResponse);
+                    Debug.Log("NPC Response: " + chatGptResponse);
 
-                    uneditedNPCResponse = npcResponse;
+                    uneditedNPCResponse = chatGptResponse;
                     // newDataLogManager.SendStringToDataLogger("Erik: " + npcResponse);
                     newDataLogManager.TotalErikResponses += 1;
-                    chatTest.AddNpcResponseToChatLog(npcResponse);
+                    chatTest.AddNpcResponseToChatLog(chatGptResponse);
 
                     
 
@@ -183,65 +183,65 @@ namespace OpenAI
                         //Check for current NPC emotion in order to play animation
                         foreach (string primaryEmotion in npcInteractorScript.npcPrimaryEmotions)
                         {
-                            npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion);
+                            npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion, chatGptResponse);
                         }
 
                         // Checks and sets the emotion blendvalue
-                        npcInteractorScript.CheckEmotionBlendvalue();
+                        npcInteractorScript.CheckEmotionBlendvalue(chatGptResponse);
 
                         // Checks for the chosen point target
                         foreach (string target in npcInteractorScript.npcPointingTargets)
                         {
-                            if (npcResponse.Contains(target))
+                            if (chatGptResponse.Contains(target))
                             {
                                 ikController.ChooseLookTarget(target);
 
-                                int startIndexAction = npcResponse.IndexOf(target);
-                                npcResponse = npcResponse.Remove(startIndexAction, target.Length);
+                                int startIndexAction = chatGptResponse.IndexOf(target);
+                                chatGptResponse = chatGptResponse.Remove(startIndexAction, target.Length);
                             }
                         }
 
                         foreach (string action in npcInteractorScript.npcActionStrings)
                         {
 
-                            if (npcResponse.Contains(action))
+                            if (chatGptResponse.Contains(action))
                             {
-                                string responseTillActionString = AnimationDelayCalculator.CreateStringUntilKeyword(inputString: npcResponse, actionToCheck: action);
+                                string responseTillActionString = AnimationDelayCalculator.CreateStringUntilKeyword(inputString: chatGptResponse, actionToCheck: action);
 
                                 int punctuationsCount = AnimationDelayCalculator.CountCharsUsingLinqCount(responseTillActionString, '.'); //Counts amount of punctuations in responseTillActionString
 
                                 int wordInStringCount = AnimationDelayCalculator.CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
 
                                 float estimatedTimeTillAction = AnimationDelayCalculator.EstimatedTimeTillAction(wordCount: wordInStringCount,
-                                    wordWeight: 0.15f, punctuationCount: punctuationsCount, punctuationWeight: 1f);
+                                    wordWeight: 0.28f, punctuationCount: punctuationsCount, punctuationWeight: 1.5f);
 
                                 Debug.Log("ActionString: " + responseTillActionString + " --" +
                                           "Punctuations: " + punctuationsCount + " --" +
                                           "Word count: " + wordInStringCount + " --" +
                                           "ETA of action: " + estimatedTimeTillAction);
 
-                                int startIndexAction = npcResponse.IndexOf(action);     //Finds the starting index of the action keyword in the ChatGPT response
+                                int startIndexAction = chatGptResponse.IndexOf(action);     //Finds the starting index of the action keyword in the ChatGPT response
 
                                 responseTillActionString = "";
 
                                 //Man kan godt løbe ind i problemer med Remove her, og ved ikke helt hvorfor.
                                 //Tror det har noget at gøre med at Length starter med at tælle til 1, men indeces starter fra 0.
-                                npcResponse = npcResponse.Remove(startIndexAction, action.Length);      //Removes the action keyword from ChatGPT's response plus the following white space
+                                chatGptResponse = chatGptResponse.Remove(startIndexAction, action.Length);      //Removes the action keyword from ChatGPT's response plus the following white space
 
-                                Debug.Log("New response after removing action:   " + npcResponse);
+                                Debug.Log("New response after removing action:   " + chatGptResponse);
                                 npcAnimationStateController.AnimateErik(action, estimatedTimeTillAction);
                             }
                         }
                         npcInteractorScript.AnimateFacialExpressionResponse_Erik(npcInteractorScript.npcEmotion, npcInteractorScript.npcEmotionValue);
                     }
 
-                    Debug.Log("Edited response: " + npcResponse);
+                    Debug.Log("Edited response: " + chatGptResponse);
 
                     result.Text = result.Text.Replace(result.Text, "");
-                    userRecordingString = result.Text;
+                    userRecordingString = "";
 
                     //OpenAI TTS (Danish):
-                    ttsManagerScript.SynthesizeAndPlay(npcResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
+                    ttsManagerScript.SynthesizeAndPlay(chatGptResponse); //https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity?tab=readme-ov-file
 
                     if (_gestureVersionManager.GestureVersion)
                     {

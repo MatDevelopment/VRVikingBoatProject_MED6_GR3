@@ -29,6 +29,7 @@ public class Tutorial : MonoBehaviour
 
     [Header("Tick to start with the tutorial enabled!")]
     public bool startExperienceWithTheTutorial;
+    
     //public CanvasGroup blackImageCG;
     public TextMeshProUGUI instructionText;
 
@@ -42,6 +43,7 @@ public class Tutorial : MonoBehaviour
 
     void Start()
     {
+        npcInteractorScript = FindObjectOfType<NPCInteractorScript>();
         npcInteractorScript.erikSpeakable = false;
 
         fadeController = FindObjectOfType<FadeController>();
@@ -58,11 +60,11 @@ public class Tutorial : MonoBehaviour
         if (gestureVersionManager.GestureVersion)
         {
 
-            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
+            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men fï¿½rst skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
         }
         else if (!gestureVersionManager.GestureVersion)
         {
-            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Kig på den orange terning for at starte.");
+            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men fï¿½rst skal mikrofonen kalibreres. Kig pï¿½ den orange terning for at starte.");
             gazeCube2.SetActive(false);
             gaze2Slider.transform.parent.gameObject.SetActive(false);
         }
@@ -148,12 +150,12 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         StartCoroutine(microphoneCalibration.ListenForLoudnessForDuration(8));
-        SetInstructionsText("Jeg kan godt lide vikinger. De har nogle sjove hatte på");
+        SetInstructionsText("Jeg kan godt lide vikinger. De har nogle sjove hatte paa");
         yield return new WaitForSeconds(8);
 
         if (userConfirmed)
         {
-            SetInstructionsText("Kalibrering færdig!");
+            SetInstructionsText("Kalibrering faerdig!");
             yield return new WaitForSeconds(2);
 
             if (gestureVersionManager.GestureVersion)
@@ -166,7 +168,7 @@ public class Tutorial : MonoBehaviour
         }
         else
         {
-            SetInstructionsText("Kalibrering mislykkedes - volumen for lav. Prøv igen.");
+            SetInstructionsText("Kalibrering mislykkedes - volumen for lav. Prï¿½v igen.");
             yield return new WaitForSeconds(2);
             StartCoroutine(TryCalibrationStep());
         }
@@ -174,7 +176,7 @@ public class Tutorial : MonoBehaviour
 
     public void StartTutorial()
     {
-        SetInstructionsText("Om 5 sekunder skal du sige en sætning. Er du klar?");
+        SetInstructionsText("Om 5 sekunder skal du sige en sï¿½tning. Er du klar?");
 
         StartCoroutine(DoSection(3));
     }
@@ -183,7 +185,7 @@ public class Tutorial : MonoBehaviour
     {
         userCanPointAtCube = true;
         ShowGreenCube();
-        SetInstructionsText("Nu er du klar - peg på den grønne terning for at starte");
+        SetInstructionsText("Nu er du klar - peg pï¿½ den grï¿½nne terning for at starte");
     }
 
     private void Step_CheckForLookAtGaze2()
@@ -192,7 +194,7 @@ public class Tutorial : MonoBehaviour
         gazeCube2.SetActive(true);
         gaze2Slider.transform.parent.gameObject.SetActive(true);
         CanLookAtCube2 = true;
-        SetInstructionsText("Nu er du klar - kig på den lilla terning for at starte");
+        SetInstructionsText("Nu er du klar - kig pï¿½ den lilla terning for at starte");
     }
 
 
@@ -213,7 +215,7 @@ public class Tutorial : MonoBehaviour
         Debug.Log("Started A Countdown!");
         for (int i = secondsToCountDown; i > 0; i--)
         {
-            SetInstructionsText("Om " + i + " sekunder skal du sige en sætning. Er du klar?");
+            SetInstructionsText("Om " + i + " sekunder skal du sige en sï¿½tning. Er du klar?");
             yield return new WaitForSeconds(1f);
         }
     }

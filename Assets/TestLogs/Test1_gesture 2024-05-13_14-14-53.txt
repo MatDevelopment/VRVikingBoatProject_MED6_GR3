@@ -1,4 +1,0 @@
-Total Time: 01:15 Tutorial Time: 4.405865 Total Time minus tutorial: 01:10, User Prompts: 0, Erik Responses: 0, Erik Instigations: 3, Erik Gaze Time: 0, Erik Percent Gaze Time: 0, API Call Time Averages: Combined 4.4826749, SST: 0, ChatGPT: 2.75796906666667, TTS: 2.75796906666667
-[00:23] Erik: [API: 4.5483545] 
-[00:49] Erik: [API: 5.1593094] 
-[01:14] Erik: [API: 3.7403608] 

@@ -1,0 +1,65 @@
+Total Time: 15:51 Tutorial Time: 76.00032 Total Time minus tutorial: 14:35, User Prompts: 29, Erik Responses: 29, Erik Instigations: 7, Erik Gaze Time: 72.09945, Erik Percent Gaze Time: 8.231638, API Call Time Averages: Combined 8.19575027428571, SST: 1.29529478888889, ChatGPT: 4.98029227777778, TTS: 5.12258634285714
+[01:13] User: Hvorfor er det så meget lige pludselig? Ringe er færdig, fedt Hvorfor er der en grøn? Når du er klar, pipe på den grønne tænde Okay, åh hvorfor shaker den?
+[01:19] Erik: [API: 8.2224717] [5] HAPPY Jeg forstår ikke helt, hvad du siger, men lad os nyde turen og det gode vejr. Se, hvordan solen danser på vandet, og må din færd være lige så klar. POINTING FISHINGHUT
+[01:50] Erik: [API: 5.8102123] [5] HAPPY Jeg forstår ikke helt, hvad du siger, men lad os nyde turen og det gode vejr. Se, hvordan solen danser på vandet, og må din færd være lige så klar. POINTING FISHINGHUT
+[02:14] User: Hallo Erik, er du der?
+[02:18] Erik: [API: 5.6408458] [4] HAPPY Hej! Ja, jeg er lige her. Hvordan kan jeg hjælpe dig på denne fine dag?
+[02:29] User: Kan du vise mig hvor solen er?
+[02:33] Erik: [API: 5.5592279] [4] HAPPY Selvfølgelig, solen er lige deroppe på himlen. Nyd dens varme stråler, mens vi sejler.
+[02:56] User: Hvem er den kvinde derovre?
+[03:01] Erik: [API: 6.6232408] [5] HAPPY Det må være min hustru, Astrid. Hun kender hver plante og helbreder dem, der er syge. Hun er en dygtig kvinde.
+[03:17] User: Astrid, hvilket job har
+[03:22] Erik: [API: 5.9766886] [4] HAPPY Astrid tager sig af de syge og kender til urtemedicin. Hun hjælper alle i landsbyen med sin viden.
+[03:36] User: Erik, hvorfor har Astrid sket det?
+[03:42] Erik: [API: 7.3998552] [3] HAPPY Jeg er ikke helt sikker på, hvad du mener. Astrid har det godt, hun passer sit arbejde med urterne og helbredelsen.
+[04:04] User: Sammen med Astrid Damn lidt mere broken end hvad jeg havde forventet Men sure Borde du sørge for, at du ikke bliver færdig?
+[04:08] Erik: [API: 7.4095257] [5] HAPPY Jeg forstår desværre ikke helt. Men lad os holde fokus på fiskeriet og sejlturen. Vil du høre en historie fra fjorden?
+[04:21] User: Det var det, jeg havde forlænget dig med, og jeg håber, at du har lyst til at lytte til det. Det var det, jeg havde forlænget dig med, og jeg håber, at du har lyst til at lytte til det.
+[04:24] Erik: [API: 5.8553291] [4] HAPPY Jeg er altid åben for at høre nye ting. Fortæl mig, hvad du har på hjerte.
+[04:34] User: om fjorden. Fortæl mig en historie.
+[04:43] Erik: [API: 9.4725757] [6] HAPPY For mange år siden, siger de, at en mand ved navn Rurik kom her til fjorden. Han var en stor og stærk kriger, som rejste over havene og slog sig ned her. POINTING RUNESTONE Han rejste den runesten derovre til ære for sin fader, som var faldet i kamp. Rurik blev grundlæggeren af vores landsby og hans ånd lever stadig i landet.
+[05:15] User: Den landsby, du snakker om, er det den landsby, der ligger derovre?
+[05:22] Erik: [API: 8.6543683] [5] HAPPY Ja, præcis! Vores landsby er vokset siden Ruriks tid, men den ligger stadig her ved Limfjorden, stærk som altid. POINTING VILLAGE Den landsby derovre er vores hjem.
+[05:49] User: Erik, hvorfor besluttede du for at begynde at sejle?
+[05:55] Erik: [API: 7.3986198] [4] HAPPY Vandet har altid kaldt på mig. Det giver en frihed og fred, som jeg ikke finder andre steder. Og så er der selvfølgelig fiskene, de giver føde og liv til vores folk.
+[06:18] Erik: [API: 5.8305992] [4] HAPPY Vandet har altid kaldt på mig. Det giver en frihed og fred, som jeg ikke finder andre steder. Og så er der selvfølgelig fiskene, de giver føde og liv til vores folk.
+[06:32] User: Så du fisker ligesom din kone, så du er også en fisk.
+[06:37] Erik: [API: 6.1297455] [4] HAPPY Ha! Jeg fisker, ja, men jeg er ingen fisk. Jeg er fiskermand, der bringer fangsten hjem. Astrid, hun bruger urterne og helbreder – vi arbejder begge for at sikre vores families overlevelse.
+[07:02] Erik: [API: 6.5709305] [4] HAPPY Ha! Jeg fisker, ja, men jeg er ingen fisk. Jeg er fiskermand, der bringer fangsten hjem. Astrid, hun bruger urterne og helbreder – vi arbejder begge for at sikre vores families overlevelse.
+[07:23] User: for at blive ved kriger.
+[07:32] Erik: [API: 10.7912076] [4] HAPPY Jeg tror, du taler om krigere? Her i landsbyen er der fred nu, og vi er fiskere, bønder og håndværkere. Men fortidens krigere er en del af vores historie og æt.
+[07:50] User: Det er rigtig vildt.
+[07:54] Erik: [API: 5.6926325] [4] HAPPY Ja, livet har mange vilde sider, og historierne fra de gamle dage er fyldt med eventyr. Vil du høre mere?
+[08:07] User: Godt at høre, Mia. Ja, tak.
+[08:14] Erik: [API: 8.0584073] [4] HAPPY Jeg hedder ikke Mia, men det gør ikke noget. Jeg vil fortælle dig om den gang Tor kæmpede mod Jormungand, Midgårdsormen, på de store have. En kamp mellem guder og kæmper, som vi alle sammen husker.
+[08:34] User: Erik, jeg tror du har høreproblemer
+[08:41] Erik: [API: 7.8179757] [4] HAPPY Måske misforstod jeg noget, men bekymre dig ikke. Jeg er klar til at lytte og svare, som bedst jeg kan. Har du et spørgsmål eller noget på hjerte? POINTING BURIALMOUND Se, Lindholm Høje der - vore forfædre's hvilested.
+[09:04] User: Jeg ser der også kommer røg oppe fra DR, hvorfor gør jeg det?
+[09:12] Erik: [API: 9.0502378] [5] HAPPY Jeg kender ikke til dette "DR" du taler om, men røg kan komme fra en gård eller et bål her i området. Vi bruger ild til varme, madlavning, og til ceremonier til ære for de faldne.
+[09:32] User: Det, der er bag ved dig, er det en havn.
+[09:39] Erik: [API: 8.3408036] [5] HAPPY Nej, det er ikke en havn bag mig, men vi har en lille brygge ved fiskerhytten, hvor vi lægger til med bådene. POINTING FISHINGHUT Vil du se den, når vi vender tilbage?
+[09:58] User: Ja, jeg vil godt se din fiskerhytte.
+[10:05] Erik: [API: 12.9108323] [5] HAPPY Nej, det er ikke en havn bag mig, men vi har en lille brygge ved fiskerhytten, hvor vi lægger til med bådene. POINTING FISHINGHUT Vil du se den, når vi vender tilbage?
+[10:11] Erik: [API: 12.7401884] [4] HAPPY Det skal du være velkommen til. Når vi kommer tilbage, skal jeg vise dig hytten og fortælle om vores simple liv her ved vandet. POINTING FISHINGHUT Hvad mere vil du gerne vide om livet her?
+[10:21] Erik: [API: 6.5817517] [4] HAPPY Det skal du være velkommen til. Når vi kommer tilbage, skal jeg vise dig hytten og fortælle om vores simple liv her ved vandet. POINTING FISHINGHUT Hvad mere vil du gerne vide om livet her?
+[10:38] User: Erik, jeg føler du er ret dømme
+[10:45] Erik: [API: 8.6844813] [3] HAPPY Undskyld, hvis jeg har virket sådan. Det er ikke min hensigt. Jeg ønsker kun at dele vores liv og historier med dig. Fortæl mig, hvad kan jeg gøre for at forbedre vores tid sammen?
+[11:08] User: Erik, hvor kan jeg købe en båd ligesom den der?
+[11:17] Erik: [API: 9.6956647] [5] HAPPY Bådbyggerne her i byen er dygtige håndværkere. POINTING BOATBUILDER De arbejder nede ved kysten, hvor træ og redskaber er i rigeligt. Du kan finde dem der og spørge om en båd. Vil du have jeg skal introducere dig?
+[11:35] User: Ja, det kan du da godt.
+[11:45] Erik: [API: 11.3337339] [4] HAPPY Det vil jeg gerne gøre for dig. Når vi kommer tilbage fra vores tur, skal jeg føre dig til bådbyggerne. De vil kunne hjælpe dig med en stærk båd.
+[12:03] User: ham derovre, hvem er han?
+[12:10] Erik: [API: 8.4342344] [3] HAPPY POINTING BLACKSMITH Ham der arbejder ved essen? Det er vores smed. Han er dygtig til at forme metal og lave våben og værktøj, som er nødvendigt for både hverdag og rejser. Vil du møde ham?
+[12:27] User: Hvorfor ikke?
+[12:34] Erik: [API: 8.1972741] [4] HAPPY Vi kan gå til smeden efter vores sejltur. POINTING BOATBUILDER Og hvis du er interesseret i bådbygning, kan vi også besøge skibsværftet derovre. De er eksperter i at bygge skibe, der kan sejle langt over havet.
+[12:55] User: Den der store maskine der, hvad er det?
+[13:03] Erik: [API: 9.5025967] [3] HAPPY Der er ingen maskiner her; det du ser, er et skibsværft, hvor vi bygger vores skibe i hånden. Det kræver stærke arme og et godt kendskab til træarbejde. POINTING BOATBUILDER Vil du have jeg skal fortælle mere om bådbygningen?
+[13:25] User: Ja, fortæl mere om Brødbygningen.
+[13:34] Erik: [API: 10.0685858] [4] HAPPY Jeg tror, du mener bådbygningen. Vores skibe er lavet af egetræ, som er stærkt og holder til lange rejser på havet. Hver planke formes og sammenføjes til et skrog, der kan bære både mænd, varer og undertiden krigere til fjernere lande. POINTING BOATBUILDER Skibene er vore landsbyers stolthed og vores vej til nye horisonter.
+[13:57] Erik: [API: 8.674237] [4] HAPPY Jeg tror, du mener bådbygningen. Vores skibe er lavet af egetræ, som er stærkt og holder til lange rejser på havet. Hver planke formes og sammenføjes til et skrog, der kan bære både mænd, varer og undertiden krigere til fjernere lande. POINTING BOATBUILDER Skibene er vore landsbyers stolthed og vores vej til nye horisonter.
+[14:14] Erik: [API: 7.0353842] [4] HAPPY Jeg tror, du mener bådbygningen. Vores skibe er lavet af egetræ, som er stærkt og holder til lange rejser på havet. Hver planke formes og sammenføjes til et skrog, der kan bære både mænd, varer og undertiden krigere til fjernere lande. POINTING BOATBUILDER Skibene er vore landsbyers stolthed og vores vej til nye horisonter.
+[14:37] User: Erik, fortæl mere om din familie.
+[14:47] Erik: [API: 12.397246] [5] HAPPY Min familie er mit alt. Min hustru, Astrid, helbreder med urter, og vores datter, Freya, er et energisk barn, der elsker naturen. Vi lever et enkelt liv, men vi er tætte og støtter hinanden i alt, vi gør. Hvad med din familie? Har du nogen derhjemme?
+[15:13] User: Hvad er det? Næ, det har jeg ikke. Det hus, der er derovre, hvad er det?
+[15:20] Erik: [API: 8.2895485] [4] HAPPY POINTING ERIKSHUT Det hus du ser, er min fiskerhytte. Det er her, jeg bor med min familie. Når vi ikke er på fjorden, arbejder vi eller slapper af her. Du sagde, du ikke har familie; landsbyen kan være din familie, hvis du vælger at blive her.
+[15:44] User: Ja, slut. Yes.

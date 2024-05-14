@@ -61,7 +61,7 @@ public class MicInputDetection : MonoBehaviour
             //The speechPauseCounter variable is so that the user can have natural breaks inbetween words they say, or so-called thinking pauses.
            // loudness = 0;
 
-            if (speechPauseCounter >= speechPauseCounterThreshold && isListening == true && apiStatus.isTranscribing == false && !apiStatus.isTalking)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
+            if (speechPauseCounter >= speechPauseCounterThreshold && isListening == true && apiStatus.isTranscribing == false && apiStatus.isTalking == false && apiStatus.isGeneratingText == false && apiStatus.isGeneratingAudio == false)        //If the user has not spoken in 2 seconds or more AFTER they initially started talking, then save an audio clip to be used.
             {
                 if (whisperScript.userRecordingString.Length > 0)
                 {
@@ -92,7 +92,7 @@ public class MicInputDetection : MonoBehaviour
             //npcInteractorScript.timeCounter = 0;
             speechPauseCounter = 0; // Resets the pause counter so the microphone keep recording
 
-            if (isListening == false && apiStatus.isTranscribing == false && apiStatus.isGeneratingAudio == false && apiStatus.isTalking == false)
+            if (isListening == false && apiStatus.isTranscribing == false && apiStatus.isGeneratingAudio == false && apiStatus.isTalking == false && apiStatus.isGeneratingText == false)
             {
                 Debug.Log("LISTENING");
                 isListening = true;

@@ -31,14 +31,14 @@ public class UserGazeErik : MonoBehaviour
     {
         yield return new WaitForSeconds(timeUntilObservation);
         
-        chatTestScript.AddSystemInstructionToChatLog("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik will take this into consideration when responding to the Traveller next time.");
+        chatTestScript.AddSystemInstructionToChatLog("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik will take this into consideration when responding to the Traveller next time and consider the fact that the user is looking around out of curiosity.");
     }
     
     IEnumerator BigGazeObservationErik(float timeUntilObservation)
     {
         yield return new WaitForSeconds(timeUntilObservation);
         
-        npcInteractorScript.InformAndInitiateNpcTalk("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik will question the Traveller about this.");
+        npcInteractorScript.InformAndInitiateNpcTalk("The Traveller has NOT looked at Erik for " + timeUntilObservation + " while Erik is talking. Erik will question the Traveller about this and ask if the Traveller likes the scenery on the boat ride.");
         _newDataLogManager.TotalErikInstigations++;
     }
 

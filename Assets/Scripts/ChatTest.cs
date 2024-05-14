@@ -49,7 +49,7 @@ namespace OpenAI
             request.Messages = combinedMessages;
             //request.Model = "gpt-3.5-turbo-16k-0613";
             request.Model = "gpt-4-1106-preview";
-            request.Temperature = 0.5f;
+            request.Temperature = 0.9f;
             request.MaxTokens = 256;
 
             Stopwatch stopwatch = Stopwatch.StartNew();

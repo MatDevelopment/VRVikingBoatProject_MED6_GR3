@@ -145,11 +145,11 @@ public class ErikIKController : MonoBehaviour
         {
             if (isLookingAtPOI)
             {
-                npcAnimator.SetLookAtWeight(1, BodyIKAmount, HeadIKAmount, 0.75f, 0.7f);
+                npcAnimator.SetLookAtWeight(1, BodyIKAmount, HeadIKAmount, 0.75f, 0.825f);
             }
             else
             {
-                npcAnimator.SetLookAtWeight(1, BodyIKAmount, HeadIKAmount, 0.75f, 0.7f);
+                npcAnimator.SetLookAtWeight(1, BodyIKAmount, HeadIKAmount, 0.75f, 0.825f);
             }
 
             npcAnimator.SetLookAtPosition(lookIKTarget.position);
