@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add illustrator gestures
 {
@@ -135,44 +136,50 @@ public class NpcAnimationStateController : MonoBehaviour //TODO: needs to add il
                 break;
             case "POINTING":
                 //animator.SetTrigger("gest.Pointing")
-
-                ikController.isPointing = true;
-                ikController.isLookingAtPOI = true;
-
-                float time = 0;
-                float duration = 3;
-
-                float startValue = 0;
-                float endValue = 1;
-                float bodyEndValue = 0.25f;
-
-                while (time < duration)
+                if (!ikController.angleInvalid)
                 {
-                    ikController.HandIKAmount = Mathf.Lerp(startValue, endValue, time / duration);
-                    ikController.BodyIKAmount = Mathf.Lerp(startValue, bodyEndValue, time / duration);
-                    time += Time.deltaTime;
-                    yield return null;
-                }
+                    ikController.isPointing = true;
+                    ikController.isLookingAtPOI = true;
 
-                yield return new WaitForSeconds(2);
+                    float time = 0;
+                    float duration = 3;
 
-                ikController.isLookingAtPOI = false;
-                StartCoroutine(ikController.ChangeLookTarget(3f));
+                    float startValue = 0;
+                    float endValue = 1;
+                    float bodyEndValue = 0.25f;
 
-                time = 0;
-                while (time < duration)
+                    while (time < duration)
+                    {
+                        ikController.HandIKAmount = Mathf.Lerp(startValue, endValue, time / duration);
+                        ikController.BodyIKAmount = Mathf.Lerp(startValue, bodyEndValue, time / duration);
+                        time += Time.deltaTime;
+                        yield return null;
+                    }
+
+                    yield return new WaitForSeconds(2);
+
+                    ikController.isLookingAtPOI = false;
+                    StartCoroutine(ikController.ChangeLookTarget(3f));
+
+                    time = 0;
+                    while (time < duration)
+                    {
+                        ikController.HandIKAmount = Mathf.Lerp(endValue, startValue, time / duration);
+                        ikController.BodyIKAmount = Mathf.Lerp(bodyEndValue, startValue, time / duration);
+                        time += Time.deltaTime;
+                        yield return null;
+                    }
+
+                    animator.SetBool("PointingLeft", false);
+                    animator.SetBool("PointingRight", false);
+                    ikController.HandIKAmount = startValue;
+                    ikController.isPointing = false;
+                    ikController.BodyIKAmount = startValue;
+                } 
+                else
                 {
-                    ikController.HandIKAmount = Mathf.Lerp(endValue, startValue, time / duration);
-                    ikController.BodyIKAmount = Mathf.Lerp(bodyEndValue, startValue, time / duration);
-                    time += Time.deltaTime;
-                    yield return null;
+                    Debug.Log("Point angle invalid");
                 }
-
-                animator.SetBool("PointingLeft", false);
-                animator.SetBool("PointingRight", false);
-                ikController.HandIKAmount = startValue;
-                ikController.isPointing = false;
-                ikController.BodyIKAmount = startValue;
                 //Only one variation implemented!
                 break;
             case "UNSURE":

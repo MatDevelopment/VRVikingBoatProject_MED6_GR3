@@ -2,10 +2,12 @@ using GLTFast.Schema;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 public class ErikIKController : MonoBehaviour
 {
+    [Header("Needed Scripts")]
     [SerializeField] private Animator npcAnimator;
     [SerializeField] private BoatRouteNavMesh boatRouteScript;
     [SerializeField] private NpcAnimationStateController npcAnimationStateController;
@@ -13,12 +15,15 @@ public class ErikIKController : MonoBehaviour
 
     private Transform rightHandIKTarget;
     private Transform leftHandIKTarget;
-    
+
     private Transform lookIKTarget;
+
+    [Header("Look Targets")]
     public Transform LookTarget;
     public Transform defaultLookTarget;
     public Transform chosenLookTarget;
 
+    [Header("IK Weights")]
     [Range(0, 1f)]
     public float HandIKAmount = 0f;
     [Range(0, 1f)]
@@ -26,16 +31,24 @@ public class ErikIKController : MonoBehaviour
     [Range(0, 1f)]
     public float HeadIKAmount = 0.75f;
 
+    [Header("POI Direction")]
     public bool isLeft = false;
     public bool isRight = false;
+    public bool angleInvalid = false;
 
+    [Range(0, 1f)]
+    public float pointThreshold = 0.85f;
+
+    [Header("Pointing")]
     public bool isLookingAtPOI = false;
     public bool isPointing = false;
 
+    [Header("Gesture Debugging")]
     public bool pointDebug = false;
     public bool headNodDebug = false;
     public bool headShakeDebug = false;
 
+    [Header("Baseline Transform for Pointing")]
     public Transform pointRotation;
 
     private void Start()
@@ -62,6 +75,31 @@ public class ErikIKController : MonoBehaviour
         {
             isLeft = false; isRight = true;
             Debug.Log("right");
+        }
+
+        // Calculate direction from character to targetObject
+        Vector3 directionToTarget = transform.position - chosenLookTarget.position;
+        directionToTarget.y = 0f; // Ignore height difference
+
+        // Normalize the direction vector
+        directionToTarget.Normalize();
+
+        // Calculate the dot product of character's forward direction and direction to target
+        float dotProduct = Vector3.Dot(transform.forward, directionToTarget);
+        //Debug.Log(dotProduct);
+
+        // Check if the character is facing the targetObject
+        if (dotProduct >= pointThreshold)
+        {
+            // Character is not facing the targetObject
+            angleInvalid = true;
+            //Debug.Log("Not Facing");
+        }
+        else
+        {
+            // Character is facing the targetObject
+            angleInvalid = false;
+            //Debug.Log("Facing");
         }
 
         // Sets Look target
@@ -115,7 +153,7 @@ public class ErikIKController : MonoBehaviour
 
         // Check rotation to look target
         var lookPos = lookIKTarget.position - pointRotation.transform.position;
-        lookPos.y = 0;
+        //lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
         pointRotation.rotation = rotation;
 
