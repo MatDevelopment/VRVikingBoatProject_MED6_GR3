@@ -1,0 +1,56 @@
+Total Time: 15:04 Tutorial Time: 35.93431 Total Time minus tutorial: 14:28, User Prompts: 27, Erik Responses: 26, Erik Instigations: 1, Erik Gaze Time: 326.6783, Erik Percent Gaze Time: 37.60156, API Call Time Averages: Combined 9.25886794444444, SST: 1.39717232142857, ChatGPT: 5.42818544074074, TTS: 5.42818544074074
+[00:44] User: Er det dansk eller engelsk? Det er dansk Okay Wow cool Er det på dansk?
+[00:49] Erik: [API: 6.8538028] [HAPPY] [3] Vinden er god i dag, perfekt til en sejltur. Kan du dufte saltvandet? Det her er hvad vi lever for. POINTING FISHINGHUT Kan du se hytten der? Det er der jeg bor og ordner mine net.
+[01:08] User: til. Det var da spændende. Hvor ordner du net?
+[01:13] Erik: [API: 6.5838117] [HAPPY] [2] Jeg ordner dem lige POINTING FISHINGHUT der ved min hytte, ved strandkanten. Der er det bedst med lyset og brisen. Har du lyst til at lære det?
+[01:26] User: Ja, det vil jeg gerne.
+[01:32] Erik: [API: 7.0487762] [HAPPY] [4] Godt at høre! Når vi kommer tilbage, kan jeg vise dig hvordan man fletter og reparerer nettene. Det kræver tålmodighed, men det er en god færdighed at have. GRATITUDE Tak for din interesse, det glæder mig.
+[01:51] User: Ja, det kunne jeg godt forestille mig. Og... Jeg har kastet jer over foden. Hvad var det du gerne ville sige?
+[02:00] Erik: [API: 10.6154662] [HAPPY] [2] Jeg vil bare sige, at livet på havet lærer os at værdsætte de simple ting, som at ordne et net eller nyde en stille morgen. Det glæder mig, at du vil lære det. Hvad bringer dig ud på vandet i dag?
+[02:23] User: Ja, undskyld, jeg afbryder dig igen, jeg har bare hørt, siden du er en viking, at kan du også finde på sådan at plyndre og stjæle fra andre?
+[02:31] Erik: [API: 9.6819679] [HAPPY] [1] Nej, nej, jeg er fisker og lever et fredeligt liv. Jeg sørger for min familie og nyder naturens gaver. Livet er mere end blot kamp og erobring; her i landsbyen hjælper vi hinanden. Hvordan er det med dig, hvad søger du her?
+[03:00] User: derovre og fisker. Ja, jeg synes også, at det er ret flot faktisk omkring her. Jeg søger ikke rigtig noget, men jeg kunne måske godt tænke mig at vide, hvem det er, der står
+[03:08] Erik: [API: 10.2458411] [HAPPY] [2] Ah, det er min gode ven Ole. En dygtig fisker og en stærk roer. Vi deler tit historier og en tår mjød. Du skal være velkommen til at hilse på ham, han har altid gode råd at give.
+[03:31] User: Hvad er det for nogle huse jeg kan se om bagved? Er det en del af den landsby du kommer fra?
+[03:38] Erik: [API: 7.9868379] [HAPPY] [2] Ja, det er de huse, som tilhører vores landsby. Vi har bådbyggere, smede og handlende. Et travlt sted, hvor hver mand og kvinde har sin rolle. Det er et godt fællesskab. Vil du se mere, når vi kommer i land?
+[04:02] User: Ja, det vil jeg rigtig gerne. Og jeg ser også lige, at der er noget her, hvor jeg peger. Jeg kunne godt tænke mig at vide, hvad det er. Kan du fortælle mig lidt om det?
+[04:12] Erik: [API: 11.2855033] [HAPPY] [3] POINTING RUNESTONE Den runesten? Det er en gammel sten, der fortæller om en stor mand, som var den første til at bosætte sig her. Hans bedrifter står ristet i stenen som minde for os alle. Det er vigtigt at ære dem, som kom før os. Vil du tættere på og se inskriptionerne?
+[04:36] User: Måske. Øh... Øh, det vil jeg gerne med at tænke lige, vi skal sejle færdigt.
+[04:44] Erik: [API: 9.7226034] [HAPPY] [2] Selvfølgelig, vi kan tage hen og se på runestenen en anden god dag. Lad os nyde sejlturen nu. Der er så meget smukt at se her omkring, og der ligger altid nye eventyr forude på vandet.
+[05:02] User: Det var det du hed i går
+[05:10] Erik: [API: 8.9529087] [HAPPY] [2] Jeg forstår ikke helt, hvad du mener. Men lad os tale om dagen i dag; hver dag bringer sin egen skæbne og muligheder. Se nu bare, hvordan solen glimter på vandet - det er da en skøn dag at være til søs. Hvad nyder du mest ved dagen i dag?
+[05:36] User: Man får lov til at komme ud i naturen Jamen altså jeg nyder Ligesom du siger, jeg nyder Vejret, det er godt vejr Og naturlydende
+[05:44] Erik: [API: 8.876146] [HAPPY] [4] Ja, naturen er en stor gave. Lydene af bølgerne, vinden der hvisker gennem træerne, og mågernes kald - alle disse ting minder os om hvor heldige vi er. At sejle sætter sindet i ro og giver tid til eftertanke. Nyd det, min ven, for det er livet i sin reneste form.
+[06:11] User: Jeg tænkte på, hvor er det, jeg er lidt glemt som, hvor er det lige vi kom fra, ja har vi været ude at fiske eller?
+[06:19] Erik: [API: 9.0773396] [HAPPY] [2] Vi er på vej fra landsbyen, hvor jeg bor. POINTING FISHINGHUT Vi har ikke været ude at fiske endnu i dag, men det kan vi sagtens, hvis du har lyst. Havet er fyldt med fisk, klar til at blive fanget! Hvad siger du til det?
+[06:36] User: Hvornår har du tid?
+[06:44] Erik: [API: 9.0061768] [HAPPY] [3] Jeg har tid efter vores tur på vandet. Vi kan tage direkte ud og sætte garn, hvis du vil prøve. Der er intet bedre end friskfanget fisk til middag, og jeg ville være glad for at vise dig, hvordan det gøres. Hvad siger du til det?
+[07:13] User: ... ... ... ... ... ... ... ... ... ... ... ... ... ...
+[07:19] Erik: [API: 7.6057536] Hvad tænker du på? Er der noget, du gerne vil spørge om eller noget, jeg kan fortælle dig om vandene her, livet i landsbyen, eller måske vores skikke og traditioner?
+[07:35] User: Kan du fortælle mig, hvor mange fingre, jeg holder op lige nu?
+[07:40] Erik: [API: 6.8322404] Jeg kan ikke hjælpe med det. Men se POINTING BURIALMOUND dér, Lindholm Høje, hvor vi ærer de afdøde. Det er et helligt sted for os. Vil du vide mere om vores traditioner?
+[08:01] User: Hvad var det du sagde der var derovre?
+[08:08] Erik: [API: 8.3502917] [HAPPY] [3] POINTING BURIALMOUND Det er Lindholm Høje - et gravsted, hvor vi brænder de døde på stenformationer, der ligner et skib. Det symboliserer deres rejse til det hinsides. Det er et sted fyldt med ånd og historie. Vil du have, at vi skal lægge til, så du kan se det nærmere?
+[08:32] User: Det vælger jeg gerne, og jeg kunne også godt tænke mig at vide, hvem det er, der er i gang med at blive brændt op. Er der en, der er død for nyhed?
+[08:42] Erik: [API: 11.3435676] [HAPPY] [2] Vi har ingen nylige afgangne, som nu bliver sendt af sted. Stenene her er gamle og fortæller om dem, som for længe siden forlod os. Det er en ære at huske og anerkende dem. Men lad os sætte til og udforske det sammen, så kan jeg fortælle mere undervejs.
+[09:13] User: Du spurgte mig om jeg havde lyst til at lægge teltet op, det kunne jeg godt tænke mig. Op ved Lindenholm højre.
+[09:21] Erik: [API: 9.6069296] [HAPPY] [4] Det kan du tro, vi kan sætte et telt op nær Lindholm Høje. Det vil være en god plads at overnatte, hvor man kan mærke historiens vingesus og være tæt på naturen. POINTING MARKETENTRANCE Og vi kan hente hvad vi skal bruge ved markedet her, før vi går derop. Er du klar til det?
+[09:42] User: Undskyld. Eeeh. Ja, det er jeg.
+[09:48] Erik: [API: 8.1300571] [HAPPY] [3] Det glæder mig! Vi skal nok få en god tid sammen. Lad os først nyde markedet og finde det, vi skal bruge. Der er altid liv og glade dage her, og du kan møde folk fra nær og fjern. Efter det tager vi til højene. Er der noget særligt, du søger på markedet?
+[10:16] User: Jeg vil lige høre, har du en kæreste tilfældigvis? Eller er du single? Altså har du en kone?
+[10:25] Erik: [API: 10.0167653] [HAPPY] [2] Ja, jeg er gift med min Asta, en klog kvinde, som kender naturens hemmeligheder og hjælper byen som helbreder. Hun er mit hjertes lys, og vi har en datter, Freya. Familien står stærkt i mit liv. Hvad med dig? Har du familie, du holder af?
+[10:51] User: Ja, jeg holder en familie. Jeg kunne også godt tænke mig at vide, hvem der står derovre, hvor jeg peger.
+[10:59] Erik: [API: 9.3254243] [HAPPY] [3] POINTING BLACKSMITH Ham der arbejder ved essen er smeden. En dygtig håndværker, som laver våben og rustninger til de, der skal på togt. Hans færdigheder er vigtige for dem, der søger ære og rigdomme på fjerne kyster. Vil du hilse på ham og se hans arbejde?
+[11:18] User: Giv op til baggrunden.
+[11:30] Erik: [API: 13.3527348] [HAPPY] [2] Jeg er ikke helt sikker på, hvad du mener, men hvis du ønsker at se smedens arbejde mere i detalje, så lad os gå hen til essen og få en snak med ham. Han har altid en god historie at fortælle, når han arbejder.
+[11:52] User: Hvad der foregår derovre? Hvad? Undskyld Jeg kunne også godt tænke mig at vide Øhm Hvad der foregår derovre?
+[12:01] Erik: [API: 11.2297208] [HAPPY] [3] POINTING BOATBUILDER Det der er skibsværftet, hvor bådebyggerne er i fuld gang med at konstruere skibe. De skaber skibe til fiskeri og togter, så vigtige for vores levevis og handel. Man kan næsten dufte træet og sejlgarnet fra her. Vil du gå tættere på og se, hvordan et vikingeskib bliver til?
+[12:36] Erik instigates talk: Det er altid spændende at se bådene tage form. Fortæl mig, har du nogen interesse i håndværk eller byggeri? Skibene her bliver lavet med stor dygtighed og tålmodighed.
+[12:38] Erik: [API: 6.1962999] [HAPPY] [3] POINTING BOATBUILDER Det der er skibsværftet, hvor bådebyggerne er i fuld gang med at konstruere skibe. De skaber skibe til fiskeri og togter, så vigtige for vores levevis og handel. Man kan næsten dufte træet og sejlgarnet fra her. Vil du gå tættere på og se, hvordan et vikingeskib bliver til?
+[13:08] User: Kan du fortælle mig om nogle af de her personer, der er her?
+[13:20] Erik: [API: 13.0668217] [HAPPY] [3] POINTING TRADERS Jo, selvfølgelig. De her handlende sørger for, at vi har hvad vi behøver. Den første sælger frisk fisk, næste har korn og grøntsager, og den sidste væver stof til tøj og sejl. Markedet er livsnerven i vores lille samfund. Ønsker du at se varerne eller møde handlende?
+[13:43] User: Ja, det vil jeg gerne.
+[13:51] Erik: [API: 9.7662753] [HAPPY] [4] Så lad os gå tættere på handlende. Du kan se varerne, de tilbyder, og måske finde noget, du har behov for. Det er også en fin måde at komme i snak med lokalbefolkningen. Lad os gå en tur på markedet!
+[14:19] User: Vi er på vej ud af byen lige nu. Er det meningen eller skulle vi holde til her?
+[14:27] Erik: [API: 9.2293708] [HAPPY] [3] POINTING ERIKSHUT Vi er på vej til min hytte, hvor vi startede. Turen er ved at være slut, men du er velkommen til at blive og se området, eller jeg kan vise dig, hvordan man ordner nettene. Hvad vil du foretrække?
+[14:57] User: Ja, og så viser du mig hvordan man ordner alle de netdaft, det lyder super spændende, og du er super sød Erik, og hvis du nogensinde er single, så bare giv dem en call
