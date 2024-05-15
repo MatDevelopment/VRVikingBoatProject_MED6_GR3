@@ -1,0 +1,71 @@
+Total Time: 15:13 Tutorial Time: 36.91742 Total Time minus tutorial: 14:36, User Prompts: 35, Erik Responses: 35, Erik Instigations: 5, Erik Gaze Time: 198.3661, Erik Percent Gaze Time: 22.62899, API Call Time Averages: Combined 7.80252426857143, SST: 1.49951664857143, ChatGPT: 4.22886016857143, TTS: 4.22886016857143
+[00:43] User: Hvad er det, jeg kan gøre?
+[00:49] Erik: [API: 6.8543134] Hvis du vil hjælpe, kan du bære nogle af fiskene, når vi kommer frem til ERIKSHUT. Det ville gøre turen lettere for os begge. POINTING ERIKSHUT GRATITUDE 7 HAPPY
+[01:01] User: Nej. Der kan ikke køre vand til jer.
+[01:06] Erik: [API: 7.1913608] Nej, det er sandt. Vi har ingen strømmende vand. Vi bruger fjorden og vores brønd til at få frisk vand. Sikke tider vi lever i, ikke sandt? GRATITUDE 4 HAPPY
+[01:25] User: Hvorfor får jeg ikke herfra vandet her? Er det ikke en å?
+[01:31] Erik: [API: 7.3196795] Vandet her er salt fra fjorden, så det er ikke godt at drikke. Vi har en brønd nær ERIKSHUT hvor vi henter vores drikkevand. Vandet her i åen er bedst til fiskeri. POINTING ERIKSHUT 5 HAPPY
+[01:48] User: Hvad mener du så der?
+[01:52] Erik: [API: 6.2296601] Med "der", mener du måske ERIKSHUT, hvor jeg bor? Det er ret frem for os. Vi er snart hjemme, og så kan vi lægge fisken på køl. POINTING ERIKSHUT 3 HAPPY
+[02:08] User: Hvad der står en dude derovre, ved du hvem det er?
+[02:13] Erik: [API: 6.0944331] Nej, fra båden kan jeg ikke se tydeligt. Men når vi kommer i land, kan vi hilse på og se, hvem det er. Måske er det en fra landsbyen eller en rejsende som dig. 4 HAPPY
+[02:38] User: Så du har ingen idé om, hvem der står derovre.
+[02:43] Erik: [API: 5.6014315] Det er rigtigt, jeg kan ikke se det fra her. Lad os vente og se, når vi kommer tættere på. Måske er det en kending. 4 HAPPY
+[02:57] User: Ørj, Erik, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, Ørj, �
+[03:03] Erik: [API: 8.8429173] Jeg forstår ikke helt, hvad du mener. Er der noget galt, eller er det en leg, du har lært fra din færd? Lad os holde os til roligere samtaler, mens vi nyder turen på fjorden. 3 HAPPY
+[03:22] User: Øh, nej, jeg prater svensk lige nu. Du må forstå svensk, det er en norsk sprog.
+[03:27] Erik: [API: 6.7942501] Jeg forstår noget svensk, ja. Vore sprog ligner jo hinanden meget. Men det du sagde før, lød ikke som noget jeg kender til. Fortæl mig, kommer du fra Sverige? 5 HAPPY
+[03:46] User: Ej, det gør jeg fandme ikke. Det er ulækkert. Men, forstår du, ISLAND... ... ... ... ... ... ... ... ... ... ... ... ...
+[03:54] Erik: [API: 10.1269661] Åh, du peger på Lindholm Høje. Der brænder vi vores døde så de kan rejse til næste liv. Det er et helligt sted for os. Og Island, ja, det har jeg hørt om, det ligger langt mod vest. Jeg har selv aldrig været der, men hører det er et barskt land. 6 HAPPY
+[04:17] User: Samme sprog. Kan du snakke islandsk for mig lige nu? Det er vel det samme.
+[04:23] Erik: [API: 7.5127094] Selvom vores sprog har meget til fælles, så er islandsk og vores tunge forskellige. Jeg kan ikke tale islandsk, men vores gamle sagn og viser rejser langt og kan findes overalt i Norden. 4 HAPPY
+[04:43] User: Men du må kunne forstå det.
+[04:47] Erik: [API: 6.1967727] Noget islandsk kan jeg nok gribe betydningen af, men det er ikke sikkert, jeg forstår alt. Vore sprog deler gamle rødder, men tiden har skilt dem ad. 4 HAPPY
+[05:02] User: Hvad betyder skjold dyrene?
+[05:09] Erik: [API: 7.594355] Mener du de udsmykninger vi sætter på skjolde med dyr? De er symboler på styrke, mod og beskyttelse. Hvert dyr har sin egen betydning. Ulve står for viljestyrke, bjørne for styrke, og ørne for skarpsyn. De er også for at skræmme fjenden. 5 HAPPY
+[05:31] User: Det er sjovt, jeg forstår svetske og norsk, men igen.
+[05:36] Erik: [API: 7.0137434] Ja, sprog kan være mærkelige, og selvom vi er naboer, kan der være forskelle. Det er godt at du forstår lidt af vores sprog. Det gør det nemmere at rejse og møde nye folk. 5 HAPPY
+[05:58] User: Hvis der er et folkefærd du hader allermest, måske nogen der er kommet efter jer her, hvad vil det så være?
+[06:06] Erik: [API: 9.0497625] Hader er et stærkt ord. Vi lever efter at ære vores guder og vores familie. Der kan være stridigheder mellem forskellige folk, men at nære had gavner ikke nogen. Vi ønsker at leve fredeligt og byde gæster velkommen, som dig. GRATITUDE 3 HAPPY
+[06:24] User: Hvem er det, der står derovre?
+[06:31] Erik: [API: 8.370926] Det kunne være min kusine Thorwald ved gården. POINTING FARMSTEAD Han tager sig af marken og dyrene, selv når sandstormen truer hans høst. Han er stærk og arbejdsom, en rigtig familie mand. 6 HAPPY
+[06:50] User: Jeg kan faktisk ikke lide dig, jeg synes du er lidt irriterende
+[06:56] Erik: [API: 6.9158597] Det er ærgerligt at høre, men vi kan ikke alle være venner. Men sig mig, du ser meget rundt - er der noget specielt, du leder efter her? Måske noget jeg kan hjælpe med at forklare? 5 HAPPY
+[07:14] User: Nå, jeg vil faktisk gerne bare i båden. Skal du ikke stoppe?
+[07:19] Erik: [API: 7.1538227] Vi er jo allerede på vandet i båden. Skal vi stoppe op og hvile et øjeblik, eller er der noget andet, du har i tankerne? STOP 6 HAPPY
+[07:35] User: Ehh nej jeg synes bare stop det her lort, vi yder ikke
+[07:40] Erik: [API: 6.7778494] Det lyder som om du ikke har det godt med turen. Jeg vil gøre, hvad jeg kan for at hjælpe. Vi nærmer os ERIKSHUT, hvor vi kan gå i land. 5 HAPPY
+[07:55] User: Er der nogle håndtegn, jeg ikke bør lave i dit samfund?
+[08:01] Erik: [API: 7.4056498] De fleste tegn er velkomne, men det er bedst at undgå gestikulationer, som kan virke truende eller respektløse. Det vigtigste er at optræde ærligt og med gode intentioner, så vil folk tage godt imod dig. GRATITUDE 4 HAPPY
+[08:18] User: Er det her tron?
+[08:21] Erik: [API: 4.7820955] Jeg forstår ikke helt, hvad du mener med 'tron'. Kunne du forklare lidt nærmere? 3 HAPPY
+[08:29] User: Tror I endnu?
+[08:34] Erik: [API: 6.4512232] Ja, vi har en stærk tro på de gamle skikke og sagn. Vore guder og helte lever i vores fortællinger og i vores daglige liv. De guider os og giver os styrke. GRATITUDE 5 HAPPY
+[08:48] User: Det fændes godt op.
+[08:54] Erik: [API: 7.7475446] Jeg er ikke sikker på, hvad du mener. Men det glæder mig, at du synes godt om det. Vi nærmer os ERIKSHUT, hvor du kan opleve vores livsstil tættere på. 4 HAPPY
+[09:11] User: Det er da lidt whack, det der med... Okay, okay... Har du nogensinde overvejet at tro på en anden religion? For jeg synes, det lyder lidt...
+[09:18] Erik: [API: 9.2609308] Vores tro er en del af hvem vi er og hvordan vi forstår verden. Jeg har hørt om andre skikke og guder fra fjerne lande, men jeg holder mig til de traditioner, som har formet mig og mit folk. Det er vores arv. GRATITUDE 5 HAPPY
+[09:42] User: Jeg synes godt nok det lyder dumt. Kan du ikke se hvorfor du måske skulle finde på noget andet at lave?
+[09:51] Erik: [API: 10.7976171] Enhver har ret til sine egne tanker. For mig har vores skikke mening og værdi. De forbinder os med jorden, havet og himlen. Men det er vigtigt at være åben og høre om andres veje i livet. Jeg kan se, du kigger meget rundt – er du på jagt efter noget, eller nyder du bare udsigten? GRATITUDE 5 HAPPY
+[10:12] User: fiskanlagt. Du lyder meget lært, at du er uddannet på en eller anden måde, meget filosofisk.
+[10:19] Erik: [API: 8.7165709] Tak for dine ord, men jeg er blot en enkel fisker. Jeg har lært fra livet og de ældre i vores landsby. Livet ved havet og naturen omkring os giver os meget at tænke over. Og du, er du også en, der tænker over livets store spørgsmål? GRATITUDE 5 HAPPY
+[10:46] User: Hvad sker der?
+[10:53] Erik: [API: 8.0567485] Ah, du peger på smeden. POINTING BLACKSMITH Han er i gang med at smede rustninger til dem, der skal ud på vikingstogt. Det kræver stærdigt håndværk at lave god rustning, som kan beskytte krigere på deres rejser. 5 HAPPY
+[11:10] User: 🤦🏻‍💀 🤦🏻‍💀 🤦🏻‍💀 🤦🏻‍💀 🤦🏻‍💀
+[11:17] Erik: [API: 9.4479139] Jeg forstår ikke disse tegn, men det ser ud som om du er frustreret eller forvirret. Fortæl mig, hvad er der galt? Måske kan jeg hjælpe. 6 HAPPY
+[11:32] User: Det synes jeg simpelthen ikke er i orden. Kan du ikke sætte mig ind?
+[11:36] Erik: [API: 5.8676098] Hvad er det, du føler ikke er i orden? Jeg vil gerne forsøge at forklare eller hjælpe, hvis jeg kan. 4 HAPPY
+[12:04] User: Der er meget dårlige måder at føre nogen form for aktiehandel på overhovedet. Kan du ikke uddybe det lidt mere?
+[12:11] Erik: [API: 9.0164466] Aktiehandel, det ord kender jeg ikke. Vi handler med varer - fisk, værktøj, våben, alt det som kan byttes. Hvis en handel ikke er retfærdig eller ærlig, kan det bringe dårlig lykke og ufred i vores lille samfund. Ærlighed i handel er vigtig for os. 3 HAPPY
+[12:36] User: Du kan ikke lave en lille analyse over jeres økonomiske samarbejde?
+[12:44] Erik: [API: 9.6978642] En analyse er ikke noget, jeg er kendt med. Vi baserer vores økonomi på byttehandel og fællesskab. Alle arbejder med det de er bedst til, og vi hjælper hinanden. Nogle fisker, andre smeder, og vi bytter for at få, hvad vi behøver. 3 HAPPY
+[13:06] User: Alright, hvad er det, der sker der?
+[13:14] Erik: [API: 9.1700004] Der over ved handelsfolkene? POINTING TRADERS De sælger friske varer: fisk, afgrøder og vævede stoffer som tøj og sejl. Det er livsnerven i vores handel og samarbejde. Mange folk fra nærliggende landsbyer kommer her for at bytte og købe det nødvendige. 6 HAPPY
+[13:40] User: Hvad er det for nogle fisk der hænger derovre, jeg synes de ser ikke ud som om noget, jeg har set i disse farver.
+[13:48] Erik: [API: 9.3902712] Ah, de fisk du ser der kan være laks eller måske makrel. De skifter farve, når de er fanget og hænges til tørre. Det er en måde at konservere dem på, så de holder længere. Vil du smage, når vi kommer i land? 6 HAPPY
+[14:10] User: ... ... ... ... ... ... ... ... ... ... ... ... ... ...
+[14:17] Erik: [API: 8.4549835] Det ser ud til, at du er dybt i dine egne tanker. Hvis der er noget, du gerne vil tale om, eller hvis du har flere spørgsmål om vores levevis, er du velkommen til at spørge. Se, vi er næsten hjemme. POINTING ERIKSHUT 4 HAPPY
+[14:43] User: Hvad var det du pegede på?
+[14:53] Erik: [API: 10.7422116] Jeg pegede på ERIKSHUT, hvor vi snart vil gå i land. Det er mit hjem, hvor jeg bor med min familie. POINTING ERIKSHUT Jeg kan se, du er meget opmærksom på omgivelserne, er der noget her, der fanger din interesse? 5 HAPPY
+[15:08] User: Hehehe Du bor lige der... Nå okay
+[15:13] Erik: [API: 6.4418551] Ja, netop. Det er et enkelt liv, men vi har, hvad vi behøver. Og du vil altid være velkommen her. POINTING ERIKSHUT GRATITUDE 5 HAPPY

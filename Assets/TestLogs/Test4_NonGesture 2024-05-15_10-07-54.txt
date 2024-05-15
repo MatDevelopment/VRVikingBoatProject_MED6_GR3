@@ -1,0 +1,65 @@
+Total Time: 15:22 Tutorial Time: 54.98495 Total Time minus tutorial: 14:27, User Prompts: 31, Erik Responses: 31, Erik Instigations: 2, Erik Gaze Time: 450.7691, Erik Percent Gaze Time: 51.945, API Call Time Averages: Combined 7.362593584375, SST: 1.5233724030303, ChatGPT: 3.68610470606061, TTS: 3.68610470606061
+[01:06] User: Halløj? Halløj? Halløj?
+[01:09] Erik: [API: 4.3997232] God dag, rejsende. Hvad fylder dine tanker denne skønne dag?
+[01:20] User: Hvad laver vi på den her båd?
+[01:25] Erik: [API: 6.9081969] Vi er ude at fiske, min ven. Har hentet dagens fangst til familjen. Snart lægger vi til ved min hytte, hvor vi kan hvile og ta' en bid brød.
+[01:40] User: Er det din kone der står der på bredden?
+[01:44] Erik: [API: 6.1448807] Ja, det er min Astrid. Hun venter altid trofast, når jeg kommer hjem fra havet. Hun er hjertet i vores hjem og landsbyens healer. Hun vil glæde sig til at møde dig.
+[02:02] User: Hvad betyder det? Landsbyens healer?
+[02:08] Erik: [API: 7.066425] Astrid kender naturens kræfter og bruger urter og planter til at lindre og helbrede folk. Hun har stor viden om helse og hjælper alle, der har brug for det. En skat for landsbyen, det er hun.
+[02:31] User: Nå, hva' eeej.
+[02:35] Erik: [API: 6.2179946] Ja, livet er fyldt med både små og store overraskelser, ikke sandt? Nu nærmer vi os hytten, klar til hvile og en god historie.
+[03:06] User: Det, der siger du no comment, det kan jeg godt lave den klik.
+[03:12] Erik: [API: 1.3690216] Jeg er ikke sikker på, hvad du mener. Men se, der er min gode ven Ole, der fisker ved molen. Han fanger ofte de største ål. Vi kan hilse på ham, når vi går forbi.
+[03:29] User: Det var flot, du kom ud af den. Okay. Det var flot.
+[03:34] Erik: [API: 6.4295609] Tak skal du have. Livet på havet lærer en at navigere gennem mange situationer. Nu, lad os nyde resten af turen til hytten.
+[03:50] User: Hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha
+[03:56] Erik: [API: 8.1990366] Det er godt at høre din latter! Livet er bedre, når man kan le i godt selskab. Lad os bringe den gode stemning hjem til hytten.
+[04:16] User: Der står til venstre der Ej det gad du ikke Øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
+[04:21] Erik: [API: 9.454152] Runestenen fortæller om den mand, som først bosatte sig her. Hans historie lever videre gennem stenens ord. Det minder os om vores forbindelse til de gamle og til landet her.
+[04:40] User: har du nogensinde slået nogen i el på tøj?
+[04:46] Erik: [API: 7.5121617] Det forstår jeg ikke helt. Vi kender ikke til 'el på tøj'. Jeg kender til at kæmpe med sværd og skjold, og til at kæmpe mod havets kræfter, men 'el på tøj' er ikke noget, jeg kender til.
+[05:05] User: Det kan være jeg mumlede lidt, har du nogensinde slået nogen i hjel på tøj?
+[05:12] Erik: [API: 8.4619135] Nej, jeg er en fredelig fisker og trives bedst med at leve i harmoni med naturen og dem omkring mig. Min kamp er mod havets bølger for at sikre dagens fangst, ikke mod mine medmennesker.
+[05:35] User: Du sagde lige før at du havde kæmpet med svær skjold, hvornår gør du så det hvis du bare slås mod havet?
+[05:42] Erik: [API: 9.1238422] Åh, det var blot en tale om min ungdom. Før jeg fandt freden i at fiske, prøvede jeg kræfter med kamptræning som ung mand. Nu er det sjældent, og kun hvis landsbyen trues, jeg ville gribe til sværd og skjold igen. Havet er min sande udfordrer nu.
+[06:03] User: Sådan du.
+[06:09] Erik: [API: 6.5492283] Tak for det. Vi har alle vores slag at kæmpe, enten mod bølgen eller mod skæbnen. Nu skal vi snart hjem. Er du klar til at møde min familie og få hvilet dine ben?
+[06:26] User: Ja. Ja. Ja.
+[06:30] Erik: [API: 4.8337122] Det glæder mig at høre. Vi skal snart i land, og så kan vi dele dagens fangst og historier. Velkommen til mit hjem.
+[06:54] User: Nå men vejret er sgu meget godt
+[06:59] Erik: [API: 5.642638] Ja, solen skinner og vinden er mild. Det bedste vejr for en god dag på havet. Perfekt til at tage hjem og nyde dagens arbejde med familien.
+[07:22] User: Undskyld jeg siger det, men der er ikke nogen overhovedet. Der er helt tomt. Hvor er alle?
+[07:31] Erik: [API: 9.5766666] De er nok ude at arbejde på markerne eller inde i skoven. Om sommeren er der altid meget at se til. Men rolig nu, de vil være hjemme, når aftensmaden skal på bordet. Sådan er livet her; vi arbejder hårdt og samles om aftenen.
+[07:51] User: Fedt. Yes.
+[07:57] Erik: [API: 7.7898373] Det er godt at høre, at du synes om det. Vi tager vare på hinanden her, og vi vil sørge for, at også du bliver taget godt imod. Lad os nyde resten af turen til hytten.
+[08:24] User: Det ligner tæppe. Hvad er det for nogle tæpper der ligger her i båden? Det ligner mere menneske.
+[08:33] Erik: [API: 10.5724658] Det er ikke tæpper, det er garn og net, vi bruger til fiskeri. De kan være tunge og våde, så de ligger i bunden af båden. Men menneske, det er de bestemt ikke. Vi bruger dem til at hale fisk ind fra fjorden.
+[08:56] User: Fordi at øh... Okay... Hvor er det vi skal lægge til at...
+[09:02] Erik: [API: 6.9949966] Vi lægger til ved min fiskehytte lige om lidt. Den ligger ved kysten, ikke langt fra, hvor vi sætter vores net. Der vil min familie vente, og du kan hvile efter rejsen og mætte dig med dagens fangst.
+[09:23] User: Hvor er dagens fangst? Vi har jo ikke nogen fisk.
+[09:28] Erik: [API: 7.0782169] Ah, du har ret. Fangsten ligger i tønderne her ved siden af os, dækket til for at holde mågerne væk. Når vi kommer i land, skal vi nok få dem op til hytten og se, hvad havet har givet os i dag.
+[09:48] User: Det ville jo være en god forklaring, hvis der var tønder, men der er ikke nogen tønder.
+[09:56] Erik: [API: 8.8901411] Det undskylder jeg. Det ser ud som om, vi måske har glemt at laste fangsten. Det sker sjældent, men vi mennesker fejler nogle gange. Vi finder en løsning, når vi kommer i land. Måske Ole ved molen har lidt at dele.
+[10:16] User: Har du smidt det over bordet eller hvad?
+[10:22] Erik: [API: 7.1503082] Nej, nej, det ville jeg aldrig gøre. Måske er de blevet efterladt ved molen i farten, eller også har vi haft et uheld. Uanset hvad, så skal min familie og du ikke gå sultne i seng; vi skal nok finde mad til aftensmåltidet.
+[10:45] User: Jeg føler at du skjuler noget for mig
+[10:52] Erik: [API: 8.3890646] Jeg skjuler ikke noget, min ven. Ærlighed er vigtig blandt folk her. Hvis der er sket en fejl med fangsten, så beklager jeg meget. Vi skal nok sørge for at du ikke går sulten til køjs i dag. Vi lever af havet, og nogle dage giver det mere end andre.
+[11:14] User: Hvem er det der står der i Hammershøi?
+[11:21] Erik: [API: 8.6821954] Det må være smeden, du ser. Han arbejder utrætteligt med at smede rustninger og våben til dem, der skal på vikingetogt. En stærk og pålidelig mand, som sikrer at krigere er godt udrustet til deres rejser.
+[11:40] User: kan jo se. Han har jo brækket sit håndløs.
+[11:46] Erik: [API: 7.6303065] Det må være et hårdt slag for ham, som smed, at skade hånden. Vores helbreder vil sikkert hjælpe ham, så han kan komme til kræfter igen. Det er vigtigt at støtte hinanden i en landsby som vores.
+[12:05] User: Jeg kan lide det. Der er meget positiv energi.
+[12:14] Erik: [API: 9.2352764] Det er godt at høre. Livet er fuldt af hårdt arbejde, men også fællesskab og livsglæde. Vi bygger skibe, dyrker jorden og fanger fisk, alt sammen med en stærk ånd og stolthed i vores håndværk. Velkommen til vores landsby, hvor positiv energi strømmer fra hvert hjørne.
+[12:43] User: på en skala fra 1 til 10, hvor godt kan du lide Astrid?
+[12:50] Erik: [API: 7.6156699] Astrid er mit hjertes lys, så på din skala ville hun få det højeste tal, en ti'er. Hun står mig nærere end noget andet, og jeg er taknemmelig hver dag for at leve mit liv ved hendes side.
+[13:09] User: Det er cute. Det er cute det der, det er cute.
+[13:16] Erik: [API: 8.1076518] Det glæder mig, at du finder livet her tiltalende. Der er skønhed i det enkle og i at værdsætte de ting vi har og de mennesker vi holder af. Vi lever et enkelt liv, men det er fyldt med kærlighed og hårdt arbejde.
+[13:33] User: Så du kampen mellem Tottenham og City i går?
+[13:39] Erik: [API: 7.2248827] Jeg ved ikke, hvad "Tottenham" og "City" er. Vi har ikke kampe som sådan her, bortset fra når unge mænd styrkeprøver ved de årlige fester. Fortæl mig om disse kampe, er det en form for dyst eller leg?
+[13:56] User: Er du også nødvendig?
+[14:04] Erik: [API: 9.7494098] Alle i vores samfund har en rolle at spille. Som fisker sørger jeg for mad til min familie og landsby. I hver vores måde er vi nødvendige for at holde liv i vores hjem og fællesskab. Er du nødvendig, hvor du kommer fra?
+[14:34] Erik instigates talk: Vi er næsten ved min hytte nu. Det har været en begivenhedsrig tur, ikke sandt? Hvad glæder du dig mest til at opleve her i vores landsby?
+[14:36] Erik: [API: 4.3981311] Alle i vores samfund har en rolle at spille. Som fisker sørger jeg for mad til min familie og landsby. I hver vores måde er vi nødvendige for at holde liv i vores hjem og fællesskab. Er du nødvendig, hvor du kommer fra?
+[14:49] User: Smager det lige af fisk?
+[14:56] Erik: [API: 8.2052866] Ja, fisken her smager frisk og ren, lige fra havet. Vi passer godt på vores fjorde og strømme, så fangsten er af bedste kvalitet. Du skal nok få en god bid at spise, der vil bekræfte det!

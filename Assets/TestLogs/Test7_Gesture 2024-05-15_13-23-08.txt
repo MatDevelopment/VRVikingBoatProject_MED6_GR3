@@ -1,0 +1,51 @@
+Total Time: 15:07 Tutorial Time: 39.28547 Total Time minus tutorial: 14:27, User Prompts: 24, Erik Responses: 24, Erik Instigations: 5, Erik Gaze Time: 141.0518, Erik Percent Gaze Time: 16.25138, API Call Time Averages: Combined 9.507995744, SST: 1.326493488, ChatGPT: 5.517661724, TTS: 5.517661724
+[00:53] User: Hvad har vi fisket?
+[00:58] Erik: [API: 6.8068029] Vi har fanget torsk, sild, og lidt skrubber. En god dag på havet! POINTING ERIKSHUT Vores hjem er lige der, vi skal snart være der. HAPPY 6
+[01:14] User: Er headsetet blevet tændt?
+[01:20] Erik: [API: 7.0731654] Jeg forstår ikke helt, hvad du mener med 'headset'. Men se, runestenen du peger på fortæller om Rurik. Han var en stor mand, som slog sig ned her for mange år siden. En kraftig historie, der løber gennem vores slægt. UNSURE 3
+[01:42] User: Fisk? Fanget af fisk? Hvad har vi fanget af fisk?
+[01:52] Erik: [API: 11.0946703] Ah, ja! Som jeg sagde før, vi har torsk, sild, og skrubber i tønden her. Det er dagens fangst, frisk fra havet – klar til at spise eller bytte. POINTING ERIKSHUT Og derovre, skal vi snart nyde fangsten. Er du klar til at smage? GRATITUDE 4
+[02:13] User: Og om lidt så må jeg beveje hænderne.
+[02:17] Erik: [API: 5.7439542] Selvfølgelig, bevæg dine hænder som du vil. Det er godt at strække sig efter en lang dag. Men fortæl mig, hvad tænker du om vores land her? UNSURE 3
+[02:33] User: Lad nu det se fint ud, hvem er det der bor her?
+[02:40] Erik: [API: 7.8660789] Det er Ole's hytte, han er en god ven og også fisker. Han bruger meget tid på den lille brygge der. Han er skarp til at fange ål og brisling. POINTING ERIKSHUT Min hytte er lidt længere fremme ved åmundingen. Vi er snart hjemme. GRATITUDE 4
+[03:02] User: på havet. Kan man fange noget herinde, eller er det kun
+[03:09] Erik: [API: 7.9890391] Ja, man kan fange mange fisk herinde i åen, ikke kun på havet. Både ål og brisling, og når sæsonen er god, også laks. Vandet giver os mad og handel, både her og ude på de åbne bølger. POINTING ERIKSHUT Snart kan du se hvor vi tørrer og salter fangsten. GRATITUDE 4
+[03:40] User: Hvad er det for nogle sten der står herovre?
+[03:48] Erik: [API: 10.1659096] Ah, det er en runesten. Den fortæller om Rurik, den mand som først bosatte sig i dette område. Han var en stærk leder – mange historier kredser om hans bedrifter og de ætter, han grundlagde. Denne sten er en hyldest til hans minde og de slægter, der følger hans fodspor. UNSURE 3
+[04:13] User: Her har jeg en grundlagt. Vi har fået nogle edder.
+[04:20] Erik: [API: 9.4473394] Det lyder som en spændende tanke. Runestenene har mange fortællinger, nogle endda lidt mystiske. Edderne, ja, vores fortællinger giver os viden om guderne og helte, som vi deler omkring bålet. De binder os sammen, fra gammel tid til nu. POINTING RUNESTONE Har du lignende fortællinger, hvor du kommer fra? GRATITUDE 4
+[04:53] User: Hvad er det for en by, vi kommer til?
+[05:02] Erik: [API: 10.9689389] Vi nærmer os vores landsby, et handelssted med smede, handelsfolk og bådebyggere. Tæt på ligger Lindholm Høje, en anden by, fuld af vores historie og gamle skikke. POINTING ERIKSHUT Men først skal vi til min hytte ved åens ende. Der kan du hvile og måske høre mere om vores folk. GRATITUDE 4
+[05:31] User: For at I mest bytter ud af fiskeriet eller jeres landbrug.
+[05:40] Erik: [API: 10.3889433] Vi bytter med begge dele. Fisk fra havet og afgrøder fra marken giver os hvad vi behøver. POINTING FARMSTEAD Se, der er min fætter Thorwalds gård. Sandstormen dækker hans afgrøder i sand, det er en kamp mod naturen. Men vi er et stærkt folk, vi klarer os gennem hårdt arbejde og sammenhold. GRATITUDE 4
+[06:10] User: Så er det klassisk fiskertøj du har på.
+[06:19] Erik: [API: 10.408462] Ja, det er det. Det her tøj er lavet til at holde mig tør og varm, når jeg er ude på havet. Enkelt og funktionelt – det er sådan vi klæder os, når vi arbejder med net og liner. Behageligt og robust, det skal kunne stå imod både vejr og vind. GRATITUDE 4
+[06:46] User: Den anden til højre. Er det et lager der er herinde?
+[06:54] Erik: [API: 9.825254] Nej, det er Lindholm landsbyen, ikke et lager. Det er en lille samling af gårde, og tæt på ligger en hellig gravhøj. POINTING VILLAGE Det er et sted fuldt af liv og slægtenes historie, ikke kun opbevaring. Vi lever livet tæt på vores marker og naturen omkring os. GRATITUDE 4
+[07:26] Erik instigates talk: Ser du noget, der fanger din interesse? Vi har mange smukke syn her i landet, og hver enkelt sted har sin egen saga at fortælle. UNSURE 3
+[07:28] Erik: [API: 5.5192358] Nej, det er Lindholm landsbyen, ikke et lager. Det er en lille samling af gårde, og tæt på ligger en hellig gravhøj. POINTING VILLAGE Det er et sted fuldt af liv og slægtenes historie, ikke kun opbevaring. Vi lever livet tæt på vores marker og naturen omkring os. GRATITUDE 4
+[07:45] User: Hvad er det for en fisk, der ligger under din stol?
+[07:56] Erik: [API: 12.3831696] Haha, du må undskylde, det er en lille skrubbe, der må være sluppet fra tønden. De er glatte små fyrer! Og der, du peger hen, det er Lindholm Høje, et helligt sted med stenformationer som skibssider. Det er her vi sender de afdøde på deres sidste rejse. POINTING BURIALMOUND En smuk tradition, ikke sandt? GRATITUDE 4
+[08:23] User: Det er til at sige, hvorfor der er bolder på.
+[08:30] Erik: [API: 8.9961848] Det forstår jeg ikke helt. Mener du de sten, vi bruger til at markere gravene? De er en del af vores traditioner – for at ære dem, der er gået videre til næste liv. Hver sten og hver formation har sin betydning, som en del af vores arv. UNSURE 3
+[08:53] User: Der er røg på toppen af bakken på stenhøjen.
+[09:01] Erik: [API: 9.3516429] Ja, det sker når en af vores egne har taget rejsen til de evige jagtmarker. Vi brænder deres legeme på stenhøjen som et skib der fører dem til efterlivet. POINTING BURIALMOUND Det er en ældgammel skik, der viser vores respekt for de døde og deres vej til de guders rige. GRATITUDE 4
+[09:27] User: Håbenskjoldene
+[09:33] Erik: [API: 7.571054] Du mener måske vores skjolde? Når vi ikke er på havet, passer vi på vores hjem og holder fast i vores tro. Skjolde er ikke kun til beskyttelse i kamp, de er også symboler på vores familier og styrke. GRATITUDE 4
+[09:57] User: Kan du fortælle noget mere omkring smitten?
+[10:05] Erik: [API: 9.4271808] Jeg ved ikke, hvad du mener med 'smitten'. Hvis du taler om vores smede, så er de dygtige håndværkere, der skaber værktøj, våben og smykker. De arbejder hårdt i ilden og hamrer metallerne til stærke genstande, vi bruger i hverdagen og til at handle med. GRATITUDE 4
+[10:38] User: igen. Vil du fortælle omkring smiden?
+[10:52] Erik: [API: 15.3225248] Selvfølgelig. Vores smed arbejder med ild og stål. Han laver rustninger og våben, som er vitale for dem, der skal ud på vikingetogter. POINTING BLACKSMITH Et stærkt håndværk, der kræver både kraft og finesse. Og det, du peger på, er indgangen til vores marked, et travlt sted fuld af handel og søfolk fra hele Norden. GRATITUDE 4
+[11:28] User: Bruger vikinger ofte heldbart?
+[11:37] Erik: [API: 9.7797007] Ja, vi vikinger sætter stor pris på holdbare genstande – det være sig våben, skjolde, eller værktøj til dagligt brug. Smeden laver ting, der skal vare mange år og holde til meget. POINTING BLACKSMITH Se hvordan han arbejder; det, han skaber, skal stå sin prøve i kamp og arbejde. GRATITUDE 4
+[12:06] User: løfteskibet. Er det en lift til at løfte?
+[12:14] Erik: [API: 9.9275196] Jeg forstår ikke helt, hvad du mener med 'lift'. Men hvis du taler om skibene, så nej, de bruger ikke lifte. Vores bådebyggere er dygtige og bruger traditionelle metoder til at bygge og reparere skibene. POINTING BOATBUILDER De bruger styrke og kloge teknikker til at håndtere træet og konstruktionen. GRATITUDE 4
+[12:46] User: Hvad er det?
+[12:52] Erik: [API: 6.8252512] Er der noget bestemt, du peger på eller snakker om? Sig endelig til, hvis der er noget, du vil vide mere om, mens vi bevæger os langs vandet. Jeg vil gerne dele vores verden og historier med dig. UNSURE 3
+[13:13] User: Det er en store trækonstruktion med et hjul.
+[13:23] Erik: [API: 11.3925975] Ah, du må tale om vores bådebyggeri. POINTING BOATBUILDER Det store hjul bruges til at vende træstammer og større dele, når vi bygger vores skibe. Et skib er vikingernes stolthed – solidt bygget til at klare lange rejser og hårde søer. GRATITUDE 4
+[13:54] User: Hvor får vikingene deres vandmelon fra?
+[14:03] Erik: [API: 9.9792608] Vandmelon? Det er ikke en frugt, vi kender til eller bruger. Vores afgrøder er dem, der kan vokse her i nordens klima - byg, hvede, ærter og roer, for eksempel. Vi handler også med lande langt væk for at få andre varer, men vandmelon har jeg ikke hørt om. UNSURE 3
+[14:34] User: Kan du fortælle noget mere omkring dragefigurerne på jeres hus?
+[14:46] Erik: [API: 13.4460131] Dragen er et magtfuldt symbol for os. Det står for styrke og beskyttelse. Mange sætter dragefigurer på deres huse eller skibe for at bringe godt held og skræmme væk onde ånder. POINTING ERIKSHUT På mit hus bruger vi også udskæringer til at fortælle om familien og vores historier. Det er en del af vores arv. GRATITUDE 4

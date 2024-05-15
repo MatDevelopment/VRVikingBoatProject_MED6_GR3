@@ -63,6 +63,7 @@ public class NPCInteractorScript : MonoBehaviour
     
     public string[] npcActionStrings = {"APPROVE", "DISAPPROVE", "GREETING", "POINTING", "UNSURE", "GRATITUDE", "CONDOLENCE", "INSULT", "STOP"};
     public string[] npcPointingTargets = { "FISHINGHUT", "RUNESTONE", "FARMSTEAD", "VILLAGE", "BURIALMOUND", "MARKETENTRANCE", "BLACKSMITH", "BOATBUILDER", "TRADERS", "ERIKSHUT" };
+    private string[] npcEmotionBlendValues = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
     private bool playedFirstVoiceLine = false;
     private bool playedSecondVoiceLine = false;
@@ -111,7 +112,7 @@ public class NPCInteractorScript : MonoBehaviour
                 "Reply to only NPC lines not to the Traveller's lines.\n" +
                 //"The NPC is NOT able to physically move around. This includes pointing, head-nodding, walking, running and everything related to physical movement. Do not say this to the Traveller.\n" +
                 "If the Traveller does not say anything then ask the Traveller what is on their mind.\n" +
-                "Your responses should be no longer than 65 words.\n" +
+                "Your responses should be no longer than 60 words.\n" +
                 "The following info is the info about the world: \n" +
                 worldInfoScript.GetPrompt() +
                 "The following info is the info about the NPC: \n" +
@@ -138,15 +139,15 @@ public class NPCInteractorScript : MonoBehaviour
                 Content =
                     "Do not say anything about the emotional state of the NPC or what the NPC is thinking, but simply take this information into account.\n" +
                     "Include in your response the NPC's current emotional state in capitalized letters, in the same message without new line and seperated by white space. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT \n" +
-                    "Give a number from 1 to 10, where 1 is not emotional and 10 is very emotional, based on how emotional the NPC is. Place ONLY THIS chosen number before the NPC's current emotional state AND with square brackets on either side of the chosen number ONLY.\n" +
+                    "Give a number from 1 to 10, where 1 is not emotional and 10 is very emotional, based on how emotional the NPC is. Place this chosen number after the placement of the NPC's current emotional state in the response, seperated by white space.\n" +
                     //"Just before the primary emotion, without a new line and seperated by whitespace with square brackets on either side, give a number from 1 to 10, where 1 is not emotional and 10 is very emotional, based on how emotional the NPC is.\n" +
                     //"DO NOT place the NPC's current emotional state within square brackets. \n" +
                     "Only choose ONE emotion per response, and only choose an emotion if you deem it necessary.\n" +
-                    "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick ONLY ONE gestures to go with the NPC's response: DISAPPROVE, APPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
+                    "Considering the context of the conversation with the Traveller and the NPC's current primary emotional state, pick ONLY ONE gestures to go with the NPC's response from the following emotions: DISAPPROVE, APPROVE, GREETING, POINTING, UNSURE, GRATITUDE, CONDOLENCE, INSULT, STOP.\n" +
                     "The gestures previously mentioned are the only gestures available to you, so please choose the most suitable gesture. All else physical movement besides these gestures are not possible.\n" +
                     "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n"+
                     "When POINTING the NPC can only choose between a given set of targets and only after the NPC have been given permission for the specific target. Write the chosen target whithout new line and after POINTING seperated by white space. The only available targets are: FISHINGHUT, RUNESTONE, FARMSTEAD, VILLAGE, BURIALMOUND, MARKETENTRANCE, BLACKSMITH, BOATBUILDER, TRADERS, ERIKSHUT.\n" +
-                    "The NPC now has permission to be POINTING at FISHINGHUT\n" +
+                    "The NPC now has permission to be POINTING at FISHINGHUT. Erik does not live in the fishing hut pointing target FISHINGHUT. \n" +
                     "Erik lives in a fishing hut together with his family, which is also the POINTING target: ERIKSHUT.\n"
                    
 
@@ -173,7 +174,7 @@ public class NPCInteractorScript : MonoBehaviour
 
     private void Update()
     {
-        if (apiStatus.isTranscribing == false && apiStatus.isGeneratingAudio == false && apiStatus.isGeneratingText == false && apiStatus.isTalking == false && _micInputDetection.isListening == false && _gestureVersionManager.GestureVersion)       //If nothing is being done concerning talk (Talking, listening etc.), then we count the timer up.
+        if (apiStatus.isTranscribing == false && apiStatus.isGeneratingAudio == false && apiStatus.isGeneratingText == false && apiStatus.isTalking == false && _micInputDetection.isListening == false)       //If nothing is being done concerning talk (Talking, listening etc.), then we count the timer up.
         {
             if(erikSpeakable && _gestureVersionManager.tutorialDone) // To prevent Erik from instigating conversation during testing
                 initiateTalkTimeCounter += Time.deltaTime;
@@ -205,11 +206,12 @@ public class NPCInteractorScript : MonoBehaviour
         
         foreach (string primaryEmotion in npcPrimaryEmotions)
         {
-            CheckErikPrimaryEmotion(primaryEmotion, chatGptResponse);
+            chatGptResponse = CheckErikPrimaryEmotion(primaryEmotion, chatGptResponse);
         }
 
         // Checks and sets the emotion blendvalue
-        CheckEmotionBlendvalue(chatGptResponse);
+        //CheckEmotionBlendvalue(chatGptResponse);
+        chatGptResponse = CheckEmotionBlendValueNumber(chatGptResponse);
 
         // Checks for the chosen point target
         foreach (string target in npcPointingTargets)
@@ -218,7 +220,7 @@ public class NPCInteractorScript : MonoBehaviour
             {
                 _erikIKController.ChooseLookTarget(target);
 
-                int startIndexAction = chatGptResponse.IndexOf(target);
+                int startIndexAction = chatGptResponse.IndexOf(target, StringComparison.Ordinal);
                 chatGptResponse = chatGptResponse.Remove(startIndexAction, target.Length);
             }
         }
@@ -235,14 +237,14 @@ public class NPCInteractorScript : MonoBehaviour
                 int wordInStringCount = AnimationDelayCalculator.CountWordsInString(responseTillActionString);    //Counts the amount of words in responseTillActionString
 
                 float estimatedTimeTillAction = AnimationDelayCalculator.EstimatedTimeTillAction(wordCount: wordInStringCount,
-                    wordWeight: 0.23f, punctuationCount: punctuationsCount, punctuationWeight: 1.1f);
+                    wordWeight: 0.23f, punctuationCount: punctuationsCount, punctuationWeight: 1f);
 
                 Debug.Log("ActionString: " + responseTillActionString + " --" +
                           "Punctuations: " + punctuationsCount + " --" +
                           "Word count: " + wordInStringCount + " --" +
                           "ETA of action: " + estimatedTimeTillAction);
 
-                int startIndexAction = chatGptResponse.IndexOf(action);     //Finds the starting index of the action keyword in the ChatGPT response
+                int startIndexAction = chatGptResponse.IndexOf(action, StringComparison.Ordinal);     //Finds the starting index of the action keyword in the ChatGPT response
 
                 responseTillActionString = "";
 
@@ -262,14 +264,14 @@ public class NPCInteractorScript : MonoBehaviour
     }
 
 
-    public void CheckEmotionBlendvalue(string npcResponse)
+    public string CheckEmotionBlendvalue(string npcResponse)
     {
         if (npcResponse.Contains("["))
         {
-            int startIndex = npcResponse.IndexOf("[");
-            int endIndex = npcResponse.IndexOf("]");
+            int startIndex = npcResponse.IndexOf("[", StringComparison.Ordinal);
+            int endIndex = npcResponse.IndexOf("]", StringComparison.Ordinal);
             string blendString = npcResponse.Substring(startIndex + 1, endIndex - startIndex - 1);
-            npcResponse = npcResponse.Remove(startIndex, endIndex + 1);
+            npcResponse = npcResponse.Remove(startIndex, endIndex - startIndex);
 
             float blendValue = 0.5f;
             if (float.TryParse(blendString, out float result)) 
@@ -283,10 +285,65 @@ public class NPCInteractorScript : MonoBehaviour
 
             Debug.Log("Blend Value: " + blendValue);
             npcEmotionValue = blendValue;
+            return npcResponse;
+        }
+
+        return npcResponse;
+    }
+
+    public string CheckEmotionBlendValueNumber(string npcResponse)
+    {
+        foreach (var blendValue in npcEmotionBlendValues)
+        {
+            if (npcResponse.Contains(blendValue))
+            {
+                EmotionBlendValuesSwitchCase(blendValue);
+                int startIndex = npcResponse.IndexOf(blendValue, StringComparison.Ordinal);
+                npcResponse = npcResponse.Remove(startIndex, blendValue.Length);
+                return npcResponse;
+            }
+        }
+        return npcResponse;
+    }
+
+    private void EmotionBlendValuesSwitchCase(string blendValue)
+    {
+        switch (blendValue)
+        {
+            case "1":
+                npcEmotionValue = 0.1f;
+                break;
+            case "2":
+                npcEmotionValue = 0.2f;
+                break;
+            case "3":
+                npcEmotionValue = 0.3f;
+                break;
+            case "4":
+                npcEmotionValue = 0.4f;
+                break;
+            case "5":
+                npcEmotionValue = 0.5f;
+                break;
+            case "6":
+                npcEmotionValue = 0.6f;
+                break;
+            case "7":
+                npcEmotionValue = 0.7f;
+                break;
+            case "8":
+                npcEmotionValue = 0.8f;
+                break;
+            case "9":
+                npcEmotionValue = 0.9f;
+                break;
+            case "10":
+                npcEmotionValue = 1f;
+                break;
         }
     }
 
-    public void CheckErikPrimaryEmotion(string triggerString, string npcResponse)
+    public string CheckErikPrimaryEmotion(string triggerString, string npcResponse)
     {
         if (npcResponse.Contains(triggerString))
         {
@@ -294,14 +351,15 @@ public class NPCInteractorScript : MonoBehaviour
             
             //https://www.jetbrains.com/help/resharper/StringIndexOfIsCultureSpecific.1.html
             //int startIndexEmotion = npcResponse.IndexOf(npcEmotion, StringComparison.Ordinal);    //TRY THIS if it still doesn't work.
-            int startIndexEmotion = npcResponse.IndexOf(triggerString);
-            npcResponse = npcResponse.Remove(startIndexEmotion, triggerString.Length + 1);     //Removes the action keyword from ChatGPT's response plus the following white space
+            int startIndexEmotion = npcResponse.IndexOf(triggerString, StringComparison.Ordinal);
+            npcResponse = npcResponse.Remove(startIndexEmotion, triggerString.Length);     //Removes the action keyword from ChatGPT's response plus the following white space (+1). DEPRECATED +1
 
             Debug.Log("NPC Emotion: " + triggerString);
             //whisperScript.npcResponse = whisperScript.npcResponse.Replace(npcEmotion, "");
             //return triggerString;
+            return npcResponse;
         }
-        //return null;
+        return npcResponse;
     }
     
     //Method that animates Erik when the NPC's response contains a set trigger string.

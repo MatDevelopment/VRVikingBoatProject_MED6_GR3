@@ -183,11 +183,11 @@ namespace OpenAI
                         //Check for current NPC emotion in order to play animation
                         foreach (string primaryEmotion in npcInteractorScript.npcPrimaryEmotions)
                         {
-                            npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion, chatGptResponse);
+                            chatGptResponse = npcInteractorScript.CheckErikPrimaryEmotion(primaryEmotion, chatGptResponse);
                         }
 
                         // Checks and sets the emotion blendvalue
-                        npcInteractorScript.CheckEmotionBlendvalue(chatGptResponse);
+                        chatGptResponse = npcInteractorScript.CheckEmotionBlendValueNumber(chatGptResponse);
 
                         // Checks for the chosen point target
                         foreach (string target in npcInteractorScript.npcPointingTargets)
@@ -196,7 +196,7 @@ namespace OpenAI
                             {
                                 ikController.ChooseLookTarget(target);
 
-                                int startIndexAction = chatGptResponse.IndexOf(target);
+                                int startIndexAction = chatGptResponse.IndexOf(target, StringComparison.Ordinal);
                                 chatGptResponse = chatGptResponse.Remove(startIndexAction, target.Length);
                             }
                         }
@@ -220,7 +220,7 @@ namespace OpenAI
                                           "Word count: " + wordInStringCount + " --" +
                                           "ETA of action: " + estimatedTimeTillAction);
 
-                                int startIndexAction = chatGptResponse.IndexOf(action);     //Finds the starting index of the action keyword in the ChatGPT response
+                                int startIndexAction = chatGptResponse.IndexOf(action, StringComparison.Ordinal);     //Finds the starting index of the action keyword in the ChatGPT response
 
                                 responseTillActionString = "";
 

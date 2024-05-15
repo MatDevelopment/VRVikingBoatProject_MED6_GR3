@@ -1,0 +1,78 @@
+Total Time: 14:58 Tutorial Time: 30.41607 Total Time minus tutorial: 14:27, User Prompts: 34, Erik Responses: 33, Erik Instigations: 6, Erik Gaze Time: 423.3699, Erik Percent Gaze Time: 48.78877, API Call Time Averages: Combined 6.37043595, SST: 1.21648678974359, ChatGPT: 3.48190449210526, TTS: 3.48190449210526
+[00:45] User: Er der noget bestemt, man skal sige til ham?
+[00:51] Erik: [API: 7.1866354] Nej, tal blot som hjertet byder. Sandstorme kan være hårde ved afgrøder, men Thorwald er stærk og snarrådig. Han finder nok en løsning. POINTING ERIKSHUT GRATITUDE 
+[01:09] User: Hvem er den person du snakker om?
+[01:13] Erik: [API: 5.5103863] Thorwald er min fætter, han bor på gårdstedet der. Han er en dygtig bonde og gode venner med vinden og jorden. POINTING FARMSTEAD HAPPY 5
+[01:27] User: Er han sådan en form for sjæl?
+[01:31] Erik: [API: 6.1598739] Nej, han er blot en mand af kød og blod, men han har forstand på jordens kræfter og vejrets luner. Det er vigtigt for en bonde. POINTING FARMSTEAD HAPPY 4
+[01:47] User: Og hvad er du selv for en person?
+[01:51] Erik: [API: 5.313934] Jeg er en fisker, lever af havet og nyder det enkle liv med min familie. Håndværket og naturens ro giver mig glæde. POINTING ERIKSHUT HAPPY 6
+[02:06] User: Hvordan befinder din familie sig?
+[02:11] Erik: [API: 6.4762161] Min familie har det godt, tak skal du have. De glæder sig til at møde dig. Min kone og datter står mig nær, og vi støtter hinanden i tykt og tyndt. GRATITUDE 5
+[02:30] User: Hvad laver din kone børn?
+[02:35] Erik: [API: 6.9629247] Min kone tager sig af helbredet i vores landsby, hun kender til planternes kræfter. Vores datter elsker at lege i naturen, hun er fuld af liv og eventyr. POINTING ERIKSHUT HAPPY 6
+[02:52] User: Hvor er vi på vej hen nu?
+[02:57] Erik: [API: 6.4883796] Vi er på vej til mit hjem, hvor vi skal aflevere dagens fangst til min familie. Derefter viser jeg dig gerne rundt. POINTING ERIKSHUT HAPPY 4
+[03:09] User: Det her har vi fanget.
+[03:15] Erik: [API: 7.3863646] Ah, ja! En god dag på havet. Vi har fanget nok til at mætte familien og så lidt til. Fisken vil blive nydt i aften! POINTING FISH GRATITUDE 5
+[03:36] User: Det var hele turen. Har du tænkt dig at sidde ned under hele tiden?
+[03:40] Erik: [API: 6.1765903] Når vi kommer i land, skal jeg nok rejse mig og hjælpe med at bære fangsten. På havet er det bedst at sidde stille i båden, så vi ikke vipper. POINTING ERIKSHUT GRATITUDE 4
+[04:01] User: til hverdag hmm er der lang tid nu?
+[04:07] Erik: [API: 7.2291334] Vi er næsten ved mit hjem nu. Tiden flyver, når man er i godt selskab og på havet. POINTING ERIKSHUT HAPPY 3
+[04:21] User: Hvor i verden er vi?
+[04:25] Erik: [API: 5.4671287] Vi er i Jylland, tæt på Limfjorden. Det er et frugtbart land med gode folk og stærke traditioner. POINTING ERIKSHUT HAPPY 4
+[04:38] User: Så det er limfjorden vi sejler i.
+[04:43] Erik: [API: 5.8260005] Ja, det er heromkring. Vi sejler på Lindholm Å, som fører os til mit hjem nær Limfjorden. Det er et smukt sted. POINTING ERIKSHUT HAPPY 4
+[04:58] User: Hvad gør du?
+[05:03] Erik: [API: 5.8999941] Jeg fisker, som vi gjorde sammen i morges. Det er mit erhverv. Jeg lever af havets gaver og nyder at tilbringe mine dage på vandet. POINTING ERIKSHUT HAPPY 5
+[05:18] User: Hvor gammel er du?
+[05:22] Erik: [API: 5.7472518] Jeg har set førtifem vintre. Livet har lært mig meget, og hver dag på havet holder mig stærk. HAPPY 3
+[05:34] User: Du snakker om...
+[05:38] Erik: [API: 5.1713794] Hvad er det, du tænker på? Er der noget, du gerne vil vide mere om? UNDECIDED 3
+[05:48] User: eller din ære.
+[05:52] Erik: [API: 5.7727561] Ære er vigtigt her i livet. Det gælder om at være ærlig, arbejde hårdt og passe på sin familie. Det er sådan, jeg lever mit liv. GRATITUDE 4
+[06:11] User: Kan du synge nogle gode sange?
+[06:17] Erik: [API: 7.0715799] Ja, jeg kender mange sange og skrøner. Sange om helte, guder og havgusens hvisken. Men lad os først komme i land, så kan jeg synge for dig. HAPPY 5
+[06:38] User: Det var flot at skubbe.
+[06:42] Erik: [API: 5.3891748] Tak, det er altid godt at have en stærk ryg og villige hænder, især når man skal få båden sikkert i havn. GRATITUDE 4
+[06:59] User: Kan du ikke fortælle noget mere om dig selv?
+[07:07] Erik: [API: 9.0620894] Jeg nyder at udskære figurer i drivtømmer, når jeg ikke fisker. Det skaber ro. Jeg beundrer stormenes vilde skønhed og finder stor glæde i min datters latter. Det simple liv her ved vandet passer mig godt. HAPPY 4
+[07:26] User: Kan du fortælle mere?
+[07:32] Erik: [API: 7.6241854] Selvfølgelig. Jeg elsker den friske luft og friheden, som mit erhverv giver. Jeg er ikke meget for myg eller larmende folkemængder, og mågerne kan være en plage, når de forsøger at snuppe min fisk. Men jeg er heldig at deltage i fest og latter med venner og familie. HAPPY 5
+[08:00] User: Har der nogen skyde for os?
+[08:05] Erik: [API: 7.0701959] Jeg forstår ikke helt, hvad du mener. Her bruger vi ikke at skyde, vi fisker og lever af landet. Måske du tænker på noget andet? UNDECIDED 3
+[08:20] User: Hvorfor? Skyder I ikke med over?
+[08:25] Erik: [API: 7.0135397] Vi bruger bue og pil, når vi jager, men til hverdag er det nettene, der fanger fisken. Skyderiet er mere for jagt end for forsvar. GRATEFUL 4
+[08:44] User: er i mange af jeres byer?
+[08:49] Erik: [API: 6.1019729] Vores landsbyer er små, med fast sammenhold blandt folk. Vi er nok til at holde liv i handel og håndværk, uden at det bliver for tæt. HAPPY 4
+[09:06] User: Hvilken by er det der er bedst?
+[09:14] Erik: [API: 9.5609536] Det kommer an på, hvad du søger. Hver by har sin charme og nytte. Lindholm er god for handel og samvær. Mine egne sange handler ofte om dette sted. GRATITUDE 4
+[09:30] User: Så fortæl noget om det.
+[09:35] Erik: [API: 6.2680989] Lindholm er et sted, hvor handel blomstrer. Bønder, handelsmænd og søfarende mødes for at udveksle varer. Der er et liv og røre, som giver landsbyen liv. POINTING MARKETENTRANCE HAPPY 5
+[10:01] Erik instigates talk: Hvordan befinder du dig her i vores land? Finder du vejene meget anderledes end dem, du kender? UNDECIDED 3
+[10:02] Erik: [API: 4.3120768] Lindholm er et sted, hvor handel blomstrer. Bønder, handelsmænd og søfarende mødes for at udveksle varer. Der er et liv og røre, som giver landsbyen liv. POINTING MARKETENTRANCE HAPPY 5
+[10:15] User: Ja, det kan man godt sige.
+[10:21] Erik: [API: 7.1631256] Det er godt at høre. Vores veje er måske ikke bredt brolagde, men de fører os, hvor vi skal hen. Og så har vi vores håndværkere, som den smed der, der laver de fineste ting. POINTING BLACKSMITH HAPPY 4
+[10:49] Erik instigates talk: Fortæller lige om du har rejst langt for at komme her? UNDECIDED 3
+[10:50] Erik: [API: 5.206954] Det er godt at høre. Vores veje er måske ikke bredt brolagde, men de fører os, hvor vi skal hen. Og så har vi vores håndværkere, som den smed der, der laver de fineste ting. POINTING BLACKSMITH HAPPY 4
+[11:02] User: Sådan cirka i 20 min. tid her.
+[11:08] Erik: [API: 6.6632024] Det er ikke lang tid. Men jeg håber, du vil finde vores måde at leve på interessant. Vi nærmer os snart mit hjem. POINTING ERIKSHUT HAPPY 5
+[11:30] User: Hvor er det fint Her bor jeg da meget pænt
+[11:35] Erik: [API: 7.1741313] Ja, vi sætter pris på vores enkle liv og skønheden i vores omgivelser. Det er alt, hvad vi behøver. Velkommen til mit hjem snart. POINTING ERIKSHUT HAPPY 6
+[11:57] User: Har du flere koner?
+[12:02] Erik: [API: 6.9652715] Nej, jeg har kun en kone. Hun er min hjerteven og står mig nær i alt, hvad vi oplever sammen. POINTING ERIKSHUT HAPPY 4
+[12:14] User: Rigtig viking Så er du da ikke en viking
+[12:21] Erik: [API: 8.3007116] En viking er ikke kun krig og togter. Det er også at leve af landet og havet. At beskytte sit hjem og familie, det er også at være en viking. POINTING ERIKSHUT HAPPY 4
+[12:47] Erik instigates talk: Jeg kan se, du ser dig godt for. Er der noget, der fanger din interesse? Vores handlende har mange fine varer. POINTING TRADERS HAPPY 5
+[12:49] Erik: [API: 5.2447557] En viking er ikke kun krig og togter. Det er også at leve af landet og havet. At beskytte sit hjem og familie, det er også at være en viking. POINTING ERIKSHUT HAPPY 4
+[13:08] User: Det kan jeg godt se.
+[13:13] Erik: [API: 5.505969] Ja, der er meget at tage ind. Vores landsby er kendt for sin handel. Når vi er i land, kunne vi tage forbi og møde nogle af dem. HAPPY 4
+[13:30] User: Er der så langt til land herfra?
+[13:34] Erik: [API: 5.5911137] Nej, vi er ganske tæt på. Snart skal vi i land og bære dagens fangst hjem. POINTING ERIKSHUT HAPPY 4
+[13:48] User: Hyggeligt. Nå, hyggeligt.
+[13:53] Erik: [API: 6.4083732] Ja, det bliver det bestemt. Det er altid godt med selskab. Jeg håber, du vil finde dig til rette hos os. POINTING ERIKSHUT HAPPY 5
+[14:16] Erik instigates talk: Vi nærmer os mit hjem. Min familie venter på os med åbne arme. Er du klar til at møde dem? POINTING ERIKSHUT HAPPY 6
+[14:17] Erik: [API: 4.3707729] Ja, det bliver det bestemt. Det er altid godt med selskab. Jeg håber, du vil finde dig til rette hos os. POINTING ERIKSHUT HAPPY 5
+[14:39] Erik instigates talk: Er der noget, du gerne vil vide, før vi når frem? Er der noget, jeg kan fortælle om livet her ved fjorden? UNDECIDED 3
+[14:41] Erik: [API: 5.233369] Ja, det bliver det bestemt. Det er altid godt med selskab. Jeg håber, du vil finde dig til rette hos os. POINTING ERIKSHUT HAPPY 5
+[14:56] User: Det kan jeg så Fanger I mange flere?

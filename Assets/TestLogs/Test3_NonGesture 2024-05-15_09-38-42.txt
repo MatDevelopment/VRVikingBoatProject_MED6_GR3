@@ -1,0 +1,55 @@
+Total Time: 15:41 Tutorial Time: 72.22203 Total Time minus tutorial: 14:29, User Prompts: 25, Erik Responses: 25, Erik Instigations: 2, Erik Gaze Time: 334.313, Erik Percent Gaze Time: 38.45868, API Call Time Averages: Combined 9.17262416666667, SST: 1.36698459259259, ChatGPT: 5.08105488148148, TTS: 5.08105488148148
+[01:19] User: Nå, nu er du klar at kigge på den lille tænding for at starte. Alright. Åh, Jesus. Hej. Hey.
+[01:25] Erik: [API: 7.3238876] Det er godt, vi er snart ved min hytte. Ser du tågen ved Lindholm strøm? Den leder os hjem. Og hold øje med mågerne, de er snu tyve, når de får chancen!
+[01:42] User: 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣
+[01:48] Erik: [API: 7.6728028] Det forstår jeg ikke. Lad os holde os til fisk og bølger, ven. Se, vi nærmer os hytten, og snart kan vi nyde dagens fangst og fortælle historier.
+[02:02] User: Og hvem er det derovre?
+[02:07] Erik: [API: 7.0491045] Åh, det kan være min Astrid eller vores lille Freya, der venter ved bredden. De er altid glade for at se, hvad jeg har med hjem. Vinker de? Nogle gange tager Freya sine venner med ned til vandet for at lege.
+[02:33] User: Det kan godt være Ej, det ligner en eller anden Duty Røstning, lidt ligesom dig Men der er astrid af en
+[02:40] Erik: [API: 9.3830316] Måske ser du en af vores krigere. Selv her ved kysten, har vi folk, der vogter over os. De bærer kraftig rustning for at beskytte landsbyen. Men kom, lad os ikke dvæle ved tanken om strid – her er der fred, og vi skal snart nyde en stille stund ved hytten.
+[03:05] User: Hvad fanden? Hej! Uh, der er et fisk!
+[03:13] Erik: [API: 9.9189874] Ja, se! Det liv under bølgen er rigt og fyldt med fisk. Jeg fanger dem for at forsørge min familie. Og Ole derovre på molens spids, han er også ude og få dagens fangst. Vil du prøve at kaste snøren, når vi kommer ind? Det er en god dag til at fiske.
+[03:37] User: Jeg er da altid klar, men har vi ikke lige fisket?
+[03:45] Erik: [API: 9.5215772] Jo, vi har allerede fisket, men havet gemmer altid på mere. Man kan aldrig få for meget af en god ting, vel? Men lad os tage hjem og se, hvad Astrid har tilberedt. Der er tid nok til at fiske igen en anden dag.
+[04:08] User: Hvad tror du Astrid har forberedt? Fisk? Eller jord?
+[04:15] Erik: [API: 8.5511223] Astrid er klog med urter og ved, hvordan man laver en god måltid. Måske har hun kogt fisk med vilde urter fra skoven. Når jorden er gavmild, kan hun kreere noget fra rodfrugterne. Hun forundrer mig altid med hendes måltider. Lad os skynde os hjem og se.
+[04:39] User: Hvad er det der for en sten derovre med det røde symbol?
+[04:47] Erik: [API: 10.0783663] Ah, det er en runesten. Den fortæller historien om en stor mand, som var en af de første bosættere i dette område. Disse sten er vores forfædres måde at lade os huske på fortidens bedrifter og slægtens ære. Det er vigtigt at videregive disse fortællinger.
+[05:10] User: Skal du også have en sten engang?
+[05:19] Erik: [API: 9.9537226] Det kunne jeg måske drømme om, men en sten er for dem med store bedrifter. Jeg er bare en enkel fisker, der forsørger sin familie. Jeg håber at efterlade mig gode minder hos dem, der kender mig, det er nok for mig. Men hvem ved, måske ender min fiskeri bedrift på en sten en dag.
+[05:46] User: Der hedder landsbyen, vi er på vej hen til.
+[05:54] Erik: [API: 8.7944596] Landsbyen derude er vores liv og hjerte. Der handler vi, bygger vi både og smeder stærkt værktøj. Thorwald, min fætter, arbejder jorden på hans gårdsted. Men sandstormen ser slem ud, det kunne skade hans afgrøder. Vi er alle afhængige af hinandens held og hårde arbejde. Snart er vi hjemme ved min hytte.
+[06:27] User: Hvor mange andre bor der i den her landsby, så det er rimelig stort.
+[06:34] Erik: [API: 8.5493618] Landsbyen er ikke så stor, men den er hjem for en stærk samling af folk. Vi er måske et par hundrede sjæle, inkluderet handelsmænd, bådbyggere, smede og bønder som min fætter Thorwald. Hver og en bidrager til landsbyens liv. Du vil møde nogle af dem, når vi kommer ind.
+[06:57] User: Hvad er det der op til højre for?
+[07:04] Erik: [API: 8.641199] Det er Lindholm. En mindre landsby, den har nogle gårde og et helligt gravhøj. Vi passerer mange steder med gammel kraft, hvor vores forfædre hviler. Det minder os om, hvor vi kommer fra og det bånd, der knytter os til denne jord.
+[07:27] User: Det er det der gravhøjen med stenene deroppe.
+[07:34] Erik: [API: 8.5343135] Ja, præcis. Gravhøjen er et gammelt sted, helligt og fyldt med forfædres ånder. Stenene markerer ære for dem, der gik før os. Nogle siger, at hvis man lytter om natten, kan man høre visdommen fra de ældgamle hviske i vinden.
+[07:57] User: Har du nogle forfader, der ligger derinde?
+[08:05] Erik: [API: 9.518848] Måske. Vores slægt har boet her længe, og mange historier binder os til disse steder. Jeg ved ikke præcist, hvem af mine forfædre der ligger der, men når jeg står ved gravhøjen, føler jeg en stærk forbindelse til dem alle. Vi ærer dem gennem vores liv og de gerninger, vi gør.
+[08:31] User: Hvem er det der tænder bål op på gravhånden?
+[08:39] Erik: [API: 9.5427162] Det er en del af vores skikke. Når en person fra vores samfund skal på sin sidste rejse, ærer vi dem med bål på gravhøjen. Stenformationerne, ligner skibsskrog, de symboliserer rejsen til det hinsides. Det er en kraftfuld ceremoni, og den styrker vores forbindelse til dem, der har forladt os.
+[09:07] User: nu. Hvem er det, der bor derovre? Vi kommer forbi.
+[09:15] Erik: [API: 8.6353656] Ah, de gårde vi sejler forbi, det er her mine landsmænd bor. Thorwald, min fætter, bor på en af dem. Mange familier arbejder jord og passer deres kvæg. De lever af landet og det hav, som vi også gør. Vi hjælper hinanden, i hårde tider og i gode, sådan holder vores samfund sig stærkt.
+[09:38] User: Er den smød derovre?
+[09:50] Erik: [API: 13.60419] Ja, det dufter af røget fisk og ferskt brød, ikke sandt? Markedet er livligt, fuld af handel og nyheder fra fjerne steder. Søfolk og handelsmænd mødes her for at bytte varer. Det kan være en travl sted, men det er godt for forretningen. Så snart vi har tømt båden, kan vi måske gå derover.
+[10:16] User: Hvad er forskellen på de blå og de gule skjold?
+[10:23] Erik: [API: 9.2579894] Skjoldenes farver kan vise tilhørsforhold til en familie eller en klan. De blå skjold kan tilhøre en gruppe med havet i deres arv, mens de gule måske er fra en klan der høster deres rigdom fra kornmarkerne. I kamp signalerer farverne ven fra fjende. Men her, i vores fredelige landsby, er det mere for traditionens skyld.
+[10:56] User: Hvad er det der?
+[11:04] Erik: [API: 9.0275484] Hvad peger du på? Er det et skib, en person, eller noget ved kysten? Fortæl mig, hvad du ser, så kan jeg måske fortælle dig historien bag det eller hvem det tilhører. Vores landskab er rigt på historier og liv.
+[11:23] User: Det er en høj træsning med et rundt hjul under, der står nogle skib ved siden af.
+[11:31] Erik: [API: 9.1995929] Ah, det lyder som værkstedet hos smeden. Det runde hjul kunne være en del af en vogn eller et kværn. Skibene ved siden af antyder, at han måske også arbejder på værktøj eller dele til skibsbyggeriet. Smeden er en vigtig mand; hans arbejde styrker både vores hverdag og vores sejlads.
+[12:01] User: Der ser travlt ud på markedet i dag, tror vi vi får solgt vores fisk.
+[12:10] Erik: [API: 9.8055205] Ja, med så mange folk og liv i markedet, er jeg sikker på, at vi får solgt vores fisk. Frisk fangst er altid eftertragtet. Vi kan også bytte os til nogle varer, vi har brug for hjemme. Der er altid en måde at gøre en god handel på en travl dag som denne.
+[12:43] Erik instigates talk: Ser du skibsværftet der? Det er her vi bygger de skibe, der sejler ud på de store togter. Vores bådbyggere er blandt de bedste, og de skibe de skaber, de bærer vores kriger og handelsfolk over bølgen. Har du rejst langt på havet?
+[12:46] Erik: [API: 7.1443637] Ja, med så mange folk og liv i markedet, er jeg sikker på, at vi får solgt vores fisk. Frisk fangst er altid eftertragtet. Vi kan også bytte os til nogle varer, vi har brug for hjemme. Der er altid en måde at gøre en god handel på en travl dag som denne.
+[13:07] User: Nej, kun med dig, ude at fiske.
+[13:18] Erik: [API: 11.9437365] Det er også en god begyndelse. Havet har meget at lære os – hver dag er en ny lektion. Jeg er glad for, at jeg kunne vise dig en bid af en fiskers liv. Nu vil jeg vise dig mit hjem, hvorfra jeg har sejlet ud siden jeg var en ung knøs. Måske får du lyst til flere ture på vandet i fremtiden.
+[13:55] Erik instigates talk: Ser du handelsfolkene der? De sælger alt, hvad en nordmand kan ønske sig: frisk fisk, afgrøder og vævede stoffer. Jeg handler ofte med dem, især når jeg skal have nyt sejl til båden eller tøj til familien. Har du brug for noget fra markedet, inden vi tager hjem?
+[13:58] Erik: [API: 8.9918879] Det er også en god begyndelse. Havet har meget at lære os – hver dag er en ny lektion. Jeg er glad for, at jeg kunne vise dig en bid af en fiskers liv. Nu vil jeg vise dig mit hjem, hvorfra jeg har sejlet ud siden jeg var en ung knøs. Måske får du lyst til flere ture på vandet i fremtiden.
+[14:21] User: Du køb...
+[14:28] Erik: [API: 8.4192244] Hvad sagde du? Er der noget, du overvejer at købe? Fortæl mig, og måske kan jeg hjælpe dig med at finde det bedste sted at handle eller råde dig til, hvad der er værd at bytte for. Markedet har meget at byde på.
+[14:48] User: Skal jeg give dig noget at drikke?
+[14:55] Erik: [API: 8.0663839] Det vil være rart, en tør hals har jeg fået fra turen. Når vi kommer ind, skal vi finde en krukke med mjød eller frisk vand for at slukke tørsten. Min Astrid kan også have brygget noget godt. I vores hytte er der altid nok til at dele med venner og gæster.
+[15:17] User: Er det derudover?
+[15:26] Erik: [API: 10.5315489] Ja, det der er min hytte, som du kan se lige der. Et simpelt hjem, men fyldt med varme og liv. Vi skal lægge til ved molen, og så kan du møde min familie. Astrid og Freya er sikker på at tage godt imod dig. Og så kan vi endelig hvile os og snakke mere. Hvad siger du til det?

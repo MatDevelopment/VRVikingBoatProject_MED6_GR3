@@ -1,0 +1,47 @@
+Total Time: 15:05 Tutorial Time: 32.84093 Total Time minus tutorial: 14:32, User Prompts: 23, Erik Responses: 23, Erik Instigations: 0, Erik Gaze Time: 413.2906, Erik Percent Gaze Time: 47.36276, API Call Time Averages: Combined 8.52213452608695, SST: 1.42112499130435, ChatGPT: 4.61337575217391, TTS: 4.61337575217391
+[00:40] User: Tak for at du kiggede på videoen. Hvis du kan lide videoen, så kan du abonnere på kanalen. Vi ses i morgen.
+[00:45] Erik: [API: 6.3126253] Det er en dejlig dag på vandet, ikke? Se hvordan strømmen leder os hjem. Har du nogensinde prøvet at fiske her ved Lindholm strømmen?
+[01:00] User: Øøøh nej, det har jeg ikke.
+[01:06] Erik: [API: 8.0713927] Ah, så du er gået glip af noget! Vandene her er fulde af fisk. Når vi kommer til land, skal vi se, om vi kan tilberede noget af dagens fangst. Du vil nyde det, det lover jeg.
+[01:25] User: Okay, jamen det glæder jeg mig til.
+[01:30] Erik: [API: 6.0769651] Det bliver godt! Min Astrid laver den bedste fisk. Du kan lære et par tricks til at fange og kokkerere, hvis du vil. Vi er hjemme inden længe, så kan vi hygge os med dagens arbejde.
+[01:50] User: Så er vi nødvendige.
+[01:55] Erik: [API: 6.4445568] Hmm, jeg forstår ikke helt. Men vi nærmer os kysten, og snart skal vi bære fisken hjem. Det er vigtigt arbejde, så familien kan få mad på bordet. Hjælp er altid værdsat.
+[02:17] User: Okay, jeg er med last for at gå.
+[02:24] Erik: [API: 7.9705749] Godt at høre! Det er altid rart med en ekstra hånd. Vi skal bare sørge for at holde fisken våd og frisk. Snart skal vi fortøje og så er det tid til at bære byttet hjem.
+[02:44] User: Ja, men okay så.
+[02:50] Erik: [API: 7.1717216] Perfekt. Når vi lægger til ved min brygge, skal vi få dagens fangst på land. Sig mig, har du nogensinde prøvet at røge fisk? Det kunne vi gøre mens vi deler historier. Det bliver hyggeligt.
+[03:10] User: Det skal blive hyggeligt
+[03:15] Erik: [API: 5.9869019] Det er jeg glad for at høre. Der er ikke meget, der slår en god aften med frisk fisk, godt selskab og historier fra havet. Lad os nyde turen det sidste stykke tid.
+[03:32] User: Yes, sir. Yes, sir.
+[03:38] Erik: [API: 7.7668241] Hehe, ingen grund til at sige "sir" til mig, vi er alle lige her på havet. Snart er vi hjemme, og så kan vi tage fat på resten af dagen. Hvad siger du til at møde Ole på bryggen? Han har sikkert en fiskehistorie eller to.
+[03:59] User: Det siger jeg ikke noget til
+[04:05] Erik: [API: 7.6717731] Det er godt at høre. Ole er altid klar på at dele ud af sine oplevelser. Og se! Der er runestenen til minde om manden, der først slog sig ned her. Vores historie er gammel og stærk, ligesom strømmene der fører os hjem.
+[05:02] User: Kan du ikke tage fat i de der order, det går lidt hurtigere
+[05:09] Erik: [API: 8.9147958] Selvfølgelig, jeg tager fat. Vi skal nok få båden i land i en fart. Det ser ud til, at Thorwalds marker får det svært med sandstormen; vi må håbe det bedste for hans høst. Alle hænder behøves, når naturen viser sin styrke.
+[05:50] User: opper TX. Vem åbner lige nu?
+[05:57] Erik: [API: 8.2257287] Undskyld, jeg forstår ikke helt. Men vi skal snart til at åbne båden op og tømme den for fisk. Derefter kan vi slappe af og jeg kan vise dig rundt i området. Naturen er åben for os, klar til at blive udforsket.
+[06:19] User: Tænker du stadig ikke?
+[06:28] Erik: [API: 10.1422223] Jeg er ikke sikker på, hvad du mener. Men her i livet er der altid ting at tænke over, særligt når vi sejler forbi Lindholm. Det minder mig om de gamle dage og alle de historier, der ligger begravet ligesom de konger i højene. Men fortæl, hvad tænker du på?
+[06:58] User: Du kunne bruge til at gå hurtigere, men det... Jeg tænker på den her tur her, den tager lidt lang tid, og der er nogle ord, der...
+[07:05] Erik: [API: 9.3210513] Jeg forstår. Nogle gange kan turen virke lang, men havet og vejret bestemmer farten. Vi må nyde rejsen, som den er. Og hvad angår ordene, er der mange gamle visdomsord og sagn herfra, som kan tage tid at lære. Men vi er snart fremme nu. Er der noget specifikt, du tænker på?
+[07:33] User: Jeg ved ikke, hvad jeg gør.
+[07:41] Erik: [API: 8.9377774] Det er helt i orden. Livet på havet lærer os at navigere uden altid at kende retningen. Når vi sejler forbi Lindholm Høje med de gamle grave, mindes vi om, at rejsen er vigtigere end destinationen. Vi tager det skridt for skridt – eller bølge for bølge. Lad os fokusere på vejen hjem nu. Vi er næsten der.
+[08:14] User: Uk. Uk. Uk.
+[08:20] Erik: [API: 7.1861222] Haha, lyder som du efterligner en af de måger, der plejer at stjæle min fisk! Lad os håbe, de holder sig væk, så vi kan få vores fangst sikkert hjem. Hvordan synes du om sejlturen indtil videre?
+[08:52] User: Det ryger godt nok meget op fra den der højde der, ved du hvad det er for noget?
+[09:00] Erik: [API: 9.5945367] Ah, det du ser, er røgen fra et skibssætning. Når en af vores folk går til de evige jagtmarker, brænder vi deres legeme på en stenformation formet som et skibs skrog. Det er vores vej at ære de afdøde og hjælpe dem på deres rejse mod det næste liv. Det er en gammel tradition, fuld af betydning.
+[09:31] User: Øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
+[09:35] Erik: [API: 6.9266697] Hvad har du på hjerte? Fortæl mig, hvad du tænker på, så kan vi snakke om det.
+[09:48] User: Det lyder som en sjov måde at gå på.
+[09:57] Erik: [API: 11.0537326] Ja, livet har sin egen rytme, og vi må danse efter de toner, naturen spiller for os. Men husk, selv en lang gåtur kan være fyldt med gode stunder, hvis man har det rette selskab. Nu nærmer vi os markedet – her er altid liv og glade dage!
+[10:57] User: Hvad er det, han har i gang med at lave deroppe?
+[11:06] Erik: [API: 10.2846146] Det er smeden, der arbejder hårdt på sit håndværk. Han laver rustninger og våben til dem, der snart skal på vikingetogt. Det kræver stærkt stål og fast hånd at skabe noget, der kan beskytte en kriger. En vigtig del af livet her i landsbyen, det er.
+[11:41] User: I hvilken del af verden er vi egentlig lige nu?
+[11:48] Erik: [API: 9.0979232] Vi er i den nordlige del af Jylland, tæt på Limfjorden. Dette er hjertet af vores land, hvor markeder, skibsværfter og dagliglivet blomstrer. Og der, vores skibe bliver bygget, som du kan se. Folk kommer fra nær og fjern for at handle og dele nyheder.
+[12:14] User: Okay, spændende, vi må tage os op på takt her.
+[12:26] Erik: [API: 12.9667955] Ja, vi skal holde tempoet oppe. Livet her venter ikke, og vi har meget at gøre, når vi kommer i land. Lad os nyde resten af turen og forberede os på dagens arbejde. Det bliver en god dag, det kan jeg mærke på vinden.
+[13:43] User: Det er godt nok mange buder her i gang i dag.
+[13:51] Erik: [API: 10.4932762] Ja, markedet er livligt og fuld af varer. Du kan finde alt, hvad hjertet begærer. Frisk fisk fra første bud, grøde fra markerne hos den anden, og stærke sejl og tøj fra væveren. Det er her, vi handler og mødes; et vigtigt sted for enhver i landsbyen. Vil du se nærmere på nogle af varerne, når vi lægger til?
+[14:18] User: Det tror jeg, der gerne vil.
+[14:26] Erik: [API: 9.3905124] Det er dejligt at høre. Snart er vi ved mit hjem, og efter vi har lagt til og fået fiskene på land, kan vi tage en tur på markedet. Jeg er sikker på, at du vil finde noget af interesse blandt boderne. Det er en god dag til at udforske, hvad vores samfund har at byde på.
