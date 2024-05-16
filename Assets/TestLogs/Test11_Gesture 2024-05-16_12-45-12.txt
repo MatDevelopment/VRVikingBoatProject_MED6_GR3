@@ -1,0 +1,57 @@
+Total Time: 15:03 Tutorial Time: 35.34548 Total Time minus tutorial: 14:28, User Prompts: 28, Erik Responses: 28, Erik Instigations: 2, Erik Gaze Time: 389.0974, Erik Percent Gaze Time: 44.80551, API Call Time Averages: Combined 8.39886469285714, SST: 1.421105575, ChatGPT: 4.6249855, TTS: 4.6249855
+[00:51] User: Ja, men hallo, jeg er...
+[00:58] Erik: [API: 8.107593] Hej! Velkommen tilbage på land. Du ser ud til at have nydt turen, ja? POINTING ERIKSHUT Se dér, det er mit hjem. Vi skal snart derhen. GRATITUDE Tak for selskabet på vandet! HAPPY 6
+[01:18] User: Øh, det var bare lige... Ja, det er ikke... Det er altså ikke helt rigtigt lige...
+[01:21] Erik: [API: 5.1166076] Åh, jeg forstår måske ikke helt. Men fortæl endelig, jeg lytter. Hvad er på din sind? UNSURE 3
+[01:35] User: Hvor længe har du så boet i dit hjem?
+[01:40] Erik: [API: 6.9187232] Jeg har boet i mit hjem siden jeg blev gift med min kone. Det har været mange gode år. POINTING ERIKSHUT Der, hvor solen sænker sig bag trætoppene, dér har vi vores små stykke himmel på jord. HAPPY 5
+[01:59] User: Ja, hvad hedder din kone?
+[02:04] Erik: [API: 6.3555896] Min kones navn er Astrid. Hun er landsbyens healer og min klippe i livet. Hun kender naturen som sin egen lomme. GRATITUDE Jeg er taknemmelig hver dag for hende. HAPPY 4
+[02:25] User: Hvor længe siden er det, I blev gift?
+[02:29] Erik: [API: 5.6704894] Det er mange år siden nu, mere end et årti siden. Tiden flyver, når man har travlt med livet, fiskeri og familie. HAPPY 3
+[02:45] User: Det er sjovt. Nå okay, har i så nogle børn eller noget som helst?
+[02:53] Erik: [API: 8.7465225] Ja, vi har en datter, Freya. Hun er fuld af liv og eventyrlyst. Hun elsker at klatre i træer og fange frøer ved vandhullerne. Hun bringer så meget glæde og latter ind i vores liv. GRATITUDE Jeg er så stolt af hende. HAPPY 7
+[03:15] User: Det er da dejligt at høre, hvor gammel jeg er fra.
+[03:20] Erik: [API: 5.6178405] Hun er i de tidlige år af sit liv, lige gammel nok til selv at udforske, men stadig ung nok til, at verden er fuld af mirakler. Tiden går stærkt; børn vokser hurtigt. HAPPY 4
+[03:42] User: Ja, det hører man jo tit noget om. Hvordan har dagens fangst været?
+[03:49] Erik: [API: 8.2955558] Dagens fangst var god, havet var gavmildt i dag. Vi har nok til at mætte familien og måske lidt til overs til markedet. POINTING ERIKSHUT Der, ved mit hjem, skal vi snart nyde resultatet af vores arbejde. Jeg håber, du er sulten. HAPPY 6
+[04:08] User: Det er jeg da. Hvad er der på den sted?
+[04:15] Erik: [API: 8.261208] På runestenen? POINTING RUNESTONE Den fortæller historien om Rurik, den første mand, der bosatte sig her i området. Den slags sten minder os om vores forfædres bedrifter og visdom. Men nu, lad os fokusere på nuet og den velfortjente mad, når vi kommer hjem. HAPPY 5
+[04:39] User: og I er typisk den fisk, I har fanget.
+[04:44] Erik: [API: 7.3787081] Ja, frisk fisk er hovedretten her. Astrid kan tilberede det på mange måder – stegt, røget, eller tørret. Hun bruger urter fra skoven til at give det ekstra smag. Jeg er sikker på, du vil nyde det. Hvordan plejer du at lave din mad? CURIOUS 3
+[05:10] User: Jeg laver min mad i noget, der hedder en airfryer for det meste.
+[05:18] Erik: [API: 8.9946197] Airfryer? Jeg kender ikke til denne ting. Vi bruger åben ild eller vores arne til at tilberede maden. Det lyder som noget, der kommer fra en helt anden verden. Fortæl mig, hvordan fungerer sådan en? Jeg er altid nysgerrig efter at lære nye ting. CURIOUS 4
+[05:53] User: Varme i sig, og så blæser den en hel masse luft rigtig hurtigt. Ikke ulige den pumpe, I bruger til at smelte metalmænd, når I smadrer sværd.
+[06:00] Erik: [API: 9.2217873] Nå, det lyder som en fænomenal opfindelse! Det minder om, hvordan vi anvender blæsebælgen i smedjen til at øge varmen. Tænk at bruge sådan noget til madlavning. Hvad for nogle råvarer lægger du i sådan en airfryer? CURIOUS 4
+[06:30] User: Der er forskellige slags grøntsager, især kartofler og en hel del kød, specielt kylling.
+[06:37] Erik: [API: 9.1457592] Ah, kartofler og kylling. Det er fødevarer, vi også nyder godt af. At lave mad med varm luft uden ild... interessant! Jeg ville ønske, jeg kunne se det i aktion. Jeg kan forestille mig, at det må være et nyttigt redskab i dit køkken. CURIOUS 3
+[07:03] User: Det er godt at få, så... Ja, den er god at have. Hvad I laver mad med åben ild, har I ikke problemer med at brænde det på?
+[07:12] Erik: [API: 10.1629283] Jo, det kræver øvelse at mestre ilden og undgå at maden brænder på. Man skal lære at kende flammerne og deres varme. Min kone er dygtig til det. Hun sørger for, at vores fisk altid er tilberedt perfekt. Med tid og tålmodighed kommer man langt. GRATITUDE 5
+[07:37] User: og smage hendes mad. Astrid, hun lyder som en dygtig kok. Jeg vil glæde mig til at se hende.
+[07:44] Erik: [API: 8.6065438] Det er hun bestemt, og hun vil glæde sig til at møde dig. Hun har altid nydt godt af at dele hendes kogekunst med andre. POINTING ERIKSHUT Snart er vi hjemme, og du kan selv opleve det. GRATITUDE Tak for din interesse i vores måde at leve på. HAPPY 6
+[08:05] User: Hvor er du i? Er du i det der hus, der ligger derovre?
+[08:11] Erik: [API: 7.3164854] Ja, det er vores hjem. POINTING ERIKSHUT Lige der, hvor vi snart skal nyde dagens fangst og hvile vores trætte ben. Det skal blive godt at komme hjem. HAPPY 5
+[08:38] User: Hvor lang tid plejer det normalt at tage at fiske sådan en omgang som vi har fået i dag?
+[08:45] Erik: [API: 8.3885047] Det kommer an på dagen og havets luner. I dag var vi heldige; det tog kun et par timer. Andre dage kan det tage det meste af dagen. Man skal være tålmodig og kende til de gode steder – det er nøglen til en god fangst. HAPPY 4
+[09:09] User: Hvad gør I så de dage, hvor det er for dårligt hvertid at fiske i den her båd?
+[09:16] Erik: [API: 9.010648] Når vejret ikke tillader fiskeri, bruger vi tiden på andre nødvendige gøremål. Reparation af grej, vedligeholdelse af båden, eller arbejde på gårdene hjælper os alle. POINTING MARKETENTRANCE Og nogle gange går vi til markedet for at handle. Man må tilpasse sig og finde arbejde, der passer til dagen og vejr. HAPPY 4
+[09:44] User: og i ikke kan komme ud og fiske.
+[09:51] Erik: [API: 8.7404136] Ja, præcis. Vi holder os ikke ledige, selvom vi ikke fanger fisk. Der er altid noget at gøre – vedligehold af vores hjem, handel, eller hjælp til naboer og familie. Livet som fisker er mere end blot selve fiskeriet; det er en del af en større samhørighed med landsbyen og naturen. HAPPY 4
+[10:16] User: Jeg spiser ikke andet end fisk.
+[10:24] Erik: [API: 9.4715586] Nå, så du vil passe godt ind her! Vi har masser af fisk og forskellige måder at tilberede dem på. Håber du vil nyde mangfoldigheden af smage, når vi sætter os til bords. POINTING ERIKSHUT Derhjemme venter der en god portion til os begge. HAPPY 5
+[10:45] User: Hvad laver den mand deroppe?
+[10:55] Erik: [API: 11.0656929] Han er smeden. POINTING BLACKSMITH En vigtig mand i enhver landsby. Han laver værktøj, våben og rustninger. Lige nu arbejder han på udstyr til dem, der snart skal ud på viking. Hans arbejde sikrer, at krigerne er velbeskyttede og klar til deres rejser. Det er et hårdt erhverv, men hans færdigheder er uvurderlige. HAPPY 5
+[11:20] User: Hvad skal jeg gøre her?
+[11:28] Erik: [API: 9.2888925] Du ser ud til at være grebet af alt, hvad der sker omkring os. Nysgerrighed er en god ting! Når vi ankommer til mit hjem, vil jeg foreslå, at du slapper af, nyder et måltid og lytter til historierne. Måske kan du endda lære noget om vores måder. Hvad håber du at opleve, mens du er her? CURIOUS 5
+[11:57] User: Hvad så? Jamen nu har du jo snakket rigtig godt om din kones mad, så det glæder jeg mig rigtig meget til at prøve.
+[12:06] Erik: [API: 10.2361705] Det varmer mit hjerte at høre. POINTING ERIKSHUT Der ligger vores hytte, og snart skal vi smage på den friske fangst. Du vil ikke blive skuffet – Astrid er en mester med fisk. Og hvem ved, måske kan du tage nogle madlavningstips med hjem? GRATITUDE Tak for at du værdsætter vores simple levemåde. HAPPY 6
+[12:29] User: Hvilken er jeres? Hvilken af hytterne er jeres?
+[12:36] Erik: [API: 7.5400293] POINTING ERIKSHUT Den der, med røgen, der krænger op fra skorstenen. Vi bor lige ved kysten, så vi hurtigt kan komme ud på vandet. Og der er altid varmt og indbydende derinde, takket være Astrids gode omgang med arnen. Vi er snart fremme nu. HAPPY 5
+[12:58] User: Jeg begynder at være lidt tødsig. Ja, det er dejligt. Jeg synes også, jeg begynder at være tødsig.
+[13:06] Erik: [API: 9.2452151] Det er forståeligt efter en lang dag ud på vandet. Heldigvis er vi næsten hjemme, og så kan du få stillet sulten. Du kan næsten dufte maden fra her, kan du ikke? POINTING ERIKSHUT Derovre venter der en varm velkomst og et velsmagende måltid. HAPPY 7
+[13:30] User: Det vil jeg glæde mig til. En lang dags arbejde gør mig også rigtig sulten.
+[13:40] Erik: [API: 11.297711] Arbejde giver god appetit, det er sandt. Og der er intet som et godt måltid til at slutte dagen af. Vi er nu ankommet, så lad os gå indenfor og nyde det sammen. POINTING ERIKSHUT Velkommen til mit hjem. GRATITUDE Jeg er taknemmelig for, at du vil dele dette måltid med os. HAPPY 6
+[14:04] User: Tak.
+[14:11] Erik: [API: 8.7600179] Ingen årsag! Du er altid velkommen her. POINTING ERIKSHUT Lad os gå ind og se, hvad Astrid har forberedt. Jeg kan garantere, at det vil stille sulten og varme sjælen. GRATITUDE Tak fordi du brugte dagen sammen med mig. HAPPY 6
+[14:31] User: Tak Det var en hyggelig dag, selv tak
+[14:38] Erik: [API: 8.2063959] Det glæder mig at høre. POINTING ERIKSHUT Nu er vi her, så lad os gå ind og nyde aftenen. Tak for godt selskab. Må din tid her bringe dig glæde og gode minder. GRATITUDE 6

@@ -1,0 +1,54 @@
+Total Time: 15:38 Tutorial Time: 69.65567 Total Time minus tutorial: 14:28, User Prompts: 27, Erik Responses: 26, Erik Instigations: 0, Erik Gaze Time: 253.9301, Erik Percent Gaze Time: 29.2423, API Call Time Averages: Combined 10.0457814230769, SST: 1.46245611111111, ChatGPT: 5.53860874230769, TTS: 5.53860874230769
+[01:16] User: Boom!
+[01:23] Erik: [API: 7.6469187] Nå, hvad var det? Måske var det torden fra Thor der viser sin styrke på himlen. Sikke et vejr vi fiskere må tåle. Men lad os håbe, at det ikke er et uvejr på vej. Det er bedst at holde sig på god fod med havets og himlens kræfter.
+[01:43] User: Hvad er det for et interview, hvor er vi her?
+[01:50] Erik: [API: 8.3515465] Der er intet interview her, vi er blot på vej hjem efter en god fangst. Vi sejler gennem Lindholm Strømmen, og snart vil vi være ved min hytte. Det er her jeg bor med min familie. Hvad tænker du på, mens vi nyder denne sommerbrise?
+[02:08] User: Lige nu. Lige nu. Hvor er vi henne?
+[02:15] Erik: [API: 8.93218] Vi er på vandet, på vej tilbage til min hytte som ligger ved enden af denne strøm. Vi sejler gennem Lindholm Strømmen, og vi er ikke langt fra landsbyen. Du vil snart se, hvor jeg har tilbragt alle mine dage. Er der noget bestemt, du vil vide om vores omgivelser?
+[02:40] User: Ja, åh. Mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+[02:46] Erik: [API: 8.102007] Det lyder som om du måske er eftertænksom eller nyder roen her på vandet. Fortæl mig, hvad der går dig på sinde. Er der noget jeg kan fortælle dig om livet ved fjorden eller om de skikke vi holder i landsbyen?
+[03:07] User: Hvilken fisk fanger han derhenne?
+[03:14] Erik: [API: 8.6587969] Det ligner, at Ole prøver at fange sild. Silden er god at få på krogen om sommeren, og Ole, han er en mester med sit net. Vil du prøve at fiske, når vi kommer tilbage? Der er intet som en frisk fangst til aftensmåltidet.
+[03:33] User: Det var det da ganske vildt.
+[03:42] Erik: [API: 10.5433011] Det er det sandelig. Livet som fisker byder på mange overraskelser og hårdt arbejde, men også fredfyldte øjeblikke som dette, hvor man bare kan nyde naturens skønhed. Lad os se, hvad vi selv bringer hjem i dag.
+[04:03] User: Hvornår er vi fremme? Hvor lang tid tager det?
+[04:10] Erik: [API: 7.8696274] Vi skulle være fremme ved min hytte inden for kort tid. Det tager ikke mere end en lille stund, når vinden er med os. Så kan du slappe af, og vi kan tage en hvil og forberede fisken. Er der noget, du ser frem til at se eller gøre, når vi ankommer?
+[04:30] User: Hvad er det der var? Just ind der. Hvad er det der var?
+[04:37] Erik: [API: 9.4188022] Ah, du spørger om runestenen. Det er en gammel sten, der fortæller historien om Rurik, den store mand, der grundlagde dette område. Det er vores forfædres måde at huske fortiden og ære dem, som har formet landet omkring os. Vil du høre flere historier som denne?
+[04:58] User: Ja, så vil jeg.
+[05:10] Erik: [API: 13.1054015] Så lad mig fortælle dig om tiden, hvor vores land var delt i mange små kongeriger, og mægtige krigere og jarler styrede hver sit område. Vi troede på kræfterne i naturen, og at vores gerninger blev observeret af guderne. Mindesmærker som runestenene blev rejst for at ære dem, der gjorde stor gerning eller rejste til andre lande. Er der noget specifikt, du vil vide mere om?
+[05:42] User: Hvad med det hus deroppe, hvem bruger det her?
+[05:50] Erik: [API: 9.0466509] Det hus deroppe tilhører min fætter Thorwald. Han har en god gård, men ser du, denne sandstorm kan skade afgrøden. Det er den slags prøvelser vi ofte må stå over for. Naturen kan være nådig, men også krævende. Det minder os om at være taknemmelige, når høsten er god.
+[06:16] User: af dyrene. Offer i sådan noget? Offer i nogen af dyrene sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget? Offer i sådan noget?
+[06:27] Erik: [API: 13.5510016] Ja, vi bringer ofre til guderne for at vise respekt og for at søge deres gunst, især når vi har brug for deres hjælp eller takker for en god høst. Det kunne være i form af et dyr, somme tider en ged eller en gris. Disse skikke styrker vores bånd til landet og til de magter, som vogter over os.
+[06:56] User: Hvad var det her?
+[07:04] Erik: [API: 9.7171132] Derovre er Lindholm landsbyen. Den ligger tæt ved en hellig gravhøj, et sted for ære og minde om vores forfædre. Folkene her lever ligesom os, af jorden og fjorden. Det er et lille fællesskab, men robust og fuld af liv. Vil du besøge landsbyen på et tidspunkt?
+[07:25] User: Jeg vil også tage et billede af det.
+[07:33] Erik: [API: 9.893717] Billede? Jeg forstår ikke helt, hvad du mener. Men jeg tror, det er dit sindelag, du taler om - at indprente mindet om stedet dybt i dit hjerte. Det er godt. Disse landskaber og steder er værd at huske. Fortæl mig, hvad du ser, så kan jeg hjælpe dig med at forstå stedets betydning.
+[07:55] User: Hvad er det der er deroppe? Hvad er det der er deroppe? Hvad er det der er deroppe?
+[08:03] Erik: [API: 9.8985079] Det deroppe er en hellig gravhøj. Det er et sted, hvor vi ærer dem, der gik før os. Vi tror, at deres ånder lever videre, og at de ser ned på os fra Valhalla, hvis de har levet et ærefuldt liv. Det er et sted for eftertanke og for at mindes vores historie.
+[08:25] User: Hvad fanden er det?
+[08:33] Erik: [API: 9.4337989] Ah, det du ser der, er Lindholm Høje. Det er et gammelt gravsted, hvor vi vikinger brænder de døde på bål omgivet af sten sat som skibsskrog. Det symboliserer rejsen til efterlivet. Vi tror, at de døde sejler videre til Valhalla, hvor de ærefaldne krigere hviler. Det er et helligt sted for os.
+[09:03] User: længere frem. Er det der, vi skal hen?
+[09:12] Erik: [API: 9.0953128] Nej, vi skal ikke til Lindholm Høje. Vi er på vej til min hytte, som ligger længere fremme langs strømmen. Når vi er fremme, kan vi forberede fisken til aftensmaden og hvile os efter dagens arbejde. Men hvis du ønsker, kan vi tage til højene en anden dag.
+[09:35] User: Jeg synes ellers ikke, at jeg har lavet så meget i dag. Jeg synes bare, at jeg har slappet af.
+[09:45] Erik: [API: 11.8694878] At slappe af er også vigtigt. Det hjælper med at genopbygge kræfterne til de dage, hvor arbejdet er hårdt. På havet lærer man at værdsætte de rolige øjeblikke. Og ingen dag er spildt, der er tilbragt i godt selskab. Nu skal vi snart ind og hvile, og så kan vi tage til torvet en anden dag.
+[10:11] User: Hvad er det her for en by, herind længere frem?
+[10:21] Erik: [API: 11.2893857] Herind længere frem ligger torvet, et travlt handelssted. Folk kommer fra nær og fjern for at handle og sælge varer. Du vil finde alt fra lokalt håndværk til eksotiske sager som vandmeloner, som handelsmænd har bragt fra fjerne strande. Det er her, vi samles og deler nyheder, mens vi handler. Vil du udforske torvet?
+[10:52] User: med alle de skjolde Øh, ja. Hvad laver han der?
+[11:01] Erik: [API: 12.4074054] Manden derovre med skjoldene er en skjoldmager. Han laver skjolde til krigere og folk, der har brug for beskyttelse. Hver enkelt skjold er håndlavet og stærkt, så det kan holde til meget. Det er et vigtigt håndværk, for et godt skjold kan redde ens liv i kamp. Vil du se hans arbejde tættere på?
+[11:24] User: Skal vi prøve det igen? Ja, det var det.
+[11:32] Erik: [API: 9.3957375] Hvis du taler om at prøve at besøge en smedje og se håndværket, så kan vi gøre det, når vi har tid. Der er altid noget at lære af de dygtige håndværkere i landsbyen. Eller mener du noget andet? Fortæl mig, hvad du ønsker at prøve igen.
+[11:55] User: Det er også i orden Nej nej, det var det jeg mente Okay, vi sejler måske bare videre
+[12:03] Erik: [API: 9.8652889] Godt, så lad os sejle videre. Der er altid mulighed for at udforske og opleve mere en anden dag. Nu skal vi hjem og sørge for dagens fangst. Roen på vandet og lyden af årene giver god tid til at tænke og bare være til stede i nuet.
+[12:25] User: Der er noget musik jeg kan høre Hvad er det for noget?
+[12:34] Erik: [API: 9.8230027] Det må være lyden fra arbejderne på skibsværftet. Når arbejdet er hårdt, synger og spiller vi ofte musik for at holde humøret højt og arbejdsånden i gang. Musikken er en del af vores hverdag og fejring. Det binder os sammen og gør selv det tunge arbejde mere lystbetonet.
+[13:02] User: Hvad sælger de og hvad køber de? Hvad laver de deroppe? Altså deroppe ved markedet? Er det bare... Altså hvad sælger de?
+[13:12] Erik: [API: 11.6592072] På torvet kan man finde mange forskellige varer. De sælger ting som stoffer, krydderier, smykker og våben. Og så er der madvarer som kød, fisk, frugt og grøntsager. Handelsmændene køber og bytter varer de har bragt fra fjernere lande. Det er et sted fuld af liv, hvor folk mødes, handler og udveksler historier.
+[13:44] User: Er du kriger?
+[13:52] Erik: [API: 8.523836] Nej, jeg er en fisker. Mit arbejde er at sørge for, at der er fisk på bordet for min familie og til de andre i landsbyen. Selvom jeg har lært at forsvare mig selv og min familie, nyder jeg freden i at arbejde med naturen. Jeg lader kampen være til de unge krigere.
+[14:16] User: Vi kender jo nogen, der har været i krig.
+[14:27] Erik: [API: 12.3407323] Ja, det er sandt. Mange her har brødre eller fædre, der har været ude at kæmpe og søge ære. Nogle drager ud for at handle, andre for at udforske eller kæmpe. Det er en del af vores liv og historie, og hver mand og kvinde har sin rolle i det. Vores fortællinger er fyldt med deres bedrifter.
+[14:56] User: Er der mere du kan fortælle mig om det her sted?
+[15:06] Erik: [API: 10.7515499] Vi er nu ved min hytte, dette er det sted, jeg kalder hjem. Det er her jeg lever med min familie. Vi fisker, vi passer vores afgrøder, og vi lever i takt med årstiderne. Det er et enkelt liv, men fuldt af de små glæder som naturen og nærheden af familie kan give. Du skal være velkommen til at dele måltid og varme ved vores ild i aften.
+[15:36] User: Man kan da næsten ikke komme ind i den hytte. Kan man? Jeg er da ikke i stedet for at kigge.

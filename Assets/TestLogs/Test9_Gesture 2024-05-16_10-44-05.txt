@@ -1,0 +1,51 @@
+Total Time: 15:23 Tutorial Time: 53.74951 Total Time minus tutorial: 14:29, User Prompts: 22, Erik Responses: 22, Erik Instigations: 4, Erik Gaze Time: 438.6612, Erik Percent Gaze Time: 50.42798, API Call Time Averages: Combined 7.6759446625, SST: 1.290504424, ChatGPT: 4.23942680384615, TTS: 4.409003876
+[01:11] Erik instigates talk: Hvordan finder du vores lille landsby indtil videre? Snart når vi frem til POINTING ERIKSHUT, hvor du skal sove. Det er et godt sted, tæt på naturen. GRATITUDE 
+[01:13] Erik: [API: 4.6644545] 
+[01:29] User: Det lyder rigtig dejligt, jeg glæder mig.
+[01:35] Erik: [API: 7.3118613] Det glæder mig at høre! Du vil elske udsigten og naturens ro. Nu skal vi bare have fisken hjem til familien. De venter sikkert spændt. HAPPY 5
+[01:51] User: Det lyder rigtig godt, og jeg glæder mig til at møde den.
+[01:57] Erik: [API: 7.2648681] Min familie vil også være glad for at møde dig. Det er ikke så tit, vi får et nyt ansigt i byen. Nu, lad os skynde os til POINTING ERIKSHUT og fortælle dem om dagens fangst. APPROVE HAPPY 6
+[02:15] User: Ja, hvad er det i øvrigt for en fisk vi har fanget?
+[02:21] Erik: [API: 7.1323136] Vi har fanget torsk og sild i dag. God solid kost for familien, og de smager fortrinligt, når de er friskfanget. Kan du lide at fiske? Jeg kunne lære dig et par tricks. APPROVE 
+[02:39] User: Det lyder sjovt, det må du gerne.
+[02:47] Erik: [API: 8.7376067] Det vil jeg se frem til! Næste gang vi sejler ud, vil jeg vise dig hvordan man mestrer linen og krogen. Det er alt sammen i håndledets bevægelse og tålmodighed. Se der, min ven Ole ved molen, han er en anden dygtig fisker her i landsbyen. HAPPY 7 POINTING FISHINGHUT
+[03:14] User: Det kan jeg se, han ligner en der ved hvad han laver.
+[03:20] Erik: [API: 7.1286868] Ja, han har mange års erfaring. Vi lærer også meget fra hinanden. Det er godt at have kammerater, der kan dele deres viden og fisketips. Nå, men lad os fortsætte. Der er ikke langt til POINTING ERIKSHUT nu. GRATITUDE 
+[03:43] User: 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣 💣
+[03:48] Erik: [API: 7.0645798] Jeg forstår ikke, hvad det er for noget. Lad os snakke mere om vores vej hjem og landsbyens liv. Er der noget, du gerne vil vide om vores måde at leve på her? GRATITUDE
+[04:08] User: Ja, hvor længe har I holdt til herude, hvor længe har I boet her?
+[04:15] Erik: [API: 8.4364313] Vores familie har boet her i mange generationer. Historien går helt tilbage til Ruriks tid, han var den første, der bosatte sig i dette område. POINTING RUNESTONE Se stenen der, den fortæller hans historie. Det er en del af vores arv. APPROVE 
+[04:41] User: Det var alt. Okay, spændende. Er der ellers noget, du kan fortælle mig om jeres by? Noget specielt?
+[04:52] Erik: [API: 12.2414937] Vores by er kendt for sine dygtige håndværkere. Vi har bådbyggere, der laver de stærkeste skibe, og smede der kan forme det fineste jern. Vi lever af handel og fiskeri, og vores markedsplads er et livligt sted, især på markedsdage. Og så selvfølgelig, vores beliggenhed ved Limfjorden gør os til et perfekt stop for rejsende som dig. HAPPY 6
+[05:22] User: Det kunne jeg godt forestille mig. I ligger rigtig godt. Sig mig, hvad er det vi har derovre?
+[05:30] Erik: [API: 9.0693409] Det er min fætter Thorwalds gårdsplads, POINTING FARMSTEAD. Som du kan se, kæmper vi nogle gange mod naturens kræfter – sandstormen dækker afgrøderne. Det kan skade høsten, men vi lærer at leve med det og beskytte vores afgrøder så godt vi kan. SURPRISED 4
+[06:04] User: Har I også dyr gående på nogle marker herude, eller er det bare plantebassinet?
+[06:13] Erik: [API: 10.2512694] Ja, vi har både får og køer, som græsser på markerne. De giver os mælk og uld, og nogle gange kød, når vinteren er hård. Vores land er både til dyr og dyrkning – det er vigtigt at have en god blanding for at holde familien mæt og varm. APPROVE 
+[06:44] User: Der er nogle runesten ligner det på bakken bag dig, hvad er det for noget?
+[06:52] Erik: [API: 10.050637] Åh, de runesten du ser, de markerer en ældgammel gravhøj nær Lindholm. Det er et helligt sted for os, en forbindelse til de forfædre, der passede på dette land før os. Deres historier fortælles i stenenes indskrifter. POINTING VILLAGE APPROVE 
+[07:21] User: Okay, det lyder som om jeres landsby her har en rig kultur.
+[09:56] User: Vi ved at være der. Hvor langt er der endnu?
+[10:03] Erik: [API: 7.1440523] Ikke langt nu. Vi nærmer os markedsindgangen, POINTING MARKETENTRANCE, og straks efter finder vi min hytte. På markedsdagen er dette sted fyldt med liv og handel. Du vil se varer fra hele verden her! Men nu er det ved at være tid til at møde min familie. GRATITUDE 
+[10:28] User: Det lyder godt.
+[10:35] Erik: [API: 7.9778906] Ja, det bliver hyggeligt. Vi er næsten ved POINTING ERIKSHUT. Min kone, Astrid, vil have middag klar, og min datter, Freya, vil sikkert ønske at vise dig rundt. Jeg håber, du vil føle dig som hjemme hos os. GRATITUDE 
+[10:55] User: Det forestiller jeg mig ikke bliver noget problem.
+[11:01] Erik: [API: 7.3305182] Det er godt at høre. Vi værdsætter gæstfrihed højt. Og POINTING ERIKSHUT her kommer vi til min hytte nu. Lad os byde dig velkommen og dele vores hjem og historier. APPROVE 
+[11:18] User: Jeg kan næsten ikke vente.
+[11:25] Erik: [API: 7.5679307] Det glæder mig at høre. Velkommen til vores hjem! Lad os sørge for at få fisken afleveret og så kan vi nyde resten af dagen. Du er nu en del af vores lille fællesskab her. POINTING ERIKSHUT GRATITUDE 
+[11:45] User: Jeg vil se frem til at tage del i det.
+[11:51] Erik: [API: 7.215721] Det bliver en fornøjelse. Vi har meget at vise dig og endnu mere at fortælle om vores måde at leve på. Nu, lad os stige i land og starte med at fordøje dagens eventyr. GRATITUDE 
+[12:07] User: Tak fordi du kiggede på.
+[12:13] Erik: [API: 7.7351936] Det var en fornøjelse at have dig med ud på vandet. Nu er vi her, lad os gå ind og nyde noget mad sammen med min familie. POINTING ERIKSHUT GRATITUDE
+[12:36] Erik instigates talk: Hvad siger du til at møde resten af min familie, når vi kommer ind? De vil også gerne høre om dine eventyr. GRATITUDE
+[12:38] Erik: [API: 4.4860705] Det var en fornøjelse at have dig med ud på vandet. Nu er vi her, lad os gå ind og nyde noget mad sammen med min familie. POINTING ERIKSHUT GRATITUDE
+[12:53] User: Det vil jeg hjertens gerne fortælle dig mere om.
+[12:59] Erik: [API: 7.8313033] Det ser vi frem til. En god fortælling er altid værdsat her i vores hjem. Lad os gå ind og slappe af. Astrid og Freya vil elske at høre, hvad du har at dele. POINTING ERIKSHUT GRATITUDE 
+[13:27] User: Det ligner da faktisk, at der er lidt liv på markedet i dag.
+[13:34] Erik: [API: 8.8348075] Ja, det er der bestemt. Selv på en almindelig dag er der handlende, som sælger deres varer. Fiskeren der sælger dagens fangst, og væveren der har tøj og sejl. Det er altid godt at bytte og få friske forsyninger. POINTING TRADERS GRATITUDE 
+[14:04] User: Er det herovre, du bor?
+[14:11] Erik: [API: 7.6334146] Ja, det er lige her. POINTING ERIKSHUT Vores lille hjem ved vandet. Det er her, vi finder ro efter en lang dags arbejde og nyder hinandens selskab. Lad os gå ind. APPROVE 
+[14:35] Erik instigates talk: Nå, men her er vi altså. POINTING ERIKSHUT Mit hjem. Jeg håber du finder hytten behagelig, og at du vil nyde dit ophold hos os. GRATITUDE 
+[14:37] Erik: [API: 4.534106] Ja, det er lige her. POINTING ERIKSHUT Vores lille hjem ved vandet. Det er her, vi finder ro efter en lang dags arbejde og nyder hinandens selskab. Lad os gå ind. APPROVE 
+[14:52] User: Mange tak. Det ser rigtig godt ud.
+[14:57] Erik: [API: 6.5781205] Tak skal du have. Vi prøver at holde det pænt og indbydende. Nu skal du hilse på familien og finde dig til rette. Kom, lad os gå indenfor. GRATITUDE
+[15:22] Erik instigates talk: Der er meget at se heromkring. Er der noget, der fanger din interesse, noget du vil høre mere om? GRATITUDE

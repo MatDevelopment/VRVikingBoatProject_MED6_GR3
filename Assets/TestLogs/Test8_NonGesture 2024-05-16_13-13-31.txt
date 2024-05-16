@@ -1,0 +1,67 @@
+Total Time: 15:42 Tutorial Time: 73.12771 Total Time minus tutorial: 14:29, User Prompts: 29, Erik Responses: 29, Erik Instigations: 4, Erik Gaze Time: 41.94229, Erik Percent Gaze Time: 4.824809, API Call Time Averages: Combined 7.02850144545455, SST: 1.24550150909091, ChatGPT: 3.59127112121212, TTS: 3.59127112121212
+[01:30] Erik instigates talk: Hvad tænker du om vores landskab her? Det er rart med lidt selskab, når man sejler hjemad.
+[01:32] Erik: [API: 4.1171096] 
+[01:43] User: Nå, thank you. Jeg kan ikke høre hvad han siger.
+[01:48] Erik: [API: 6.7470962] Det er jo vinden, der driller os. Sig til, hvis jeg skal tale højere. Hvordan finder du så vores fiskevand sammenlignet med andre steder?
+[02:04] User: Det var meget hyggeligt. Jeg glæder mig.
+[02:08] Erik: [API: 5.7186717] Det er godt at høre. Snart er vi hjemme, og du kan møde min familie. De vil også glæde sig til at møde dig.
+[02:22] User: Hvordan er din familie? Ah fantastisk, hvordan er din familie?
+[02:26] Erik: [API: 5.5356941] Min hustru er landsbyens lægekvinde, en stor hjælp for alle. Og min datter er fuld af liv – hun er altid ude på nye eventyr. De vil begge tage godt imod dig.
+[02:52] Erik instigates talk: Når vi kommer hjem, skal du smage Astrids kogekunst. Hun laver en fremragende fiskegryde. Hvad er din yndlingsret?
+[02:53] Erik: [API: 3.8412134] Min hustru er landsbyens lægekvinde, en stor hjælp for alle. Og min datter er fuld af liv – hun er altid ude på nye eventyr. De vil begge tage godt imod dig.
+[03:08] User: Min yndlingsræt er 20.000 kroner
+[03:13] Erik: [API: 6.1054003] Det var en sjov tanke. Men lad os holde os til måltiderne, hvad siger du til fisk? Vi har nok fangst i dag til at lave noget lækkert.
+[03:28] User: Hvad skal vi have? Årh fantastisk, hvad skal vi have?
+[03:33] Erik: [API: 6.338456] Vi skal have friskfanget fisk fra dagens tur. Astrid laver en fremragende fiskegryde med urter fra skoven. Det bliver en fest for ganen!
+[03:48] User: Jeg glæder mig. Fantastisk, jeg glæder mig.
+[03:52] Erik: [API: 5.065731] Det gør mig glad at høre! Vi elsker at dele vores måltider med venlige sjæle. Det binder os sammen og skaber gode minder.
+[04:13] User: Hvad er det derovre til venstre?
+[04:18] Erik: [API: 5.6790327] Til venstre ser du Lindholm Å, der snor sig igennem landskabet. Det er et godt sted for os fiskere, rig på fisk og fredeligt.
+[04:35] User: Der er en sten der, vil du have det?
+[04:40] Erik: [API: 6.7067363] Den sten er en runesten, den fortæller historien om Rurik, der bosatte sig her for mange år siden. Den er en del af vores arv og skal blive, hvor den er, så alle kan mindes fortiden.
+[04:59] User: Ror ikke. Kender du historien om ro?
+[05:04] Erik: [API: 6.5024779] Jeg kender mange historier leveret gennem generationer, men den om "ro"? Måske er det en fortælling fra dine egne lande? Fortæl mig mere, så kan jeg se, om det minder om noget, jeg kender.
+[05:24] User: Den her historie er fra den steen, den kender han ikke til
+[05:31] Erik: [API: 8.586139] Ah, runestenens historie kan være svær at tyde for uindviede. Hver runesten har sin egen saga, og jeg er ingen skjald. Men Rurik var en stor mand, og hans bedrifter er vævet ind i vores lands historie. Det er vigtigt at huske og ære dem, der banede vejen for os.
+[06:04] User: Hvad laver du så her for? Hvad laver du så her for?
+[06:12] Erik: [API: 9.1742454] Jeg fisker for at forsørge min familie og byde gæster som dig på det bedste fra havet. Livet er enkelt her: fisk om dagen, hygge med familien om aftenen, og alt imellem bruger vi til at passe på vores land og hinanden.
+[06:37] User: Hvorfor var jeg gæst igen?
+[06:45] Erik: [API: 8.6204046] Du er gæst, fordi du søgte læ for natten, og her hos os viser vi gæstfrihed til rejsende. Det er både skik og pligt at tage godt imod dem, der krydser vores vej. Plus, det er god skæbne at byde en fremmed velkommen.
+[07:04] User: Har du selv været ude og regne?
+[07:09] Erik: [API: 6.1820326] Mener du rejse? Ja, jeg har været længere væk på fisketogter eller for at handle, men jeg vender altid hjem. Intet slår følelsen af at se vores landsby i horisonten.
+[07:30] User: Det til højre er en gravsted.
+[07:37] Erik: [API: 8.2498641] Ja, det er et helligt sted for os. En gravhøj, hvor vores forfædre hviler. Vi passer godt på det sted og mindes de gamle tiders helte og slægten, der gik forud for os.
+[07:53] User: Kender du dem? Hmm... Og hvad med den by?
+[08:00] Erik: [API: 7.9494273] Jeg kender ikke dem, der ligger i gravhøjen, men deres arv lever i os alle. Og byen, Lindholm, består af hårdtarbejdende folk som os. Vi støtter hinanden i handel og dagligdagen. Det er et stærkt fællesskab.
+[08:27] User: Hvor ofte var du ude og fiske? Er det dagligt?
+[08:32] Erik: [API: 6.7363281] Ja, jeg fisker næsten hver dag, medmindre vejret er for voldsomt, eller jeg må tage mig af andre gøremål. Havet giver os føde, og det er en fiskers lod at være tæt på vandet.
+[08:54] User: Der kommer en lidt stor by her, er det der?
+[09:01] Erik: [API: 8.319549] Ja, det er Lindholm Høje, hvor vi har vore gravpladser. Stedet er særligt for os, fordi de døde sendes på deres sidste rejse med skibssætninger. Det minder os om, at livet er en rejse, og døden blot en ny begyndelse.
+[09:29] User: Hvis du kan lide denne video, så giv den en like, kommenter og abonner på kanalen.
+[09:35] Erik: [API: 7.0120651] Jeg forstår ikke dine ord om videoer og abonnering. Men lad os nyde sejlturen og den friske brise. Se der! Du kan skimte mit hjem fra her; vi er næsten fremme.
+[09:53] User: Der oven på det orange og det hvide skål Bor du i det hus med de skål der?
+[09:59] Erik: [API: 8.3388716] Nej, mit hus er et stykke derfra, tættere på vandet. Men jeg kender godt de skåle, du taler om. Markedet her er fuldt af ting fra fjern og nær. Har du set vandmelonerne? De er en sjældenhed her.
+[10:21] User: Hvad er der på sådan en fin marked?
+[10:28] Erik: [API: 7.6847858] Markedet er fyldt med varer fra hele verden. Der er stoffer, krydderier, smykker, værktøj og selv eksotiske frugter som vandmeloner. Håndværkere, smede og handelsfolk mødes for at sælge deres varer. Det er et livligt sted, hvor man kan høre sprog fra fjerne strande.
+[10:52] User: Hvor kender du Hammersmøden da? Hammersmøden da?
+[10:59] Erik: [API: 8.5604509] Hammersmøden, mener du den store samling, hvor folk fra vidt omkring mødes og fejrer? Jeg har hørt fortællinger fra andre søfolk om sådanne begivenheder, hvor der handles, drikkes og synges. Men jeg har aldrig deltaget i en selv. Er det noget, du har oplevet?
+[11:20] User: Nej, nej, nej, det har jeg ikke.
+[11:30] Erik: [API: 11.1109062] Nå, måske en dag får du chancen. Livet byder på mange muligheder for at opleve nyt. Nu når vi nærmer os min hytte, lad os forberede os på aftenens måltid og en rolig stund med familien. Det kan også være en fest på sin egen måde.
+[11:51] User: Jeg glæder mig da til at skulle spise
+[11:57] Erik: [API: 7.8635044] Det bliver godt! Der er intet som et måltid lavet på friske råvarer, og med godt selskab skaber det minder for livet. Vi skal nok sørge for, at du får en skøn aften hos os.
+[12:15] User: Der sker noget musik derovre, det er en fest, eller hvad sker der? Hvad der sker der?
+[12:21] Erik: [API: 7.4398562] Musikken? Åh, der kan være en familie, som fejrer en fødsel, en høst eller noget helt tredje. Vi danskere elsker en god fest – det holder humøret højt og samfundet tæt sammen. Vi kan tage et kig, når vi har lagt til ved min hytte.
+[12:52] Erik instigates talk: Har du nogensinde set, hvordan skibe bliver bygget? Det er et hårdt arbejde, men imponerende at følge. Skibsværftet der giver liv til mange stolte skibe.
+[12:54] Erik: [API: 5.7439847] Musikken? Åh, der kan være en familie, som fejrer en fødsel, en høst eller noget helt tredje. Vi danskere elsker en god fest – det holder humøret højt og samfundet tæt sammen. Vi kan tage et kig, når vi har lagt til ved min hytte.
+[13:12] User: Har du bygget den selv? Har du selv bygget sådan en skib her? Har du bygget dem både selv?
+[13:18] Erik: [API: 7.3355281] Nej, jeg er fisker, ikke skibsbygger. Mine færdigheder ligger i at fange fisk, ikke at bygge skibe. Det er de kyndige hænder på skibsværftet, der skaber disse stærke skibe, som kan tåle havets kræfter.
+[13:39] User: Selvom du sælger dine fisk på markedet eller spiser dem, så er du altid selv.
+[13:47] Erik: [API: 8.9717248] Jeg forstår, du mener, at jeg enten sælger fiskene eller spiser dem med familien. Ja, det er livet for en fisker. Fiskene er vores levebrød, og nogle gange deler vi vores fangst med markedet for at bytte til andre nødvendige varer.
+[14:17] Erik instigates talk: Kender du til handel? Det er interessant at se, hvordan en god handel kan bringe forskellige varer fra fjerne lande til vores lille sted.
+[14:18] Erik: [API: 4.471143] Jeg forstår, du mener, at jeg enten sælger fiskene eller spiser dem med familien. Ja, det er livet for en fisker. Fiskene er vores levebrød, og nogle gange deler vi vores fangst med markedet for at bytte til andre nødvendige varer.
+[14:33] User: Kender du det?
+[14:39] Erik: [API: 6.7192717] Jeg kender til mange ting i vores landsby og vores handelsmåder. Hvis du fortæller mig, hvad du tænker på, kan jeg bedre forstå og dele min viden med dig.
+[14:57] User: Spydt fisk.
+[15:03] Erik: [API: 7.9739442] Ah, spydstegt fisk! Det er en lækker måde at tilberede fisk på. Man fanger en frisk fisk, spyder den og steger den over bål. Simpelt og smagfuldt. Vi gør det tit her, især når vi fejrer eller bare nyder en god dag. Vil du prøve det?
+[15:23] User: Ja, det var det øverste.
+[15:28] Erik: [API: 6.5389017] Perfekt! Når vi er tilbage i hytten, kan vi forberede en fisk til at blive stegt på spyd. Det bliver en god måde for dig at smage vores lokale madlavning.

@@ -1,0 +1,55 @@
+Total Time: 15:14 Tutorial Time: 43.90916 Total Time minus tutorial: 14:30, User Prompts: 22, Erik Responses: 22, Erik Instigations: 6, Erik Gaze Time: 252.3118, Erik Percent Gaze Time: 28.9761, API Call Time Averages: Combined 8.83163993333334, SST: 1.26067682592593, ChatGPT: 5.25563395185185, TTS: 5.25563395185185
+[01:02] Erik instigates talk: Hvordan finder du vores landskab her? Vent til du ser mit hjem, det ligger lige for enden af denne strøm. POINTING ERIKSHUT HAPPY 6
+[01:03] Erik: [API: 4.8961541] 
+[01:20] User: Det er meget bakket og en del skov.
+[01:27] Erik: [API: 7.8391025] Ja, skovene giver os godt med vildt, og bakkerne beskytter os mod de stærke vinde. Har du set sådan natur før, hvor du kommer fra? GRATITUDE
+[01:47] User: Er det småfarligt at placere? Jo, det har jeg da bestemt.
+[01:53] Erik: [API: 7.0016047] Ikke farligt, nej. Naturen er som en god ven, som man skal respektere og forstå. Det er godt at høre, at du kender til skovens veje. Det gør en bedre til at færdes i den. Hvad bringer dig så langt væk hjemmefra? GRATITUDE
+[02:13] User: Fisketur. En god fisketur.
+[02:20] Erik: [API: 8.1236552] En fisketur er altid godt for sjælen. Havet giver os mad og historier til at fortælle. Og ser du her, dagens fangst var gavmild. Vi skal snart være fremme ved mit hjem, og du skal se, hvordan vi forbereder fangsten. APPROVE
+[02:49] Erik instigates talk: Har du nogensinde prøvet at fiske i sådan en strøm her? Der kan være god udfordring i at læse vandet og finde de bedste steder. POINTING ERIKSHUT HAPPY 4
+[02:51] Erik: [API: 4.8066301] En fisketur er altid godt for sjælen. Havet giver os mad og historier til at fortælle. Og ser du her, dagens fangst var gavmild. Vi skal snart være fremme ved mit hjem, og du skal se, hvordan vi forbereder fangsten. APPROVE
+[03:06] User: Ja, det tror jeg gerne på.
+[03:14] Erik: [API: 9.9057076] Det er visdom, der kommer med tiden og tålmodighed. Og se, der står min ven Ole ved molen. Han har været fisker lige så længe som mig. Vi nærmer os nu min hytte. APPROVE
+[03:33] User: Hvorfor er Ole ikke ude på det åbne?
+[03:39] Erik: [API: 8.1281849] Ole nyder stilheden ved molen, og nogle gange er det let at fange fisk lige her ved strømmen. Han siger, at fiskene leger i strømvandet, så han behøver ikke altid det åbne hav. APPROVE
+[03:59] User: Hvad er det for nogle runer vi har herovre?
+[04:05] Erik: [API: 7.7050967] Ah, det er en runesten til ære for Rurik, en stor mand, der grundlagde dette område. Stenens historie er fortalt gennem runerne - vores forfædres skrift. POINTING RUNESTONE GRATITUDE 5
+[04:30] User: Det er meget idyllisk.
+[04:36] Erik: [API: 7.5153852] Det er det bestemt. Vi værdsætter skønheden i vores landskab og de fortællinger, som de gamle sten gemmer på. Et sted fyldt med historier og natur er et godt sted at leve. GRATITUDE 
+[04:59] User: Kan du ikke fortælle mig lidt om ytterdenen der ligger heroppe langs flodkanten?
+[05:07] Erik: [API: 9.3008275] Ytterdenen du ser, er grænsen til vort fællesskab. Træer og buske langs flodkanten giver os skjul, brænde og mad. Det er et sted for både arbejde og hvile, hvor vi kan nyde lyden af vandet og fællesskabet. GRATITUDE
+[05:34] User: eller hvordan er det lige Det vagtårn jeg ser herovre er det til vikingehøvdingen
+[05:47] Erik: [API: 14.0091306] Nej, det du ser er ikke et vagtårn, men et tårn på min fætter Thorwalds gård. Det hjælper med at holde udkig over afgrøderne og beskytter mod uønskede besøgende. En sandstorm truer nu marken, som det kan ske. Men vi er et stærkt fællesskab, der hjælper hinanden i nød. POINTING FARMSTEAD GRATITUDE 4
+[06:20] Erik instigates talk: Du ser nysgerrig ud. Er der noget andet, du undrer dig over her i området? POINTING ERIKSHUT GRATITUDE 3
+[06:21] Erik: [API: 4.054761] Nej, det du ser er ikke et vagtårn, men et tårn på min fætter Thorwalds gård. Det hjælper med at holde udkig over afgrøderne og beskytter mod uønskede besøgende. En sandstorm truer nu marken, som det kan ske. Men vi er et stærkt fællesskab, der hjælper hinanden i nød. POINTING FARMSTEAD GRATITUDE 4
+[06:34] User: Hvor mange er I i det her fællesskab?
+[06:40] Erik: [API: 7.7716049] I vores landsby tæller vi nok omkring en halv hundrede folk. Hver familie kender hinanden, og vi står sammen i arbejde som i fest. Vores fællesskab er vores styrke. POINTING VILLAGE GRATITUDE 4
+[07:09] User: Okay, fedt. Har I ofte problemer med fremmed?
+[07:16] Erik: [API: 9.2245432] Ikke ofte. De fleste rejsende er handelsfolk eller andre vikinger, der søger ly eller samhandel. Vi byder dem velkommen, så længe de kommer med fredelig hensigt. Vores styrke og samhold skræmmer de fleste dårlige sjæle væk. GRATITUDE
+[07:44] User: Ok, interessant. Hvor meget mad har I brug for at producere til at holde en hel vinter?
+[07:54] Erik: [API: 12.154186] Vi skal sørge for at have nok tørret kød, fisk, og grøntsager gemt væk. Lageret skal være fyldt, så det kan række gennem de hårde måneder, når marken er frossen og havet stormfuldt. Det er en daglig kamp, men vi får det til at lykkes med hårdt arbejde og god planlægning. GRATITUDE
+[08:25] User: Det område vi er på vej inden nu, hvordan forholder det sig til din egen gård?
+[08:33] Erik: [API: 8.7068712] Vi er nu meget tæt på min gård – mit hjem. Det ligger lidt længere fremme ved enden af strømmen. Det er et simpelt sted, men det er vores, og her har vi alt, hvad vi behøver. Det er her vi lever vores liv, sammen med naturen og årstiderne. POINTING ERIKSHUT GRATITUDE 5
+[09:00] User: Når I skal bygge de her jolder, hvordan er det lige jeres processer er?
+[09:09] Erik: [API: 9.8275935] Bygning af en jolle starter med at vælge det rette træ, som skal være stærkt og bøjeligt. Vi benytter værktøjer håndlavet af jern til at forme plankerne. Derefter samler vi dem i skrogets form og tætner det med tjære for at gøre det vandtæt. Det er et arbejde, der kræver tid og dygtighed. GRATITUDE
+[09:43] User: Den herre, der står henne ved kajen, vælger at købe den herre, der står henne ved kajen, og det er den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre, der køber den herre
+[09:51] Erik: [API: 10.6251774] Jeg forstår ikke helt, hvad du mener. Men ser du, vi nærmer os nu markedets indgang. Det er her vi handler og møder handelsfolk fra fjerne lande, som bringer eksotiske varer, endda frugter såsom vandmeloner, som vi ikke dyrker her. POINTING MARKETENTRANCE GRATITUDE 4
+[10:21] User: Er der en fordel i at placere markedet helt nede ved floden?
+[10:29] Erik: [API: 9.7030877] Ja, markedspladsen ved floden gør det nemt for handelsskibe at læsse deres varer af. Det gør handel hurtigere og enklere for både os og de rejsende. Det er et knudepunkt for handel og nyt fra fjerne steder. POINTING MARKETENTRANCE GRATITUDE 5
+[10:55] User: herovre, hvad er det specifikt du vil have materiale for.
+[11:05] Erik: [API: 11.2636426] Hvis du taler om smeden, så arbejder han med jern og stål for at skabe våben og rustning. Han forsyner vikingerne på rejse med det nødvendige udstyr for deres sikkerhed og succes. Han er dygtig, og hans arbejde er vigtigt for vores folk. POINTING BLACKSMITH GRATITUDE 5
+[11:39] User: Det vi ser længere hen på højre side, det er, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning, at det er en løsning
+[11:48] Erik: [API: 12.1131085] Det lyder som om der er lidt forvirring. Lad mig vide, hvad du præcist ønsker at lære om, så jeg kan hjælpe dig bedre. Er det noget specifikt ved landsbyen, håndværk eller natur du ønsker at vide mere om? GRATITUDE
+[12:11] User: Du må gerne fortælle mig lidt mere om jeres samfund i den her landsby her.
+[12:23] Erik: [API: 13.6551624] Vores samfund er bygget på fællesskab og arbejde. Vi hjælper hinanden, fra landbrug og fiskeri til skibsbygning, som du kan se der. POINTING BOATBUILDER Hver håndværker bidrager med sine færdigheder, og sammen sikrer vi, at landsbyen trives. Vi fejrer også vores traditioner og ærer de gamle skikke, der holder os forbundet. GRATITUDE 4
+[12:51] User: Okay, det er et meget idyllisk sted I har jer her.
+[12:59] Erik: [API: 8.9049168] Det er jeg glad for at høre, du synes. Vi har vores udfordringer, men vi er taknemmelige for det liv, naturen og guderne har givet os. Snart er vi hjemme ved ERIKSHUT, og du kan se, hvordan vi lever. POINTING ERIKSHUT GRATITUDE 3
+[13:16] User: Det vil jeg se frem til.
+[13:23] Erik: [API: 7.8182744] Det glæder mig. Jeg håber, du finder det lige så fredfyldt som jeg gør. Vi er snart der, og så kan du møde min familie og hvile dig efter rejsen. GRATITUDE
+[13:48] User: Er der gang i handlen i jeres marked her?
+[13:55] Erik: [API: 8.3985431] Ja, markedet summer ofte af liv. Handelsfolk og håndværkere fra nær og fjern kommer for at handle og dele nyheder. Vi vikinger elsker at bytte og forhandle – det er en del af vores dagligdag. POINTING TRADERS GRATITUDE 5
+[14:27] Erik instigates talk: Og her er vi så. Dette er mit hjem. Det er her, jeg og min familie lever et enkelt liv, men fyldt med glæde. Kom, lad os gå i land, og jeg vil vise dig, hvordan vi forbereder fangsten. POINTING ERIKSHUT GRATITUDE 6
+[14:29] Erik: [API: 8.1029147] Ja, markedet summer ofte af liv. Handelsfolk og håndværkere fra nær og fjern kommer for at handle og dele nyheder. Vi vikinger elsker at bytte og forhandle – det er en del af vores dagligdag. POINTING TRADERS GRATITUDE 5
+[14:58] Erik instigates talk: Jeg kan se, du er optaget af at udforske omgivelserne, noget særligt der fanger dit blik? Vi har mange historier knyttet til hvert et hjørne af denne egn. APPROVE
+[15:00] Erik: [API: 6.8984117] Ja, markedet summer ofte af liv. Handelsfolk og håndværkere fra nær og fjern kommer for at handle og dele nyheder. Vi vikinger elsker at bytte og forhandle – det er en del af vores dagligdag. POINTING TRADERS GRATITUDE 5

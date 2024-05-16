@@ -41099,7 +41099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c80fc436aed7bd46ac6118d9e3f142c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GestureVersion: 1
+  GestureVersion: 0
   tutorialDone: 0
   userGestureManagerGameObject: {fileID: 1739521426}
 --- !u!4 &928690118
@@ -55998,7 +55998,7 @@ MonoBehaviour:
   AllowLogging: 1
   whisper: {fileID: 861633864}
   apiCallTimeManager: {fileID: 1442082956}
-  newFileName: Test8_Gesture
+  newFileName: Test9_NonGesture
   StringsToLog: []
   TotalUserPrompts: 0
   TotalErikResponses: 0
@@ -66658,7 +66658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1544722748
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70461,8 +70461,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 24.043015
-  m_Center: {x: 8.61182, y: -7.688793, z: 0.00000010420328}
+  m_Radius: 29
+  m_Center: {x: 14.42, y: -7.688793, z: -4.4}
 --- !u!82 &1651602407
 AudioSource:
   m_ObjectHideFlags: 0
