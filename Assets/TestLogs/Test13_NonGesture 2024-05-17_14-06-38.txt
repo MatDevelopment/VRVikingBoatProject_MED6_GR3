@@ -1,0 +1,57 @@
+Total Time: 15:00 Tutorial Time: 32.49153 Total Time minus tutorial: 14:27, User Prompts: 25, Erik Responses: 25, Erik Instigations: 3, Erik Gaze Time: 244.5958, Erik Percent Gaze Time: 28.194, API Call Time Averages: Combined 8.04671959285714, SST: 1.21596881071429, ChatGPT: 3.987944675, TTS: 3.987944675
+[00:49] Erik instigates talk: Du fortalte før om de steder, du har rejst. Hvordan var havene der? Er de som vores gode, gamle Limfjorden her?
+[00:51] Erik: [API: 3.6761033] 
+[01:03] User: Kan du gentage det?
+[01:07] Erik: [API: 5.6480879] Selvfølgelig. Jeg spurgte, hvordan havene var der, du har rejst. Er de som vores Limfjorden her?
+[01:19] User: Ja, det var meget godt, det var det.
+[01:25] Erik: [API: 7.246604] Dejligt at høre! Der er noget særligt ved at være på vandet, ikke sandt? Hvordan er fiskene der? Større eller mindre end de torsk, vi har fanget i dag?
+[01:45] User: Det er okay.
+[01:50] Erik: [API: 5.9765717] Ah, jeg forstår. Nå, lad os se, hvad vi har i spanden! Vi har fanget en god portion i dag. Det bliver et fint måltid. Hvad er din yndlingsret?
+[02:05] User: Med tårsk er det nok værd.
+[02:11] Erik: [API: 6.6754912] Helt enig. En god torsk, frisk fra fjorden, det er måske en af de bedste retter, man kan få. Når vi kommer tilbage, kan vi grille den over bålet. Med lidt urter fra min hustru, det bliver himmelsk.
+[02:34] User: Er det din bror der står derinde?
+[02:39] Erik: [API: 6.1008976] Nej, det er min gode ven, Ole. Han bor der i hytten. En dygtig fisker ligesom jeg, og en hjælpsom ven. Vil du møde ham en anden gang?
+[02:59] User: Han står der i hvert fald og kigger lidt og får fat i nogle fisk forhåbentligvis, han har allerede fanget nogle.
+[03:05] Erik: [API: 7.0971925] Ja, Ole har altid et godt øje for fisk. Han kender vandet som sin egen bukselomme. Vi deler tit historier og fangster ved dags ende. Det er en god livsstil, vi fiskere har.
+[03:24] User: Har du en søn der er uden for Danmark og Limfjorden?
+[03:29] Erik: [API: 5.8935603] Nej, jeg har ingen søn. Jeg har en datter, Freya. Hun er stadig ung og lever livet her ved fjorden sammen med os. Hun er en kvik lille ting – altid på opdagelse i naturen.
+[03:49] User: Hvad er det for en sten der er her?
+[03:55] Erik: [API: 6.9455433] Ah, du har øje for den gamle runesten! Den fortæller historien om Olaf, den mand der først bosatte sig heromkring. Hans bedrifter hjalp med at forme vores landsby. Det er vigtigt at huske og ære dem, der gik forud for os.
+[04:17] User: Det er ikke så vildt at bygge den her.
+[04:25] Erik: [API: 8.9382907] Måske ikke nu, men i gamle dage var det en stor bedrift at rejse en runesten. Det krævede mange stærke arme og viljestyrke. Den står her som et minde om vores forfædre og deres arbejde. Det minder os om at værdsætte det, vi har.
+[04:54] Erik instigates talk: Taler vi om forfædre og fortiden, har du så kendskab til dine egne forfædre? Har de fortalt dig historier, som du bærer med dig?
+[04:57] Erik: [API: 5.0604294] Måske ikke nu, men i gamle dage var det en stor bedrift at rejse en runesten. Det krævede mange stærke arme og viljestyrke. Den står her som et minde om vores forfædre og deres arbejde. Det minder os om at værdsætte det, vi har.
+[05:11] User: Så skal jeg lige måle for at have tid.
+[05:19] Erik: [API: 9.3308335] Det forstår jeg. Tid er vigtigt, særligt når man arbejder med naturen. Min fætter Thorwald på gården der skulle også holde tæt øje med vejret for sine afgrøder. Sandstorme kan komme pludseligt og skabe ravage. Har du meget, du skal nå i dag?
+[05:44] User: Jeg tænker at jeg skal kigge til nogle kyllinger. Måske en ko. De larmer godt nok lidt lige nu.
+[05:51] Erik: [API: 8.4536347] Det lyder som en travl dag. Dyrene kræver en del omsorg, men det er også en glæde at arbejde med dem. Man lærer meget af naturen. Hvis du har brug for en hånd, er du altid velkommen tilbage til gården – vi hjælper hinanden her.
+[06:17] User: Det må da jeg tage op på det tilbud så. Og hvad med den bakke der med alle stenene?
+[06:24] Erik: [API: 8.0683434] Ah, den hellige gravhøj. Det er et gammelt sted, fuld af vores forfædres ånder. Stenene markerer hvor vikinger før os blev æret i deres død. Det er et stille sted, godt for eftertanke. Du er velkommen til at besøge det, hvis du ønsker. Mange finder ro der.
+[06:56] User: Hvad synes du om det?
+[07:03] Erik: [API: 8.5781476] Jeg sætter pris på gravhøjenes betydning. De forbinder os med fortiden og minder os om livets cyklus. Det er vigtigt at ære de som har banet vejen for os, så deres ånder kan finde fred, og vi kan lære af deres liv. Hvad tænker du om det?
+[07:33] User: Det er klart, at når man tænker over det og så tænker man hjemme i hverdagen, det kan godt være det er træls, men at det er også godt at lige gå op med en anden ting.
+[07:41] Erik: [API: 9.6364068] Ja, det er sandt. Livet kan være krævende, men det er også vigtigt at pause og reflektere. At besøge steder som gravhøjene giver os tid til at tænke over det store billede, og hvad der virkelig betyder noget. Det hjælper os med at finde balance i hverdagen.
+[08:11] User: Det kan være lidt hård engang imellem, så jeg prøver også at finde god balance med at gå ture og bare nyde mig.
+[08:19] Erik: [API: 9.6827838] Det er en god tilgang. Naturen kan være en kilde til styrke og ro. Når man går blandt træer og vand, kan man finde en form for fred, som er svær at opnå i dagligdagens travlhed. Fortsæt med at søge de stille stunder, de er værdifulde.
+[08:49] User: Det er også godt, når man kan være sammen med folk og bare slappe af og grine og hygge, når man ikke har en masse mennesker.
+[08:57] Erik: [API: 10.0744124] Helt enig. Der er intet som at dele tid med familie og venner. Det er de øjeblikke, man husker – de stille, glade stunder, hvor man kan grine og have det godt sammen. Et godt måltid, historier ved bålet, det binder os sammen. Når man kan dele sådanne tider, så har man sandt rigdom.
+[09:31] User: og sælger nogle skolde Nu kommer vi også op til byen her Hvem er det der står herinde ved? Det er en der står og sælger
+[09:40] Erik: [API: 10.931481] Ah, vi nærmer os markedet. Her kan du finde handlende fra nær og fjern med alskens varer. Kan du se manden derovre? Han har lige fået vandmeloner hjem fra en fjern egns land. Det er eksotisk! Har du nogensinde smagt sådan en? De er sjældne heroppe.
+[10:02] User: Det er klart.
+[10:08] Erik: [API: 7.5180134] Ja, det åbner en hel ny verden, når man kan smage frugter fra fjerne steder. Det er som en rejse i sig selv, ikke sandt? Markedet her kan være en sand skattekiste af opdagelser. Hvis der er noget, du søger, er chancerne gode for, at du kan finde det her.
+[10:34] User: eller lidt forskelligt. Det kunne være man lige havde brug for et nyt skjold, eller en ny chainmail.
+[10:43] Erik: [API: 10.38697] Jamen, så er smeden det rette sted! Han laver stærke skjolde og ringbrynjer, som kan stå imod en hel del. Han laver også fine økser, hvis du skulle have brug for en. Hvis du går i land her, kan du helt sikkert få det, du har brug for, inden din næste rejse.
+[11:15] User: Og der er sådan en del mennesker, der er hernede.
+[11:23] Erik: [API: 9.5154336] Ja, markedet samler folk fra hele området, og søfolk lægger også til her. Det er et livligt sted, fuld af handel og nyheder. Det kan være overvældende, men også spændende. Der er altid noget nyt at se eller høre om. Husk, hvis du har brug for en pause, er min hytte åben for dig.
+[11:46] User: Så er vi klar til at komme forbi din høle.
+[11:55] Erik: [API: 9.8312406] Godt at høre! Min 'høle', som du kalder det, er måske ikke så stor, men den er hjem. Min familie og jeg har det, vi behøver. Der er plads nok til at huse en rejsende som dig. Du skal være velkommen, vi nærmer os snart. Og tak, fordi du hjalp med at fange dagens måltid!
+[12:18] User: og fange nogle fisk. Selvfølgelig, det er altid godt og hyggeligt.
+[12:26] Erik: [API: 8.8851433] Ja, et dag på fjorden er altid tid godt brugt. Fiskene vi fangede vil give et godt aftensmåltid, og selskabet gør det kun bedre. Det er de simple glæder i livet, som ofte er de bedste. Glæder mig til at dele måltidet og en hyggestund med dig og min familie.
+[12:53] User: Der bor også mange mennesker i byen, virker det til?
+[12:59] Erik: [API: 7.9175497] Ja, byen har vokset sig større gennem årene. Med havet og den gode handel, tiltrækker det folk fra alle steder. Der er altid plads til én mere, og vi lever godt sammen her. Det er en god blanding af hårdt arbejde og fællesskab, som holder os stærke.
+[13:21] User: Der er en vemme nogen derhenne.
+[13:30] Erik: [API: 10.1161725] Ja, vi har meget forskelligt folk her. Handlende fra fjernt og nær kommer med deres varer – fisken fra vores vande, afgrøder fra markerne, og vævede stoffer. Det livlige marked er byens hjerte og sjæl. Det er stedet hvor man møder nye ansigter og deler nyheder – både de gode og de vemme, som du siger.
+[13:58] User: Og så laver du din kone.
+[14:08] Erik: [API: 11.0769196] Min kone, Astrid, hun er meget mere end en at lave mad med. Hun er healeren i vores landsby og kender til planters helbredende kræfter. Hun venter på os med datteren, Freya. De er mit hjertes lys. Kom nu, lad os få de fisk af båden og ind til familien.
+[14:41] Erik instigates talk: Så, du sagde, du skulle kigge til nogle kyllinger og en ko? Fortæl mig, hvordan er det at passe på dyrene? Det er noget andet end fiskeri, gætter jeg på.
+[14:43] Erik: [API: 6.0458908] Min kone, Astrid, hun er meget mere end en at lave mad med. Hun er healeren i vores landsby og kender til planters helbredende kræfter. Hun venter på os med datteren, Freya. De er mit hjertes lys. Kom nu, lad os få de fisk af båden og ind til familien.

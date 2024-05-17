@@ -1,0 +1,73 @@
+Total Time: 15:08 Tutorial Time: 40.35221 Total Time minus tutorial: 14:28, User Prompts: 23, Erik Responses: 23, Erik Instigations: 14, Erik Gaze Time: 299.0424, Erik Percent Gaze Time: 34.4499, API Call Time Averages: Combined 5.74169456944444, SST: 0.890341991666667, ChatGPT: 3.08002714166667, TTS: 3.08002714166667
+[00:58] User: Åh!
+[01:02] Erik: [API: 5.5358274] God dag! Ser du den strækning vi sejler på nu? Det er Lindholm strømmen, en vigtig vej for os fiskere. GREETING HAPPY 6
+[01:16] User: Hvad hedder du?
+[01:19] Erik: [API: 4.6181926] Jeg hedder Erik, en simpel fisker. Hvad kan jeg kalde dig? GREETING 
+[01:29] User: Hvad hedder det?
+[01:33] Erik: [API: 5.5860951] Er det vores hjem du spørger til? Vi kalder det "ERIKSHUT". Snart er vi fremme, og du kan hvile dine ben. POINTING ERIKSHUT GRATITUDE 5
+[01:48] User: Hvis du kan lide denne video, så giv den en like, kommenter og abonner på kanalen.
+[01:52] Erik: [API: 6.2097046] Det er dejligt at høre, at du nyder vores tid sammen. Lad os fokusere på fiskene og den friske luft her på strømmen. POINTING ERIKSHUT GRATITUDE 4
+[02:15] Erik instigates talk: Så, hvor kommer du fra, og hvad bringer dig til vores landsdel? Er du på udkig efter handel, eller søger du måske eventyr? 
+[02:16] Erik: [API: 3.5806319] Det er dejligt at høre, at du nyder vores tid sammen. Lad os fokusere på fiskene og den friske luft her på strømmen. POINTING ERIKSHUT GRATITUDE 4
+[02:29] User: Jeg tror, jeg ser noget eventyr.
+[02:34] Erik: [API: 5.4534266] Eventyr, du siger? Disse lande har meget at byde på. Pas på, naturen her kan være både vild og fortryllende. POINTING ERIKSHUT GRATITUDE 6
+[02:52] User: Hvis du kan lide denne video, så kan du abonnere på kanalen, så kan du også lide denne video, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere på kanalen, så kan du abonnere
+[02:56] Erik: [API: 7.0854344] Ah, ja, hav og himmel er åbne her, og der er plads til mange fortællinger. Lad os nyde turen og stilheden på fjorden. POINTING ERIKSHUT GRATITUDE 4
+[03:18] Erik instigates talk: Har du nogensinde prøvet at fiske? Der er noget særligt ved at kæmpe med fisken og mærke naturens kræfter. 
+[03:20] Erik: [API: 3.689599] Ah, ja, hav og himmel er åbne her, og der er plads til mange fortællinger. Lad os nyde turen og stilheden på fjorden. POINTING ERIKSHUT GRATITUDE 4
+[03:31] User: Jeg har aldrig prøvet at fiske.
+[03:37] Erik: [API: 6.8322654] Det er aldrig for sent at lære. Næste gang vi er ude, kan jeg vise dig hvordan det gøres. Det er en god måde at finde ro og forbinde sig med havet. APPROVE 
+[04:02] Erik instigates talk: Se der! Den runesten fortæller om Olaf, manden der grundlagde vores landsby. Det er en vigtig del af vores historie. POINTING RUNESTONE GRATITUDE 4
+[04:03] Erik: [API: 4.1086511] Det er aldrig for sent at lære. Næste gang vi er ude, kan jeg vise dig hvordan det gøres. Det er en god måde at finde ro og forbinde sig med havet. APPROVE 
+[04:25] Erik instigates talk: Fortæl mig, har du nogen spændende historier fra dine rejser? Jeg nyder gode fortællinger, mens vi sejler. 
+[04:27] Erik: [API: 3.380647] Det er aldrig for sent at lære. Næste gang vi er ude, kan jeg vise dig hvordan det gøres. Det er en god måde at finde ro og forbinde sig med havet. APPROVE 
+[04:41] User: Hvad tror jeg, jeg tænker, du?
+[04:45] Erik: [API: 4.8132867] Måske tænker du på, hvad resten af dagen vil bringe, eller hvordan det vil være at sove i ERIKSHUT? UNSURE 3
+[04:55] User: Ja.
+[05:00] Erik: [API: 6.8103569] Det glæder mig. Du skal nok føle dig hjemme. Min familie og jeg sørger for, at du får en behagelig oplevelse hos os. POINTING ERIKSHUT GRATITUDE 5
+[05:23] Erik instigates talk: Det ser ud til, at Thorwalds gård har lidt under sandstormen. Naturen kan være ubarmhjertig undertiden, men vi klarer os. POINTING FARMSTEAD GRATITUDE 4
+[05:24] Erik: [API: 3.8726235] Det glæder mig. Du skal nok føle dig hjemme. Min familie og jeg sørger for, at du får en behagelig oplevelse hos os. POINTING ERIKSHUT GRATITUDE 5
+[05:41] User: Er det der, du bor?
+[05:46] Erik: [API: 6.0707009] Nej, det er min fætter Thorwalds gård. Jeg bor lidt længere fremme ved stranden i ERIKSHUT sammen med min familie. POINTING ERIKSHUT GRATITUDE 5
+[06:00] User: Hvad er det deroppe?
+[06:06] Erik: [API: 7.5837877] Det er Lindholm landsbyen. Den ligger tæt ved en hellig gravhøj. Landsbyen har en del gårde og er et samlingssted for folkene heromkring. POINTING VILLAGE GRATITUDE 5
+[06:35] Erik instigates talk: I landsbyen har vi endda en smed, der kan fremstille de fineste redskaber. Har du brug for noget, mens du er her? POINTING VILLAGE GRATITUDE 4
+[06:37] Erik: [API: 8.9567236] Det er Lindholm landsbyen. Den ligger tæt ved en hellig gravhøj. Landsbyen har en del gårde og er et samlingssted for folkene heromkring. POINTING VILLAGE GRATITUDE 5
+[06:59] Erik instigates talk: Det må være en stor omvæltning at opleve så meget nyt. Hvordan føler du for dette lands skikke og natur? 
+[07:01] Erik: [API: 4.0925498] Det er Lindholm landsbyen. Den ligger tæt ved en hellig gravhøj. Landsbyen har en del gårde og er et samlingssted for folkene heromkring. POINTING VILLAGE GRATITUDE 5
+[08:02] User: Er det et bål deroppe?
+[08:09] Erik: [API: 8.3945481] Nej, det du ser er Lindholm Høje, en hellig gravhøj. De stenformationer, der ligner et skibs skrog, er til ceremonier, hvor vi ærer de afdøde på deres færd til efterlivet. POINTING BURIALMOUND GRATITUDE 5
+[08:36] Erik instigates talk: Det er vigtigt for os at mindes vores forfædre og de bedrifter, de har udført. Har du lignende traditioner, hvor du kommer fra? 
+[08:38] Erik: [API: 5.0401588] Nej, det du ser er Lindholm Høje, en hellig gravhøj. De stenformationer, der ligner et skibs skrog, er til ceremonier, hvor vi ærer de afdøde på deres færd til efterlivet. POINTING BURIALMOUND GRATITUDE 5
+[09:02] User: Tak fordi du kiggede på videoen!
+[09:06] Erik: [API: 5.7033664] Det er en fornøjelse at dele min hverdag og fortællinger med dig. Snart er vi ved ERIKSHUT, hvor du kan slappe af. POINTING ERIKSHUT GRATITUDE 4
+[09:29] Erik instigates talk: Ser du torvet der? Det er her handelsfolk fra fjerne lande bringer spændende varer til. Skulle vi se nærmere på det senere? POINTING MARKETENTRANCE GRATITUDE 5
+[09:31] Erik: [API: 5.0749588] Det er en fornøjelse at dele min hverdag og fortællinger med dig. Snart er vi ved ERIKSHUT, hvor du kan slappe af. POINTING ERIKSHUT GRATITUDE 4
+[09:55] Erik instigates talk: Hvad tænker du omhandelens livlighed? Det er fascinerende at se varer komme langvejsfra og blive byttet her. 
+[09:57] Erik: [API: 4.6151923] Det er en fornøjelse at dele min hverdag og fortællinger med dig. Snart er vi ved ERIKSHUT, hvor du kan slappe af. POINTING ERIKSHUT GRATITUDE 4
+[10:07] User: Ja, det er rigtigt.
+[10:13] Erik: [API: 6.8142196] Det forbindes os med en verden ud over vores kyster. Noget så simpelt som handel kan bringe folk sammen og udveksle mere end blot varer. APPROVE 
+[10:28] User: Går du meget op i handel?
+[10:33] Erik: [API: 5.7831551] Som fisker bytter jeg ofte fisk for hvad vi behøver. Men min hjerte ligger ved havet og naturen, mere end ved handel og mønt. GRATITUDE 
+[10:47] User: Hvad med det der?
+[10:54] Erik: [API: 8.2034133] Der? Det er vores smedje. Smeden der er dygtig til at lave rustninger og våben for dem, der skal på viking. Hans arbejde er essentielt for mange. POINTING BLACKSMITH GRATITUDE 5
+[11:19] Erik instigates talk: En dygtig smed kan gøre en stor forskel på en vikingetogt. Er du bekendt med kunsthåndværk eller håndværk derhjemme? 
+[11:21] Erik: [API: 4.4529087] Der? Det er vores smedje. Smeden der er dygtig til at lave rustninger og våben for dem, der skal på viking. Hans arbejde er essentielt for mange. POINTING BLACKSMITH GRATITUDE 5
+[11:45] User: Så er det der.
+[11:49] Erik: [API: 5.528691] Ja, vi er næsten ved ERIKSHUT. Der kan vi lande, aflevere dagens fangst og du kan møde min familie. POINTING ERIKSHUT GRATITUDE 5
+[12:11] Erik instigates talk: Har du set et skibsværft før? Der bygger de skibe, som kan bære os over de vildeste bølger. POINTING BOATBUILDER GRATITUDE 5
+[12:13] Erik: [API: 4.9677947] Ja, vi er næsten ved ERIKSHUT. Der kan vi lande, aflevere dagens fangst og du kan møde min familie. POINTING ERIKSHUT GRATITUDE 5
+[12:33] User: Her er skibet. Har I bygget jeres skib?
+[12:37] Erik: [API: 5.7268093] Ja, vores skib er bygget af folkene fra skibsværftet. De er dygtige håndværkere og kender havets veje. GRATITUDE 
+[12:56] User: Sælger i fisk.
+[13:02] Erik: [API: 7.1967579] Ja, vi fanger og sælger fisk. Den første handler, du peger på, er en af dem, der sælger fisk fra vores daglige fangster. POINTING TRADERS GRATITUDE 5
+[13:24] User: Og i sælger vandmelon.
+[13:28] Erik: [API: 5.9944256] Vandmelon? Det lyder som noget, handelsfolket kunne have medbragt. Jeg koncentrerer mig mest om fisk og håndværk. GRATITUDE 
+[13:39] User: Ja.
+[13:45] Erik: [API: 6.471105] Det er spændende med nye varer. Måske skulle vi smage den frugt senere. Nu er vi snart ved ERIKSHUT, klar til at lande. POINTING ERIKSHUT GRATITUDE 5
+[14:06] User: Er det der, vi skal hen med fisken?
+[14:10] Erik: [API: 4.9733758] Ja, det er her. Vi er næsten fremme ved mit hjem, hvor vi skal aflevere dagens fangst. POINTING ERIKSHUT GRATITUDE 5
+[14:32] Erik instigates talk: Er du klar til at møde min familie og smage på dagens fisk? Vi skal nok sørge for, at du får en god aften. POINTING ERIKSHUT GRATITUDE 6
+[14:34] Erik: [API: 5.7646087] Ja, det er her. Vi er næsten fremme ved mit hjem, hvor vi skal aflevere dagens fangst. POINTING ERIKSHUT GRATITUDE 5
+[14:45] User: Ja, ja, ja, ja, ja.
+[14:52] Erik: [API: 7.7150112] Det er godt at høre! Jeg håber, du vil nyde vores gæstfrihed og den fred, der er ved at være tæt på havet. POINTING ERIKSHUT GRATITUDE 6

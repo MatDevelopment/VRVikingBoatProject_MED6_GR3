@@ -60,11 +60,11 @@ public class Tutorial : MonoBehaviour
         if (gestureVersionManager.GestureVersion)
         {
 
-            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men f�rst skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
+            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Lav en Thumbs up for at starte.");
         }
         else if (!gestureVersionManager.GestureVersion)
         {
-            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men f�rst skal mikrofonen kalibreres. Kig p� den orange terning for at starte.");
+            SetInstructionsText("Velkommen! Oplevelsen starter om lidt. Men først skal mikrofonen kalibreres. Kig på den orange terning for at starte.");
             gazeCube2.SetActive(false);
             gaze2Slider.transform.parent.gameObject.SetActive(false);
         }

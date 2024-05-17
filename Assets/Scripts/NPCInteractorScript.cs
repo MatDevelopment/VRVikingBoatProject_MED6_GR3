@@ -138,7 +138,7 @@ public class NPCInteractorScript : MonoBehaviour
                 Role = "system",
                 Content =
                     "Do not say anything about the emotional state of the NPC or what the NPC is thinking, but simply take this information into account.\n" +
-                    "Include in your response the NPC's current emotional state in capitalized letters, in the same message without new line and seperated by white space. Available NPC emotional states are: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT \n" +
+                    "Include in your response the NPC's current emotional state in capitalized letters, in the same message without new line and seperated by white space. The only available NPC emotional states are the following: HAPPY, SAD, ANGRY, SURPRISED, SCARED, DISGUST, CONTEMPT \n" +
                     "Give a number from 1 to 10, where 1 is not emotional and 10 is very emotional, based on how emotional the NPC is. Place this chosen number after the placement of the NPC's current emotional state in the response, seperated by white space.\n" +
                     //"Just before the primary emotion, without a new line and seperated by whitespace with square brackets on either side, give a number from 1 to 10, where 1 is not emotional and 10 is very emotional, based on how emotional the NPC is.\n" +
                     //"DO NOT place the NPC's current emotional state within square brackets. \n" +
@@ -148,7 +148,7 @@ public class NPCInteractorScript : MonoBehaviour
                     "Position the word of the chosen gesture at the time in the response that the NPC would do the gesture, with white space as separator. Do not change the spelling or capitalization of the chosen gesture word.\n"+
                     "When POINTING the NPC can only choose between a given set of targets and only after the NPC have been given permission for the specific target. Write the chosen target whithout new line and after POINTING seperated by white space. The only available targets are: FISHINGHUT, RUNESTONE, FARMSTEAD, VILLAGE, BURIALMOUND, MARKETENTRANCE, BLACKSMITH, BOATBUILDER, TRADERS, ERIKSHUT.\n" +
                     "The NPC now has permission to be POINTING at FISHINGHUT. Erik does not live in the fishing hut pointing target FISHINGHUT. \n" +
-                    "Erik lives in a fishing hut together with his family, which is also the POINTING target: ERIKSHUT.\n"
+                    "Erik lives in a fishing hut together with his family, which is also the POINTING target: ERIKSHUT. When talking to the Traveller about where he lives, Erik refers to his home as a fishing hut.\n"
                    
 
                     //OLD tested prompts (for inspiration)

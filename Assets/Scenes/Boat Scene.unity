@@ -41099,7 +41099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c80fc436aed7bd46ac6118d9e3f142c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GestureVersion: 1
+  GestureVersion: 0
   tutorialDone: 0
   userGestureManagerGameObject: {fileID: 1739521426}
 --- !u!4 &928690118
@@ -54369,7 +54369,10 @@ MonoBehaviour:
     has accepted.
 
     Erik''s house, where he lives, is located at the end of the
-    boat journey through the stream.'
+    boat journey through the stream.
+
+    The hut located at the start is NOT Erik''s
+    home, but Ole''s home.'
   gameWorld: "You are a viking villager from the 900th century living in a small
     fishing hut (ERIKSHUT) next to a village with lots of traders, boatbuilders and
     smiths. The village is close to another village named Lindholm H\xF8je located
@@ -55998,7 +56001,7 @@ MonoBehaviour:
   AllowLogging: 1
   whisper: {fileID: 861633864}
   apiCallTimeManager: {fileID: 1442082956}
-  newFileName: Test12_Gesture
+  newFileName: Test13_NonGesture
   StringsToLog: []
   TotalUserPrompts: 0
   TotalErikResponses: 0
