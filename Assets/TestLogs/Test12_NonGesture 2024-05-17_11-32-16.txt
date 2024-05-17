@@ -1,0 +1,57 @@
+Total Time: 15:17 Tutorial Time: 50.50784 Total Time minus tutorial: 14:26, User Prompts: 20, Erik Responses: 20, Erik Instigations: 8, Erik Gaze Time: 508.3945, Erik Percent Gaze Time: 58.64582, API Call Time Averages: Combined 7.64501009642857, SST: 1.05298575357143, ChatGPT: 3.99150631428571, TTS: 3.99150631428571
+[01:08] Erik instigates talk: Det var en god fangst i dag. Hvordan synes du om livet her ved fjorden? Der er ikke meget, der slår en frisk fisk til aftensmåltid, vel?
+[01:10] Erik: [API: 4.7716811] 
+[01:25] User: Okay, det er godt. Nej, det har du ret i.
+[01:32] Erik: [API: 8.544906] Ja, havets gaver er noget af det bedste. Når vi når til hytten, bør vi takke guderne for dagens fangst og for alt, de giver os. Hvad med at hjælpe til med at forberede fisken senere?
+[01:50] User: Det vil jeg gerne.
+[01:56] Erik: [API: 7.480227] Det glæder mig at høre. Det er altid godt at have en hjælpende hånd, især når man skal klargøre fisken. Der er noget særligt ved at dele arbejdet og måltidet med andre.
+[02:15] User: Hvor meget har vi fanget?
+[02:20] Erik: [API: 7.4057653] Vi har fanget en god mængde, nok til at mætte familien og til at give dig et solidt måltid. Hvis vi er heldige, er der også nok til at bytte med andre i landsbyen. Det er velsignelser fra havet i dag.
+[02:45] User: Hvad skal vi gøre for at takke Gud?
+[02:51] Erik: [API: 8.1659902] Vi plejer at bringe en del af fangsten tilbage til naturen eller tilbyde den til ilden. Det viser vores taknemmelighed og respekt for de gaver, vi har fået. Det er en simpel handling, men den betyder meget.
+[03:20] Erik instigates talk: Ser du Ole derovre ved molen? Han er en god ven og en ærlig fisker. Det er vigtigt med gode naboer, når man lever så tæt på naturen som os. Har du mange, du stoler på, der hvor du kommer fra?
+[03:23] Erik: [API: 5.9404245] Vi plejer at bringe en del af fangsten tilbage til naturen eller tilbyde den til ilden. Det viser vores taknemmelighed og respekt for de gaver, vi har fået. Det er en simpel handling, men den betyder meget.
+[03:41] User: Ja, det har jeg.
+[03:48] Erik: [API: 7.5815421] Det er godt at høre. At have folk, man kan stole på, er som at have et fast punkt i stormvejr. Man ved, at de altid vil være der, uanset hvad. Sådan er livet her også. Vi holder sammen.
+[04:12] User: Er der flere som Ole?
+[04:19] Erik: [API: 8.6089422] Ja, landsbyen har mange hårdtarbejdende folk som Ole. Vi fiskere deler ofte viden og hjælper hinanden. Det samme gælder håndværkerne, som bygger vores både og smeder vores redskaber. Fællesskabet er stærkt her. Alle bidrager med det, de er bedst til.
+[04:48] User: Laver du andet end at fiske?
+[04:55] Erik: [API: 7.8616413] Når jeg ikke fisker, bruger jeg tid på at snitte i træ. Det er en god måde at slappe af på og skabe noget smukt. Og så bruger jeg selvfølgelig tid sammen med min familie. Min datter kan lide at lege udenfor, så vi bruger meget tid i naturen sammen.
+[05:27] User: Det er det, du har taget.
+[05:32] Erik: [API: 6.5557356] Ja, det er det liv, jeg har valgt, og jeg nyder det. Naturen giver os hvad vi behøver, så længe vi respekterer den og dens kredsløb. Hvad med dig, hvad fylder din dag med mening?
+[05:53] User: Jeg elsker mænd
+[06:00] Erik: [API: 8.0488585] Det er godt at høre, at du har fundet det, som gør dig lykkelig. At finde glæde i livet er vigtigt. Og her i landsbyen værdsætter vi de stærke bånd, der holder os sammen, hvad enten det er venskab eller kærlighed.
+[06:29] Erik instigates talk: I landsbyen finder vi også sammenkomster vigtige. De skaber fællesskab og styrker vores bånd. Når vi når hytten, kunne vi dele en mjød og god historie. Hvordan samles folk, der hvor du kommer fra?
+[06:32] Erik: [API: 6.0213995] Det er godt at høre, at du har fundet det, som gør dig lykkelig. At finde glæde i livet er vigtigt. Og her i landsbyen værdsætter vi de stærke bånd, der holder os sammen, hvad enten det er venskab eller kærlighed.
+[06:56] User: Ja hej. Hvilke sammenkomster har du?
+[07:02] Erik: [API: 7.8333] Vi samles ofte for at fejre skiftet i årstiderne og ære de kræfter, som styrer dem. Vi holder også fester for at markere en god høst eller når en ung mand bliver voksen. Og så er der blot de aftener, hvor vi deler historier og sang rundt om bålet.
+[07:35] Erik instigates talk: Sammenkomster er også en tid for musik og dans. Kan du lide at danse, eller har du andre måder at fejre på i dit hjemland?
+[07:36] Erik: [API: 5.3826637] Vi samles ofte for at fejre skiftet i årstiderne og ære de kræfter, som styrer dem. Vi holder også fester for at markere en god høst eller når en ung mand bliver voksen. Og så er der blot de aftener, hvor vi deler historier og sang rundt om bålet.
+[07:51] User: Jeg elsker også musik
+[08:04] Erik: [API: 13.9828894] Musikken er sjælens sprog, siger de gamle. Den binder os sammen og fortæller historierne om vores folk. Når vi kommer hjem, skal du høre min datter synge, hun har en stemme så klar som fjordens vand. Musik er en vigtig del af hverdagen og festen her.
+[08:30] User: Jeg glæder mig til at høre. Bestemt, det vil jeg glade mig til at høre.
+[08:35] Erik: [API: 7.3137957] Det vil være en fornøjelse at dele vores musik med dig. Der er intet som at sidde sammen når dagen er omme, lytte til tonerne og lade tankerne sejle væk. Det binder os til nuet og til vores forfædre.
+[09:02] User: Kender du nogle gamle sange?
+[09:09] Erik: [API: 8.2687353] Ja, jeg kender mange sange, gamle som havet. De fortæller om helte og deres bedrifter, om guderne og naturens kræfter. Jeg ville være glad for at lære dig nogle, hvis du vil. De er en del af vores arv og fortæller meget om, hvem vi er.
+[09:33] User: Det må du gerne høre.
+[09:39] Erik: [API: 7.2889803] Det vil jeg se frem til. Når aftenen falder på, og vi sidder ved ilden, skal jeg dele en af de gamle viser. Musik og gode historier får os til at føle os nærmere hinanden og guderne.
+[10:06] Erik instigates talk: Når vi har leveret dagens fangst, kunne vi også tage en tur gennem markedet. Der er kommet nye varer fra fjerne strande, og det er altid spændende at se, hvad de bringer. Har du nogensinde smagt en vandmelon?
+[10:08] Erik: [API: 5.5991438] Det vil jeg se frem til. Når aftenen falder på, og vi sidder ved ilden, skal jeg dele en af de gamle viser. Musik og gode historier får os til at føle os nærmere hinanden og guderne.
+[10:34] User: Ja, det har jeg. De er virkelig gode. Men lad os kigge på markedet. Det lyder spændende. Er der noget, du vil kigge på?
+[10:41] Erik: [API: 8.5381826] Markedet byder altid på overraskelser. Jeg leder efter kvalitetsredskaber til fiskeri, eller måske noget træ til mit næste snitteprojekt. Men det bedste er at opleve de forskellige dufte og lyde, og måske prøve noget mad, vi ikke ser hver dag. Lad os tage en runde og se, hvad vi finder.
+[11:15] Erik instigates talk: Det er altid godt at støtte vores lokale håndværkere som smeden derovre. De er dygtige til deres håndværk. Hvad er dit håndværk, eller hvad arbejder du med?
+[11:17] Erik: [API: 4.8580365] Markedet byder altid på overraskelser. Jeg leder efter kvalitetsredskaber til fiskeri, eller måske noget træ til mit næste snitteprojekt. Men det bedste er at opleve de forskellige dufte og lyde, og måske prøve noget mad, vi ikke ser hver dag. Lad os tage en runde og se, hvad vi finder.
+[11:42] Erik instigates talk: Har du set sådan noget håndværk før, som smeden laver? Der går meget håndværk og kunst i at smede gode våben og værn.
+[11:45] Erik: [API: 5.6015948] Markedet byder altid på overraskelser. Jeg leder efter kvalitetsredskaber til fiskeri, eller måske noget træ til mit næste snitteprojekt. Men det bedste er at opleve de forskellige dufte og lyde, og måske prøve noget mad, vi ikke ser hver dag. Lad os tage en runde og se, hvad vi finder.
+[12:03] User: Ja, det er flot, jeg kender selv en smed.
+[12:10] Erik: [API: 9.149157] Det er en fornem færdighed at kende til. Smede skaber værktøj og våben, som er essentielle for vores daglige arbejde og beskyttelse. Og se på skibsbyggerne her - deres arbejde sikrer vores rejser over havet. Håndværk er virkelig hjertet af en stærk landsby.
+[12:43] User: Er det en skibsbygger vi sejler forbi?
+[12:50] Erik: [API: 9.023356] Ja, det er vores lokale skibsværft, hvor skibe fødes og bliver klar til havets udfordringer. De bygger langskibe og knarrer, som kan bære os over havet til nye lande. Håndværkerne der er blandt de bedste, og de bruger den kran til at håndtere tunge tømmerstokke og skrog.
+[13:25] Erik instigates talk: Handelen blomstrer i disse dage. Se, der er fiskehandleren. Min fangst kan også ende dér, hvis jeg fanger mere end vi kan spise. Og ved siden af sælger de afgrøder og stoffer. Det er godt at have alt så tæt på. Bruger du meget tid på markeder, hvor du kommer fra?
+[13:29] Erik: [API: 8.2564624] Ja, det er vores lokale skibsværft, hvor skibe fødes og bliver klar til havets udfordringer. De bygger langskibe og knarrer, som kan bære os over havet til nye lande. Håndværkerne der er blandt de bedste, og de bruger den kran til at håndtere tunge tømmerstokke og skrog.
+[14:01] User: Jeg tager næsten dagligt ud og kigger efter varer, hvad jeg skal bruge til madlavning eller tøj.
+[14:09] Erik: [API: 9.3553747] Det lyder som en fornuftig vane. Der er noget tilfredsstillende ved selv at vælge de ting, der skal bruges i hjemmet. Her i landsbyen bytter vi ofte varer - fisk for afgrøder eller tjenester. Det er vores måde at sikre, at alle får, hvad de behøver. Skal vi finde noget til aftenens måltid?
+[14:36] User: Hvad kan du anbefale? Hvad går godt til fisk?
+[14:44] Erik: [API: 9.2568319] Frisk dild og porrer går godt med fisk. Og måske nogle af de nye kartofler. Min kone kan lave en urtesovs, der vil få en haj til at svømme ind på land for at smage! Når vi kommer hjem, kan vi se, hvad hun har i tankerne. Hun er landsbyens bedste til at tilberede et måltid.
+[15:11] User: Det lyder lækkert.
+[15:17] Erik: [API: 7.3646653] Ja, det er det sandelig. Det er en af de glæder ved at leve her ved fjorden – den friske fangst og de friske urter. Nu er vi snart hjemme, hvor vi kan få maden på bordet. Jeg håber, du vil nyde det måltid og selskabet.

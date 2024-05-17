@@ -1,0 +1,57 @@
+Total Time: 15:04 Tutorial Time: 35.39685 Total Time minus tutorial: 14:29, User Prompts: 26, Erik Responses: 26, Erik Instigations: 2, Erik Gaze Time: 655.7114, Erik Percent Gaze Time: 75.44864, API Call Time Averages: Combined 8.37844768571429, SST: 1.25069430357143, ChatGPT: 4.56299883214286, TTS: 4.56299883214286
+[00:44] User: Hej!
+[00:48] Erik: [API: 5.3320335] Velkommen ombord! Det har været en god fangst i dag. Hvad tænker du om vores tur? Har du nogensinde prøvet at fiske før?
+[01:04] User: Ja, da jeg var mindre sammen med min far. Hvem er dig?
+[01:09] Erik: [API: 5.6443418] Det er godt at høre. Jeg er en simpel fiskermand, der lever af havets gaver. Familien og jeg bor i en hytte ved vandet. Hvad med dig? Hvor kommer du fra?
+[01:24] User: Hvor kommer du fra? Jeg kommer fra Fyn
+[01:30] Erik: [API: 7.1215905] Åh, Fyn! Det er et smukt sted. Jeg er opvokset her i nærheden, tæt på Limfjorden. Naturen her har altid været en del af mit liv. Hvordan er livet på Fyn sammenlignet med her?
+[01:52] User: Det er også skændt ligesom her.
+[01:58] Erik: [API: 8.05395] Det lyder dejligt. Naturens skønhed er noget, som virkelig kan bringe fred i sindet. Vi skal snart til min hytte, så du kan se, hvor jeg bor og møde min familie. Hvordan finder du så turen indtil videre?
+[02:18] User: Hvem er din familie? Den er meget rolig.
+[02:25] Erik: [API: 8.4134263] Min kone, Astrid, er landsbyens helbreder – hun kender til hver en plante og deres virkning. Vi har også en datter, Freya, som er fuld af liv og elsker naturen. De glæder sig til at møde dig. Og ro er netop, hvad jeg elsker ved at være ude på vandet.
+[02:47] User: Det har vi fanget i dag.
+[02:52] Erik: [API: 5.8179259] Vi har haft en god dag på vandet. Der er torsk, sild og et par fladfisk i spanden. Det skal nok blive en god middag i aften. Glæder du dig til at smage på fangsten?
+[03:18] Erik instigates talk: Det er altid godt at dele historier og oplevelser, mens vi nyder sejlturen. Fortæl mig, hvad bringer dig fra Fyn til vores landsdel? Er der noget særligt, du søger eller vil opleve her?
+[03:20] Erik: [API: 5.007783] Vi har haft en god dag på vandet. Der er torsk, sild og et par fladfisk i spanden. Det skal nok blive en god middag i aften. Glæder du dig til at smage på fangsten?
+[03:38] User: Jeg vil gerne prøve at være en ægte viking
+[03:45] Erik: [API: 9.0878835] Det kan jeg godt forstå. Livet her er fyldt med de gamle skikke, og naturen lærer os meget. Når vi når frem, skal jeg vise dig, hvordan vi lever, og måske kan du prøve at ro en langbåd eller smede et sværd. Er der noget specielt, du har lyst til at lære?
+[04:12] User: Og pil. Jeg kunne godt tænke mig at lære at skyde med bue.
+[04:19] Erik: [API: 7.9605448] Det kan arrangeres. At skyde med bue og pil kræver øvelse og tålmodighed, men jeg kan vise dig grundteknikkerne. Når vi kommer til lands, kan vi finde et sted, hvor du kan øve dig. Vores forfædre satte stor ære i at være dygtige bueskytter.
+[04:39] User: Er det der din landsby?
+[04:46] Erik: [API: 7.7977433] Ja, det er min landsby. Vi er snart hjemme. Der er handelsfolk, bådebyggere og smede. De bidrager alle til vores samfund. Min hytte ligger for enden af denne bæk. Glæder mig til at vise dig, hvor jeg er opvokset.
+[05:08] User: i jeres landsby.
+[05:16] Erik: [API: 8.615041] Ja, i vores landsby er der et stærkt fællesskab. Folk passer på hinanden og hjælper, som du kan se der ved gården. Selv når naturen viser sin barske side, står vi sammen. Det er hårdt arbejde at leve her, men det er også en stor gave. Vi skal snart være fremme ved min hytte.
+[05:50] User: Hvor længe har dig og din kone været sammen?
+[05:57] Erik: [API: 8.4102559] Astrid og jeg har været sammen i mange år, siden jeg var ung mand. Vi mødtes, da jeg var ude på jagt. Hun har været min støtte gennem tykt og tyndt. Tiden flyver, når man har nogen at dele livet med. Hvordan er det med dig? Har du nogen derhjemme, som venter på dig?
+[06:20] User: Ja, det har jeg. Han hedder Frederik.
+[06:27] Erik: [API: 7.6863312] Det må være godt at have nogen som Frederik. Det er vigtigt at have familie eller kære, som støtter en. Nu nærmer vi os min hytte. Astrid og Freya vil være glade for at høre om din rejse og dit hjem. Har du nogen spørgsmål, inden vi lægger til?
+[06:50] User: Hvor gammel er Freja?
+[06:55] Erik: [API: 6.7289476] Freya, hun er en livlig ung pige på ti somre. Hun vokser hurtigt, og lærer hver dag om vores verden og den natur, der omgiver os. Hun vil finde det spændende at møde dig og høre om dine eventyr.
+[07:17] User: Hvor gammel er du?
+[07:21] Erik: [API: 5.743253] Jeg har set fyrre vintre. Livet her ved fjorden har givet mig både styrke og visdom med tiden. Og hvert år lærer jeg noget nyt, enten fra naturen eller de mennesker, jeg møder, ligesom dig.
+[07:38] User: Hvad er dit bedste råd?
+[07:44] Erik: [API: 7.6474408] Mit bedste råd ville være at leve livet fuldt ud og værdsætte de små øjeblikke. Arbejd hårdt, men glem ikke at nyde naturens og familiens gaver. Og husk altid at være gæstfri og venlig, for man ved aldrig, hvornår man selv får brug for en hjælpende hånd.
+[08:16] User: Har du noget, du gerne vil spørge mig om, inden jeg skriver?
+[08:22] Erik: [API: 7.7752066] Jeg er nysgerrig efter at vide, hvad du håber at lære af dit besøg hos os? Og hvad bringer minderne frem, når du tænker tilbage på dine dage med fiskeri med din far? Det er sjældent, vi får besøg fra så fjerne steder.
+[08:48] User: Og jeg kunne godt tænke mig at lære om, hvordan I lever og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres liv er, og hvordan deres
+[08:57] Erik: [API: 11.8852696] Du vil finde, at vores liv er tæt forbundet med naturen og årstidernes skiften. Vi lever af det, havet og jorden giver os, og vi ærer de ældgamle traditioner. Når du er hos os, vil du opleve, hvordan vi arbejder, fejrer og lever sammen som et fællesskab. Din nysgerrighed skal nok blive mættet.
+[09:24] User: Hvad vil du gerne lære mig? Er der noget specielt, du gerne vil lære mig?
+[09:34] Erik: [API: 10.6165915] Jeg vil gerne lære dig at fiske og navigere på vores vande, at kende naturens skift og finde ro i den. Måske lidt træskærerarbejde for at finde glæden ved at skabe noget med hænderne. Og selvfølgelig, samværet og de historier, vi deler, mens vi gør arbejdet. Det ville gøre mig stolt at videregive dette.
+[10:04] User: Hvem er ham, der står derovre?
+[10:12] Erik: [API: 8.7028567] Det er min gode ven Ole. Han bor i hytten lige ved siden af os og er også fiskermand. En fin fætter, der altid har en god historie eller to. Når vi lægger til, kan jeg præsentere dig for ham, hvis du vil. Ole har altid nyheder fra de andre landsdele, som han deler villigt.
+[10:35] User: Hvad har han smidt? Er han ikke smed?
+[10:44] Erik: [API: 10.5152249] Ja, han er vores smed. En dygtig håndværker, som laver alt fra våben til brugsgenstande. Lige nu arbejder han på rustninger til dem, der snart skal på rejse – måske en vikingetogt. Hans arbejde er vigtigt for vores samfund, og han er respekteret for hans færdigheder. Skulle du have brug for noget smedet, kan han helt sikkert hjælpe.
+[11:12] User: Der er det, der er over.
+[11:18] Erik: [API: 7.5204754] Jeg er ikke sikker på, hvad du refererer til. Er det noget særligt, du ser, som du vil vide mere om? Her på vores rejse passerer vi mange ting; hvert sted har sin historie og sit formål i vores samfund.
+[11:41] User: Den der høje, kranagtige noget med hjulet.
+[11:55] Erik: [API: 15.5623937] Ah, det du ser er en kran, som vi bruger til at løfte tungt gods fra skibene. Det hjul gør det lettere at hejse tunge læs som tømmer og sten, der skal bruges i byggerier eller til handel. Det er smarte indretninger, som gør vores arbejde ved kajen en hel del lettere.
+[12:20] User: Hvad siger du til det?
+[12:29] Erik: [API: 10.1142032] Jeg synes, det er fantastisk. Vi vikinger er dygtige bådebyggere og navigatører, og kranen er et vidnesbyrd om vores snilde. Det gør det muligt at bygge større skibe og handle mere effektivt. Jeg sætter pris på sådanne redskaber, der gør livet og arbejdet lettere for os.
+[13:04] User: Så kan du have en god aften med øl.
+[13:11] Erik: [API: 8.6400385] Det har du ret i. En aften med god mad fra dagens fangst og en krukke øl er den bedste måde at slutte dagen på. Det er tid til at slappe af, dele historier og grine sammen med familie og venner. Jeg ser frem til at byde dig velkommen ind i vores kreds og skåle for nye venskaber. Skal vi lægge til nu?
+[13:36] User: Okay.
+[13:45] Erik: [API: 11.0004743] Så lægger vi til. Jeg håber, du vil nyde dit ophold og lære meget. Velkommen til vores hjem, og lad os få en mindeværdig aften. Husk, hvis du har brug for noget, så spørg endelig. Lad os gå i land.
+[14:15] Erik instigates talk: Her er vi så. Dette er vores beskedne hjem. Lad os bringe fangsten ind til familien og forberede middagen. Jeg håber, det bliver en hyggelig aften. Har du nogensinde smagt ægte vikingemad før?
+[14:17] Erik: [API: 6.4038694] Så lægger vi til. Jeg håber, du vil nyde dit ophold og lære meget. Velkommen til vores hjem, og lad os få en mindeværdig aften. Husk, hvis du har brug for noget, så spørg endelig. Lad os gå i land.
+[14:35] User: Nej, aldrig. Jeg glæder mig til at smage det.
+[14:45] Erik: [API: 10.7914393] Det bliver en fornøjelse at dele vores måltid med dig. Vi har fiskegryde og friske urter, Astrid laver den bedste. Og der vil være brød og måske en lille sødme til slut. Vær beredt på at fylde maven og varme sjælen. Velkommen til vores bord!

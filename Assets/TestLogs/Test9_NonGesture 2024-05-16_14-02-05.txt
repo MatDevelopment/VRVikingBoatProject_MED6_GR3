@@ -1,0 +1,1 @@
+Total Time: 00:05 Tutorial Time: 0 Total Time minus tutorial: 00:05, User Prompts: 0, Erik Responses: 0, Erik Instigations: 0, Erik Gaze Time: 0, Erik Percent Gaze Time: 0, API Call Time Averages: Combined NaN, SST: NaN, ChatGPT: NaN, TTS: NaN

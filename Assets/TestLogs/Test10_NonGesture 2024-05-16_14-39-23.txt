@@ -1,0 +1,55 @@
+Total Time: 15:03 Tutorial Time: 33.08845 Total Time minus tutorial: 14:30, User Prompts: 24, Erik Responses: 24, Erik Instigations: 3, Erik Gaze Time: 189.1047, Erik Percent Gaze Time: 21.72041, API Call Time Averages: Combined 7.9537817037037, SST: 1.3201069037037, ChatGPT: 4.22208272222222, TTS: 4.22208272222222
+[00:49] Erik instigates talk: Det er en fin dag for fiskeri, ikke? Hvordan finder du livet her ved Limfjorden?
+[00:51] Erik: [API: 3.0700948] 
+[01:02] User: Jeg ved ikke om han siger noget, men hey
+[01:06] Erik: [API: 4.8377488] Nå, hvad tænker du på? Har du nogensinde prøvet at fiske, som vi gør her på fjorden?
+[01:18] User: Det er lidt vanskeligt på det.
+[01:26] Erik: [API: 9.5564092] Ja, det kræver lidt øvelse, men med tiden bliver det nemmere. Måske kan jeg lære dig et par kneb, når vi kommer tilbage. Hvad siger du til det?
+[01:45] User: Det lyder godt. Hmm. Det lyder godt. Øh, det lyder godt.
+[01:51] Erik: [API: 6.6589015] Det bliver hyggeligt! Vi kan starte så snart vi har afleveret fangsten og fået os noget at spise. Livet er simpelt her, men der er glæde i disse små ting.
+[02:13] User: Det har du ret i, skal vi ikke sejle over til Hans derovre på kanten?
+[02:19] Erik: [API: 7.0714037] Vi skal først hjem med fangsten, men bagefter kan vi godt sejle over til Hans. Han har sikkert et godt måltid og en stærk historie at dele.
+[02:38] User: Hvorfor er du her igen? Jeg kan godt lide din accent. Hvorfor er du her igen?
+[02:44] Erik: [API: 8.1888567] Jeg er her for at fiske og leve mit liv med min familie. Og tak for komplimenten om min accent, det er bare sådan vi taler her. Hvad med dig, hvad bringer dig til disse egne?
+[03:05] User: Det ved jeg ikke helt. Prøv noget nyt.
+[03:11] Erik: [API: 7.2201697] At prøve noget nyt kan være begyndelsen på storslåede eventyr. Livet her er fyldt med daglige gøremål, men naturen og havet bringer os nye udfordringer og glæder hver dag. Hvad håber du at finde på din rejse?
+[03:39] User: Rigdom, skatte og rovensten.
+[03:46] Erik: [API: 7.9185886] Ja, fortællingerne om skatte og ære er mange. Hvis du søger rigdom, kan handel og færdigheder være vejen frem. Og den sten der, det er en runesten, som fortæller om Olaf. Han var en stor mand, som gjorde meget for disse lande. Muligvis han også søgte eventyr og rigdom som dig.
+[04:14] User: Ja, ja, det... Hvad er den mest almindelige fangst heromkring, og hvor meget fanger du?
+[04:20] Erik: [API: 7.526694] Torsk, sild og fladfisk er de fisk vi oftest fanger her. På en god dag kan vi fange nok til at mætte familien og bytte med andre i landsbyen. Det handler om at kende fjorden og dens strømme.
+[04:45] User: Får vi nogensinde højvande her så meget, at det kan komme op og oversvømme?
+[04:51] Erik: [API: 7.7217138] Det sker, at vandet stiger, især når stormene kommer, men ikke ofte så det oversvømmer. Vi bygger vore huse højt og sikrer os mod fjordens luner. Naturens kræfter skal man have respekt for.
+[05:18] User: Hvad er det for en bygning der ligger herovre? Er det en gård?
+[05:24] Erik: [API: 6.8299862] Ja, det er min fætter Thorwalds gård. Desværre ser det ud til, at sandstormen giver ham problemer med afgrøderne. Sandet kan skade udbyttet betydeligt. Vi støtter hinanden i sådanne tider.
+[05:50] User: Ellers, hvad for nogle afgrøder er det han har med i stedet, det ser ud som om han har noget korn og hvad ved jeg.
+[05:57] Erik: [API: 8.3821414] Thorwald dyrker byg og havre mest, men han har også en del kål og roer. Disse afgrøder er gode at have igennem vinteren. Kornet bruger vi til at bage brød og til ølbrygning. Det er vigtigt at have et godt forråd.
+[06:29] User: Jeg var med placeringen herovre med vagtornet, som hjørnet er på.
+[06:36] Erik: [API: 7.8480778] Ah, du taler om varderne. De er gamle vejvisere og markeringer. Det er vigtigt at kunne finde vej, især om natten eller i tåge, så de hjælper både rejsende og os, der bor her. Sikke et syn, ikke?
+[07:00] User: Det er et sjovt syn, når man ser de meget flyvende hegn, der er derovre, og nogle sjov tilfælde.
+[07:06] Erik: [API: 7.321052] Ja, naturen kan skabe nogle særprægede skuer, og det får tit historierne til at trives. Vi tror på, at hver sten og høj har sin egen saga. Livet er fyldt med mærkværdigheder – og det er godt at kunne le af dem indimellem.
+[07:32] User: Hvad så med gravhøjden derovre? Hvad ligger der relevans der? Hvem er begravet og hvem er de største?
+[07:41] Erik: [API: 11.4474288] Det er Lindholm Høje, et helligt sted, hvor vores forfædre er begravet. De stenformationer, der ligner skibsskrog, repræsenterer rejsen til efterlivet. De største er ofte for de mest ærede krigere og ledere, som vi husker for deres bedrifter og mod. Det er et sted med stor betydning for os.
+[08:17] User: Jeg vil gerne have noget at spise Ville det ikke gå hurtigere at komme indlands Hvis vi valgte at bruge De bagager der lå her Jeg er sulten og vil gerne have noget
+[08:24] Erik: [API: 8.7338649] Vi skal snart være ved mit hjem, hvor du kan få noget at spise. At tage landsiden ville måske være hurtigere, men jeg må levere dagens fangst til min familie. Lidt tålmodighed, ven. Jeg lover, at vi skal mættes snart.
+[08:54] Erik instigates talk: Du sagde, du var sulten. Hvad er din yndlingsret? Måske har vi noget, som kan stille din sult, når vi kommer hjem.
+[08:55] Erik: [API: 4.4624947] Vi skal snart være ved mit hjem, hvor du kan få noget at spise. At tage landsiden ville måske være hurtigere, men jeg må levere dagens fangst til min familie. Lidt tålmodighed, ven. Jeg lover, at vi skal mættes snart.
+[09:21] User: Kød, kød af alle former, kød fra gris, kød fra ko, kød fra gedder.
+[09:30] Erik: [API: 10.1926894] Det lyder som en måltid for en sand kriger! Vi har ofte fisk og vildt, og nogle gange bytter vi os til kød fra markedet. Ser du, der kommer varer fra hele verden, endda vandmeloner fra fjerne lande! Men i aften kan vi lave en god stuvning med dagens fangst. Det vil stille din sult.
+[10:04] User: Så skal vi være klar til at steppe ud af båden, det ser ud som om vi kommer op til hvor de andre er holdt.
+[10:11] Erik: [API: 8.8813452] Ja, nu nærmer vi os. Lad mig sikre båden, og så skal jeg hjælpe dig i land. Vi går op til mit hus, afleverer dette gode fiskeheld, og så finder vi noget til den sultne mave. Velkommen til mit hjem.
+[10:34] User: Hens loyus mormen er besat.
+[10:42] Erik: [API: 9.2155154] Det lyder som en sætning, jeg ikke forstår fuldt ud. Men det er vigtigt at have en dygtig smed i nærheden. Han laver rustninger til dem, der skal ud på vikingstog. Smedens arbejde er essentielt for vores folks beskyttelse og succes.
+[11:13] User: Hvad mangler du at købe fra ham med sådan noget? Hvad har han lavet af ting til dig, som du bruger? Og hvad mangler du?
+[11:19] Erik: [API: 8.306438] Jeg bruger mest min krog og net til fiskeri, men smeden har lavet en kniv til mig, stærk og skarp, den bruger jeg hver dag. Jeg kunne godt bruge en ny spidsgaffel, til at hjælpe med at hive de større fisk ind. Hvad med dig, har du brug for noget fra ham?
+[11:47] User: Man har brug for at frenske med Tja, ud over svære skjold og hjelm Så er det jo svært at sige hvad ellers
+[11:56] Erik: [API: 10.5644645] Skjold og hjelm er gode at have, især hvis du tager på togt. I landsbyen findes alt, hvad en kriger kan ønske sig. Vi har også bådbyggere, der laver de stærkeste skibe. Med det rette udrustning, kan man rejse langt og opnå stor ære. Er du også en kriger?
+[12:25] User: Det ved jeg ikke, men hvor langt har du prøvet at sejle ned langs fanden, hvor langt hjemmefra har du prøvet at sejle ned?
+[12:34] Erik: [API: 11.0065817] Mine rejser har ikke bragt mig så langt som mange andre. Jeg har sejlet ned langs vores kyst og besøgt handelspladser indenfor dagsrejse. Jeg holder mig mest til fjorden og mine fiskepladser. Der er dem, der søger eventyr og lande langt væk – min rigdom ligger her med min familie og mine net.
+[13:04] User: Hvad er det bedste I har at tilbyde her i markedet?
+[13:11] Erik: [API: 8.7522682] Det bedste, vi har her, er nok vores håndværk og vores fisk. Vi har også vævere, der laver stærkt tøj og sejl. Afgrøder fra markerne er også i høj kurs. Man kan finde næsten alt her, da handelsmænd bringer varer fra fjerne steder. Vil du handle, når vi kommer i land?
+[13:43] User: Hvor er det vi skal lande hen, siger du? Kan man se det herfra?
+[13:50] Erik: [API: 8.70852] Vi skal lande ved min brygge, lige forude. Du kan se den lille træpier, hvor der er bundet et par både fast. Derfra er det ikke langt til mit hus, hvor vi kan få os noget mad og hvile. Det bliver godt at strække benene på fast grund igen.
+[14:23] User: Hvor mange folk bor der i byen her?
+[14:30] Erik: [API: 8.4417057] Vi er ikke mange, men vi står sammen. Måske et par hundrede sjæle i alt. Hver mand, kvinde og barn bidrager på sin måde. Og her er mit hjem, hvor min familie venter. Du skal møde dem og se, hvordan vi lever. Kom, lad os komme i land.
+[15:01] Erik instigates talk: Har du set noget på din rejse, som har overrasket dig, eller som du vil tage med dig hjem i erindring?
+[15:03] Erik: [API: 5.8869513] Vi er ikke mange, men vi står sammen. Måske et par hundrede sjæle i alt. Hver mand, kvinde og barn bidrager på sin måde. Og her er mit hjem, hvor min familie venter. Du skal møde dem og se, hvordan vi lever. Kom, lad os komme i land.
